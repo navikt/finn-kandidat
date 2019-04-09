@@ -4,11 +4,6 @@
     "private": true,
     "homepage": "/finn-kandidat",
     "dependencies": {
-        "@craco/craco": "^4.1.0",
-        "@types/jest": "^24.0.11",
-        "@types/node": "^11.13.0",
-        "@types/react": "^16.8.13",
-        "@types/react-dom": "^16.8.3",
         "classnames": "^2.2.6",
         "craco-less": "^1.7.0",
         "nav-frontend-core": "^4.0.8",
@@ -16,6 +11,14 @@
         "react-dom": "^16.8.6",
         "react-scripts": "2.1.8",
         "typescript": "^3.4.2"
+    },
+    "devDependencies": {
+        "@craco/craco": "^4.1.0",
+        "@types/classnames": "^2.2.7",
+        "@types/jest": "^24.0.11",
+        "@types/node": "^11.13.0",
+        "@types/react": "^16.8.13",
+        "@types/react-dom": "^16.8.3"
     },
     "scripts": {
         "start": "craco start",
