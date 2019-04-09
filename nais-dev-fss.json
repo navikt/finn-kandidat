@@ -1,0 +1,32 @@
+{
+    "apiVersion": "nais.io/v1alpha1",
+    "kind": "Application",
+    "metadata": {
+        "name": "finn-kandidat",
+        "namespace": "default",
+        "labels": {
+            "team": "teamtag"
+        }
+    },
+    "spec": {
+        "port": 3000,
+        "team": "teamtag",
+        "image": "navikt/finn-kandidat:latest",
+        "ingresses": ["https://arbeidsgiver.nais.preprod.local/finn-kandidat/"],
+        "liveness": {
+            "initialDelay": 5,
+            "path": "/finn-kandidat/internal/isAlive"
+        },
+
+        "readiness": {
+            "initialDelay": 5,
+            "path": "/finn-kandidat/internal/isReady"
+        },
+        "env": [
+            {
+                "name": "NODE_EXTRA_CA_CERTS",
+                "value": "/etc/ssl/ca-bundle.pem"
+            }
+        ]
+    }
+}
