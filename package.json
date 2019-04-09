@@ -2,6 +2,7 @@
     "name": "finn-kandidat",
     "version": "0.1.0",
     "private": true,
+    "homepage": "/finn-kandidat",
     "dependencies": {
         "@craco/craco": "^4.1.0",
         "@types/jest": "^24.0.11",
@@ -9,6 +10,7 @@
         "@types/react": "^16.8.13",
         "@types/react-dom": "^16.8.3",
         "craco-less": "^1.7.0",
+        "nav-frontend-core": "^4.0.8",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-scripts": "2.1.8",
@@ -18,7 +20,9 @@
         "start": "craco start",
         "build": "craco build",
         "test": "craco test",
-        "eject": "craco eject"
+        "eject": "craco eject",
+        "docker:build": "docker build -t finn-kandidat .",
+        "docker:start": "docker run -p 3000:3000 finn-kandidat"
     },
     "eslintConfig": {
         "extends": "react-app"

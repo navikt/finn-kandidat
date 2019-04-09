@@ -6447,6 +6447,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
+nav-frontend-core@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/nav-frontend-core/-/nav-frontend-core-4.0.8.tgz#f29caa0ed19ade5a6a2e56c0674cef96ee7f9aeb"
+  integrity sha512-EVClW7xi36sC6lrsEPmyikOhVcU258j3UTa6PcDhfVG99Bx1wTGHlojw+k0oHbWiIlOYyeem3Zx4IS1O2ryODw==
+
 needle@^2.2.1:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/needle/-/needle-2.2.4.tgz#51931bff82533b1928b7d1d69e01f1b00ffd2a4e"
