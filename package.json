@@ -38,6 +38,7 @@
         "test": "craco test",
         "eject": "craco eject",
         "develop": "yarn start",
+        "serve": "node src/server/server.js",
         "docker:build": "docker build -t finn-kandidat .",
         "docker:start": "docker run -p 3000:3000 finn-kandidat"
     },
