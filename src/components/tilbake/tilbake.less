@@ -1,0 +1,21 @@
+@import '../../styles/variables.less';
+
+.tilbake {
+    display: inline-flex;
+    align-items: center;
+    color: @navBla;
+    text-decoration: none;
+    padding: 1rem 2rem 1rem 0;
+
+    &__icon {
+        margin-right: 0.5rem;
+    }
+
+    &:hover {
+        text-decoration: underline;
+
+        .tilbake__icon {
+            transform: translateX(-3px) rotate(-90deg);
+        }
+    }
+}
