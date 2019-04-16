@@ -29,7 +29,7 @@
             },
             {
                 "name": "LOGIN_URL",
-                "value": "https://loginservice-q.nav.no/login?redirect=https://arbeidsgiver.nais.preprod.local/finn-kandidat/"
+                "value": "https://loginservice.nais.preprod.local/login?redirect=https://arbeidsgiver.nais.preprod.local/finn-kandidat/"
             }
         ]
     }

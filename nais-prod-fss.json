@@ -29,7 +29,7 @@
             },
             {
                 "name": "LOGIN_URL",
-                "value": "https://loginservice.nav.no/login?redirect=https://arbeidsgiver.nais.adeo.no/finn-kandidat/"
+                "value": "https://loginservice.nais.adeo.no/login?redirect=https://arbeidsgiver.nais.adeo.no/finn-kandidat/"
             }
         ]
     }
