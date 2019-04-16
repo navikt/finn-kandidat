@@ -13,14 +13,13 @@ const startServer = () => {
 
     app.get(`${BASE_PATH}/internal/isAlive`, (req, res) => res.sendStatus(200));
     app.get(`${BASE_PATH}/internal/isReady`, (req, res) => res.sendStatus(200));
-
-    app.use(BASE_PATH, (req, res) => {
-        res.sendFile(path.resolve(buildPath, 'index.html'));
-    });
-
     app.get(`${BASE_PATH}/redirect-til-login`, (req, res) => {
         const loginUrl = process.env.LOGIN_URL || LOCAL_LOGIN;
         res.redirect(loginUrl);
+    });
+
+    app.use(BASE_PATH, (req, res) => {
+        res.sendFile(path.resolve(buildPath, 'index.html'));
     });
 
     app.listen(3000, () => {
