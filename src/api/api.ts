@@ -1,5 +1,6 @@
 import { isDevelopment } from '../utils/environment';
 import { APP_ROOT } from '../utils/paths';
+import Kandidat from '../types/Kandidat';
 
 const API_BASE_URL = '/finn-kandidat-api';
 const API_LOGIN = `${APP_ROOT}/redirect-til-login`;
@@ -26,3 +27,10 @@ export const hentHelloWorld = async (): Promise<string> => {
         return 'Feil fra backend';
     }
 };
+
+export const postKandidat = async (kandidat: Kandidat): Promise<boolean> =>
+    new Promise(resolve => {
+        setTimeout(() => {
+            resolve(true);
+        }, 1000);
+    });

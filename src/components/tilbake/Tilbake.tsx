@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Tilbake = ({ til }: Props) => (
-    <Link to={til} className={cls.block} aria-label="Gå tilbake">
+    <Link to={til} className={cls.classNames(cls.block, 'blokk-s')} aria-label="Gå tilbake">
         <VenstreChevron className={cls.element('icon')} />
         Tilbake
     </Link>

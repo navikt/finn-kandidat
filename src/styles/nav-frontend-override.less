@@ -1,0 +1,16 @@
+.skjemaelement {
+    &__label {
+        font-weight: bold;
+    }
+
+    input[type='radio'] ~ &__label,
+    input[type='checkbox'] ~ &__label {
+        font-weight: normal;
+    }
+
+    input[type='checkbox'] ~  &__label {
+        &::before {
+            border-color: @navGra20;
+        }
+    }
+}
