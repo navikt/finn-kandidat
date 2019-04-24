@@ -5,6 +5,8 @@ interface Kandidat {
     fnr: string;
     arbeidssituasjon: Arbeidssituasjon;
     fysiskTilrettelegging: FysiskTilrettelegging[];
+    sistEndret: Date;
+    sistEndretAv: string;
 }
 
 export default Kandidat;

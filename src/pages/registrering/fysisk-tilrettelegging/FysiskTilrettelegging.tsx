@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fieldset } from 'nav-frontend-skjema';
 import Alternativ from '../../../types/FysiskTilrettelegging';
-import CheckboxMedBeskrivelse from '../../checkbox-med-beskrivelse/CheckboxMedBeskrivelse';
+import CheckboxMedBeskrivelse from '../../../components/checkbox-med-beskrivelse/CheckboxMedBeskrivelse';
 import fysiskTilretteleggingAlternativer from './fysiskTilretteleggingAlternativer';
 
 interface Props {

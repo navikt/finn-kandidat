@@ -1,17 +1,18 @@
 import React, { useState, FormEvent } from 'react';
-import { AppRoute } from '../../utils/paths';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { Input } from 'nav-frontend-skjema';
-import { postKandidat } from '../../api/api';
 import { withRouter, RouteComponentProps } from 'react-router';
+
+import { AppRoute } from '../../utils/paths';
+import { postKandidat } from '../../api/api';
 import Arbeidssituasjon from './arbeidssituasjon/Arbeidssituasjon';
 import bemHelper from '../../utils/bemHelper';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 import Fysisk from '../../types/FysiskTilrettelegging';
 import FysiskTilrettelegging from './fysisk-tilrettelegging/FysiskTilrettelegging';
-import RouteBanner from '../route-banner/RouteBanner';
+import RouteBanner from '../../components/route-banner/RouteBanner';
 import Situasjon from '../../types/Arbeidssituasjon';
-import Tilbake from '../tilbake/Tilbake';
+import Tilbake from '../../components/tilbake/Tilbake';
 import './registrering.less';
 
 const cls = bemHelper('registrering');
@@ -25,7 +26,13 @@ const Registrering = (props: RouteComponentProps) => {
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const kandidat = { fnr, arbeidssituasjon, fysiskTilrettelegging };
+        const kandidat = {
+            fnr,
+            arbeidssituasjon,
+            fysiskTilrettelegging,
+            sistEndret: new Date(),
+            sistEndretAv: 'A123456',
+        };
 
         setSubmitting(true);
         const respons = await postKandidat(kandidat);

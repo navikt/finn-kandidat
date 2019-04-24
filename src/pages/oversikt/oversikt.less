@@ -1,0 +1,27 @@
+@import '../../styles/variables.less';
+
+@padding: 1rem;
+
+.oversikt {
+    max-width: 46.5rem + 2 * @padding;
+    margin: 0 auto;
+    padding: @padding;
+
+    &__overKandidatene {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .blokk-xs();
+    }
+
+    &__kandidaterSpinner {
+        margin-top: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .lenkepanel {
+        .blokk-xxs();
+    }
+}
