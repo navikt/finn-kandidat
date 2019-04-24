@@ -1,6 +1,7 @@
 import React from 'react';
-import { AppRoute } from '../../../utils/paths';
 import { Link } from 'react-router-dom';
+
+import { AppRoute } from '../../../utils/paths';
 import AddCircle from '../../../components/ikoner/AddCircle';
 import bemHelper from '../../../utils/bemHelper';
 import './nyKandidatKnapp.less';

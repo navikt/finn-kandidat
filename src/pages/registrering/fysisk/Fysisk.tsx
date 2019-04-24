@@ -1,29 +1,29 @@
 import React from 'react';
 import { Fieldset } from 'nav-frontend-skjema';
-import Alternativ from '../../../types/FysiskTilrettelegging';
 import CheckboxMedBeskrivelse from '../../../components/checkbox-med-beskrivelse/CheckboxMedBeskrivelse';
-import fysiskTilretteleggingAlternativer from './fysiskTilretteleggingAlternativer';
+import alternativer from './alternativer';
+import { FysiskBehov } from '../../../types/Behov';
 
 interface Props {
-    valgteAlternativer: Alternativ[];
-    onChange: (value: Alternativ[]) => void;
+    valgteAlternativer: FysiskBehov[];
+    onChange: (value: FysiskBehov[]) => void;
 }
 
-const FysiskTilrettelegging = ({ valgteAlternativer, onChange }: Props) => {
-    const fjernAlternativ = (alternativ: Alternativ) =>
+const Fysisk = ({ valgteAlternativer, onChange }: Props) => {
+    const fjernAlternativ = (alternativ: FysiskBehov) =>
         onChange(valgteAlternativer.filter(valgt => valgt !== alternativ));
 
-    const leggTilAlternativ = (alternativ: Alternativ) =>
+    const leggTilAlternativ = (alternativ: FysiskBehov) =>
         onChange([...valgteAlternativer, alternativ]);
 
-    const onAlternativClick = (alternativ: Alternativ) => () =>
+    const onAlternativClick = (alternativ: FysiskBehov) => () =>
         valgteAlternativer.includes(alternativ)
             ? fjernAlternativ(alternativ)
             : leggTilAlternativ(alternativ);
 
     return (
         <Fieldset legend="Dersom du har behov for fysisk tilrettelegging, hva bør det legges til rette for?">
-            {fysiskTilretteleggingAlternativer.map(({ value, label, beskrivelse }) => (
+            {alternativer.map(({ value, label, beskrivelse }) => (
                 <CheckboxMedBeskrivelse
                     key={value}
                     label={label}
@@ -36,4 +36,4 @@ const FysiskTilrettelegging = ({ valgteAlternativer, onChange }: Props) => {
     );
 };
 
-export default FysiskTilrettelegging;
+export default Fysisk;

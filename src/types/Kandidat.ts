@@ -1,12 +1,14 @@
-import FysiskTilrettelegging from './FysiskTilrettelegging';
-import Arbeidssituasjon from './Arbeidssituasjon';
+import { ArbeidstidBehov, FysiskBehov, ArbeidsmijøBehov, GrunnleggendeBehov } from './Behov';
 
 interface Kandidat {
     fnr: string;
-    arbeidssituasjon: Arbeidssituasjon;
-    fysiskTilrettelegging: FysiskTilrettelegging[];
-    sistEndret: Date;
-    sistEndretAv: string;
+    sistEndret?: Date;
+    sistEndretAv?: string;
+
+    arbeidstidBehov: ArbeidstidBehov;
+    fysiskeBehov: FysiskBehov[];
+    arbeidsmiljøBehov: ArbeidsmijøBehov[];
+    grunnleggendeBehov: GrunnleggendeBehov[];
 }
 
 export default Kandidat;

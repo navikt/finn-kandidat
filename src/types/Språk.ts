@@ -1,5 +1,5 @@
 enum Språk {
-    'BOKMÅL' = 'nb-NO',
+    Bokmål = 'nb-NO',
 }
 
 export default Språk;

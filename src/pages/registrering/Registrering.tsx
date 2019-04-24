@@ -2,16 +2,16 @@ import React, { useState, FormEvent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { Input } from 'nav-frontend-skjema';
 import { withRouter, RouteComponentProps } from 'react-router';
+import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
 import { AppRoute } from '../../utils/paths';
+import { FysiskBehov, ArbeidstidBehov } from '../../types/Behov';
 import { postKandidat } from '../../api/api';
-import Arbeidssituasjon from './arbeidssituasjon/Arbeidssituasjon';
+import Arbeidstid from './arbeidstid/Arbeidstid';
 import bemHelper from '../../utils/bemHelper';
-import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
-import Fysisk from '../../types/FysiskTilrettelegging';
-import FysiskTilrettelegging from './fysisk-tilrettelegging/FysiskTilrettelegging';
+import Fysisk from './fysisk/Fysisk';
+import Kandidat from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
-import Situasjon from '../../types/Arbeidssituasjon';
 import Tilbake from '../../components/tilbake/Tilbake';
 import './registrering.less';
 
@@ -19,17 +19,21 @@ const cls = bemHelper('registrering');
 
 const Registrering = (props: RouteComponentProps) => {
     const [fnr, setFnr] = useState<string>('');
-    const [arbeidssituasjon, setArbeidssituasjon] = useState<Situasjon>(Situasjon.IKKE_VALGT);
-    const [fysiskTilrettelegging, setFysiskTilrettelegging] = useState<Fysisk[]>([]);
+    const [arbeidstidBehov, setArbeidstidBehov] = useState<ArbeidstidBehov>(
+        ArbeidstidBehov.IkkeValgt
+    );
+    const [fysiskeBehov, setFysiskeBehov] = useState<FysiskBehov[]>([]);
     const [isSubmitting, setSubmitting] = useState<boolean>(false);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const kandidat = {
+        const kandidat: Kandidat = {
             fnr,
-            arbeidssituasjon,
-            fysiskTilrettelegging,
+            arbeidstidBehov,
+            fysiskeBehov,
+            grunnleggendeBehov: [],
+            arbeidsmiljøBehov: [],
             sistEndret: new Date(),
             sistEndretAv: 'A123456',
         };
@@ -66,19 +70,16 @@ const Registrering = (props: RouteComponentProps) => {
 
                     <section className="blokk-s">
                         <Ekspanderbartpanel apen tittel="Arbeidstid og arbeidskapasitet">
-                            <Arbeidssituasjon
-                                valgtAlternativ={arbeidssituasjon}
-                                onChange={setArbeidssituasjon}
+                            <Arbeidstid
+                                valgtAlternativ={arbeidstidBehov}
+                                onChange={setArbeidstidBehov}
                             />
                         </Ekspanderbartpanel>
                     </section>
 
                     <section className="blokk-s">
                         <Ekspanderbartpanel apen tittel="Fysisk tilrettelegging">
-                            <FysiskTilrettelegging
-                                valgteAlternativer={fysiskTilrettelegging}
-                                onChange={setFysiskTilrettelegging}
-                            />
+                            <Fysisk valgteAlternativer={fysiskeBehov} onChange={setFysiskeBehov} />
                         </Ekspanderbartpanel>
                     </section>
 

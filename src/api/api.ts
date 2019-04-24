@@ -1,7 +1,7 @@
-import { isDevelopment } from '../utils/environment';
 import { APP_ROOT } from '../utils/paths';
+import { ArbeidstidBehov } from '../types/Behov';
+import { isDevelopment } from '../utils/environment';
 import Kandidat from '../types/Kandidat';
-import Arbeidssituasjon from '../types/Arbeidssituasjon';
 
 const API_BASE_URL = '/finn-kandidat-api';
 const API_LOGIN = `${APP_ROOT}/redirect-til-login`;
@@ -32,10 +32,13 @@ export const hentHelloWorld = async (): Promise<string> => {
 export const hentKandidater = (): Promise<Kandidat[]> => {
     const kandidater: Kandidat[] = ['12125012345', '12125012346', '12125012347'].map(fnr => ({
         fnr,
-        fysiskTilrettelegging: [],
-        arbeidssituasjon: Arbeidssituasjon.IKKE_VALGT,
         sistEndretAv: 'MD57773',
         sistEndret: new Date(),
+
+        arbeidstidBehov: ArbeidstidBehov.IkkeValgt,
+        fysiskeBehov: [],
+        grunnleggendeBehov: [],
+        arbeidsmiljøBehov: [],
     }));
 
     return new Promise(resolve => {

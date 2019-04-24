@@ -27,7 +27,8 @@ const Kandidatliste = ({ filtrerteKandidater }: Props) => (
                     <div className={cls.classNames(cls.element('rad'), 'lenkepanel__heading')}>
                         <span aria-labelledby={KolonneID.FNR}>{fnr}</span>
                         <span aria-labelledby={KolonneID.SIST_ENDRET}>
-                            {sistEndret.toLocaleDateString(Språk.BOKMÅL, sistEndretFormat)}
+                            {sistEndret &&
+                                sistEndret.toLocaleDateString(Språk.Bokmål, sistEndretFormat)}
                         </span>
                         <span aria-labelledby={KolonneID.SIST_ENDRET_AV}>{sistEndretAv}</span>
                     </div>

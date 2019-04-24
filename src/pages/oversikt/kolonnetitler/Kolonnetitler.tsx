@@ -1,6 +1,4 @@
 import React, { ReactNode } from 'react';
-import { Element } from 'nav-frontend-typografi';
-
 import bemHelper from '../../../utils/bemHelper';
 import './kolonnetitler.less';
 
