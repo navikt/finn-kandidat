@@ -1,56 +1,42 @@
-import { APP_ROOT } from '../utils/paths';
-import { ArbeidstidBehov } from '../types/Behov';
-import { isDevelopment } from '../utils/environment';
 import Kandidat from '../types/Kandidat';
+import initialize from './initialize';
 
-const API_BASE_URL = '/finn-kandidat-api';
-const API_LOGIN = `${APP_ROOT}/redirect-til-login`;
-const LOCAL_LOGIN = `http://localhost:8080/finn-kandidat-api/local/isso-login?redirect=http://localhost:3000/${APP_ROOT}`;
+const api = initialize('/finn-kandidat-api');
 
-const redirectToLogin = () => {
-    window.location.href = isDevelopment() ? LOCAL_LOGIN : API_LOGIN;
-};
+const parseSistEndretDato = (kandidat: Kandidat) => {
+    const sistEndret = kandidat.sistEndret ? new Date(kandidat.sistEndret) : undefined;
 
-const redirectUnauthorized = (status: number) => {
-    if (status === 401) {
-        redirectToLogin();
-    }
+    return {
+        ...kandidat,
+        sistEndret,
+    };
 };
 
 export const hentHelloWorld = async (): Promise<string> => {
-    const respons = await fetch(`${API_BASE_URL}/hello-world`);
-
-    redirectUnauthorized(respons.status);
-
-    if (respons.ok) {
-        return await respons.text();
-    } else {
+    try {
+        const response = await api.get('/hello-world');
+        return response.data;
+    } catch (error) {
         return 'Feil fra backend';
     }
 };
 
-export const hentKandidater = (): Promise<Kandidat[]> => {
-    const kandidater: Kandidat[] = ['12125012345', '12125012346', '12125012347'].map(fnr => ({
-        fnr,
-        sistEndretAv: 'MD57773',
-        sistEndret: new Date(),
-
-        arbeidstidBehov: ArbeidstidBehov.IkkeValgt,
-        fysiskeBehov: [],
-        grunnleggendeBehov: [],
-        arbeidsmiljøBehov: [],
-    }));
-
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve(kandidater);
-        }, 300);
-    });
+export const hentKandidater = async (): Promise<Kandidat[]> => {
+    try {
+        const response = await api.get('/kandidater');
+        return response.data.map(parseSistEndretDato);
+    } catch (error) {
+        return [];
+    }
 };
 
-export const postKandidat = async (kandidat: Kandidat): Promise<boolean> =>
-    new Promise(resolve => {
-        setTimeout(() => {
-            resolve(true);
-        }, 300);
-    });
+export const postKandidat = async (kandidat: Kandidat): Promise<boolean> => {
+    try {
+        const response = await api.post('/kandidater', kandidat);
+        return response.data;
+    } catch (error) {
+        return error.response;
+    }
+};
+
+export default api;

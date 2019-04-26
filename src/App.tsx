@@ -6,26 +6,21 @@ import Header from './components/header/Header';
 import Oversikt from './pages/oversikt/Oversikt';
 import Registrering from './pages/registrering/Registrering';
 import './styles/app.less';
-import useHelloWorld from './hooks/useHelloWorld';
 
-const App: FunctionComponent = () => {
-    useHelloWorld();
+const App: FunctionComponent = () => (
+    <div className="app">
+        <Normaltekst tag="div">
+            <Router basename={APP_ROOT}>
+                <Header />
 
-    return (
-        <div className="app">
-            <Normaltekst tag="div">
-                <Router basename={APP_ROOT}>
-                    <Header />
-
-                    <Switch>
-                        <Route exact path={AppRoute.OVERSIKT} component={Oversikt} />
-                        <Route exact path={AppRoute.REGISTRERING} component={Registrering} />
-                        <Redirect to={AppRoute.OVERSIKT} />
-                    </Switch>
-                </Router>
-            </Normaltekst>
-        </div>
-    );
-};
+                <Switch>
+                    <Route exact path={AppRoute.OVERSIKT} component={Oversikt} />
+                    <Route exact path={AppRoute.REGISTRERING} component={Registrering} />
+                    <Redirect to={AppRoute.OVERSIKT} />
+                </Switch>
+            </Router>
+        </Normaltekst>
+    </div>
+);
 
 export default App;
