@@ -23,7 +23,7 @@ interface Props {
 const Kandidatliste = ({ filtrerteKandidater }: Props) => (
     <ul className={cls.block}>
         {filtrerteKandidater.length === 0 ? (
-            <IngenKandidater />
+            <IngenKandidater årsak="Ingen kandidater å vise" />
         ) : (
             filtrerteKandidater.map(kandidat => (
                 <Kandidatrad key={kandidat.fnr} kandidat={kandidat} />

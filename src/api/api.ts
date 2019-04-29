@@ -26,7 +26,7 @@ export const hentKandidater = async (): Promise<Kandidat[]> => {
         const response = await api.get('/kandidater');
         return response.data.map(parseSistEndretDato);
     } catch (error) {
-        return [];
+        return Promise.reject(error.response);
     }
 };
 
@@ -35,7 +35,7 @@ export const postKandidat = async (kandidat: Kandidat): Promise<boolean> => {
         const response = await api.post('/kandidater', kandidat);
         return response.data;
     } catch (error) {
-        return error.response;
+        return Promise.reject(error.response);
     }
 };
 

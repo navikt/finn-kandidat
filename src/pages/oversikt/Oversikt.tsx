@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { AxiosResponse } from 'axios';
 import { Element } from 'nav-frontend-typografi';
 import NavFrontendSpinner from 'nav-frontend-spinner';
 
 import { hentKandidater } from '../../api/api';
 import bemHelper from '../../utils/bemHelper';
+import IngenKandidater from './ingen-kandidater/IngenKandidater';
 import Kandidat from '../../types/Kandidat';
 import Kandidatliste from './kandidatliste/Kandidatliste';
 import Kolonnetitler from './kolonnetitler/Kolonnetitler';
@@ -16,13 +18,25 @@ const cls = bemHelper('oversikt');
 const Oversikt = () => {
     const [alleKandidater, setKandidater] = useState<Kandidat[]>([]);
     const [isFetching, toggleFetching] = useState<boolean>(true);
+    const [fetchError, setFetchError] = useState<boolean>(false);
 
     useEffect(() => {
-        hentKandidater().then((kandidater: Kandidat[]) => {
-            setKandidater(kandidater);
-            toggleFetching(false);
-        });
+        hentKandidater()
+            .then((kandidater: Kandidat[]) => {
+                setKandidater(kandidater);
+                toggleFetching(false);
+            })
+            .catch((response: AxiosResponse) => {
+                setFetchError(true);
+            });
     }, []);
+
+    let kandidaterInnhold = <LasterInn />;
+    if (fetchError) {
+        kandidaterInnhold = <IngenKandidater årsak="Kunne ikke hente kandidater" />;
+    } else if (!isFetching) {
+        kandidaterInnhold = <Kandidatliste filtrerteKandidater={alleKandidater} />;
+    }
 
     return (
         <>
@@ -35,11 +49,7 @@ const Oversikt = () => {
                         <NyKandidatKnapp />
                     </div>
                     <Kolonnetitler />
-                    {isFetching ? (
-                        <LasterInn />
-                    ) : (
-                        <Kandidatliste filtrerteKandidater={alleKandidater} />
-                    )}
+                    {kandidaterInnhold}
                 </section>
             </main>
         </>

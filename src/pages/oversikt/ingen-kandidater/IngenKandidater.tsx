@@ -5,9 +5,13 @@ import './ingenKandidater.less';
 
 const cls = bemHelper('ingenKandidater');
 
-const IngenKandidater = () => (
+interface Props {
+    årsak: string;
+}
+
+const IngenKandidater = ({ årsak }: Props) => (
     <Panel border className={cls.block}>
-        Ingen kandidater å vise
+        {årsak}
     </Panel>
 );
 

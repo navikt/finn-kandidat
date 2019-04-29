@@ -21,6 +21,8 @@ const initializeApi = (baseURL: string) => {
         error => {
             if (error.response.status === 401) {
                 redirectToLogin();
+            } else {
+                return Promise.reject(error);
             }
         }
     );
