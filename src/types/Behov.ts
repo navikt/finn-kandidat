@@ -29,7 +29,7 @@ export enum GrunnleggendeBehov {
     SnakkeNorsk = 'SNAKKE_NORSK',
     SkriveNorsk = 'SKRIVE_NORSK',
     LeseNorsk = 'LESE_NORSK',
-    RegningOgTallforstaelse = 'REGNING_OG_TALLFORSTAELSE',
+    RegningOgTallforståelse = 'REGNING_OG_TALLFORSTÅELSE',
     DigitaleFerdigheter = 'DIGITALE_FERDIGHETER',
     AndreUtfordringer = 'ANDRE_UTFORDRINGER',
     VetIkke = 'VET_IKKE',
