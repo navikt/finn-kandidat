@@ -2,8 +2,10 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
+const DEFAULT_PORT = 3000;
+const PORT = process.env.PORT || DEFAULT_PORT;
 const BASE_PATH = '/finn-kandidat';
-const LOCAL_APP = 'http://localhost:3000/finn-kandidat';
+const LOCAL_APP = `http://localhost:${PORT}/finn-kandidat`;
 const LOCAL_LOGIN = `http://localhost:8080/finn-kandidat-api/local/isso-login?redirect=${LOCAL_APP}`;
 
 const buildPath = path.join(__dirname, '../../build');
@@ -22,8 +24,8 @@ const startServer = () => {
         res.sendFile(path.resolve(buildPath, 'index.html'));
     });
 
-    app.listen(3000, () => {
-        console.log('Server listening on port', 3000);
+    app.listen(PORT, () => {
+        console.log('Server listening on port', PORT);
     });
 };
 
