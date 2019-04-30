@@ -33,18 +33,18 @@ const GrunnleggendeFerdigheter = ({ valgteAlternativer, onChange }: Props) => {
                     Mange arbeidsgivere kan tilrettelegge for arbeidstakere som har utfordringer med
                     ferdigheter som for eksempel å snakke norsk.
                 </p>
-                <Fieldset
-                    className={cls.element('alternativer')}
-                    legend="Har du utfordringer med noe av dette?"
-                >
-                    {alternativer.map(({ value, label }) => (
-                        <CheckboxMedBeskrivelse
-                            key={value}
-                            label={label}
-                            checked={valgteAlternativer.includes(value)}
-                            onChange={onAlternativClick(value)}
-                        />
-                    ))}
+                <Fieldset legend="Har du utfordringer med noe av dette?">
+                    <div className={cls.element('alternativer')}>
+                        {alternativer.map(({ value, label }) => (
+                            <CheckboxMedBeskrivelse
+                                className={cls.element('alternativ')}
+                                key={value}
+                                label={label}
+                                checked={valgteAlternativer.includes(value)}
+                                onChange={onAlternativClick(value)}
+                            />
+                        ))}
+                    </div>
                 </Fieldset>
             </Ekspanderbartpanel>
         </section>
