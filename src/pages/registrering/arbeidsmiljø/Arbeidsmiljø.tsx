@@ -2,30 +2,30 @@ import React from 'react';
 import { Fieldset } from 'nav-frontend-skjema';
 import CheckboxMedBeskrivelse from '../../../components/checkbox-med-beskrivelse/CheckboxMedBeskrivelse';
 import alternativer from './alternativer';
-import { FysiskBehov } from '../../../types/Behov';
+import { ArbeidsmijøBehov } from '../../../types/Behov';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
 interface Props {
-    valgteAlternativer: FysiskBehov[];
-    onChange: (value: FysiskBehov[]) => void;
+    valgteAlternativer: ArbeidsmijøBehov[];
+    onChange: (value: ArbeidsmijøBehov[]) => void;
 }
 
-const Fysisk = ({ valgteAlternativer, onChange }: Props) => {
-    const fjernAlternativ = (alternativ: FysiskBehov) =>
+const Arbeidsmiljø = ({ valgteAlternativer, onChange }: Props) => {
+    const fjernAlternativ = (alternativ: ArbeidsmijøBehov) =>
         onChange(valgteAlternativer.filter(valgt => valgt !== alternativ));
 
-    const leggTilAlternativ = (alternativ: FysiskBehov) =>
+    const leggTilAlternativ = (alternativ: ArbeidsmijøBehov) =>
         onChange([...valgteAlternativer, alternativ]);
 
-    const onAlternativClick = (alternativ: FysiskBehov) => () =>
+    const onAlternativClick = (alternativ: ArbeidsmijøBehov) => () =>
         valgteAlternativer.includes(alternativ)
             ? fjernAlternativ(alternativ)
             : leggTilAlternativ(alternativ);
 
     return (
         <section className="blokk-s">
-            <Ekspanderbartpanel apen tittel="Fysisk tilrettelegging">
-                <Fieldset legend="Dersom du har behov for fysisk tilrettelegging, hva bør det legges til rette for?">
+            <Ekspanderbartpanel apen tittel="Arbeidsmiljø">
+                <Fieldset legend="Dersom det er behov for tilrettelegging av arbeidsmiljøet, hvordan bør det tilrettelegges for deg?">
                     {alternativer.map(({ value, label, beskrivelse }) => (
                         <CheckboxMedBeskrivelse
                             key={value}
@@ -41,4 +41,4 @@ const Fysisk = ({ valgteAlternativer, onChange }: Props) => {
     );
 };
 
-export default Fysisk;
+export default Arbeidsmiljø;

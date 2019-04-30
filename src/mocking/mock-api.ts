@@ -18,9 +18,7 @@ const mock = new MockAdapter(api, {
     delayResponse: 300,
 });
 
-mock.onGet('/finn-kandidat-api/hello-world')
-    .reply(200, 'Hello fra axios-mock!')
-    .onGet('/finn-kandidat-api/kandidater')
+mock.onGet('/finn-kandidat-api/kandidater')
     .reply(() => [200, kandidater])
     .onPost('/finn-kandidat-api/kandidater')
     .reply(config => [200, config.data]);

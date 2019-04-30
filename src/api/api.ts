@@ -12,15 +12,6 @@ const parseSistEndretDato = (kandidat: Kandidat) => {
     };
 };
 
-export const hentHelloWorld = async (): Promise<string> => {
-    try {
-        const response = await api.get('/hello-world');
-        return response.data;
-    } catch (error) {
-        return 'Feil fra backend';
-    }
-};
-
 export const hentKandidater = async (): Promise<Kandidat[]> => {
     try {
         const response = await api.get('/kandidater');

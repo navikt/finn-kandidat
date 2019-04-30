@@ -5,7 +5,7 @@ interface Kandidat {
     sistEndret?: Date;
     sistEndretAv?: string;
 
-    arbeidstidBehov: ArbeidstidBehov;
+    arbeidstidBehov?: ArbeidstidBehov;
     fysiskeBehov: FysiskBehov[];
     arbeidsmiljøBehov: ArbeidsmijøBehov[];
     grunnleggendeBehov: GrunnleggendeBehov[];

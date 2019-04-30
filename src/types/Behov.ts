@@ -5,7 +5,6 @@ export enum ArbeidstidBehov {
     BorteFasteDagerEllerTider = 'BORTE_FASTE_DAGER_ELLER_TIDER',
     Fleksibel = 'FLEKSIBEL',
     VetIkke = 'VET_IKKE',
-    IkkeValgt = 'IKKE_VALGT',
 }
 
 export enum FysiskBehov {
@@ -13,7 +12,7 @@ export enum FysiskBehov {
     Ergnonomi = 'ERGONOMI',
     Hørsel = 'HØRSEL',
     Syn = 'SYN',
-    AndreFormer = 'ANDRE_FORMER',
+    AndreFormer = 'ANNET',
     VetIkke = 'VET_IKKE',
 }
 
