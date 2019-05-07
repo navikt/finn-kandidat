@@ -60,7 +60,9 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
                     setFnr={oppdaterFnrOgFjernFeilmelding}
                     feilmelding={feilmelding}
                 />
-                <Hovedknapp onClick={onGåVidereKlikk}>Gå videre</Hovedknapp>
+                <Hovedknapp className={cls.element('knapp')} onClick={onGåVidereKlikk}>
+                    Gå videre
+                </Hovedknapp>
             </main>
         </>
     );
