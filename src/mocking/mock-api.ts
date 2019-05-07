@@ -21,4 +21,6 @@ const mock = new MockAdapter(api, {
 mock.onGet('/finn-kandidat-api/kandidater')
     .reply(() => [200, kandidater])
     .onPost('/finn-kandidat-api/kandidater')
-    .reply(config => [200, config.data]);
+    .reply(config => [200, config.data])
+    .onGet(/\/finn-kandidat-api\/kandidater\/\d+\/skrivetilgang/)
+    .reply(() => [200, true]);

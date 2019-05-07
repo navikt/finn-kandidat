@@ -51,7 +51,7 @@ const Registrering = (props: RouteComponentProps) => {
         setSubmitting(false);
 
         if (respons) {
-            props.history.replace(AppRoute.OVERSIKT);
+            props.history.push(AppRoute.Oversikt);
         }
     };
 
@@ -60,7 +60,7 @@ const Registrering = (props: RouteComponentProps) => {
             <RouteBanner tittel="Ny kandidat" />
 
             <main className={cls.block}>
-                <Tilbake til={AppRoute.OVERSIKT} />
+                <Tilbake til={AppRoute.Oversikt} />
 
                 <form onSubmit={handleSubmit}>
                     <OmKandidaten fnr={fnr} setFnr={setFnr} />

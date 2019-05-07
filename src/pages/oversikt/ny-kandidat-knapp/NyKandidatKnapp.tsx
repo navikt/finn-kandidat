@@ -11,7 +11,7 @@ const cls = bemHelper('nyKandidatKnapp');
 const NyKandidatKnapp = () => (
     <Link
         className={cls.classNames(cls.block, 'knapp', 'knapp--hoved', 'knapp--mini')}
-        to={AppRoute.REGISTRERING}
+        to={AppRoute.Registrering}
     >
         <AddCircle className={cls.element('ikon')} />
         Ny kandidat

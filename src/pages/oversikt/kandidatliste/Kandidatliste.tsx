@@ -39,12 +39,12 @@ const Kandidatrad = ({ kandidat }: { kandidat: Kandidat }) => {
         <li className={cls.element('listElement')}>
             <LenkepanelBase className={cls.element('kandidat')} href={`#${fnr}`}>
                 <div className={cls.classNames(cls.element('rad'), 'lenkepanel__heading')}>
-                    <span aria-labelledby={KolonneID.FNR}>{fnr}</span>
-                    <span aria-labelledby={KolonneID.SIST_ENDRET}>
+                    <span aria-labelledby={KolonneID.Fnr}>{fnr}</span>
+                    <span aria-labelledby={KolonneID.SistEndret}>
                         {sistEndret &&
                             sistEndret.toLocaleDateString(Språk.Bokmål, sistEndretFormat)}
                     </span>
-                    <span aria-labelledby={KolonneID.SIST_ENDRET_AV}>{sistEndretAv}</span>
+                    <span aria-labelledby={KolonneID.SistEndretAv}>{sistEndretAv}</span>
                 </div>
             </LenkepanelBase>
         </li>

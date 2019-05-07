@@ -5,6 +5,7 @@ import { Normaltekst } from 'nav-frontend-typografi';
 import Header from './components/header/Header';
 import Oversikt from './pages/oversikt/Oversikt';
 import Registrering from './pages/registrering/Registrering';
+import FørDuBegynner from './pages/før-du-begynner/FørDuBegynner';
 import './styles/app.less';
 
 const App: FunctionComponent = () => (
@@ -14,9 +15,10 @@ const App: FunctionComponent = () => (
                 <Header />
 
                 <Switch>
-                    <Route exact path={AppRoute.OVERSIKT} component={Oversikt} />
-                    <Route exact path={AppRoute.REGISTRERING} component={Registrering} />
-                    <Redirect to={AppRoute.OVERSIKT} />
+                    <Route exact path={AppRoute.Oversikt} component={Oversikt} />
+                    <Route exact path={`${AppRoute.Registrering}/:fnr`} component={Registrering} />
+                    <Route exact path={AppRoute.FørDuBegynner} component={FørDuBegynner} />
+                    <Redirect to={AppRoute.Oversikt} />
                 </Switch>
             </Router>
         </Normaltekst>

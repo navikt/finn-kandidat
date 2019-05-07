@@ -5,17 +5,17 @@ import './kolonnetitler.less';
 const cls = bemHelper('kolonnetitler');
 
 export enum KolonneID {
-    FNR = 'kandidatFnr',
-    SIST_ENDRET = 'kandidatSistEndret',
-    SIST_ENDRET_AV = 'kandidatSistEndretAv',
+    Fnr = 'kandidatFnr',
+    SistEndret = 'kandidatSistEndret',
+    SistEndretAv = 'kandidatSistEndretAv',
 }
 
 const Kolonnetitler = () => (
     <div className={cls.block}>
         <div className={cls.element('inner')}>
-            <Tittel id={KolonneID.FNR}>Fødselsnummer</Tittel>
-            <Tittel id={KolonneID.SIST_ENDRET}>Sist endret</Tittel>
-            <Tittel id={KolonneID.SIST_ENDRET_AV}>Sist endret av</Tittel>
+            <Tittel id={KolonneID.Fnr}>Fødselsnummer</Tittel>
+            <Tittel id={KolonneID.SistEndret}>Sist endret</Tittel>
+            <Tittel id={KolonneID.SistEndretAv}>Sist endret av</Tittel>
         </div>
     </div>
 );
