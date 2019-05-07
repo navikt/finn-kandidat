@@ -33,7 +33,7 @@ export const postKandidat = async (kandidat: Kandidat): Promise<boolean> => {
 export const hentSkrivetilgang = async (fnr: string): Promise<boolean> => {
     try {
         const respons = await api.get(`/kandidater/${fnr}/skrivetilgang`);
-        return respons.data;
+        return respons.status === 200;
     } catch (error) {
         return Promise.reject(error.respons);
     }
