@@ -1,19 +1,23 @@
 import { FysiskBehov } from '../../../types/Behov';
 
-export const alternativer = [
+export interface FysiskAlternativ {
+    behov: FysiskBehov;
+    label: string;
+    beskrivelse?: string;
+}
+
+export const fysiskeAlternativer: FysiskAlternativ[] = [
     {
-        value: FysiskBehov.Arbeidsstilling,
+        behov: FysiskBehov.Arbeidsstilling,
         label: 'Varierte arbeidsstillinger',
     },
     {
-        value: FysiskBehov.Ergnonomi,
+        behov: FysiskBehov.Ergnonomi,
         label: 'Ergonomiske tilpasninger',
         beskrivelse: 'For eksempel hev/senk-pult eller tilpassede lys- eller lydforhold',
     },
-    { value: FysiskBehov.Hørsel, label: 'Hørsel' },
-    { value: FysiskBehov.Syn, label: 'Syn' },
-    { value: FysiskBehov.AndreFormer, label: 'Andre former for fysisk tilrettelegging' },
-    { value: FysiskBehov.VetIkke, label: 'Vet ikke' },
+    { behov: FysiskBehov.TungeLøft, label: 'Unngå tunge løft' },
+    { behov: FysiskBehov.Hørsel, label: 'Hørsel' },
+    { behov: FysiskBehov.Syn, label: 'Syn' },
+    { behov: FysiskBehov.AndreFormer, label: 'Andre former for fysisk tilrettelegging' },
 ];
-
-export default alternativer;

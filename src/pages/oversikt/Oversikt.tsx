@@ -12,6 +12,7 @@ import Kolonnetitler from './kolonnetitler/Kolonnetitler';
 import NyKandidatKnapp from './ny-kandidat-knapp/NyKandidatKnapp';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './oversikt.less';
+import Filtrering from './filtrering/Filtrering';
 
 const cls = bemHelper('oversikt');
 
@@ -42,9 +43,11 @@ const Oversikt = () => {
         <>
             <RouteBanner tittel="Kandidatoversikt" />
             <main className={cls.block}>
-                <aside>{/* TODO: Filtrering av kandidater */}</aside>
-                <section>
-                    <div className={cls.element('overKandidatene')}>
+                <aside className={cls.element('filter')}>
+                    <Filtrering />
+                </aside>
+                <section className={cls.element('kandidatliste')}>
+                    <div className={cls.element('antallOgKnapp')}>
                         <Element>{alleKandidater.length} kandidater</Element>
                         <NyKandidatKnapp />
                     </div>

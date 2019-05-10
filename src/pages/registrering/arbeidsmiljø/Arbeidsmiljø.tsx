@@ -1,13 +1,13 @@
 import React from 'react';
 import { Fieldset } from 'nav-frontend-skjema';
 import CheckboxMedBeskrivelse from '../../../components/checkbox-med-beskrivelse/CheckboxMedBeskrivelse';
-import alternativer from './alternativer';
-import { ArbeidsmijøBehov } from '../../../types/Behov';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
+import { arbeidsmiløAlternativer } from './alternativer';
+import { ArbeidsmijøBehov } from '../../../types/Behov';
 
 interface Props {
     valgteAlternativer: ArbeidsmijøBehov[];
-    onChange: (value: ArbeidsmijøBehov[]) => void;
+    onChange: (behov: ArbeidsmijøBehov[]) => void;
 }
 
 const Arbeidsmiljø = ({ valgteAlternativer, onChange }: Props) => {
@@ -25,14 +25,14 @@ const Arbeidsmiljø = ({ valgteAlternativer, onChange }: Props) => {
     return (
         <section className="blokk-s">
             <Ekspanderbartpanel apen tittel="Arbeidsmiljø">
-                <Fieldset legend="Dersom det er behov for tilrettelegging av arbeidsmiljøet, hvordan bør det tilrettelegges for deg?">
-                    {alternativer.map(({ value, label, beskrivelse }) => (
+                <Fieldset legend="Dersom det er behov for tilrettelegging av arbeidsmiljøet, hvordan bør det tilrettelegges for kandidaten?">
+                    {arbeidsmiløAlternativer.map(({ behov, label, beskrivelse }) => (
                         <CheckboxMedBeskrivelse
-                            key={value}
+                            key={behov}
                             label={label}
                             beskrivelse={beskrivelse}
-                            checked={valgteAlternativer.includes(value)}
-                            onChange={onAlternativClick(value)}
+                            checked={valgteAlternativer.includes(behov)}
+                            onChange={onAlternativClick(behov)}
                         />
                     ))}
                 </Fieldset>

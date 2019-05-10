@@ -1,13 +1,13 @@
-import { ArbeidstidBehov } from '../../../types/Behov';
+import { ArbeidstidBehov } from '../../../../types/Behov';
 
-export interface ArbeidstidAlternativ {
+export interface ArbeidstidKriterie {
     behov: ArbeidstidBehov;
     label: string;
 }
 
-export const arbeidstidAlternativer: ArbeidstidAlternativ[] = [
-    { behov: ArbeidstidBehov.KanIkkeJobbe, label: 'Kan ikke jobbe nå' },
-    { behov: ArbeidstidBehov.Heltid, label: 'Heltid' },
+export const arbeidstidKriterier: ArbeidstidKriterie[] = [
+    { behov: ArbeidstidBehov.KanIkkeJobbe, label: 'Ikke kan jobbe nå' },
+    { behov: ArbeidstidBehov.Heltid, label: 'Kan jobbe heltid' },
     {
         behov: ArbeidstidBehov.IkkeHeleDager,
         label: 'Kan jobbe hver ukedag, men ikke hele dager',

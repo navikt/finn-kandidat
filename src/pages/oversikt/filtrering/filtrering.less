@@ -1,0 +1,20 @@
+@import '../../../styles/variables.less';
+
+.filtrering {
+    display: flex;
+    flex-direction: column;
+
+    &__slettKnapp {
+        border: none;
+        background: none;
+        color: @navBla;
+        padding-right: 0;
+        align-self: end;
+        height: 3rem;
+
+        &:hover {
+            text-decoration: underline @navBla;
+            cursor: pointer;
+        }
+    }
+}

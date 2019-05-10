@@ -1,13 +1,13 @@
 import React from 'react';
 import { Fieldset } from 'nav-frontend-skjema';
 import CheckboxMedBeskrivelse from '../../../components/checkbox-med-beskrivelse/CheckboxMedBeskrivelse';
-import alternativer from './alternativer';
-import { FysiskBehov } from '../../../types/Behov';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
+import { fysiskeAlternativer } from './alternativer';
+import { FysiskBehov } from '../../../types/Behov';
 
 interface Props {
     valgteAlternativer: FysiskBehov[];
-    onChange: (value: FysiskBehov[]) => void;
+    onChange: (behov: FysiskBehov[]) => void;
 }
 
 const Fysisk = ({ valgteAlternativer, onChange }: Props) => {
@@ -25,14 +25,14 @@ const Fysisk = ({ valgteAlternativer, onChange }: Props) => {
     return (
         <section className="blokk-s">
             <Ekspanderbartpanel apen tittel="Fysisk tilrettelegging">
-                <Fieldset legend="Dersom du har behov for fysisk tilrettelegging, hva bør det legges til rette for?">
-                    {alternativer.map(({ value, label, beskrivelse }) => (
+                <Fieldset legend="Dersom kandidaten har behov for fysisk tilrettelegging, hva bør det tilrettelegges for?">
+                    {fysiskeAlternativer.map(({ behov, label, beskrivelse }) => (
                         <CheckboxMedBeskrivelse
-                            key={value}
+                            key={behov}
                             label={label}
                             beskrivelse={beskrivelse}
-                            checked={valgteAlternativer.includes(value)}
-                            onChange={onAlternativClick(value)}
+                            checked={valgteAlternativer.includes(behov)}
+                            onChange={onAlternativClick(behov)}
                         />
                     ))}
                 </Fieldset>

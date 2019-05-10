@@ -4,16 +4,15 @@ export enum ArbeidstidBehov {
     IkkeHeleDager = 'IKKE_HELE_DAGER',
     BorteFasteDagerEllerTider = 'BORTE_FASTE_DAGER_ELLER_TIDER',
     Fleksibel = 'FLEKSIBEL',
-    VetIkke = 'VET_IKKE',
 }
 
 export enum FysiskBehov {
     Arbeidsstilling = 'ARBEIDSSTILLING',
     Ergnonomi = 'ERGONOMI',
+    TungeLøft = 'TUNGE_LØFT',
     Hørsel = 'HØRSEL',
     Syn = 'SYN',
     AndreFormer = 'ANNET',
-    VetIkke = 'VET_IKKE',
 }
 
 export enum ArbeidsmijøBehov {
@@ -21,7 +20,6 @@ export enum ArbeidsmijøBehov {
     TilrettelagteArbeidsoppgaver = 'TILRETTELAGTE_ARBEIDSOPPGAVER',
     Fadder = 'FADDER',
     Annet = 'ANNET',
-    VetIkke = 'VET_IKKE',
 }
 
 export enum GrunnleggendeBehov {
@@ -29,7 +27,14 @@ export enum GrunnleggendeBehov {
     SkriveNorsk = 'SKRIVE_NORSK',
     LeseNorsk = 'LESE_NORSK',
     RegningOgTallforståelse = 'REGNING_OG_TALLFORSTÅELSE',
-    DigitaleFerdigheter = 'DIGITALE_FERDIGHETER',
     AndreUtfordringer = 'ANDRE_UTFORDRINGER',
-    VetIkke = 'VET_IKKE',
+}
+
+export type Behov = ArbeidstidBehov | FysiskBehov | ArbeidsmijøBehov | GrunnleggendeBehov;
+
+export enum Behovfelt {
+    arbeidstidBehov = 'arbeidstidBehov',
+    fysiskeBehov = 'fysiskeBehov',
+    arbeidsmiljøBehov = 'arbeidsmiljøBehov',
+    grunnleggendeBehov = 'grunnleggendeBehov',
 }

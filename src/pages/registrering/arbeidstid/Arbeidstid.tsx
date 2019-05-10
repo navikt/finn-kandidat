@@ -1,13 +1,13 @@
 import React from 'react';
 import { Fieldset, Radio } from 'nav-frontend-skjema';
 
-import { ArbeidstidBehov } from '../../../types/Behov';
-import alternativer from './alternativer';
+import { arbeidstidAlternativer } from './alternativer';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
+import { ArbeidstidBehov } from '../../../types/Behov';
 
 interface Props {
     valgtAlternativ?: ArbeidstidBehov;
-    onChange: (value: ArbeidstidBehov) => void;
+    onChange: (behov: ArbeidstidBehov) => void;
 }
 
 const Arbeidstid = ({ valgtAlternativ, onChange }: Props) => (
@@ -18,15 +18,15 @@ const Arbeidstid = ({ valgtAlternativ, onChange }: Props) => (
                 har ansvar for å forsørge et familiemedlem eller at man må gå til behandling. Mange
                 arbeidsgivere kan tilrettelegge for dette.
             </p>
-            <Fieldset legend="Hvilken arbeidssituasjon passer deg best?">
-                {alternativer.map(({ value, label }) => (
+            <Fieldset legend="Hvilken arbeidssituasjon passer kandidaten best akkurat nå?">
+                {arbeidstidAlternativer.map(({ behov, label }) => (
                     <Radio
                         name="arbeidssituasjon"
-                        key={value}
+                        key={behov}
                         label={label}
-                        value={value}
-                        checked={valgtAlternativ === value}
-                        onChange={() => onChange(value)}
+                        value={behov}
+                        checked={valgtAlternativ === behov}
+                        onChange={() => onChange(behov)}
                     />
                 ))}
             </Fieldset>

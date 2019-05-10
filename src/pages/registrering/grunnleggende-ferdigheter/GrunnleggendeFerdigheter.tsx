@@ -1,15 +1,15 @@
 import React from 'react';
 import { Fieldset } from 'nav-frontend-skjema';
 import CheckboxMedBeskrivelse from '../../../components/checkbox-med-beskrivelse/CheckboxMedBeskrivelse';
-import alternativer from './alternativer';
-import { GrunnleggendeBehov } from '../../../types/Behov';
 import bemHelper from '../../../utils/bemHelper';
 import './grunnleggendeFerdigheter.less';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
+import { grunnleggendeAlternativer } from './alternativer';
+import { GrunnleggendeBehov } from '../../../types/Behov';
 
 interface Props {
     valgteAlternativer: GrunnleggendeBehov[];
-    onChange: (value: GrunnleggendeBehov[]) => void;
+    onChange: (behov: GrunnleggendeBehov[]) => void;
 }
 
 const cls = bemHelper('grunnleggendeFerdigheter');
@@ -33,15 +33,15 @@ const GrunnleggendeFerdigheter = ({ valgteAlternativer, onChange }: Props) => {
                     Mange arbeidsgivere kan tilrettelegge for arbeidstakere som har utfordringer med
                     ferdigheter som for eksempel å snakke norsk.
                 </p>
-                <Fieldset legend="Har du utfordringer med noe av dette?">
+                <Fieldset legend="Har kandidaten utfordringer med noe av dette?">
                     <div className={cls.element('alternativer')}>
-                        {alternativer.map(({ value, label }) => (
+                        {grunnleggendeAlternativer.map(({ behov, label }) => (
                             <CheckboxMedBeskrivelse
                                 className={cls.element('alternativ')}
-                                key={value}
+                                key={behov}
                                 label={label}
-                                checked={valgteAlternativer.includes(value)}
-                                onChange={onAlternativClick(value)}
+                                checked={valgteAlternativer.includes(behov)}
+                                onChange={onAlternativClick(behov)}
                             />
                         ))}
                     </div>

@@ -1,4 +1,4 @@
-import { ArbeidstidBehov, FysiskBehov, ArbeidsmijøBehov, GrunnleggendeBehov } from './Behov';
+import { ArbeidsmijøBehov, ArbeidstidBehov, FysiskBehov, GrunnleggendeBehov } from './Behov';
 
 interface Kandidat {
     fnr: string;

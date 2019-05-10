@@ -1,16 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
-import { Input } from 'nav-frontend-skjema';
 import { withRouter, RouteComponentProps } from 'react-router';
-import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
-
 import { AppRoute } from '../../utils/paths';
-import {
-    FysiskBehov,
-    ArbeidstidBehov,
-    ArbeidsmijøBehov,
-    GrunnleggendeBehov,
-} from '../../types/Behov';
 import { postKandidat } from '../../api/api';
 import Arbeidstid from './arbeidstid/Arbeidstid';
 import bemHelper from '../../utils/bemHelper';
@@ -22,6 +13,12 @@ import './registrering.less';
 import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
 import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
 import OmKandidaten from './om-kandidaten/OmKandidaten';
+import {
+    ArbeidsmijøBehov,
+    ArbeidstidBehov,
+    FysiskBehov,
+    GrunnleggendeBehov,
+} from '../../types/Behov';
 
 const cls = bemHelper('registrering');
 

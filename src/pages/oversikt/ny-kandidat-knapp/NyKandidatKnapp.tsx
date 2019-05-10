@@ -14,7 +14,7 @@ const NyKandidatKnapp = () => (
         to={AppRoute.FørDuBegynner}
     >
         <AddCircle className={cls.element('ikon')} />
-        Ny kandidat
+        Registrer tilretteleggingsbehov
     </Link>
 );
 

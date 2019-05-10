@@ -1,21 +1,23 @@
 import { GrunnleggendeBehov } from '../../../types/Behov';
 
-export const alternativer = [
+export interface GrunnleggendeAlternativ {
+    behov: GrunnleggendeBehov;
+    label: string;
+}
+
+export const grunnleggendeAlternativer: GrunnleggendeAlternativ[] = [
     {
-        value: GrunnleggendeBehov.SnakkeNorsk,
+        behov: GrunnleggendeBehov.SnakkeNorsk,
         label: 'Snakke norsk',
     },
     {
-        value: GrunnleggendeBehov.SkriveNorsk,
+        behov: GrunnleggendeBehov.SkriveNorsk,
         label: 'Skrive norsk',
     },
     {
-        value: GrunnleggendeBehov.LeseNorsk,
+        behov: GrunnleggendeBehov.LeseNorsk,
         label: 'Lese norsk',
     },
-    { value: GrunnleggendeBehov.RegningOgTallforståelse, label: 'Regning og tallforståelse' },
-    { value: GrunnleggendeBehov.DigitaleFerdigheter, label: 'Digitale ferdigheter' },
-    { value: GrunnleggendeBehov.AndreUtfordringer, label: 'Andre utfordringer' },
+    { behov: GrunnleggendeBehov.RegningOgTallforståelse, label: 'Regning og tallforståelse' },
+    { behov: GrunnleggendeBehov.AndreUtfordringer, label: 'Andre utfordringer' },
 ];
-
-export default alternativer;
