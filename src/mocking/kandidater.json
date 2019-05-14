@@ -1,15 +1,15 @@
 [
     {
-        "fnr": "07081921645",
+        "fnr": "07089421688",
         "sistEndret": "2019-03-23T18:26:51.242Z",
         "sistEndretAv": "U595221",
-        "arbeidstidBehov": "",
-        "fysiskeBehov": [],
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["HØRSEL", "SYN"],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "fnr": "08031944242",
+        "fnr": "08039146283",
         "sistEndret": "2019-03-01T10:54:35.609Z",
         "sistEndretAv": "X972777",
         "arbeidstidBehov": "",
@@ -18,7 +18,7 @@
         "arbeidsmiljøBehov": []
     },
     {
-        "fnr": "14091976047",
+        "fnr": "14099676079",
         "sistEndret": "2019-01-22T09:01:22.939Z",
         "sistEndretAv": "S147051",
         "arbeidstidBehov": "",
@@ -27,7 +27,7 @@
         "arbeidsmiljøBehov": []
     },
     {
-        "fnr": "11081908412",
+        "fnr": "11089828424",
         "sistEndret": "2019-04-01T04:48:16.712Z",
         "sistEndretAv": "S434787",
         "arbeidstidBehov": "",
@@ -36,7 +36,7 @@
         "arbeidsmiljøBehov": []
     },
     {
-        "fnr": "28081905620",
+        "fnr": "28088505648",
         "sistEndret": "2019-03-25T19:56:26.170Z",
         "sistEndretAv": "X422058",
         "arbeidstidBehov": "",
@@ -45,7 +45,7 @@
         "arbeidsmiljøBehov": []
     },
     {
-        "fnr": "18111940801",
+        "fnr": "18118140857",
         "sistEndret": "2019-01-08T09:17:02.391Z",
         "sistEndretAv": "O915230",
         "arbeidstidBehov": "",
@@ -54,7 +54,7 @@
         "arbeidsmiljøBehov": []
     },
     {
-        "fnr": "17031957931",
+        "fnr": "17039757915",
         "sistEndret": "2019-03-31T03:42:38.842Z",
         "sistEndretAv": "Z017071",
         "arbeidstidBehov": "",
@@ -63,7 +63,7 @@
         "arbeidsmiljøBehov": []
     },
     {
-        "fnr": "02011920995",
+        "fnr": "02019220918",
         "sistEndret": "2019-01-07T17:33:59.937Z",
         "sistEndretAv": "X007009",
         "arbeidstidBehov": "",

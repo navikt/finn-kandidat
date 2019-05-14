@@ -3,7 +3,7 @@ import './førDuBegynner.less';
 import bemHelper from '../../utils/bemHelper';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import Tilbake from '../../components/tilbake/Tilbake';
-import { AppRoute } from '../../utils/paths';
+import { AppRoute, hentRoute } from '../../utils/paths';
 import InfoBoks from './infoboks/InfoBoks';
 import FnrInput from './fnr-input/FnrInput';
 import { Hovedknapp } from 'nav-frontend-knapper';
@@ -27,8 +27,9 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
 
     const redirectTilRegistreringHvisTilgang = async () => {
         const harSkrivetilgang = await hentSkrivetilgang(fnr);
+
         if (harSkrivetilgang) {
-            props.history.push(`${AppRoute.Registrering}/${fnr}`);
+            props.history.push(hentRoute(AppRoute.Registrering, fnr));
         } else {
             setFeilmelding(
                 'Du har enten ikke tilgang til denne kandidaten eller så finnes ikke kandidaten i systemet'

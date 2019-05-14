@@ -1,28 +1,28 @@
-import { arbeidstidAlternativer } from './arbeidstid/alternativer';
+import arbeidstidSpørsmål from './arbeidstid/arbeidstidSpørsmål';
 import {
     ArbeidsmijøBehov,
     ArbeidstidBehov,
     FysiskBehov,
     GrunnleggendeBehov,
 } from '../../types/Behov';
-import { fysiskeAlternativer } from './fysisk/alternativer';
-import { arbeidsmiløAlternativer } from './arbeidsmiljø/alternativer';
-import { grunnleggendeAlternativer } from './grunnleggende-ferdigheter/alternativer';
+import fysiskeSpørsmål from './fysisk/fysiskSpørsmål';
+import arbeidsmiløSpørsmål from './arbeidsmiljø/arbeidsmiljøSpørsmål';
+import grunnleggendeSpørsmål from './grunnleggende-ferdigheter/grunnleggendeFerdigheterSpørsmål';
 
 test('Arbeidstidalternativ skal inneholde alle behov', () => {
-    alternativSkalInneholdeAlleBehov(arbeidstidAlternativer, ArbeidstidBehov);
+    alternativSkalInneholdeAlleBehov(arbeidstidSpørsmål.svaralternativer, ArbeidstidBehov);
 });
 
 test('Fysiske alternativ skal inneholde alle behov', () => {
-    alternativSkalInneholdeAlleBehov(fysiskeAlternativer, FysiskBehov);
+    alternativSkalInneholdeAlleBehov(fysiskeSpørsmål.svaralternativer, FysiskBehov);
 });
 
 test('Arbeidsmlijøalternativ skal inneholde alle behov', () => {
-    alternativSkalInneholdeAlleBehov(arbeidsmiløAlternativer, ArbeidsmijøBehov);
+    alternativSkalInneholdeAlleBehov(arbeidsmiløSpørsmål.svaralternativer, ArbeidsmijøBehov);
 });
 
 test('Grunnleggende alternativ skal inneholde alle behov', () => {
-    alternativSkalInneholdeAlleBehov(grunnleggendeAlternativer, GrunnleggendeBehov);
+    alternativSkalInneholdeAlleBehov(grunnleggendeSpørsmål.svaralternativer, GrunnleggendeBehov);
 });
 
 const alternativSkalInneholdeAlleBehov = (alternativer: any, alleBehov: any) => {

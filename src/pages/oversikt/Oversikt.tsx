@@ -5,14 +5,14 @@ import NavFrontendSpinner from 'nav-frontend-spinner';
 
 import { hentKandidater } from '../../api/api';
 import bemHelper from '../../utils/bemHelper';
-import IngenKandidater from './ingen-kandidater/IngenKandidater';
+import Filtrering from './filtrering/Filtrering';
 import Kandidat from '../../types/Kandidat';
 import Kandidatliste from './kandidatliste/Kandidatliste';
 import Kolonnetitler from './kolonnetitler/Kolonnetitler';
 import NyKandidatKnapp from './ny-kandidat-knapp/NyKandidatKnapp';
+import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './oversikt.less';
-import Filtrering from './filtrering/Filtrering';
 
 const cls = bemHelper('oversikt');
 
@@ -34,7 +34,7 @@ const Oversikt = () => {
 
     let kandidaterInnhold = <LasterInn />;
     if (fetchError) {
-        kandidaterInnhold = <IngenKandidater årsak="Kunne ikke hente kandidater" />;
+        kandidaterInnhold = <PanelMedTekst tekst="Kunne ikke hente kandidater" />;
     } else if (!isFetching) {
         kandidaterInnhold = <Kandidatliste filtrerteKandidater={alleKandidater} />;
     }

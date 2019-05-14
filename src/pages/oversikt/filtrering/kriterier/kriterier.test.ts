@@ -1,11 +1,11 @@
 import { arbeidstidKriterier } from './arbeidstidKriterier';
-import { arbeidstidAlternativer } from '../../../registrering/arbeidstid/alternativer';
+import arbeidstidAlternativer from '../../../registrering/arbeidstid/arbeidstidSpørsmål';
 import { fysiskeKriterier } from './fysiskeKriterier';
 import { arbeidsmiløKriterier } from './arbeidsmiljøKriterier';
-import { fysiskeAlternativer } from '../../../registrering/fysisk/alternativer';
-import { arbeidsmiløAlternativer } from '../../../registrering/arbeidsmiljø/alternativer';
+import fysiskeAlternativer from '../../../registrering/fysisk/fysiskSpørsmål';
+import arbeidsmiløAlternativer from '../../../registrering/arbeidsmiljø/arbeidsmiljøSpørsmål';
 import { grunnleggendeKriterier } from './grunnleggendeKriterier';
-import { grunnleggendeAlternativer } from '../../../registrering/grunnleggende-ferdigheter/alternativer';
+import grunnleggendeAlternativer from '../../../registrering/grunnleggende-ferdigheter/grunnleggendeFerdigheterSpørsmål';
 import {
     ArbeidsmijøBehov,
     ArbeidstidBehov,
@@ -15,19 +15,19 @@ import {
 import { Kriterie } from '../Filtrering';
 
 test('Skal være like mange arbeidstidkriterier som alternativer', () => {
-    expect(arbeidstidKriterier.length).toBe(arbeidstidAlternativer.length);
+    expect(arbeidstidKriterier.length).toBe(arbeidstidAlternativer.svaralternativer.length);
 });
 
 test('Skal være like mange fysiske kriterier som alternativer', () => {
-    expect(fysiskeKriterier.length).toBe(fysiskeAlternativer.length);
+    expect(fysiskeKriterier.length).toBe(fysiskeAlternativer.svaralternativer.length);
 });
 
 test('Skal være like mange arbeidsmiljøkriterier som alternativer', () => {
-    expect(arbeidsmiløKriterier.length).toBe(arbeidsmiløAlternativer.length);
+    expect(arbeidsmiløKriterier.length).toBe(arbeidsmiløAlternativer.svaralternativer.length);
 });
 
 test('Skal være like mange grunnleggende kriterier som alternativer', () => {
-    expect(grunnleggendeKriterier.length).toBe(grunnleggendeAlternativer.length);
+    expect(grunnleggendeKriterier.length).toBe(grunnleggendeAlternativer.svaralternativer.length);
 });
 
 test('Arbeidstidkriterier skal inneholde alle behov', () => {

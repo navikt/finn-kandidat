@@ -12,6 +12,15 @@ const parseSistEndretDato = (kandidat: Kandidat) => {
     };
 };
 
+export const hentKandidat = async (fnr: string): Promise<Kandidat> => {
+    try {
+        const respons = await api.get(`/kandidater/${fnr}`);
+        return respons.data;
+    } catch (error) {
+        return Promise.reject(error.respons);
+    }
+};
+
 export const hentKandidater = async (): Promise<Kandidat[]> => {
     try {
         const respons = await api.get('/kandidater');

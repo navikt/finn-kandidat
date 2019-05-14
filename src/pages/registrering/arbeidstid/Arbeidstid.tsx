@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fieldset, Radio } from 'nav-frontend-skjema';
 
-import { arbeidstidAlternativer } from './alternativer';
+import arbeidstidSpørsmål from './arbeidstidSpørsmål';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 import { ArbeidstidBehov } from '../../../types/Behov';
 
@@ -12,14 +12,14 @@ interface Props {
 
 const Arbeidstid = ({ valgtAlternativ, onChange }: Props) => (
     <section className="blokk-s">
-        <Ekspanderbartpanel apen tittel="Arbeidstid og arbeidskapasitet">
+        <Ekspanderbartpanel apen tittel={arbeidstidSpørsmål.tittel}>
             <p className="blokk-m">
                 Av og til er det ting som gjør at man ikke kan jobbe 100&nbsp;%. For eksempel at man
                 har ansvar for å forsørge et familiemedlem eller at man må gå til behandling. Mange
                 arbeidsgivere kan tilrettelegge for dette.
             </p>
-            <Fieldset legend="Hvilken arbeidssituasjon passer kandidaten best akkurat nå?">
-                {arbeidstidAlternativer.map(({ behov, label }) => (
+            <Fieldset legend={arbeidstidSpørsmål.spørsmål}>
+                {arbeidstidSpørsmål.svaralternativer.map(({ behov, label }) => (
                     <Radio
                         name="arbeidssituasjon"
                         key={behov}

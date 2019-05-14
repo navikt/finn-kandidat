@@ -47,3 +47,5 @@ export const midlertidigGyldigFnr = (verdi: string): boolean => {
     const mindreEllerLik11Tegn = verdi.length <= 11;
     return (inneholderBareTall && mindreEllerLik11Tegn) || erTom(verdi);
 };
+
+export const formaterFnr = (fnr: string) => [fnr.substr(0, 6), fnr.substr(6)].join(' ');

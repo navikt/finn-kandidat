@@ -1,12 +1,7 @@
 import { ArbeidsmijøBehov } from '../../../types/Behov';
+import Spørsmål from '../Spørsmål';
 
-export interface ArbeidsmiløAlternativ {
-    behov: ArbeidsmijøBehov;
-    label: string;
-    beskrivelse?: string;
-}
-
-export const arbeidsmiløAlternativer: ArbeidsmiløAlternativ[] = [
+const svaralternativer = [
     {
         behov: ArbeidsmijøBehov.TilrettelagtOpplæring,
         label: 'Tilrettelagt opplæring',
@@ -24,3 +19,11 @@ export const arbeidsmiløAlternativer: ArbeidsmiløAlternativ[] = [
     },
     { behov: ArbeidsmijøBehov.Annet, label: 'Andre former for tilrettelegging' },
 ];
+
+const arbeidsmiljøSpørsmål: Spørsmål<ArbeidsmijøBehov> = {
+    tittel: 'Arbeidsmiljø',
+    spørsmål: 'Hvilken arbeidssituasjon passer deg best?',
+    svaralternativer,
+};
+
+export default arbeidsmiljøSpørsmål;

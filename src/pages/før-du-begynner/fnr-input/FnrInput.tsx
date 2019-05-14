@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Undertittel } from 'nav-frontend-typografi';
 import bemHelper from '../../../utils/bemHelper';
 import './fnrInput.less';

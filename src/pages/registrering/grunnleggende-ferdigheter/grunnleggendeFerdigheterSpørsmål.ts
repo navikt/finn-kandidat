@@ -1,11 +1,7 @@
 import { GrunnleggendeBehov } from '../../../types/Behov';
+import Spørsmål from '../Spørsmål';
 
-export interface GrunnleggendeAlternativ {
-    behov: GrunnleggendeBehov;
-    label: string;
-}
-
-export const grunnleggendeAlternativer: GrunnleggendeAlternativ[] = [
+const svaralternativer = [
     {
         behov: GrunnleggendeBehov.SnakkeNorsk,
         label: 'Snakke norsk',
@@ -21,3 +17,11 @@ export const grunnleggendeAlternativer: GrunnleggendeAlternativ[] = [
     { behov: GrunnleggendeBehov.RegningOgTallforståelse, label: 'Regning og tallforståelse' },
     { behov: GrunnleggendeBehov.AndreUtfordringer, label: 'Andre utfordringer' },
 ];
+
+const grunnleggendeFerdigheterSpørsmål: Spørsmål<GrunnleggendeBehov> = {
+    tittel: 'Grunnleggende ferdigheter',
+    spørsmål: 'Har du utfordringer med noe av dette?',
+    svaralternativer,
+};
+
+export default grunnleggendeFerdigheterSpørsmål;

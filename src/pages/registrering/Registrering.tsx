@@ -1,24 +1,25 @@
 import React, { useState, FormEvent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { withRouter, RouteComponentProps } from 'react-router';
+
 import { AppRoute } from '../../utils/paths';
-import { postKandidat } from '../../api/api';
-import Arbeidstid from './arbeidstid/Arbeidstid';
-import bemHelper from '../../utils/bemHelper';
-import Fysisk from './fysisk/Fysisk';
-import Kandidat from '../../types/Kandidat';
-import RouteBanner from '../../components/route-banner/RouteBanner';
-import Tilbake from '../../components/tilbake/Tilbake';
-import './registrering.less';
-import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
-import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
-import OmKandidaten from './om-kandidaten/OmKandidaten';
 import {
     ArbeidsmijøBehov,
     ArbeidstidBehov,
     FysiskBehov,
     GrunnleggendeBehov,
 } from '../../types/Behov';
+import { postKandidat } from '../../api/api';
+import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
+import Arbeidstid from './arbeidstid/Arbeidstid';
+import bemHelper from '../../utils/bemHelper';
+import Fysisk from './fysisk/Fysisk';
+import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
+import Kandidat from '../../types/Kandidat';
+import OmKandidaten from './om-kandidaten/OmKandidaten';
+import RouteBanner from '../../components/route-banner/RouteBanner';
+import Tilbake from '../../components/tilbake/Tilbake';
+import './registrering.less';
 
 const cls = bemHelper('registrering');
 
@@ -35,12 +36,12 @@ const Registrering = (props: RouteComponentProps) => {
 
         const kandidat: Kandidat = {
             fnr,
-            arbeidstidBehov,
             fysiskeBehov,
             arbeidsmiljøBehov,
             grunnleggendeBehov,
-            sistEndret: new Date(),
-            sistEndretAv: 'A123456',
+
+            // TODO: Valider fnr. ArbeidstidBehov bør ikke ha noen default.
+            arbeidstidBehov: arbeidstidBehov || ArbeidstidBehov.Heltid,
         };
 
         setSubmitting(true);

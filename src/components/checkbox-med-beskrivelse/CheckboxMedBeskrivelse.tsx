@@ -12,10 +12,10 @@ interface OwnProps {
 type Props = OwnProps & CheckboxProps;
 
 const CheckboxMedBeskrivelse = (props: Props) => {
-    const { label, checked, onChange, beskrivelse } = props;
+    const { label, checked, onChange, beskrivelse, disabled } = props;
     return (
         <div>
-            <Checkbox label={label} checked={checked} onChange={onChange} />
+            <Checkbox label={label} checked={checked} onChange={onChange} disabled={disabled} />
             {beskrivelse && <div className={cls.element('beskrivelse')}>{beskrivelse}</div>}
         </div>
     );

@@ -33,8 +33,8 @@ export enum GrunnleggendeBehov {
 export type Behov = ArbeidstidBehov | FysiskBehov | ArbeidsmijøBehov | GrunnleggendeBehov;
 
 export enum Behovfelt {
-    arbeidstidBehov = 'arbeidstidBehov',
-    fysiskeBehov = 'fysiskeBehov',
-    arbeidsmiljøBehov = 'arbeidsmiljøBehov',
-    grunnleggendeBehov = 'grunnleggendeBehov',
+    ArbeidstidBehov = 'arbeidstidBehov',
+    FysiskeBehov = 'fysiskeBehov',
+    ArbeidsmiljøBehov = 'arbeidsmiljøBehov',
+    GrunnleggendeBehov = 'grunnleggendeBehov',
 }

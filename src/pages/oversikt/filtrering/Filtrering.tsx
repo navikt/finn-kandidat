@@ -26,10 +26,10 @@ interface ValgteKriterier {
 
 const Filtrering = () => {
     const defaultValgteKriterier: ValgteKriterier = {
-        [Behovfelt.arbeidstidBehov]: [],
-        [Behovfelt.fysiskeBehov]: [],
-        [Behovfelt.arbeidsmiljøBehov]: [],
-        [Behovfelt.grunnleggendeBehov]: [],
+        [Behovfelt.ArbeidstidBehov]: [],
+        [Behovfelt.FysiskeBehov]: [],
+        [Behovfelt.ArbeidsmiljøBehov]: [],
+        [Behovfelt.GrunnleggendeBehov]: [],
     };
 
     const [valgteKriterier, setValgteKriterier] = useState<ValgteKriterier>(defaultValgteKriterier);
@@ -58,7 +58,7 @@ const Filtrering = () => {
             <Filter
                 tittel="Arbeidstid"
                 spørsmål="Finn kandidater som:"
-                type={Behovfelt.arbeidstidBehov}
+                type={Behovfelt.ArbeidstidBehov}
                 kriterier={arbeidstidKriterier}
                 valgteKriterier={valgteKriterier.arbeidstidBehov}
                 endreValgteKriterier={endreValgteKriterier}
@@ -66,25 +66,25 @@ const Filtrering = () => {
             <Filter
                 tittel="Fysisk tilrettelegging"
                 spørsmål="Finn kandidater som har behov for:"
-                type={Behovfelt.fysiskeBehov}
+                type={Behovfelt.FysiskeBehov}
                 kriterier={fysiskeKriterier}
-                valgteKriterier={valgteKriterier[Behovfelt.fysiskeBehov]}
+                valgteKriterier={valgteKriterier[Behovfelt.FysiskeBehov]}
                 endreValgteKriterier={endreValgteKriterier}
             />
             <Filter
                 tittel="Arbeidsmiljø"
                 spørsmål="Finn kandidater som har behov for:"
-                type={Behovfelt.arbeidsmiljøBehov}
+                type={Behovfelt.ArbeidsmiljøBehov}
                 kriterier={arbeidsmiløKriterier}
-                valgteKriterier={valgteKriterier[Behovfelt.arbeidsmiljøBehov]}
+                valgteKriterier={valgteKriterier[Behovfelt.ArbeidsmiljøBehov]}
                 endreValgteKriterier={endreValgteKriterier}
             />
             <Filter
                 tittel="Grunnleggende ferdigheter"
                 spørsmål="Finn kandidater som har utfordringer med:"
-                type={Behovfelt.grunnleggendeBehov}
+                type={Behovfelt.GrunnleggendeBehov}
                 kriterier={grunnleggendeKriterier}
-                valgteKriterier={valgteKriterier[Behovfelt.grunnleggendeBehov]}
+                valgteKriterier={valgteKriterier[Behovfelt.GrunnleggendeBehov]}
                 endreValgteKriterier={endreValgteKriterier}
             />
         </div>

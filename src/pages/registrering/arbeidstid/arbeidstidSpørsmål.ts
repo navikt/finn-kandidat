@@ -1,11 +1,7 @@
 import { ArbeidstidBehov } from '../../../types/Behov';
+import Spørsmål from '../Spørsmål';
 
-export interface ArbeidstidAlternativ {
-    behov: ArbeidstidBehov;
-    label: string;
-}
-
-export const arbeidstidAlternativer: ArbeidstidAlternativ[] = [
+const svaralternativer = [
     { behov: ArbeidstidBehov.KanIkkeJobbe, label: 'Kan ikke jobbe nå' },
     { behov: ArbeidstidBehov.Heltid, label: 'Heltid' },
     {
@@ -18,3 +14,11 @@ export const arbeidstidAlternativer: ArbeidstidAlternativ[] = [
     },
     { behov: ArbeidstidBehov.Fleksibel, label: 'Må ha fleksible arbeidsdager' },
 ];
+
+const arbeidstidSpørsmål: Spørsmål<ArbeidstidBehov> = {
+    tittel: 'Arbeidstid og arbeidskapasitet',
+    spørsmål: 'Hvilken arbeidssituasjon passer deg best?',
+    svaralternativer,
+};
+
+export default arbeidstidSpørsmål;

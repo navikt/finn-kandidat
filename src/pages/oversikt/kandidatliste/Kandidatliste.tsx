@@ -1,12 +1,14 @@
 import React from 'react';
 import { LenkepanelBase } from 'nav-frontend-lenkepanel';
+import { Link } from 'react-router-dom';
 
 import { KolonneID } from '../kolonnetitler/Kolonnetitler';
 import bemHelper from '../../../utils/bemHelper';
-import IngenKandidater from '../ingen-kandidater/IngenKandidater';
 import Kandidat from '../../../types/Kandidat';
+import PanelMedTekst from '../../../components/panel-med-tekst/PanelMedTekst';
 import Språk from '../../../types/Språk';
 import './kandidatliste.less';
+import { hentRoute, AppRoute } from '../../../utils/paths';
 
 const cls = bemHelper('kandidatliste');
 
@@ -23,7 +25,7 @@ interface Props {
 const Kandidatliste = ({ filtrerteKandidater }: Props) => (
     <ul className={cls.block}>
         {filtrerteKandidater.length === 0 ? (
-            <IngenKandidater årsak="Ingen kandidater å vise" />
+            <PanelMedTekst tekst="Ingen kandidater å vise" />
         ) : (
             filtrerteKandidater.map(kandidat => (
                 <Kandidatrad key={kandidat.fnr} kandidat={kandidat} />
@@ -35,9 +37,19 @@ const Kandidatliste = ({ filtrerteKandidater }: Props) => (
 const Kandidatrad = ({ kandidat }: { kandidat: Kandidat }) => {
     const { fnr, sistEndret, sistEndretAv } = kandidat;
 
+    const linkCreator = (props: React.HTMLProps<HTMLElement>) => (
+        <Link className={props.className} to={props.href || '#'}>
+            {props.children}
+        </Link>
+    );
+
     return (
         <li className={cls.element('listElement')}>
-            <LenkepanelBase className={cls.element('kandidat')} href={`#${fnr}`}>
+            <LenkepanelBase
+                href={hentRoute(AppRoute.SeKandidat, fnr)}
+                className={cls.element('kandidat')}
+                linkCreator={linkCreator}
+            >
                 <div className={cls.classNames(cls.element('rad'), 'lenkepanel__heading')}>
                     <span aria-labelledby={KolonneID.Fnr}>{fnr}</span>
                     <span aria-labelledby={KolonneID.SistEndret}>
