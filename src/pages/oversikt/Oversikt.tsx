@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { AxiosResponse } from 'axios';
+import React, { useState, useEffect, FunctionComponent } from 'react';
 import { Element } from 'nav-frontend-typografi';
 import NavFrontendSpinner from 'nav-frontend-spinner';
-
 import { hentKandidater } from '../../api/api';
 import bemHelper from '../../utils/bemHelper';
 import Filtrering from './filtrering/Filtrering';
@@ -13,30 +11,44 @@ import NyKandidatKnapp from './ny-kandidat-knapp/NyKandidatKnapp';
 import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './oversikt.less';
+import { RouteComponentProps, withRouter } from 'react-router';
+import { filtrerKandidater, hentFiltreringFraUrl } from './filtrering/filtreringslogikk';
 
 const cls = bemHelper('oversikt');
 
-const Oversikt = () => {
-    const [alleKandidater, setKandidater] = useState<Kandidat[]>([]);
+const Oversikt: FunctionComponent<RouteComponentProps> = () => {
+    const [alleKandidater, setAlleKandidater] = useState<Kandidat[]>([]);
+    const [filtrerteKandidater, setFiltrerteKandidater] = useState<Kandidat[]>([]);
     const [isFetching, toggleFetching] = useState<boolean>(true);
     const [fetchError, setFetchError] = useState<boolean>(false);
 
     useEffect(() => {
         hentKandidater()
             .then((kandidater: Kandidat[]) => {
-                setKandidater(kandidater);
+                setAlleKandidater(kandidater);
+                setFiltrerteKandidater(kandidater);
                 toggleFetching(false);
             })
-            .catch((response: AxiosResponse) => {
+            .catch(() => {
                 setFetchError(true);
             });
     }, []);
+
+    useEffect(
+        () => {
+            const urlParams = location.search;
+            const filtrering = hentFiltreringFraUrl(urlParams);
+            const filtrerteKandidater = filtrerKandidater(alleKandidater, filtrering);
+            setFiltrerteKandidater(filtrerteKandidater);
+        },
+        [location.href]
+    );
 
     let kandidaterInnhold = <LasterInn />;
     if (fetchError) {
         kandidaterInnhold = <PanelMedTekst tekst="Kunne ikke hente kandidater" />;
     } else if (!isFetching) {
-        kandidaterInnhold = <Kandidatliste filtrerteKandidater={alleKandidater} />;
+        kandidaterInnhold = <Kandidatliste filtrerteKandidater={filtrerteKandidater} />;
     }
 
     return (
@@ -48,7 +60,7 @@ const Oversikt = () => {
                 </aside>
                 <section className={cls.element('kandidatliste')}>
                     <div className={cls.element('antallOgKnapp')}>
-                        <Element>{alleKandidater.length} kandidater</Element>
+                        <Element>{filtrerteKandidater.length} kandidater</Element>
                         <NyKandidatKnapp />
                     </div>
                     <Kolonnetitler />
@@ -65,4 +77,4 @@ const LasterInn = () => (
     </div>
 );
 
-export default Oversikt;
+export default withRouter(Oversikt);

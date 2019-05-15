@@ -1,10 +1,10 @@
-import { arbeidstidKriterier } from './arbeidstidKriterier';
+import { arbeidstidKriterier } from '../kriterier/arbeidstidKriterier';
 import arbeidstidAlternativer from '../../../registrering/arbeidstid/arbeidstidSpørsmål';
-import { fysiskeKriterier } from './fysiskeKriterier';
-import { arbeidsmiløKriterier } from './arbeidsmiljøKriterier';
+import { fysiskeKriterier } from '../kriterier/fysiskeKriterier';
+import { arbeidsmiløKriterier } from '../kriterier/arbeidsmiljøKriterier';
 import fysiskeAlternativer from '../../../registrering/fysisk/fysiskSpørsmål';
 import arbeidsmiløAlternativer from '../../../registrering/arbeidsmiljø/arbeidsmiljøSpørsmål';
-import { grunnleggendeKriterier } from './grunnleggendeKriterier';
+import { grunnleggendeKriterier } from '../kriterier/grunnleggendeKriterier';
 import grunnleggendeAlternativer from '../../../registrering/grunnleggende-ferdigheter/grunnleggendeFerdigheterSpørsmål';
 import {
     ArbeidsmijøBehov,

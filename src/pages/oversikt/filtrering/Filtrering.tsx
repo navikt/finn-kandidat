@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Element } from 'nav-frontend-typografi';
 import bemHelper from '../../../utils/bemHelper';
 import './filtrering.less';
@@ -8,6 +8,8 @@ import Filter from './filter/Filter';
 import { fysiskeKriterier, FysiskKriterie } from './kriterier/fysiskeKriterier';
 import { Behov, Behovfelt } from '../../../types/Behov';
 import { ArbeidsmiløKriterie, arbeidsmiløKriterier } from './kriterier/arbeidsmiljøKriterier';
+import { RouteComponentProps, withRouter } from 'react-router';
+import { hentFiltreringFraUrl, lagQueryParams } from './filtreringslogikk';
 
 const cls = bemHelper('filtrering');
 
@@ -17,36 +19,49 @@ export type Kriterie =
     | ArbeidsmiløKriterie
     | GrunnleggendeKriterie;
 
-interface ValgteKriterier {
+export interface ValgteKriterier {
     arbeidstidBehov: Behov[];
     fysiskeBehov: Behov[];
     arbeidsmiljøBehov: Behov[];
     grunnleggendeBehov: Behov[];
 }
 
-const Filtrering = () => {
+const Filtrering: FunctionComponent<RouteComponentProps> = props => {
     const defaultValgteKriterier: ValgteKriterier = {
-        [Behovfelt.ArbeidstidBehov]: [],
-        [Behovfelt.FysiskeBehov]: [],
-        [Behovfelt.ArbeidsmiljøBehov]: [],
-        [Behovfelt.GrunnleggendeBehov]: [],
+        arbeidstidBehov: [],
+        fysiskeBehov: [],
+        arbeidsmiljøBehov: [],
+        grunnleggendeBehov: [],
     };
 
     const [valgteKriterier, setValgteKriterier] = useState<ValgteKriterier>(defaultValgteKriterier);
 
+    useEffect(
+        () => {
+            const urlParams = location.search;
+            const filtrering = hentFiltreringFraUrl(urlParams);
+            setValgteKriterier(filtrering);
+        },
+        [location.search]
+    );
+
     const endreValgteKriterier = (behov: Behov, checked: boolean, type: Behovfelt) => {
-        if (checked) {
-            valgteKriterier[type].push(behov);
+        const urlParams = location.search;
+        let kriterierIUrl: any = hentFiltreringFraUrl(urlParams);
+
+        const kriterieIkkeIUrl = !kriterierIUrl[type].includes(behov);
+        if (checked && kriterieIkkeIUrl) {
+            kriterierIUrl[type].push(behov);
         } else {
-            valgteKriterier[type] = valgteKriterier[type].filter(
-                (alternativIListe: any) => alternativIListe !== behov
-            );
+            kriterierIUrl[type] = kriterierIUrl[type].filter((filter: Behov) => filter !== behov);
         }
-        setValgteKriterier({ ...valgteKriterier });
+
+        const queryParams = lagQueryParams(kriterierIUrl);
+        props.history.replace({ search: queryParams });
     };
 
     const onSlettAlleKlikk = () => {
-        setValgteKriterier(defaultValgteKriterier);
+        props.history.replace({ search: '' });
     };
 
     return (
@@ -91,4 +106,4 @@ const Filtrering = () => {
     );
 };
 
-export default Filtrering;
+export default withRouter(Filtrering);

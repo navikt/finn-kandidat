@@ -30,11 +30,14 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
     const [feilmelding, setFeilmelding] = useState<string | undefined>(undefined);
     const [harSkrivetilgang, settSkrivetilgang] = useState<boolean>(false);
 
-    useEffect(() => {
-        redirectVedUgyldigFnr();
-        hentKandidatEllerVisFeilmelding();
-        sjekkSkrivetilgang();
-    }, [fnr]);
+    useEffect(
+        () => {
+            redirectVedUgyldigFnr();
+            hentKandidatEllerVisFeilmelding();
+            sjekkSkrivetilgang();
+        },
+        [fnr]
+    );
 
     const redirectVedUgyldigFnr = () => {
         const fnrErGyldig = erGyldigFnr(fnr);
