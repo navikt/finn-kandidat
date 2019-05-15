@@ -1,8 +1,8 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, FunctionComponent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { withRouter, RouteComponentProps } from 'react-router';
 
-import { AppRoute, hentRoute } from '../../utils/paths';
+import { AppRoute, hentRoute, MatchProps } from '../../utils/paths';
 import {
     ArbeidsmijøBehov,
     ArbeidstidBehov,
@@ -17,14 +17,14 @@ import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Fysisk from './fysisk/Fysisk';
 import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
 import Kandidat from '../../types/Kandidat';
-import OmKandidaten from './om-kandidaten/OmKandidaten';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './registrering.less';
+import Informasjon from './informasjon/Informasjon';
 
 const cls = bemHelper('registrering');
 
-const Registrering = (props: RouteComponentProps) => {
-    const [fnr, setFnr] = useState<string>('');
+const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ history, match }) => {
+    const fnr = match.params.fnr;
     const [arbeidstidBehov, setArbeidstidBehov] = useState<ArbeidstidBehov | undefined>(undefined);
     const [fysiskeBehov, setFysiskeBehov] = useState<FysiskBehov[]>([]);
     const [arbeidsmiljøBehov, setArbeidsmiljøBehov] = useState<ArbeidsmijøBehov[]>([]);
@@ -40,7 +40,7 @@ const Registrering = (props: RouteComponentProps) => {
             arbeidsmiljøBehov,
             grunnleggendeBehov,
 
-            // TODO: Valider fnr. ArbeidstidBehov bør ikke ha noen default.
+            // TODO: ArbeidstidBehov bør ikke ha noen default.
             arbeidstidBehov: arbeidstidBehov || ArbeidstidBehov.Heltid,
         };
 
@@ -49,19 +49,19 @@ const Registrering = (props: RouteComponentProps) => {
         setSubmitting(false);
 
         if (respons) {
-            props.history.push(hentRoute(AppRoute.SeKandidat, fnr));
+            history.push(hentRoute(AppRoute.SeKandidat, fnr));
         }
     };
 
     return (
         <>
-            <RouteBanner tittel="Ny kandidat" />
+            <RouteBanner tittel="Ny kandidat" undertittel={fnr} />
 
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.Registrering} />
+                <Informasjon />
 
                 <form onSubmit={handleSubmit}>
-                    <OmKandidaten fnr={fnr} setFnr={setFnr} />
                     <Arbeidstid valgtAlternativ={arbeidstidBehov} onChange={setArbeidstidBehov} />
                     <Fysisk valgteAlternativer={fysiskeBehov} onChange={setFysiskeBehov} />
                     <Arbeidsmiljø
