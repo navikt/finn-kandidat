@@ -5,15 +5,15 @@ import { AppRoute, MatchProps } from '../../utils/paths';
 import { formaterFnr, erGyldigFnr } from '../før-du-begynner/fnr-input/fnrUtils';
 import { hentKandidat, hentSkrivetilgang } from '../../api/api';
 import bemHelper from '../../utils/bemHelper';
+import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import EndreKandidat from './endre-kandidat/EndreKandidat';
 import EndreKandidatKnapp from './EndreKandidatKnapp';
 import Kandidat from '../../types/Kandidat';
+import LasterInn from './laster-inn/LasterInn';
 import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import SeKandidat from './se-kandidat/SeKandidat';
-import Tilbake from '../../components/tilbake/Tilbake';
 import './kandidatdetaljer.less';
-import LasterInn from './laster-inn/LasterInn';
 
 const cls = bemHelper('kandidatdetaljer');
 
@@ -83,7 +83,10 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
             <RouteBanner tittel="Kandidat" undertittel={formaterFnr(fnr)} />
             <main className={cls.block}>
                 <div className={cls.element('handlingspanel')}>
-                    <Tilbake til={AppRoute.Oversikt} />
+                    <Brødsmulesti
+                        sidenDuErPå={iEndremodus ? AppRoute.EndreKandidat : AppRoute.SeKandidat}
+                        fnr={fnr}
+                    />
                     {harSkrivetilgang && <EndreKandidatKnapp fnr={fnr} iEndremodus={iEndremodus} />}
                 </div>
 

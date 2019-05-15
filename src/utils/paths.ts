@@ -1,7 +1,8 @@
 export const APP_ROOT = '/finn-kandidat';
 
 export enum AppRoute {
-    Oversikt = '/',
+    Forside = '/',
+    Oversikt = '/oversikt',
     Registrering = '/registrering',
     SeKandidat = '/kandidat/:fnr',
     EndreKandidat = '/kandidat/:fnr/endre',

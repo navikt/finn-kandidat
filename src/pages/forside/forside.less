@@ -1,0 +1,52 @@
+@import '../../styles/variables.less';
+
+.forside {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 48.125rem;
+    margin: 0 auto;
+    padding: 1rem;
+
+    &__introduksjon {
+        color: #3e3832;
+        max-width: 34rem;
+        margin: 1.5rem auto 2.5rem;
+        text-align: center;
+    }
+
+    &__navigasjon {
+        margin-bottom: 1rem;
+    }
+
+    &__lenke {
+        flex: 1;
+        height: 7.125rem;
+        overflow: hidden;
+    }
+
+    &__lenkeinnhold {
+        display: flex;
+        align-items: center;
+    }
+
+    &__lenkeikon {
+        margin-right: 1rem;
+    }
+
+    @media (min-width: @desktop-breakpoint) {
+        padding: 0rem;
+
+        &__navigasjon {
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+        }
+
+        &__lenke {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

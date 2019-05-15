@@ -2,7 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { withRouter, RouteComponentProps } from 'react-router';
 
-import { AppRoute } from '../../utils/paths';
+import { AppRoute, hentRoute } from '../../utils/paths';
 import {
     ArbeidsmijøBehov,
     ArbeidstidBehov,
@@ -13,12 +13,12 @@ import { postKandidat } from '../../api/api';
 import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from './arbeidstid/Arbeidstid';
 import bemHelper from '../../utils/bemHelper';
+import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Fysisk from './fysisk/Fysisk';
 import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
 import Kandidat from '../../types/Kandidat';
 import OmKandidaten from './om-kandidaten/OmKandidaten';
 import RouteBanner from '../../components/route-banner/RouteBanner';
-import Tilbake from '../../components/tilbake/Tilbake';
 import './registrering.less';
 
 const cls = bemHelper('registrering');
@@ -49,7 +49,7 @@ const Registrering = (props: RouteComponentProps) => {
         setSubmitting(false);
 
         if (respons) {
-            props.history.push(AppRoute.Oversikt);
+            props.history.push(hentRoute(AppRoute.SeKandidat, fnr));
         }
     };
 
@@ -58,7 +58,7 @@ const Registrering = (props: RouteComponentProps) => {
             <RouteBanner tittel="Ny kandidat" />
 
             <main className={cls.block}>
-                <Tilbake til={AppRoute.Oversikt} />
+                <Brødsmulesti sidenDuErPå={AppRoute.Registrering} />
 
                 <form onSubmit={handleSubmit}>
                     <OmKandidaten fnr={fnr} setFnr={setFnr} />
