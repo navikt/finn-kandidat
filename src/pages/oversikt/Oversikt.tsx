@@ -53,7 +53,7 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
 
     return (
         <>
-            <RouteBanner tittel="Kandidatoversikt" />
+            <RouteBanner tittel="Finn kandidater med tilretteleggingsbehov" />
             <main className={cls.block}>
                 <aside className={cls.element('filter')}>
                     <Filtrering />

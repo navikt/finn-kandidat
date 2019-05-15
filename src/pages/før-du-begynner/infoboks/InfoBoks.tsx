@@ -7,7 +7,7 @@ import './infoboks.less';
 const InfoBoks = () => {
     return (
         <Veilederpanel type={'plakat'} kompakt svg={<img src={veileder} />}>
-            <Undertittel>Før du begynner</Undertittel>
+            <Undertittel>Viktig informasjon</Undertittel>
             <ul>
                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                 <li>
