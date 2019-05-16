@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Undertittel } from 'nav-frontend-typografi';
+import { Undertittel, Normaltekst } from 'nav-frontend-typografi';
 import bemHelper from '../../../utils/bemHelper';
 import './fnrInput.less';
 import { Input } from 'nav-frontend-skjema';
@@ -23,7 +23,13 @@ const FnrInput: FunctionComponent<Props> = ({ fnr, setFnr, feilmelding }) => {
 
     return (
         <div className={cls.block}>
-            <Undertittel>Registrer ny kandidat</Undertittel>
+            <Undertittel className="blokk-s">
+                Registrer eller endre tilretteleggingsbehov
+            </Undertittel>
+            <Normaltekst className="blokk-m">
+                Du kan kun registrere eller endre tilretteleggingsbehov til kandidater du har
+                tilgang til.
+            </Normaltekst>
             <Input
                 className={cls.element('input')}
                 value={fnr}

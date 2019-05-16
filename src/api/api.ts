@@ -15,7 +15,7 @@ const parseSistEndretDato = (kandidat: Kandidat) => {
 export const hentKandidat = async (fnr: string): Promise<Kandidat> => {
     try {
         const respons = await api.get(`/kandidater/${fnr}`);
-        return respons.data;
+        return parseSistEndretDato(respons.data);
     } catch (error) {
         return Promise.reject(error.respons);
     }

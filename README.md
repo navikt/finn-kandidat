@@ -12,6 +12,12 @@ yarn
 yarn start
 ```
 
+Med mocket API:
+
+```
+yarn mock
+```
+
 ## Regler
 
 ### Vektorgrafikk

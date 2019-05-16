@@ -1,15 +1,15 @@
 import React, { FunctionComponent, useState } from 'react';
-import './førDuBegynner.less';
-import bemHelper from '../../utils/bemHelper';
-import RouteBanner from '../../components/route-banner/RouteBanner';
-import { AppRoute, hentRoute } from '../../utils/paths';
-import InfoBoks from './infoboks/InfoBoks';
-import FnrInput from './fnr-input/FnrInput';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { RouteComponentProps, withRouter } from 'react-router';
-import { hentSkrivetilgang } from '../../api/api';
+
+import { AppRoute, hentRoute } from '../../utils/paths';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
+import { hentSkrivetilgang } from '../../api/api';
+import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
+import FnrInput from './fnr-input/FnrInput';
+import RouteBanner from '../../components/route-banner/RouteBanner';
+import './førDuBegynner.less';
 
 const cls = bemHelper('førDuBegynner');
 
@@ -55,7 +55,6 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
             <RouteBanner tittel="Tilretteleggingsbehov" />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.FørDuBegynner} />
-                <InfoBoks />
                 <FnrInput
                     fnr={fnr}
                     setFnr={oppdaterFnrOgFjernFeilmelding}

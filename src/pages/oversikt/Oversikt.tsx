@@ -22,27 +22,28 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
     const [isFetching, toggleFetching] = useState<boolean>(true);
     const [fetchError, setFetchError] = useState<boolean>(false);
 
-    useEffect(() => {
+    const brukKandidatfilter = (kandidater: Kandidat[]) => {
+        const urlParams = location.search;
+        const filtrering = hentFiltreringFraUrl(urlParams);
+        const filtrerteKandidater = filtrerKandidater(kandidater, filtrering);
+        setFiltrerteKandidater(filtrerteKandidater);
+    };
+
+    const hentAlleKandidater = () => {
         hentKandidater()
             .then((kandidater: Kandidat[]) => {
-                setAlleKandidater(kandidater);
-                setFiltrerteKandidater(kandidater);
                 toggleFetching(false);
+
+                setAlleKandidater(kandidater);
+                brukKandidatfilter(kandidater);
             })
             .catch(() => {
                 setFetchError(true);
             });
-    }, []);
+    };
 
-    useEffect(
-        () => {
-            const urlParams = location.search;
-            const filtrering = hentFiltreringFraUrl(urlParams);
-            const filtrerteKandidater = filtrerKandidater(alleKandidater, filtrering);
-            setFiltrerteKandidater(filtrerteKandidater);
-        },
-        [location.href]
-    );
+    useEffect(hentAlleKandidater, []);
+    useEffect(() => brukKandidatfilter(alleKandidater), [location.href]);
 
     let kandidaterInnhold = <LasterInn />;
     if (fetchError) {

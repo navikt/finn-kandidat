@@ -30,7 +30,7 @@ const RegistrertBehov: FunctionComponent<Props> = ({ spørsmål, svar }) => {
     }
 
     return (
-        <section className="blokk-xxs">
+        <section className="blokk-xs">
             <Ekspanderbartpanel apen tittel={spørsmål.tittel}>
                 <Element>{spørsmål.spørsmål}</Element>
                 <ul className={cls.element('svarliste')}>{registrerteSvar}</ul>

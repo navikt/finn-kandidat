@@ -14,7 +14,7 @@ const cls = bemHelper('forside');
 const Forside: FunctionComponent = () => {
     return (
         <>
-            <RouteBanner tittel="Tilretteleggingsbehov" />
+            <RouteBanner tittel="Finn kandidater med tilretteleggingsbehov" />
             <main className={cls.block}>
                 <span className={cls.element('introduksjon')}>
                     Her kan du registrere tilretteleggingsbehovene til en kandidat og finne
