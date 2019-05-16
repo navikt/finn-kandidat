@@ -22,7 +22,7 @@ const svaralternativer = [
 
 const arbeidsmiljøSpørsmål: Spørsmål<ArbeidsmijøBehov> = {
     tittel: 'Arbeidsmiljø',
-    spørsmål: 'Hvilken arbeidssituasjon passer deg best?',
+    spørsmål: 'Dersom det er behov for tilrettelegging av arbeidsmiljøet, hvordan bør det tilrettelegges for kandidaten?',
     svaralternativer,
 };
 

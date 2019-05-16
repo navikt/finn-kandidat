@@ -28,7 +28,7 @@ const Forside: FunctionComponent = () => {
                     />
                     <Forsidelenke
                         ikon={forstørrelsesglass}
-                        tekst="Finn kandidat"
+                        tekst="Finn kandidater med tilretteleggingsbehov"
                         href={AppRoute.Oversikt}
                     />
                 </nav>

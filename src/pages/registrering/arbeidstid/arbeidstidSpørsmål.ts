@@ -16,8 +16,8 @@ const svaralternativer = [
 ];
 
 const arbeidstidSpørsmål: Spørsmål<ArbeidstidBehov> = {
-    tittel: 'Arbeidstid og arbeidskapasitet',
-    spørsmål: 'Hvilken arbeidssituasjon passer deg best?',
+    tittel: 'Arbeidstid',
+    spørsmål: 'Hvilken arbeidssituasjon passer kandidaten best?',
     svaralternativer,
 };
 

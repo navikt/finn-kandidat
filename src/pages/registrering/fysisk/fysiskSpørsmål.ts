@@ -19,7 +19,7 @@ const svaralternativer = [
 
 const fysiskSpørsmål: Spørsmål<FysiskBehov> = {
     tittel: 'Fysisk tilrettelegging',
-    spørsmål: 'Dersom du har behov for fysisk tilrettelegging, hva bør det legges til rette for?',
+    spørsmål: 'Dersom kandidaten har behov for fysisk tilrettelegging, hva bør det tilrettelegges for?',
     svaralternativer,
 };
 

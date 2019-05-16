@@ -9,6 +9,7 @@ import bemHelper from '../../../utils/bemHelper';
 import Kandidat from '../../../types/Kandidat';
 import PanelMedTekst from '../../../components/panel-med-tekst/PanelMedTekst';
 import './kandidatliste.less';
+import IngenKandidater from './IngenKandidater';
 
 const cls = bemHelper('kandidatliste');
 
@@ -19,7 +20,7 @@ interface Props {
 const Kandidatliste = ({ filtrerteKandidater }: Props) => (
     <ul className={cls.block}>
         {filtrerteKandidater.length === 0 ? (
-            <PanelMedTekst tekst="Ingen kandidater å vise" />
+            <IngenKandidater årsak="Fant ingen kandidater" />
         ) : (
             filtrerteKandidater.map(kandidat => (
                 <Kandidatrad key={kandidat.fnr} kandidat={kandidat} />

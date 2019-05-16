@@ -20,7 +20,7 @@ const svaralternativer = [
 
 const grunnleggendeFerdigheterSpørsmål: Spørsmål<GrunnleggendeBehov> = {
     tittel: 'Grunnleggende ferdigheter',
-    spørsmål: 'Har du utfordringer med noe av dette?',
+    spørsmål: 'Har kandidaten utfordringer med noe av dette?',
     svaralternativer,
 };
 
