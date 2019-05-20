@@ -1,5 +1,14 @@
 [
     {
+        "fnr": "00000000000",
+        "sistEndret": "2019-01-07T16:21:25.878Z",
+        "sistEndretAv": "A679611",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["SYN", "ARBEIDSSTILLING", "ANNET"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
         "fnr": "15057296558",
         "sistEndret": "2019-01-07T16:21:25.878Z",
         "sistEndretAv": "A679611",
