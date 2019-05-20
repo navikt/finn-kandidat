@@ -61,3 +61,7 @@ svg {
     }
 }
 ```
+
+## Opprett mockdata
+
+`src/mocking/kandidater.json` inneholder kandidatene som brukes under mocking. Disse kan regenereres med scriptet under `src/mocking/skapKandidater.ts`. Legg til linjen `console.log(skapKandidater(n));` i `App.tsx`, der *n* er antall kandidater du vil generere. Kjør appen med `yarn mock`, gå til browserkonsollen, kopier log-outputtet og lim det inn i `kandidater.json`. I Chrome kan du kopiere kandidatene ved å høyreklikke, trykke *Store as global variable*, så kjøre `copy(temp1)`.
