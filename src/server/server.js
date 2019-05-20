@@ -20,8 +20,12 @@ const startServer = () => {
         res.redirect(loginUrl);
     });
 
-    app.use(BASE_PATH, (req, res) => {
+    app.use(BASE_PATH, (_, res) => {
         res.sendFile(path.resolve(buildPath, 'index.html'));
+    });
+
+    app.use('/', (_, res) => {
+        res.redirect(BASE_PATH);
     });
 
     app.listen(PORT, () => {
