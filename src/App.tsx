@@ -15,7 +15,7 @@ const App: FunctionComponent = () => (
     <div className="app">
         <Normaltekst tag="div">
             <Router basename={APP_ROOT}>
-                <Header />
+                <Header/>
 
                 <Switch>
                     <Route exact path={AppRoute.Forside} component={Forside} />
