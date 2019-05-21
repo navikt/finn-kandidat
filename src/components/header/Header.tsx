@@ -11,12 +11,12 @@ const cls = bemHelper('header');
 const hentSidetittel = (path: string): string => {
     switch (path.split('/')[1]) {
         case 'oversikt':
-            return "Finner’n";
+            return 'Finner’n';
         case 'for-du-begynner':
         case 'kandidat':
-            return "Kartlegger’n";
+            return 'Kartlegger’n';
         default:
-            return "Tilrettelegger’n";
+            return 'Tilrettelegger’n';
     }
 };
 
