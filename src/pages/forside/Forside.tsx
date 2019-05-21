@@ -14,7 +14,7 @@ const cls = bemHelper('forside');
 const Forside: FunctionComponent = () => {
     return (
         <>
-            <RouteBanner tittel="Tilrettelegger'n" />
+            <RouteBanner tittel="Tilretteleggingsbehov" />
             <main className={cls.block}>
                 <div className={cls.element('container')}>
                     <span className={cls.element('introduksjon')}>
