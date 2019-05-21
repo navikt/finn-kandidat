@@ -81,7 +81,7 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
 
     return (
         <>
-            <RouteBanner tittel="Ny kandidat" undertittel={formaterFnr(fnr)} />
+            <RouteBanner tittel="Kartlegger'n" undertittel={formaterFnr(fnr)} />
 
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.Registrering} />

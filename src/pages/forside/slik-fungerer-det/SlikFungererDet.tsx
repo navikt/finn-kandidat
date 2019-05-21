@@ -15,7 +15,7 @@ const bolker: Informasjonsbolk[] = [
     {
         tittel: 'Hvordan bruke verktøyet?',
         punkter: [
-            'I dette verktøyet kan du registrere tilretteleggingsbehov til kandidater på en strukturert måte. Når du registrerer en kandidat blir denne kandidaten søkbar for andre på kontoret, som kan bruke verktøyet til å finne kandidater med spesifikke tilretteleggingsbehov.',
+            'I dette verktøyet kan du registrere tilretteleggingsbehov til kandidater på en strukturert måte. Når du registrerer en kandidat blir denne kandidaten søkbar for markedskontaktene, som kan bruke verktøyet til å finne kandidater med tilretteleggingsbehov.',
             'Registreringen av tilretteleggingsbehov skal gjøres i forbindelse med en samtale.',
             'Du kan kun registrere tilretteleggingsbehov på dine egne kandidater.',
         ],

@@ -11,7 +11,7 @@ const cls = bemHelper('header');
 const Header = () => (
     <header className={cls.block}>
         <Link to={AppRoute.Forside}>
-            <Sidetittel className={cls.element('tittel')}>“Tilretteleggingsfinnern”</Sidetittel>
+            <Sidetittel className={cls.element('tittel')}>Tilrettelegger'n</Sidetittel>
         </Link>
 
         <div className={cls.element('user')}>
