@@ -52,7 +52,7 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
 
     return (
         <>
-            <RouteBanner tittel="Tilretteleggingsbehov" />
+            <RouteBanner tittel="Registrer eller endre kandidat" />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.FørDuBegynner} />
                 <FnrInput

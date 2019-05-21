@@ -91,7 +91,10 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
 
     return (
         <>
-            <RouteBanner tittel="Kandidat" undertittel={formaterFnr(fnr)} />
+            <RouteBanner
+                tittel={iEndremodus ? 'Endre kandidat' : 'Kandidat'}
+                undertittel={formaterFnr(fnr)}
+            />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={sidenDuErPå} fnr={fnr} />
 
