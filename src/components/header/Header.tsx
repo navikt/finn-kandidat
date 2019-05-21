@@ -14,6 +14,7 @@ const hentSidetittel = (path: string): string => {
             return 'Finner’n';
         case 'for-du-begynner':
         case 'kandidat':
+        case 'registrering':
             return 'Kartlegger’n';
         default:
             return 'Tilrettelegger’n';
