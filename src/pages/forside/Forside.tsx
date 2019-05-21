@@ -6,8 +6,8 @@ import bemHelper from '../../utils/bemHelper';
 import blyant from './blyant.svg';
 import Forsidelenke from './Forsidelenke';
 import forstørrelsesglass from './forstørrelsesglass.svg';
+import SlikFungererDet from './slik-fungerer-det/SlikFungererDet';
 import './forside.less';
-import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
 const cls = bemHelper('forside');
 
@@ -16,25 +16,25 @@ const Forside: FunctionComponent = () => {
         <>
             <RouteBanner tittel="Tilretteleggingsbehov" />
             <main className={cls.block}>
-                <span className={cls.element('introduksjon')}>
-                    Her kan du registrere tilretteleggingsbehovene til en kandidat og finne
-                    kandidater med konkrete behov
-                </span>
-                <nav className={cls.element('navigasjon')}>
-                    <Forsidelenke
-                        ikon={blyant}
-                        tekst="Registrer eller endre tilretteleggingsbehov til kandidat"
-                        href={AppRoute.FørDuBegynner}
-                    />
-                    <Forsidelenke
-                        ikon={forstørrelsesglass}
-                        tekst="Finn kandidater med tilretteleggingsbehov"
-                        href={AppRoute.Oversikt}
-                    />
-                </nav>
-                <Ekspanderbartpanel border tittel="Sånn fungerer det">
-                    Det fungerer bra!
-                </Ekspanderbartpanel>
+                <div className={cls.element('container')}>
+                    <span className={cls.element('introduksjon')}>
+                        Her kan du registrere tilretteleggingsbehovene til en kandidat og finne
+                        kandidater med konkrete behov
+                    </span>
+                    <nav className={cls.element('navigasjon')}>
+                        <Forsidelenke
+                            ikon={blyant}
+                            tekst="Registrer eller endre tilretteleggingsbehov til kandidat"
+                            href={AppRoute.FørDuBegynner}
+                        />
+                        <Forsidelenke
+                            ikon={forstørrelsesglass}
+                            tekst="Finn kandidater med tilretteleggingsbehov"
+                            href={AppRoute.Oversikt}
+                        />
+                    </nav>
+                </div>
+                <SlikFungererDet />
             </main>
         </>
     );

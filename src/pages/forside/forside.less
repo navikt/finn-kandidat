@@ -3,10 +3,15 @@
 .forside {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    max-width: 48.125rem;
-    margin: 0 auto;
-    padding: 1rem;
+
+    &__container {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 1rem;
+        flex-direction: column;
+        max-width: 50.125rem;
+        align-items: stretch;
+    }
 
     &__introduksjon {
         color: #3e3832;
@@ -16,7 +21,7 @@
     }
 
     &__navigasjon {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     &__lenke {
@@ -35,8 +40,6 @@
     }
 
     @media (min-width: @desktop-breakpoint) {
-        padding: 0rem;
-
         &__navigasjon {
             display: flex;
             flex-direction: row;

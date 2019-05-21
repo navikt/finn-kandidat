@@ -21,6 +21,7 @@ import Informasjon from './informasjon/Informasjon';
 import Kandidat from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './registrering.less';
+import { formaterFnr } from '../før-du-begynner/fnr-input/fnrUtils';
 
 const cls = bemHelper('registrering');
 
@@ -80,7 +81,7 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
 
     return (
         <>
-            <RouteBanner tittel="Ny kandidat" undertittel={fnr} />
+            <RouteBanner tittel="Ny kandidat" undertittel={formaterFnr(fnr)} />
 
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.Registrering} />

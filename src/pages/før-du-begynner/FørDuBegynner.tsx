@@ -14,7 +14,7 @@ import './førDuBegynner.less';
 const cls = bemHelper('førDuBegynner');
 
 const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
-    const [fnr, setFnr] = useState<string>('');
+    const [fnr, setFnr] = useState<string>('00000000000'); // TODO: Fjern default fnr
     const [feilmelding, setFeilmelding] = useState<string | undefined>(undefined);
 
     const onGåVidereKlikk = async () => {
