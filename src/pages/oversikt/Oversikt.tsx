@@ -1,8 +1,13 @@
 import React, { useState, useEffect, FunctionComponent } from 'react';
 import { Element } from 'nav-frontend-typografi';
+import { RouteComponentProps, withRouter } from 'react-router';
 import NavFrontendSpinner from 'nav-frontend-spinner';
+
+import { AppRoute } from '../../utils/paths';
+import { filtrerKandidater, hentFiltreringFraUrl } from './filtrering/filtreringslogikk';
 import { hentKandidater } from '../../api/api';
 import bemHelper from '../../utils/bemHelper';
+import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Filtrering from './filtrering/Filtrering';
 import Kandidat from '../../types/Kandidat';
 import Kandidatliste from './kandidatliste/Kandidatliste';
@@ -11,8 +16,6 @@ import NyKandidatKnapp from './ny-kandidat-knapp/NyKandidatKnapp';
 import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './oversikt.less';
-import { RouteComponentProps, withRouter } from 'react-router';
-import { filtrerKandidater, hentFiltreringFraUrl } from './filtrering/filtreringslogikk';
 
 const cls = bemHelper('oversikt');
 
@@ -56,17 +59,20 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
         <>
             <RouteBanner tittel="Finn kandidater med tilretteleggingsbehov" />
             <main className={cls.block}>
-                <aside className={cls.element('filter')}>
-                    <Filtrering />
-                </aside>
-                <section className={cls.element('kandidatliste')}>
-                    <div className={cls.element('antallOgKnapp')}>
-                        <Element>{filtrerteKandidater.length} kandidater</Element>
-                        <NyKandidatKnapp />
-                    </div>
-                    <Kolonnetitler />
-                    {kandidaterInnhold}
-                </section>
+                <Brødsmulesti sidenDuErPå={AppRoute.Oversikt} />
+                <div className={cls.element('filterOgKandidatliste')}>
+                    <aside className={cls.element('filter')}>
+                        <Filtrering />
+                    </aside>
+                    <section className={cls.element('kandidatliste')}>
+                        <div className={cls.element('antallOgKnapp')}>
+                            <Element>{filtrerteKandidater.length} kandidater</Element>
+                            <NyKandidatKnapp />
+                        </div>
+                        <Kolonnetitler />
+                        {kandidaterInnhold}
+                    </section>
+                </div>
             </main>
         </>
     );

@@ -1,12 +1,16 @@
 @import '../../styles/variables.less';
 
-@padding: 1rem;
+@bredde: 70rem;
+@filterbredde: 18rem;
+@minAvstandMellom: 1.5rem;
+@maksAvstandMellom: 7rem;
 
 .oversikt {
+    display: flex;
+    max-width: @bredde;
+    flex-direction: column;
     margin: 0 auto;
-    padding-left: @padding;
-    padding-right: @padding;
-    display: block;
+    padding: 0 1rem;
 
     &__antallOgKnapp {
         display: flex;
@@ -26,17 +30,19 @@
         margin-bottom: 0.5rem;
     }
 
-    @media (min-width: @mobile-breakpoint) {
-        display: flex;
-        justify-content: center;
+    @media (min-width: @tablet-breakpoint) {
+        &__filterOgKandidatliste {
+            display: flex;
+            justify-content: space-between;
+        }
 
         &__filter {
-            width: 18rem;
+            width: @filterbredde;
+            margin-right: @minAvstandMellom;
         }
 
         &__kandidatliste {
-            width: 46rem;
-            margin-left: 5rem;
+            width: @bredde - @filterbredde - @maksAvstandMellom;
         }
     }
 }
