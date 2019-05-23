@@ -2,9 +2,9 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import { Element } from 'nav-frontend-typografi';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
-import { Behov } from '../../../../types/Behov';
-import Spørsmål from '../../../registrering/Spørsmål';
-import bemHelper from '../../../../utils/bemHelper';
+import { Behov } from '../../../../../types/Behov';
+import Spørsmål from '../../../../registrering/Spørsmål';
+import bemHelper from '../../../../../utils/bemHelper';
 import Behovspunkt from './Behovspunkt';
 import './registrertBehov.less';
 

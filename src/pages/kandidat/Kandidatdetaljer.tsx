@@ -2,19 +2,15 @@ import React, { useState, useEffect, FunctionComponent } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 
 import { AppRoute, MatchProps } from '../../utils/paths';
-import { formaterDatoOgTid } from '../../utils/datoUtils';
 import { formaterFnr, erGyldigFnr } from '../før-du-begynner/fnr-input/fnrUtils';
 import { hentKandidat, hentSkrivetilgang } from '../../api/api';
-import AvbrytKnapp from './avbryt-knapp/AvbrytKnapp';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
-import EndreKandidat from './endre-kandidat/EndreKandidat';
-import EndreKandidatKnapp from './endre-kandidat-knapp/EndreKandidatKnapp';
+import Hovedinnhold from './hovedinnhold/Hovedinnhold';
 import Kandidat from '../../types/Kandidat';
-import LasterInn from './laster-inn/LasterInn';
-import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
-import SeKandidat from './se-kandidat/SeKandidat';
+import SistEndretOgKnapper from './sist-endret-og-knapper/SistEndretOgKnapper';
+import SlettKandidatModal from './slett-kandidat-modal/SlettKandidatModal';
 import './kandidatdetaljer.less';
 
 const cls = bemHelper('kandidatdetaljer');
@@ -32,6 +28,7 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
     const [kandidat, setKandidat] = useState<Kandidat | undefined>(undefined);
     const [feilmelding, setFeilmelding] = useState<string | undefined>(undefined);
     const [harSkrivetilgang, settSkrivetilgang] = useState<boolean>(false);
+    const [slettemodalErÅpen, toggleSlettemodal] = useState<boolean>(false);
 
     useEffect(() => {
         redirectVedUgyldigFnr();
@@ -62,33 +59,6 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
         settSkrivetilgang(harTilgang);
     };
 
-    const renderSistEndret = () =>
-        kandidat && kandidat.sistEndret
-            ? `Sist endret ${formaterDatoOgTid(kandidat.sistEndret)} av ${kandidat.sistEndretAv}`
-            : null;
-
-    const renderEndreModusKnapp = () => {
-        if (harSkrivetilgang) {
-            return iEndremodus ? <AvbrytKnapp fnr={fnr} /> : <EndreKandidatKnapp fnr={fnr} />;
-        }
-    };
-
-    const renderHovedinnhold = () => {
-        if (kandidat) {
-            return iEndremodus ? (
-                <EndreKandidat kandidat={kandidat} onKandidatChange={setKandidat} />
-            ) : (
-                <SeKandidat kandidat={kandidat} />
-            );
-        }
-
-        if (feilmelding) {
-            return <PanelMedTekst tekst={feilmelding} />;
-        }
-
-        return <LasterInn />;
-    };
-
     return (
         <>
             <RouteBanner
@@ -97,14 +67,26 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
             />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={sidenDuErPå} fnr={fnr} />
-
-                <div className={cls.element('sistEndretOgKnapper')}>
-                    {renderSistEndret()}
-                    {renderEndreModusKnapp()}
-                </div>
-
-                {renderHovedinnhold()}
+                {kandidat && !feilmelding && (
+                    <SistEndretOgKnapper
+                        kandidat={kandidat}
+                        iEndremodus={iEndremodus}
+                        harSkrivetilgang={harSkrivetilgang}
+                        åpneSlettemodal={() => toggleSlettemodal(true)}
+                    />
+                )}
+                <Hovedinnhold
+                    iEndremodus={iEndremodus}
+                    kandidat={kandidat}
+                    setKandidat={setKandidat}
+                    feilmelding={feilmelding}
+                />
             </main>
+            <SlettKandidatModal
+                erÅpen={slettemodalErÅpen}
+                kandidatensFnr={fnr}
+                lukk={() => toggleSlettemodal(false)}
+            />
         </>
     );
 };

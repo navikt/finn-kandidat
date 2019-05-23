@@ -3,6 +3,7 @@ import { Panel } from 'nav-frontend-paneler';
 
 import bemHelper from '../../utils/bemHelper';
 import './panelMedTekst.less';
+import { Undertittel } from 'nav-frontend-typografi';
 
 const cls = bemHelper('panelMedTekst');
 
@@ -12,7 +13,7 @@ interface Props {
 
 const PanelMedTekst: FunctionComponent<Props> = ({ tekst }) => (
     <Panel border className={cls.block}>
-        {tekst}
+        <Undertittel>{tekst}</Undertittel>
     </Panel>
 );
 

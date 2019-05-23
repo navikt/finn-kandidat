@@ -2,14 +2,14 @@ import React, { useState, FormEvent, FunctionComponent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { withRouter, RouteComponentProps } from 'react-router';
 
-import { AppRoute, hentRoute } from '../../../utils/paths';
-import { Behov, Behovfelt } from '../../../types/Behov';
-import { postKandidat } from '../../../api/api';
-import Arbeidsmiljø from '../../registrering/arbeidsmiljø/Arbeidsmiljø';
-import Arbeidstid from '../../registrering/arbeidstid/Arbeidstid';
-import Fysisk from '../../registrering/fysisk/Fysisk';
-import GrunnleggendeFerdigheter from '../../registrering/grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
-import Kandidat from '../../../types/Kandidat';
+import { AppRoute, hentRoute } from '../../../../utils/paths';
+import { Behov, Behovfelt } from '../../../../types/Behov';
+import { postKandidat } from '../../../../api/api';
+import Arbeidsmiljø from '../../../registrering/arbeidsmiljø/Arbeidsmiljø';
+import Arbeidstid from '../../../registrering/arbeidstid/Arbeidstid';
+import Fysisk from '../../../registrering/fysisk/Fysisk';
+import GrunnleggendeFerdigheter from '../../../registrering/grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
+import Kandidat from '../../../../types/Kandidat';
 
 interface OwnProps {
     kandidat: Kandidat;

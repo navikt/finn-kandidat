@@ -22,13 +22,22 @@ const visAdvarsel = () => {
 
 visAdvarsel();
 
+const hentFnrFraConfig = (config: any) => config.url && config.url.split('/')[3];
+
 mock.onGet(ROUTE_SKRIVETILGANG).reply(() => [200]);
 
 mock.onGet(ROUTE_FNR).reply(config => {
-    const fnrFraRoute = config.url && config.url.split('/')[3];
+    const fnrFraRoute = hentFnrFraConfig(config);
     const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute);
 
     return kandidatFraMock ? [200, kandidatFraMock] : [404];
+});
+
+mock.onDelete(ROUTE_FNR).reply(config => {
+    const fnrFraRoute = hentFnrFraConfig(config);
+    const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute);
+
+    return kandidatFraMock ? [200] : [404];
 });
 
 mock.onGet(ROUTE_KANDIDATER).reply(() => [200, kandidater]);

@@ -2,11 +2,11 @@ import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
-import { hentRoute, AppRoute } from '../../../utils/paths';
-import bemHelper from '../../../utils/bemHelper';
+import { hentRoute, AppRoute } from '../../../../utils/paths';
+import bemHelper from '../../../../utils/bemHelper';
 import './avbrytKnapp.less';
 
-const cls = bemHelper('endreKandidatKnapp');
+const cls = bemHelper('avbrytKnapp');
 const knappCls = bemHelper('knapp');
 
 interface Props {

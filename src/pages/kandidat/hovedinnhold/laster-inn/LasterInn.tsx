@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import NavFrontendSpinner from 'nav-frontend-spinner';
-import bemHelper from '../../../utils/bemHelper';
+import bemHelper from '../../../../utils/bemHelper';
 import './lasterInn.less';
 
 const cls = bemHelper('lasterInn');

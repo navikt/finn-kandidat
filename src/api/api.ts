@@ -39,6 +39,15 @@ export const postKandidat = async (kandidat: Kandidat): Promise<boolean> => {
     }
 };
 
+export const slettKandidat = async (fnr: string): Promise<boolean> => {
+    try {
+        const respons = await api.delete(`/kandidater/${fnr}`);
+        return respons.status === 200;
+    } catch (error) {
+        return Promise.reject(error.respons);
+    }
+};
+
 export const hentSkrivetilgang = async (fnr: string): Promise<boolean> => {
     try {
         const respons = await api.get(`/kandidater/${fnr}/skrivetilgang`);

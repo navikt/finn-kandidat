@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from 'react';
 
-import arbeidsmiljøSpørsmål from '../../registrering/arbeidsmiljø/arbeidsmiljøSpørsmål';
-import arbeidstidSpørsmål from '../../registrering/arbeidstid/arbeidstidSpørsmål';
-import fysiskeSpørsmål from '../../registrering/fysisk/fysiskSpørsmål';
-import grunnleggendeSpørsmål from '../../registrering/grunnleggende-ferdigheter/grunnleggendeFerdigheterSpørsmål';
-import Kandidat from '../../../types/Kandidat';
+import arbeidsmiljøSpørsmål from '../../../registrering/arbeidsmiljø/arbeidsmiljøSpørsmål';
+import arbeidstidSpørsmål from '../../../registrering/arbeidstid/arbeidstidSpørsmål';
+import fysiskeSpørsmål from '../../../registrering/fysisk/fysiskSpørsmål';
+import grunnleggendeSpørsmål from '../../../registrering/grunnleggende-ferdigheter/grunnleggendeFerdigheterSpørsmål';
+import Kandidat from '../../../../types/Kandidat';
 import RegistrertBehov from './registrert-behov/RegistrertBehov';
-import { Behovfelt } from '../../../types/Behov';
+import { Behovfelt } from '../../../../types/Behov';
 
 interface Props {
     kandidat: Kandidat;

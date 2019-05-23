@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import hakesirkel from './hakesirkel.svg';
-import bemHelper from '../../../../utils/bemHelper';
+import bemHelper from '../../../../../utils/bemHelper';
 
 const cls = bemHelper('registrertBehov');
 

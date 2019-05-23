@@ -1,0 +1,33 @@
+@import '../../../styles/variables.less';
+
+.slettKandidatModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 2.5rem 2.5rem;
+    max-width: 30rem;
+
+    &:focus {
+        box-shadow: 0 0 0px 3px #6ea5da;
+    }
+
+    &__tekst {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    &__knapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__feilmelding {
+        margin-top: 2.5rem;
+    }
+
+    .knapp--hoved {
+        margin-top: 3px;
+        margin-right: 1.5rem;
+    }
+}
