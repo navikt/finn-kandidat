@@ -13,6 +13,13 @@ interface Informasjonsbolk {
 
 const bolker: Informasjonsbolk[] = [
     {
+        tittel: 'Hvorfor bruke verktøyet?',
+        punkter: [
+            'Du bidrar til å øke kandidatens muligheter i arbeidsmarkedet.',
+            'Du øker sannsynligheten for at kandidatene får møte en arbeidsgiver som kan tilrettelegge for akkurat deres behov.',
+        ],
+    },
+    {
         tittel: 'Hvordan bruke verktøyet?',
         punkter: [
             'I dette verktøyet kan du registrere tilretteleggingsbehov til kandidater på en strukturert måte. Når du registrerer en kandidat blir denne kandidaten søkbar for markedskontakter, som kan bruke verktøyet til å finne kandidater med tilretteleggingsbehov.',
