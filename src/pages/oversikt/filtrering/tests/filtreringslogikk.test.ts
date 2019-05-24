@@ -62,7 +62,7 @@ test('Ved valgt tilrettelagt opplæring skal kun kandidater som trenger tilrette
     };
 
     const filtrerteKandidater = filtrerKandidater(
-        [testdata.kandidatSomTrengerTilrettelagtOpplæring, testdata.kandidatSomTrengerFadder],
+        [testdata.kandidatSomTrengerTilrettelagtOpplæring, testdata.kandidatSomTrengerMentor],
         filter
     );
 
@@ -131,22 +131,22 @@ test('Ved valgt hørsel og syn skal kandidater har behov for tilrettelegging for
     ]);
 });
 
-test('Ved valgt tunge løft og fadder skal kandidater ikke kan løfte tungt og som trenger fadder vises', () => {
+test('Ved valgt tunge løft og mentor skal kandidater ikke kan løfte tungt og som trenger mentor vises', () => {
     const filter: AlleFilter = {
         arbeidstidBehov: [],
         fysiskeBehov: [FysiskBehov.TungeLøft],
-        arbeidsmiljøBehov: [ArbeidsmijøBehov.Fadder],
+        arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
         grunnleggendeBehov: [],
     };
 
     const filtrerteKandidater = filtrerKandidater(
         [
-            testdata.kandidatSomIkkeKanLøfteTungtOgSomTrengerFadder,
+            testdata.kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor,
             testdata.kandidatSomIkkeKanLøfteTungt,
-            testdata.kandidatSomTrengerFadder,
+            testdata.kandidatSomTrengerMentor,
         ],
         filter
     );
 
-    expect(filtrerteKandidater).toEqual([testdata.kandidatSomIkkeKanLøfteTungtOgSomTrengerFadder]);
+    expect(filtrerteKandidater).toEqual([testdata.kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor]);
 });

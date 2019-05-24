@@ -45,11 +45,11 @@ export const kandidatSomTrengerTilrettelagtOpplæring = {
     grunnleggendeBehov: [],
 };
 
-export const kandidatSomTrengerFadder = {
+export const kandidatSomTrengerMentor = {
     fnr: '',
     arbeidstidBehov: ArbeidstidBehov.Heltid,
     fysiskeBehov: [],
-    arbeidsmiljøBehov: [ArbeidsmijøBehov.Fadder],
+    arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
     grunnleggendeBehov: [],
 };
 
@@ -101,11 +101,11 @@ export const kandidatSomKanSkriveNorsk = {
     grunnleggendeBehov: [GrunnleggendeBehov.SkriveNorsk],
 };
 
-export const kandidatSomIkkeKanLøfteTungtOgSomTrengerFadder = {
+export const kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor = {
     fnr: '',
     arbeidstidBehov: ArbeidstidBehov.Heltid,
     fysiskeBehov: [FysiskBehov.TungeLøft],
-    arbeidsmiljøBehov: [ArbeidsmijøBehov.Fadder],
+    arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
     grunnleggendeBehov: [],
 };
 
@@ -115,12 +115,12 @@ export const noenKandidater = [
     kandidatSomTrengerErgonomiskTilrettelegging,
     kandidatSomIkkeKanLøfteTung,
     kandidatSomTrengerTilrettelagtOpplæring,
-    kandidatSomTrengerFadder,
+    kandidatSomTrengerMentor,
     kandidatSomTrengerTilretteleggingForHørsel,
     kandidatSomTrengerTilretteleggingForSyn,
     kandidatSomIkkeKanLøfteTungt,
     kandidatSomIkkeKanJobbe,
     kandidatSomKanSnakkeNorsk,
     kandidatSomKanSkriveNorsk,
-    kandidatSomIkkeKanLøfteTungtOgSomTrengerFadder,
+    kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor,
 ];

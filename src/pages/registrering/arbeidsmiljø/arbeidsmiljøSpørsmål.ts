@@ -13,7 +13,7 @@ const svaralternativer = [
         beskrivelse: 'For eksempel tydelige oppgaver eller unntak fra noen typer oppgaver',
     },
     {
-        behov: ArbeidsmijøBehov.Fadder,
+        behov: ArbeidsmijøBehov.Mentor,
         label: 'Mentor',
         beskrivelse: 'En egen person med ansvar for tett oppfølging',
     },

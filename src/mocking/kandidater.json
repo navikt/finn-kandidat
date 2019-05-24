@@ -258,7 +258,7 @@
         "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "TILRETTELAGTE_ARBEIDSOPPGAVER", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "TILRETTELAGTE_ARBEIDSOPPGAVER", "MENTOR"]
     },
     {
         "fnr": "17028883560",
@@ -393,7 +393,7 @@
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "MENTOR"]
     },
     {
         "fnr": "16079190741",
@@ -402,7 +402,7 @@
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": [],
         "grunnleggendeBehov": ["SNAKKE_NORSK", "SKRIVE_NORSK", "LESE_NORSK"],
-        "arbeidsmiljøBehov": ["FADDER", "TILRETTELAGTE_ARBEIDSOPPGAVER"]
+        "arbeidsmiljøBehov": ["MENTOR", "TILRETTELAGTE_ARBEIDSOPPGAVER"]
     },
     {
         "fnr": "10059406758",
@@ -483,7 +483,7 @@
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "MENTOR"]
     },
     {
         "fnr": "15017822532",
@@ -492,7 +492,7 @@
         "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "ANNET", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "ANNET", "MENTOR"]
     },
     {
         "fnr": "21038891488",
@@ -879,7 +879,7 @@
         "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["FADDER", "TILRETTELAGTE_ARBEIDSOPPGAVER"]
+        "arbeidsmiljøBehov": ["MENTOR", "TILRETTELAGTE_ARBEIDSOPPGAVER"]
     },
     {
         "fnr": "24017934992",
@@ -951,7 +951,7 @@
         "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": ["ERGONOMI", "HØRSEL", "SYN", "ANNET"],
         "grunnleggendeBehov": ["LESE_NORSK", "SKRIVE_NORSK"],
-        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "MENTOR"]
     },
     {
         "fnr": "20108479109",
@@ -1005,7 +1005,7 @@
         "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": ["HØRSEL", "ARBEIDSSTILLING", "SYN", "ERGONOMI", "ANNET"],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["FADDER"]
+        "arbeidsmiljøBehov": ["MENTOR"]
     },
     {
         "fnr": "17017874535",
@@ -1014,7 +1014,7 @@
         "arbeidstidBehov": "HELTID",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["ANNET", "FADDER", "TILRETTELAGTE_ARBEIDSOPPGAVER"]
+        "arbeidsmiljøBehov": ["ANNET", "MENTOR", "TILRETTELAGTE_ARBEIDSOPPGAVER"]
     },
     {
         "fnr": "23057413352",
@@ -1122,7 +1122,7 @@
         "arbeidstidBehov": "KAN_IKKE_JOBBE",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "MENTOR"]
     },
     {
         "fnr": "10079949820",
@@ -1257,7 +1257,7 @@
         "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["ANNET", "FADDER"]
+        "arbeidsmiljøBehov": ["ANNET", "MENTOR"]
     },
     {
         "fnr": "19028967112",
@@ -1347,7 +1347,7 @@
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": ["SYN"],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "ANNET", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "ANNET", "MENTOR"]
     },
     {
         "fnr": "13118375445",
@@ -1536,7 +1536,7 @@
         "arbeidstidBehov": "KAN_IKKE_JOBBE",
         "fysiskeBehov": ["ANNET"],
         "grunnleggendeBehov": ["ANDRE_UTFORDRINGER"],
-        "arbeidsmiljøBehov": ["FADDER", "TILRETTELAGT_OPPLÆRING"]
+        "arbeidsmiljøBehov": ["MENTOR", "TILRETTELAGT_OPPLÆRING"]
     },
     {
         "fnr": "19058431691",
@@ -1644,7 +1644,7 @@
         "arbeidstidBehov": "HELTID",
         "fysiskeBehov": [],
         "grunnleggendeBehov": ["LESE_NORSK", "REGNING_OG_TALLFORSTÅELSE", "ANDRE_UTFORDRINGER"],
-        "arbeidsmiljøBehov": ["FADDER"]
+        "arbeidsmiljøBehov": ["MENTOR"]
     },
     {
         "fnr": "02077808178",
@@ -1662,7 +1662,7 @@
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": ["HØRSEL", "ERGONOMI", "ARBEIDSSTILLING", "ANNET"],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "FADDER"]
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "MENTOR"]
     },
     {
         "fnr": "22049410151",

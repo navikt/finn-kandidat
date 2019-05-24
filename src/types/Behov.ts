@@ -18,7 +18,7 @@ export enum FysiskBehov {
 export enum ArbeidsmijøBehov {
     TilrettelagtOpplæring = 'TILRETTELAGT_OPPLÆRING',
     TilrettelagteArbeidsoppgaver = 'TILRETTELAGTE_ARBEIDSOPPGAVER',
-    Fadder = 'FADDER',
+    Mentor = 'MENTOR',
     Annet = 'ANNET',
 }
 
