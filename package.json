@@ -63,7 +63,8 @@
         "@types/react-router-dom": "^4.3.2",
         "axios-mock-adapter": "^1.16.0",
         "body-parser": "^1.18.3",
-        "express": "^4.16.4"
+        "express": "^4.16.4",
+        "prettier": "^1.17.1"
     },
     "scripts": {
         "start": "craco start",

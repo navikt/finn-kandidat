@@ -14,7 +14,7 @@ const svaralternativer = [
     },
     {
         behov: ArbeidsmijøBehov.Fadder,
-        label: 'Fadder',
+        label: 'Mentor',
         beskrivelse: 'En egen person med ansvar for tett oppfølging',
     },
     { behov: ArbeidsmijøBehov.Annet, label: 'Andre former for tilrettelegging' },
@@ -22,7 +22,8 @@ const svaralternativer = [
 
 const arbeidsmiljøSpørsmål: Spørsmål<ArbeidsmijøBehov> = {
     tittel: 'Arbeidsmiljø',
-    spørsmål: 'Dersom det er behov for tilrettelegging av arbeidsmiljøet, hvordan bør det tilrettelegges for kandidaten?',
+    spørsmål:
+        'Dersom det er behov for tilrettelegging av arbeidsmiljøet, hvordan bør det tilrettelegges for kandidaten?',
     svaralternativer,
 };
 

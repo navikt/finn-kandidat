@@ -16,7 +16,7 @@ export const arbeidsmiløKriterier: ArbeidsmiløKriterie[] = [
     },
     {
         behov: ArbeidsmijøBehov.Fadder,
-        label: 'Fadder',
+        label: 'Mentor',
     },
     { behov: ArbeidsmijøBehov.Annet, label: 'Andre former for tilrettelegging' },
 ];
