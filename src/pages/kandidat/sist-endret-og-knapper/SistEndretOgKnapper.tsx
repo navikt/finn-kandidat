@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Knapp } from 'nav-frontend-knapper';
+import Lenke from 'nav-frontend-lenker';
 
 import { formaterDatoOgTid } from '../../../utils/datoUtils';
 import AvbrytKnapp from './avbryt-knapp/AvbrytKnapp';
@@ -19,14 +20,11 @@ interface Props {
 const SistEndretOgKnapper: FunctionComponent<Props> = props => {
     const { kandidat, iEndremodus, harSkrivetilgang, åpneSlettemodal } = props;
 
-    const renderSistEndret = () =>
-        kandidat && kandidat.sistEndret
-            ? `Sist endret ${formaterDatoOgTid(kandidat.sistEndret)} av ${kandidat.sistEndretAv}`
-            : null;
-
     return (
         <div className={cls.element('sistEndretOgKnapper')}>
-            {renderSistEndret()}
+            {kandidat.sistEndret && kandidat.sistEndretAv && (
+                <SistEndret sistEndret={kandidat.sistEndret} sistEndretAv={kandidat.sistEndretAv} />
+            )}
             {harSkrivetilgang && (
                 <div className={cls.element('knapper')}>
                     <Knapp mini onClick={åpneSlettemodal} className={cls.element('slettknapp')}>
@@ -40,6 +38,19 @@ const SistEndretOgKnapper: FunctionComponent<Props> = props => {
                 </div>
             )}
         </div>
+    );
+};
+
+const SistEndret = ({ sistEndret, sistEndretAv }: { sistEndret: Date; sistEndretAv: string }) => {
+    const lenkeTilBrukerprofil = `https://navet.adeo.no/medsok/medarbeider/id/${sistEndretAv}`;
+
+    return (
+        <span>
+            <span>Sist endret {formaterDatoOgTid(sistEndret)} av </span>
+            <Lenke className={cls.element('sistEndret')} href={lenkeTilBrukerprofil}>
+                {sistEndretAv}
+            </Lenke>
+        </span>
     );
 };
 
