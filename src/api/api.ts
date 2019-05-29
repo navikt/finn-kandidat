@@ -17,7 +17,7 @@ export const hentKandidat = async (fnr: string): Promise<Kandidat> => {
         const respons = await api.get(`/kandidater/${fnr}`);
         return parseSistEndretDato(respons.data);
     } catch (error) {
-        return Promise.reject(error.respons);
+        return Promise.reject(error.response);
     }
 };
 
@@ -26,7 +26,7 @@ export const hentKandidater = async (): Promise<Kandidat[]> => {
         const respons = await api.get('/kandidater');
         return respons.data.map(parseSistEndretDato);
     } catch (error) {
-        return Promise.reject(error.respons);
+        return Promise.reject(error.response);
     }
 };
 
@@ -35,7 +35,7 @@ export const postKandidat = async (kandidat: Kandidat): Promise<boolean> => {
         const respons = await api.post('/kandidater', kandidat);
         return respons.data;
     } catch (error) {
-        return Promise.reject(error.respons);
+        return Promise.reject(error.response);
     }
 };
 
@@ -44,16 +44,16 @@ export const slettKandidat = async (fnr: string): Promise<boolean> => {
         const respons = await api.delete(`/kandidater/${fnr}`);
         return respons.status === 200;
     } catch (error) {
-        return Promise.reject(error.respons);
+        return Promise.reject(error.response);
     }
 };
 
 export const hentSkrivetilgang = async (fnr: string): Promise<boolean> => {
     try {
-        const respons = await api.get(`/kandidater/${fnr}/skrivetilgang`);
-        return respons.status === 200;
+        await api.get(`/kandidater/${fnr}/skrivetilgang`);
+        return true;
     } catch (error) {
-        return Promise.reject(error.respons);
+        return error.response.status === 403 ? false : Promise.reject(error.response);
     }
 };
 

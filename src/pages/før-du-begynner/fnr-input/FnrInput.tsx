@@ -9,15 +9,15 @@ const cls = bemHelper('fnrInput');
 
 interface Props {
     fnr: string;
-    setFnr: (fnr: string) => void;
+    onFnrChange: (fnr: string) => void;
     feilmelding?: string;
 }
 
-const FnrInput: FunctionComponent<Props> = ({ fnr, setFnr, feilmelding }) => {
+const FnrInput: FunctionComponent<Props> = ({ fnr, onFnrChange, feilmelding }) => {
     const onChange = (event: any) => {
         const verdi = event.currentTarget.value;
         if (midlertidigGyldigFnr(verdi)) {
-            setFnr(verdi);
+            onFnrChange(verdi);
         }
     };
 

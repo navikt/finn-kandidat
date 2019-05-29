@@ -13,41 +13,47 @@ import './førDuBegynner.less';
 
 const cls = bemHelper('førDuBegynner');
 
+enum Feilmelding {
+    TomtFødselsnummer = 'Vennligst fyll ut fødselsnummer',
+    UgyldigFødselsnummer = 'Fødselsnummeret er ugyldig',
+    IngenTilgang = 'Du har enten ikke tilgang til denne kandidaten eller så finnes ikke kandidaten i systemet',
+    Serverfeil = 'Det skjedde dessverre en feil',
+}
+
 const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
     const [fnr, setFnr] = useState<string>('00000000000'); // TODO: Fjern default fnr
-    const [feilmelding, setFeilmelding] = useState<string | undefined>(undefined);
+    const [feilmelding, setFeilmelding] = useState<Feilmelding | undefined>(undefined);
 
-    const onGåVidereKlikk = async () => {
-        if (erGyldigFnr(fnr)) {
-            await redirectTilRegistreringHvisTilgang();
-        } else {
-            settFeilmelding(fnr);
-        }
-    };
-
-    const redirectTilRegistreringHvisTilgang = async () => {
-        const harSkrivetilgang = await hentSkrivetilgang(fnr);
-
-        if (harSkrivetilgang) {
-            props.history.push(hentRoute(AppRoute.Registrering, fnr));
-        } else {
-            setFeilmelding(
-                'Du har enten ikke tilgang til denne kandidaten eller så finnes ikke kandidaten i systemet'
-            );
-        }
-    };
-
-    const settFeilmelding = (fnr: string) => {
-        if (erTom(fnr)) {
-            setFeilmelding('Vennligst fyll ut fødselsnummer');
-        } else if (!erGyldigFnr(fnr)) {
-            setFeilmelding('Fødselsnummeret er ugyldig');
-        }
-    };
-
-    const oppdaterFnrOgFjernFeilmelding = (fnr: string) => {
+    const handleFnrChange = (fnr: string) => {
         setFnr(fnr);
         setFeilmelding(undefined);
+    };
+
+    const onGåVidereClick = () => {
+        if (erGyldigFnr(fnr)) {
+            sjekkTilgangOgRedirect();
+        } else if (erTom(fnr)) {
+            setFeilmelding(Feilmelding.TomtFødselsnummer);
+        } else {
+            setFeilmelding(Feilmelding.UgyldigFødselsnummer);
+        }
+    };
+
+    const sjekkTilgangOgRedirect = async () => {
+        try {
+            const harSkrivetilgang = await hentSkrivetilgang(fnr);
+            if (harSkrivetilgang) {
+                redirectTilRegistrering();
+            } else {
+                setFeilmelding(Feilmelding.IngenTilgang);
+            }
+        } catch (error) {
+            setFeilmelding(Feilmelding.Serverfeil);
+        }
+    };
+
+    const redirectTilRegistrering = () => {
+        props.history.push(hentRoute(AppRoute.Registrering, fnr));
     };
 
     return (
@@ -55,12 +61,8 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
             <RouteBanner tittel="Registrer eller endre kandidat" />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.FørDuBegynner} />
-                <FnrInput
-                    fnr={fnr}
-                    setFnr={oppdaterFnrOgFjernFeilmelding}
-                    feilmelding={feilmelding}
-                />
-                <Hovedknapp className={cls.element('knapp')} onClick={onGåVidereKlikk}>
+                <FnrInput fnr={fnr} onFnrChange={handleFnrChange} feilmelding={feilmelding} />
+                <Hovedknapp className={cls.element('knapp')} onClick={onGåVidereClick}>
                     Gå videre
                 </Hovedknapp>
             </main>
