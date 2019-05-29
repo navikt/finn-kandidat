@@ -4,7 +4,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 import { AppRoute, hentRoute } from '../../utils/paths';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
-import { hentSkrivetilgang } from '../../api/api';
+import { hentSkrivetilgang, hentKandidat } from '../../api/api';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import FnrInput from './fnr-input/FnrInput';
@@ -23,15 +23,23 @@ enum Feilmelding {
 const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
     const [fnr, setFnr] = useState<string>('00000000000'); // TODO: Fjern default fnr
     const [feilmelding, setFeilmelding] = useState<Feilmelding | undefined>(undefined);
+    const [sjekkerTilgangOgEksistens, setSjekkerTilgangOgEksistens] = useState<boolean>();
 
     const handleFnrChange = (fnr: string) => {
         setFnr(fnr);
         setFeilmelding(undefined);
     };
 
-    const onGåVidereClick = () => {
+    const onGåVidereClick = async () => {
         if (erGyldigFnr(fnr)) {
-            sjekkTilgangOgRedirect();
+            setSjekkerTilgangOgEksistens(true);
+
+            const harSkrivetilgang = await sjekkTilgang();
+            if (harSkrivetilgang) {
+                await sjekkEksistensOgRedirect();
+            }
+
+            setSjekkerTilgangOgEksistens(false);
         } else if (erTom(fnr)) {
             setFeilmelding(Feilmelding.TomtFødselsnummer);
         } else {
@@ -39,21 +47,36 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
         }
     };
 
-    const sjekkTilgangOgRedirect = async () => {
+    const sjekkTilgang = async () => {
         try {
-            const harSkrivetilgang = await hentSkrivetilgang(fnr);
-            if (harSkrivetilgang) {
-                redirectTilRegistrering();
+            if (await hentSkrivetilgang(fnr)) {
+                return true;
             } else {
                 setFeilmelding(Feilmelding.IngenTilgang);
             }
         } catch (error) {
             setFeilmelding(Feilmelding.Serverfeil);
         }
+
+        return false;
     };
 
-    const redirectTilRegistrering = () => {
-        props.history.push(hentRoute(AppRoute.Registrering, fnr));
+    const sjekkEksistensOgRedirect = async () => {
+        try {
+            // TODO: Fjern når vi fjerner default fnr
+            if (fnr === '00000000000') {
+                throw new Error();
+            }
+
+            await hentKandidat(fnr);
+            redirectTil(AppRoute.EndreKandidat);
+        } catch (error) {
+            redirectTil(AppRoute.Registrering);
+        }
+    };
+
+    const redirectTil = (route: AppRoute) => {
+        props.history.push(hentRoute(route, fnr));
     };
 
     return (
@@ -62,7 +85,11 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.FørDuBegynner} />
                 <FnrInput fnr={fnr} onFnrChange={handleFnrChange} feilmelding={feilmelding} />
-                <Hovedknapp className={cls.element('knapp')} onClick={onGåVidereClick}>
+                <Hovedknapp
+                    spinner={sjekkerTilgangOgEksistens}
+                    className={cls.element('knapp')}
+                    onClick={onGåVidereClick}
+                >
                     Gå videre
                 </Hovedknapp>
             </main>
