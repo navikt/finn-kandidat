@@ -9,38 +9,12 @@
     padding: 0 2rem;
 
     &__tittel {
-        display: none;
+        display: inline-block;
         font-size: 1.5rem;
         color: @navMorkGra;
 
         &:hover {
             color: @navGra60;
-        }
-    }
-
-    &__user {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .knapp {
-        height: 2rem;
-        padding: 0 1.5rem;
-    }
-
-    @media (min-width: @mobile-breakpoint) {
-        &__tittel {
-            display: inline-block;
-        }
-
-        &__username {
-            margin: 0 1.5rem;
-        }
-
-        &__user {
-            justify-content: flex-end;
         }
     }
 }
