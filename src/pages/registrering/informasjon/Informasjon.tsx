@@ -10,8 +10,8 @@ const cls = bemHelper('informasjon');
 
 const nedtrekksmenyTittel = 'Dette må du informere kandidaten om';
 const nedtrekksmenyPunkter = [
-    'Tilretteleggingsbehovene vil bli brukt til å kartlegge kandidatens muligheter i arbeidsmarkedet.',
-    'NAV har kontakt med arbeidsgivere som kan tilby tilrettelagte stillinger og andre inkluderingsmuligheter. Når kandidaten oppgir sine tilretteleggingsbehov kan NAV kontakte kandidaten dersom en arbeidsgiver kan tilrettelegge for disse.',
+    'Tilretteleggingsbehovene vil bli brukt til å øke kandidatens muligheter i arbeidsmarkedet.',
+    'Ved å oppgi denne informasjonen øker sannsynligheten for at NAV finner en arbeidsgiver som kan tilrettelegge for kandidatens behov.',
     'Kandidaten kan få informasjonen om tilretteleggingsbehov slettet når han eller hun ønsker det ved å kontakte NAV.',
 ];
 

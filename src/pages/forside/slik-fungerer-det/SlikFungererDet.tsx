@@ -24,7 +24,7 @@ const bolker: Informasjonsbolk[] = [
         punkter: [
             'I dette verktøyet kan du registrere tilretteleggingsbehov til kandidater på en strukturert måte. Når du registrerer en kandidat blir denne kandidaten søkbar for markedskontakter, som kan bruke verktøyet til å finne kandidater med tilretteleggingsbehov.',
             'Registreringen av tilretteleggingsbehov skal gjøres i forbindelse med en samtale.',
-            'Du kan kun registrere tilretteleggingsbehov på dine egne kandidater.',
+            'Du kan kun registrere tilretteleggingsbehov på kandidater du har tilgang til.',
         ],
     },
     {
