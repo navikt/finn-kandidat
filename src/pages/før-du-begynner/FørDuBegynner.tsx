@@ -37,9 +37,9 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
             const harSkrivetilgang = await sjekkTilgang();
             if (harSkrivetilgang) {
                 await sjekkEksistensOgRedirect();
+            } else {
+                setSjekkerTilgangOgEksistens(false);
             }
-
-            setSjekkerTilgangOgEksistens(false);
         } else if (erTom(fnr)) {
             setFeilmelding(Feilmelding.TomtFødselsnummer);
         } else {
