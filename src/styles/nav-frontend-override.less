@@ -36,3 +36,12 @@
         }
     }
 }
+
+// Fiks tekstfarge ved fokus på knapper som også er lenker.
+a.knapp--hoved:focus:not(:active):not(:hover) {
+    color: @navBla;
+
+    svg {
+        fill: @navBla;
+    }
+}
