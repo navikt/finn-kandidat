@@ -4,7 +4,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 import { AppRoute, hentRoute } from '../../utils/paths';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
-import { hentSkrivetilgang, hentKandidat } from '../../api/api';
+import { hentSkrivetilgang, hentKandidat } from '../../api/finnKandidatApi';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import FnrInput from './fnr-input/FnrInput';

@@ -8,6 +8,7 @@ import Forsidelenke from './Forsidelenke';
 import forstørrelsesglass from './forstørrelsesglass.svg';
 import SlikFungererDet from './slik-fungerer-det/SlikFungererDet';
 import './forside.less';
+import { loggKlikkPåFinnKandidater, loggKlikkPåRegistrering } from '../../api/målinger';
 
 const cls = bemHelper('forside');
 
@@ -26,11 +27,13 @@ const Forside: FunctionComponent = () => {
                             ikon={blyant}
                             tekst="Registrer eller endre tilretteleggingsbehov til kandidat"
                             href={AppRoute.FørDuBegynner}
+                            onClick={loggKlikkPåRegistrering}
                         />
                         <Forsidelenke
                             ikon={forstørrelsesglass}
                             tekst="Finn kandidater med tilretteleggingsbehov"
                             href={AppRoute.Oversikt}
+                            onClick={loggKlikkPåFinnKandidater}
                         />
                     </nav>
                 </div>

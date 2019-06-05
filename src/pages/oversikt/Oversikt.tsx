@@ -5,7 +5,7 @@ import NavFrontendSpinner from 'nav-frontend-spinner';
 
 import { AppRoute } from '../../utils/paths';
 import { filtrerKandidater, hentFiltreringFraUrl } from './filtrering/filtreringslogikk';
-import { hentKandidater } from '../../api/api';
+import { hentKandidater } from '../../api/finnKandidatApi';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Filtrering from './filtrering/Filtrering';
@@ -16,6 +16,7 @@ import NyKandidatKnapp from './ny-kandidat-knapp/NyKandidatKnapp';
 import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './oversikt.less';
+import { loggKlikkPåKandidat } from '../../api/målinger';
 
 const cls = bemHelper('oversikt');
 
@@ -45,6 +46,12 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
             });
     };
 
+    const onClickKandidat = () => {
+        const urlParams = location.search;
+        const filtrering = hentFiltreringFraUrl(urlParams);
+        loggKlikkPåKandidat(filtrering);
+    };
+
     useEffect(hentAlleKandidater, []);
     useEffect(() => brukKandidatfilter(alleKandidater), [location.href]);
 
@@ -52,7 +59,12 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
     if (fetchError) {
         kandidaterInnhold = <PanelMedTekst tekst="Kunne ikke hente kandidater" />;
     } else if (!isFetching) {
-        kandidaterInnhold = <Kandidatliste filtrerteKandidater={filtrerteKandidater} />;
+        kandidaterInnhold = (
+            <Kandidatliste
+                filtrerteKandidater={filtrerteKandidater}
+                onClickKandidat={onClickKandidat}
+            />
+        );
     }
 
     return (

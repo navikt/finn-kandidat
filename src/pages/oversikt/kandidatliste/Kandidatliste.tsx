@@ -7,7 +7,6 @@ import { hentRoute, AppRoute } from '../../../utils/paths';
 import { KolonneID } from '../kolonnetitler/Kolonnetitler';
 import bemHelper from '../../../utils/bemHelper';
 import Kandidat from '../../../types/Kandidat';
-import PanelMedTekst from '../../../components/panel-med-tekst/PanelMedTekst';
 import './kandidatliste.less';
 import IngenKandidater from './IngenKandidater';
 
@@ -15,25 +14,26 @@ const cls = bemHelper('kandidatliste');
 
 interface Props {
     filtrerteKandidater: Kandidat[];
+    onClickKandidat: () => void;
 }
 
-const Kandidatliste = ({ filtrerteKandidater }: Props) => (
+const Kandidatliste = ({ filtrerteKandidater, onClickKandidat }: Props) => (
     <ul className={cls.block}>
         {filtrerteKandidater.length === 0 ? (
             <IngenKandidater årsak="Fant ingen kandidater" />
         ) : (
             filtrerteKandidater.map(kandidat => (
-                <Kandidatrad key={kandidat.fnr} kandidat={kandidat} />
+                <Kandidatrad key={kandidat.fnr} kandidat={kandidat} onClick={onClickKandidat} />
             ))
         )}
     </ul>
 );
 
-const Kandidatrad = ({ kandidat }: { kandidat: Kandidat }) => {
+const Kandidatrad = ({ kandidat, onClick }: { kandidat: Kandidat; onClick: () => void }) => {
     const { fnr, sistEndret, sistEndretAv } = kandidat;
 
     const linkCreator = (props: React.HTMLProps<HTMLElement>) => (
-        <Link className={props.className} to={props.href || '#'}>
+        <Link className={props.className} to={props.href || '#'} onClick={() => onClick()}>
             {props.children}
         </Link>
     );

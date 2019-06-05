@@ -4,12 +4,12 @@ import { withRouter, RouteComponentProps } from 'react-router';
 
 import { AppRoute, hentRoute } from '../../../../utils/paths';
 import { Behov, Behovfelt } from '../../../../types/Behov';
-import { postKandidat } from '../../../../api/api';
 import Arbeidsmiljø from '../../../registrering/arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from '../../../registrering/arbeidstid/Arbeidstid';
 import Fysisk from '../../../registrering/fysisk/Fysisk';
 import GrunnleggendeFerdigheter from '../../../registrering/grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
 import Kandidat from '../../../../types/Kandidat';
+import { endreKandidat } from '../../../../api/finnKandidatApi';
 
 interface OwnProps {
     kandidat: Kandidat;
@@ -35,7 +35,7 @@ const EndreKandidat: FunctionComponent<Props> = props => {
         event.preventDefault();
 
         setSubmitting(true);
-        const respons = await postKandidat(kandidat);
+        const respons = await endreKandidat(kandidat);
         setSubmitting(false);
 
         if (respons) {

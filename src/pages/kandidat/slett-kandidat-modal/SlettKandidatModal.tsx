@@ -7,7 +7,7 @@ import Modal from 'nav-frontend-modal';
 
 import bemHelper from '../../../utils/bemHelper';
 import { AppRoute } from '../../../utils/paths';
-import { slettKandidat } from '../../../api/api';
+import { slettKandidat } from '../../../api/finnKandidatApi';
 import './slettKandidatModal.less';
 
 const cls = bemHelper('slettKandidatModal');

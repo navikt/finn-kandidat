@@ -9,9 +9,9 @@ const redirectToLogin = () => {
     window.location.href = isDevelopment() ? LOCAL_LOGIN : API_LOGIN;
 };
 
-const initializeApi = (baseURL: string) => {
+const initializeApi = () => {
     const api = axios.create({
-        baseURL,
+        baseURL: '/finn-kandidat-api',
         withCredentials: true,
         timeout: 30000,
     });
@@ -30,4 +30,6 @@ const initializeApi = (baseURL: string) => {
     return api;
 };
 
-export default initializeApi;
+const api = initializeApi();
+
+export default api;

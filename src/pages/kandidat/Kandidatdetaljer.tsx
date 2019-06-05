@@ -3,7 +3,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 import { AppRoute, MatchProps } from '../../utils/paths';
 import { formaterFnr, erGyldigFnr } from '../før-du-begynner/fnr-input/fnrUtils';
-import { hentKandidat, hentSkrivetilgang } from '../../api/api';
+import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Hovedinnhold from './hovedinnhold/Hovedinnhold';

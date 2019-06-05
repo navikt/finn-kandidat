@@ -10,11 +10,12 @@ interface Props {
     ikon: any;
     tekst: string;
     href: string;
+    onClick?: () => void;
 }
 
-const Forsidelenke: FunctionComponent<Props> = ({ ikon, tekst, href }) => {
+const Forsidelenke: FunctionComponent<Props> = ({ ikon, tekst, href, onClick }) => {
     const linkCreator = (props: React.HTMLProps<HTMLElement>) => (
-        <Link className={props.className} to={props.href || '#'}>
+        <Link className={props.className} to={props.href || '#'} onClick={onClick}>
             {props.children}
         </Link>
     );

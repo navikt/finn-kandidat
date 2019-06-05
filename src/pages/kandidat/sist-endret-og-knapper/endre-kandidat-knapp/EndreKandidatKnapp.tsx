@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
-import { hentRoute, AppRoute } from '../../../../utils/paths';
+import { AppRoute, hentRoute } from '../../../../utils/paths';
 import bemHelper from '../../../../utils/bemHelper';
 import './endreKandidatKnapp.less';
 

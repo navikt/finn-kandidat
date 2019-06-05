@@ -1,7 +1,5 @@
 import Kandidat from '../types/Kandidat';
-import initialize from './initialize';
-
-const api = initialize('/finn-kandidat-api');
+import api from './initialize';
 
 const parseSistEndretDato = (kandidat: Kandidat) => {
     const sistEndret = kandidat.sistEndret ? new Date(kandidat.sistEndret) : undefined;
@@ -30,9 +28,18 @@ export const hentKandidater = async (): Promise<Kandidat[]> => {
     }
 };
 
-export const postKandidat = async (kandidat: Kandidat): Promise<boolean> => {
+export const opprettKandidat = async (kandidat: Kandidat): Promise<boolean> => {
     try {
         const respons = await api.post('/kandidater', kandidat);
+        return respons.data;
+    } catch (error) {
+        return Promise.reject(error.response);
+    }
+};
+
+export const endreKandidat = async (kandidat: Kandidat): Promise<boolean> => {
+    try {
+        const respons = await api.put('/kandidater', kandidat);
         return respons.data;
     } catch (error) {
         return Promise.reject(error.response);
@@ -56,5 +63,3 @@ export const hentSkrivetilgang = async (fnr: string): Promise<boolean> => {
         return error.response.status === 403 ? false : Promise.reject(error.response);
     }
 };
-
-export default api;
