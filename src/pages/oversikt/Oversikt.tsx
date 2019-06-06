@@ -4,8 +4,16 @@ import { RouteComponentProps, withRouter } from 'react-router';
 import NavFrontendSpinner from 'nav-frontend-spinner';
 
 import { AppRoute } from '../../utils/paths';
-import { filtrerKandidater, hentFiltreringFraUrl } from './filtrering/filtreringslogikk';
+import {
+    filtrerKandidater,
+    hentFiltreringFraUrl,
+    tellKandidatensMatchendeKriterier,
+    initMatchendeKriterier,
+    FiltrertKandidat,
+} from './filtrering/filtreringslogikk';
+import { ArbeidstidBehov } from '../../types/Behov';
 import { hentKandidater } from '../../api/finnKandidatApi';
+import { loggKlikkPåKandidat } from '../../api/målinger';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Filtrering from './filtrering/Filtrering';
@@ -16,21 +24,41 @@ import NyKandidatKnapp from './ny-kandidat-knapp/NyKandidatKnapp';
 import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './oversikt.less';
-import { loggKlikkPåKandidat } from '../../api/målinger';
 
 const cls = bemHelper('oversikt');
 
+const sorterPåMatchendeKriterier = (a: FiltrertKandidat, b: FiltrertKandidat) =>
+    b.matchendeKriterier.length - a.matchendeKriterier.length;
+
 const Oversikt: FunctionComponent<RouteComponentProps> = () => {
     const [alleKandidater, setAlleKandidater] = useState<Kandidat[]>([]);
-    const [filtrerteKandidater, setFiltrerteKandidater] = useState<Kandidat[]>([]);
+    const [filtrerteKandidater, setFiltrerteKandidater] = useState<FiltrertKandidat[]>([]);
+    const [antallValgteKriterier, setAntallValgteKriterier] = useState<number>(0);
     const [isFetching, toggleFetching] = useState<boolean>(true);
     const [fetchError, setFetchError] = useState<boolean>(false);
 
     const brukKandidatfilter = (kandidater: Kandidat[]) => {
         const urlParams = location.search;
         const filtrering = hentFiltreringFraUrl(urlParams);
-        const filtrerteKandidater = filtrerKandidater(kandidater, filtrering);
+        const filtrerteKandidater = filtrerKandidater(kandidater, filtrering)
+            .map(initMatchendeKriterier)
+            .map(tellKandidatensMatchendeKriterier(filtrering))
+            .sort(sorterPåMatchendeKriterier);
+
+        const { arbeidstidBehov, ...andreFiltre } = filtrering;
+
         setFiltrerteKandidater(filtrerteKandidater);
+        setAntallValgteKriterier(summerValgteKriterier(arbeidstidBehov, andreFiltre));
+    };
+
+    const summerValgteKriterier = (
+        arbeidstidFilter: ArbeidstidBehov[],
+        filtreUtenomArbeidstid: Object
+    ) => {
+        const antallFiltreUtenomArbeidstid = Object.values(filtreUtenomArbeidstid).flat().length;
+        const antallArbeidstidFiltre = arbeidstidFilter.length > 0 ? 1 : 0;
+
+        return antallFiltreUtenomArbeidstid + antallArbeidstidFiltre;
     };
 
     const hentAlleKandidater = () => {
@@ -61,6 +89,7 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
     } else if (!isFetching) {
         kandidaterInnhold = (
             <Kandidatliste
+                antallValgteKriterier={antallValgteKriterier}
                 filtrerteKandidater={filtrerteKandidater}
                 onClickKandidat={onClickKandidat}
             />

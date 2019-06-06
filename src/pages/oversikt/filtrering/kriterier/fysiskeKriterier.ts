@@ -11,7 +11,7 @@ export const fysiskeKriterier: FysiskKriterie[] = [
         label: 'Varierte arbeidsstillinger',
     },
     {
-        behov: FysiskBehov.Ergnonomi,
+        behov: FysiskBehov.Ergonomi,
         label: 'Ergonomiske tilpasninger',
     },
     { behov: FysiskBehov.TungeLøft, label: 'Å unngå tunge løft' },

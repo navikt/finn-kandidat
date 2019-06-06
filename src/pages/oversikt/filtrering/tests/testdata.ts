@@ -24,7 +24,7 @@ export const kandidatSomKanJobbeFleksibelt = {
 export const kandidatSomTrengerErgonomiskTilrettelegging = {
     fnr: '',
     arbeidstidBehov: ArbeidstidBehov.Heltid,
-    fysiskeBehov: [FysiskBehov.Ergnonomi],
+    fysiskeBehov: [FysiskBehov.Ergonomi],
     arbeidsmiljøBehov: [],
     grunnleggendeBehov: [],
 };
@@ -105,6 +105,14 @@ export const kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor = {
     fnr: '',
     arbeidstidBehov: ArbeidstidBehov.Heltid,
     fysiskeBehov: [FysiskBehov.TungeLøft],
+    arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
+    grunnleggendeBehov: [],
+};
+
+export const kandidatSomIkkeKanLøfteTungtOgSomTrengerErgonomiOgMentor = {
+    fnr: '',
+    arbeidstidBehov: ArbeidstidBehov.Heltid,
+    fysiskeBehov: [FysiskBehov.TungeLøft, FysiskBehov.Ergonomi],
     arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
     grunnleggendeBehov: [],
 };

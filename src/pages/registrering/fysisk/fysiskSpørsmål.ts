@@ -7,7 +7,7 @@ const svaralternativer = [
         label: 'Varierte arbeidsstillinger',
     },
     {
-        behov: FysiskBehov.Ergnonomi,
+        behov: FysiskBehov.Ergonomi,
         label: 'Ergonomiske tilpasninger',
         beskrivelse: 'For eksempel hev/senk-pult eller tilpassede lys- eller lydforhold',
     },

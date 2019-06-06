@@ -16,56 +16,71 @@ export interface AlleFilter {
     [Behovfelt.GrunnleggendeBehov]: GrunnleggendeBehov[];
 }
 
-export const filtrerKandidater = (kandidater: Kandidat[], filter: AlleFilter): Kandidat[] => {
-    kandidater = filtrerPåArbeidstid(kandidater, filter[Behovfelt.ArbeidstidBehov]);
-    kandidater = filtrerPåFysisk(kandidater, filter[Behovfelt.FysiskeBehov]);
-    kandidater = filtrerPåArbeidsmiljø(kandidater, filter[Behovfelt.ArbeidsmiljøBehov]);
-    kandidater = filtrerPåGrunnleggende(kandidater, filter[Behovfelt.GrunnleggendeBehov]);
-    return kandidater;
+export type FiltrertKandidat = Kandidat & {
+    matchendeKriterier: Behov[];
 };
 
-const filtrerPåArbeidstid = (kandidater: Kandidat[], filter: ArbeidstidBehov[]): Kandidat[] => {
-    if (filter.length === 0) {
-        return kandidater;
-    }
-    return kandidater.filter(kandidat => filter.includes(kandidat.arbeidstidBehov));
+export const initMatchendeKriterier = (kandidat: Kandidat): FiltrertKandidat => ({
+    ...kandidat,
+    matchendeKriterier: [],
+});
+
+export const filtrerKandidater = (kandidater: Kandidat[], filter: AlleFilter) => {
+    return kandidater
+        .filter(passererKriterierOmArbeidstid(filter[Behovfelt.ArbeidstidBehov]))
+        .filter(passererKriterierOmBehov(filter, Behovfelt.FysiskeBehov))
+        .filter(passererKriterierOmBehov(filter, Behovfelt.ArbeidsmiljøBehov))
+        .filter(passererKriterierOmBehov(filter, Behovfelt.GrunnleggendeBehov));
 };
 
-const filtrerPåFysisk = (kandidater: Kandidat[], filter: FysiskBehov[]): Kandidat[] => {
-    if (filter.length === 0) {
-        return kandidater;
-    }
+export const tellKandidatensMatchendeKriterier = (filter: AlleFilter) => (
+    kandidat: FiltrertKandidat
+) => ({
+    ...kandidat,
+    matchendeKriterier: [
+        Behovfelt.ArbeidsmiljøBehov,
+        Behovfelt.FysiskeBehov,
+        Behovfelt.GrunnleggendeBehov,
+    ].reduce(
+        kombinerMatchendeKriterier(kandidat, filter),
+        beholdMatchendeArbeidskriterie(kandidat, filter)
+    ),
+});
 
-    return kandidater.filter(kandidat => {
-        return kandidat.fysiskeBehov.some(fysiskBehov => filter.includes(fysiskBehov));
-    });
+const passererKriterierOmArbeidstid = (arbeidstidFilter: ArbeidstidBehov[]) => (
+    kandidat: Kandidat
+) => {
+    return arbeidstidFilter.length === 0
+        ? kandidat
+        : arbeidstidFilter.includes(kandidat[Behovfelt.ArbeidstidBehov]);
 };
 
-const filtrerPåArbeidsmiljø = (kandidater: Kandidat[], filter: ArbeidsmijøBehov[]): Kandidat[] => {
-    if (filter.length === 0) {
-        return kandidater;
-    }
-
-    return kandidater.filter(kandidat => {
-        return kandidat.arbeidsmiljøBehov.some(arbeidsmiljøBehov =>
-            filter.includes(arbeidsmiljøBehov)
-        );
-    });
+const passererKriterierOmBehov = (filter: AlleFilter, behovfelt: Behovfelt) => (
+    kandidat: Kandidat
+) => {
+    const behovsfilter = filter[behovfelt] as Behov[];
+    return behovsfilter.length === 0
+        ? kandidat
+        : behovsfilter.some(filter => (kandidat[behovfelt] as Behov[]).includes(filter));
 };
 
-const filtrerPåGrunnleggende = (
-    kandidater: Kandidat[],
-    filter: GrunnleggendeBehov[]
-): Kandidat[] => {
-    if (filter.length === 0) {
-        return kandidater;
-    }
+const kombinerMatchendeKriterier = (kandidat: FiltrertKandidat, filter: AlleFilter) => (
+    matchendeKriterier: Behov[],
+    behovfelt: Behovfelt
+): Behov[] => {
+    const kandidatensBehov = kandidat[behovfelt] as any;
+    const aktueltFilter = filter[behovfelt] as any;
 
-    return kandidater.filter(kandidat => {
-        return kandidat.grunnleggendeBehov.some(grunnleggendeBehov =>
-            filter.includes(grunnleggendeBehov)
-        );
-    });
+    return matchendeKriterier.concat(intersectionAvBehov(kandidatensBehov, aktueltFilter));
+};
+
+const beholdMatchendeArbeidskriterie = (kandidat: FiltrertKandidat, filter: AlleFilter) =>
+    filter[Behovfelt.ArbeidstidBehov].filter(
+        arbeidstidKriterie => kandidat[Behovfelt.ArbeidstidBehov] == arbeidstidKriterie
+    );
+
+const intersectionAvBehov = (kandidatensBehov: Behov[], filter: Behov[]): Behov[] => {
+    return filter.filter(behov => kandidatensBehov.includes(behov));
 };
 
 export const hentFiltreringFraUrl = (urlParams: string): AlleFilter => {

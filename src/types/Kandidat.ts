@@ -4,6 +4,7 @@ import {
     ArbeidsmijøBehov,
     GrunnleggendeBehov,
     Behovfelt,
+    Behov,
 } from './Behov';
 
 interface Kandidat {

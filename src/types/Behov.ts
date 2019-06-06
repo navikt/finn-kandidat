@@ -8,7 +8,7 @@ export enum ArbeidstidBehov {
 
 export enum FysiskBehov {
     Arbeidsstilling = 'ARBEIDSSTILLING',
-    Ergnonomi = 'ERGONOMI',
+    Ergonomi = 'ERGONOMI',
     TungeLøft = 'TUNGE_LØFT',
     Hørsel = 'HØRSEL',
     Syn = 'SYN',

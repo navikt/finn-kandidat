@@ -4,7 +4,12 @@ import {
     FysiskBehov,
     GrunnleggendeBehov,
 } from '../../../../types/Behov';
-import { AlleFilter, filtrerKandidater } from '../filtreringslogikk';
+import {
+    AlleFilter,
+    filtrerKandidater,
+    tellKandidatensMatchendeKriterier,
+    initMatchendeKriterier,
+} from '../filtreringslogikk';
 import * as testdata from './testdata';
 
 test('Alle kandidater skal vises hvis ingen filter er valgt', () => {
@@ -37,7 +42,7 @@ test('Ved valgt heltid skal kun kandidater som kan jobbe heltid bli vist', () =>
 test('Ved valgt ergnonomi skal kun kandidater som trenger ergonomisk tilrettelegging bli vist', () => {
     const filter: AlleFilter = {
         arbeidstidBehov: [],
-        fysiskeBehov: [FysiskBehov.Ergnonomi],
+        fysiskeBehov: [FysiskBehov.Ergonomi],
         arbeidsmiljøBehov: [],
         grunnleggendeBehov: [],
     };
@@ -149,4 +154,28 @@ test('Ved valgt tunge løft og mentor skal kandidater ikke kan løfte tungt og s
     );
 
     expect(filtrerteKandidater).toEqual([testdata.kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor]);
+});
+
+test('Antall matchende kriterier skal telle hvor mange av de aktive kriteriene fra filteret som kandidaten dekker', () => {
+    const filter: AlleFilter = {
+        arbeidstidBehov: [],
+        fysiskeBehov: [FysiskBehov.TungeLøft, FysiskBehov.Ergonomi],
+        arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
+        grunnleggendeBehov: [],
+    };
+
+    const kandidater = [
+        testdata.kandidatSomIkkeKanLøfteTungtOgSomTrengerErgonomiOgMentor,
+        testdata.kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor,
+    ];
+
+    const medMatchendeKriterier = kandidater
+        .map(initMatchendeKriterier)
+        .map(tellKandidatensMatchendeKriterier(filter));
+
+    const antallMatchendeKriterier = medMatchendeKriterier.map(
+        kandidat => kandidat.matchendeKriterier.length
+    );
+
+    expect(antallMatchendeKriterier).toEqual([3, 2]);
 });
