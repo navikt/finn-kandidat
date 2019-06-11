@@ -5,15 +5,15 @@ import {
     GrunnleggendeBehov,
 } from '../../../../types/Behov';
 import {
-    AlleFilter,
+    Filter,
     filtrerKandidater,
     tellKandidatensMatchendeKriterier,
-    initMatchendeKriterier,
+    tilFiltrertKandidat,
 } from '../filtreringslogikk';
 import * as testdata from './testdata';
 
 test('Alle kandidater skal vises hvis ingen filter er valgt', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [],
         fysiskeBehov: [],
         arbeidsmiljøBehov: [],
@@ -24,7 +24,7 @@ test('Alle kandidater skal vises hvis ingen filter er valgt', () => {
 });
 
 test('Ved valgt heltid skal kun kandidater som kan jobbe heltid bli vist', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [ArbeidstidBehov.Heltid],
         fysiskeBehov: [],
         arbeidsmiljøBehov: [],
@@ -40,7 +40,7 @@ test('Ved valgt heltid skal kun kandidater som kan jobbe heltid bli vist', () =>
 });
 
 test('Ved valgt ergnonomi skal kun kandidater som trenger ergonomisk tilrettelegging bli vist', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [],
         fysiskeBehov: [FysiskBehov.Ergonomi],
         arbeidsmiljøBehov: [],
@@ -59,7 +59,7 @@ test('Ved valgt ergnonomi skal kun kandidater som trenger ergonomisk tilretteleg
 });
 
 test('Ved valgt tilrettelagt opplæring skal kun kandidater som trenger tilrettelagt opplæring bli vist', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [],
         fysiskeBehov: [],
         arbeidsmiljøBehov: [ArbeidsmijøBehov.TilrettelagtOpplæring],
@@ -75,7 +75,7 @@ test('Ved valgt tilrettelagt opplæring skal kun kandidater som trenger tilrette
 });
 
 test('Ved valgt snakke norsk skal kun kandidater som trenger kan snakke norsk bli vist', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [],
         fysiskeBehov: [],
         arbeidsmiljøBehov: [],
@@ -91,7 +91,7 @@ test('Ved valgt snakke norsk skal kun kandidater som trenger kan snakke norsk bl
 });
 
 test('Ved valgt fleksibel og heltid skal kandidater som kan jobbe fleksibelt eller heltid vises', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [ArbeidstidBehov.Heltid, ArbeidstidBehov.Fleksibel],
         fysiskeBehov: [],
         arbeidsmiljøBehov: [],
@@ -114,7 +114,7 @@ test('Ved valgt fleksibel og heltid skal kandidater som kan jobbe fleksibelt ell
 });
 
 test('Ved valgt hørsel og syn skal kandidater har behov for tilrettelegging for syn eller hørsel vises', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [],
         fysiskeBehov: [FysiskBehov.Hørsel, FysiskBehov.Syn],
         arbeidsmiljøBehov: [],
@@ -137,7 +137,7 @@ test('Ved valgt hørsel og syn skal kandidater har behov for tilrettelegging for
 });
 
 test('Ved valgt tunge løft og mentor skal kandidater ikke kan løfte tungt og som trenger mentor vises', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [],
         fysiskeBehov: [FysiskBehov.TungeLøft],
         arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
@@ -157,7 +157,7 @@ test('Ved valgt tunge løft og mentor skal kandidater ikke kan løfte tungt og s
 });
 
 test('Antall matchende kriterier skal telle hvor mange av de aktive kriteriene fra filteret som kandidaten dekker', () => {
-    const filter: AlleFilter = {
+    const filter: Filter = {
         arbeidstidBehov: [],
         fysiskeBehov: [FysiskBehov.TungeLøft, FysiskBehov.Ergonomi],
         arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
@@ -170,7 +170,7 @@ test('Antall matchende kriterier skal telle hvor mange av de aktive kriteriene f
     ];
 
     const medMatchendeKriterier = kandidater
-        .map(initMatchendeKriterier)
+        .map(tilFiltrertKandidat)
         .map(tellKandidatensMatchendeKriterier(filter));
 
     const antallMatchendeKriterier = medMatchendeKriterier.map(

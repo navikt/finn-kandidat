@@ -1,20 +1,16 @@
-import { AlleFilter } from '../pages/oversikt/filtrering/filtreringslogikk';
-import api from './initialize';
 import { Behovfelt } from '../types/Behov';
+import { Filter } from '../pages/oversikt/filtrering/filtreringslogikk';
+import { hentAlleBehovfelt } from '../utils/behovUtils';
+import api from './initialize';
 
-export const loggKlikkPåKandidat = (aktiveFilter: AlleFilter) => {
+export const loggKlikkPåKandidat = (aktivtFilter: Filter) => {
     const leggTilPrefix = (behovfelt: Behovfelt) =>
-        (aktiveFilter[behovfelt] as any).map((felt: Behovfelt) => `${behovfelt}.${felt}`);
+        (aktivtFilter[behovfelt] as any).map((felt: Behovfelt) => `${behovfelt}.${felt}`);
 
     const data = {
         eventnavn: 'kandidat.klikk',
         felter: {
-            aktiveFelter: [
-                ...leggTilPrefix(Behovfelt.ArbeidstidBehov),
-                ...leggTilPrefix(Behovfelt.FysiskeBehov),
-                ...leggTilPrefix(Behovfelt.ArbeidsmiljøBehov),
-                ...leggTilPrefix(Behovfelt.GrunnleggendeBehov),
-            ],
+            aktiveFelter: hentAlleBehovfelt().flatMap((behov: Behovfelt) => leggTilPrefix(behov)),
         },
     };
 

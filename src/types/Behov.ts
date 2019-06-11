@@ -38,3 +38,10 @@ export enum Behovfelt {
     ArbeidsmiljøBehov = 'arbeidsmiljøBehov',
     GrunnleggendeBehov = 'grunnleggendeBehov',
 }
+
+export interface AlleBehov {
+    arbeidstidBehov: ArbeidstidBehov[];
+    fysiskeBehov: FysiskBehov[];
+    arbeidsmiljøBehov: ArbeidsmijøBehov[];
+    grunnleggendeBehov: GrunnleggendeBehov[];
+}

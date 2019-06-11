@@ -43,7 +43,7 @@ const Kandidatrad = ({ kandidat, onClick, antallValgteKriterier }: Props) => {
                         {sistEndret && formaterDato(sistEndret)}
                     </span>
                     <span aria-labelledby={KolonneID.SistEndretAv}>{sistEndretAv}</span>
-                    <span aria-labelledby={KolonneID.MatchendeKriterier}>
+                    <span aria-labelledby={KolonneID.TreffPåKriterier}>
                         {antallMatchendeKriterier}
                     </span>
                 </div>

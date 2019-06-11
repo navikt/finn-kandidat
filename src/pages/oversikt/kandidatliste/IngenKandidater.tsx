@@ -15,7 +15,7 @@ const IngenKandidater: FunctionComponent<Props> = ({ årsak }) => {
         <div className={cls.block}>
             <img src={fjell} alt="fjell" className={cls.element('illustrasjon')} />
             <Systemtittel>{årsak}</Systemtittel>
-            <p>Prøv igjen med andre søkekriterier</p>
+            <p>Prøv igjen med andre kriterier</p>
         </div>
     );
 };

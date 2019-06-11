@@ -6,9 +6,9 @@ import NavFrontendSpinner from 'nav-frontend-spinner';
 import { AppRoute } from '../../utils/paths';
 import {
     filtrerKandidater,
-    hentFiltreringFraUrl,
+    hentFilterFraUrl,
     tellKandidatensMatchendeKriterier,
-    initMatchendeKriterier,
+    tilFiltrertKandidat,
     FiltrertKandidat,
 } from './filtrering/filtreringslogikk';
 import { ArbeidstidBehov } from '../../types/Behov';
@@ -39,13 +39,13 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
 
     const brukKandidatfilter = (kandidater: Kandidat[]) => {
         const urlParams = location.search;
-        const filtrering = hentFiltreringFraUrl(urlParams);
-        const filtrerteKandidater = filtrerKandidater(kandidater, filtrering)
-            .map(initMatchendeKriterier)
-            .map(tellKandidatensMatchendeKriterier(filtrering))
+        const filter = hentFilterFraUrl(urlParams);
+        const filtrerteKandidater = filtrerKandidater(kandidater, filter)
+            .map(tilFiltrertKandidat)
+            .map(tellKandidatensMatchendeKriterier(filter))
             .sort(sorterPåMatchendeKriterier);
 
-        const { arbeidstidBehov, ...andreFiltre } = filtrering;
+        const { arbeidstidBehov, ...andreFiltre } = filter;
 
         setFiltrerteKandidater(filtrerteKandidater);
         setAntallValgteKriterier(summerValgteKriterier(arbeidstidBehov, andreFiltre));
@@ -55,10 +55,10 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
         arbeidstidFilter: ArbeidstidBehov[],
         filtreUtenomArbeidstid: Object
     ) => {
-        const antallFiltreUtenomArbeidstid = Object.values(filtreUtenomArbeidstid).flat().length;
-        const antallArbeidstidFiltre = arbeidstidFilter.length > 0 ? 1 : 0;
+        const antallArbeidstidkriterierSomPasserKandidat = arbeidstidFilter.length > 0 ? 1 : 0;
+        const antallAndreKriterier = Object.values(filtreUtenomArbeidstid).flat().length;
 
-        return antallFiltreUtenomArbeidstid + antallArbeidstidFiltre;
+        return antallArbeidstidkriterierSomPasserKandidat + antallAndreKriterier;
     };
 
     const hentAlleKandidater = () => {
@@ -76,8 +76,8 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
 
     const onClickKandidat = () => {
         const urlParams = location.search;
-        const filtrering = hentFiltreringFraUrl(urlParams);
-        loggKlikkPåKandidat(filtrering);
+        const aktivtFilter = hentFilterFraUrl(urlParams);
+        loggKlikkPåKandidat(aktivtFilter);
     };
 
     useEffect(hentAlleKandidater, []);
@@ -89,8 +89,8 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
     } else if (!isFetching) {
         kandidaterInnhold = (
             <Kandidatliste
+                kandidater={filtrerteKandidater}
                 antallValgteKriterier={antallValgteKriterier}
-                filtrerteKandidater={filtrerteKandidater}
                 onClickKandidat={onClickKandidat}
             />
         );

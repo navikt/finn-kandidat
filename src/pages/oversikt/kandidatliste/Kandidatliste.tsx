@@ -10,14 +10,14 @@ const cls = bemHelper('kandidatliste');
 
 interface Props {
     antallValgteKriterier: number;
-    filtrerteKandidater: FiltrertKandidat[];
+    kandidater: FiltrertKandidat[];
     onClickKandidat: () => void;
 }
 
-const Kandidatliste = ({ filtrerteKandidater, onClickKandidat, antallValgteKriterier }: Props) => (
+const Kandidatliste = ({ kandidater, onClickKandidat, antallValgteKriterier }: Props) => (
     <ul className={cls.block}>
-        {filtrerteKandidater.length > 0 ? (
-            filtrerteKandidater.map(kandidat => (
+        {kandidater.length > 0 ? (
+            kandidater.map(kandidat => (
                 <Kandidatrad
                     key={kandidat.fnr}
                     kandidat={kandidat}

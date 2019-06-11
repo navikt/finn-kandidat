@@ -8,7 +8,7 @@ export enum KolonneID {
     Fnr = 'kandidatFnr',
     SistEndret = 'kandidatSistEndret',
     SistEndretAv = 'kandidatSistEndretAv',
-    MatchendeKriterier = 'matchendeKriterier',
+    TreffPåKriterier = 'treffPåKriterier',
 }
 
 const Kolonnetitler = () => (
@@ -17,7 +17,7 @@ const Kolonnetitler = () => (
             <Tittel id={KolonneID.Fnr}>Fødselsnummer</Tittel>
             <Tittel id={KolonneID.SistEndret}>Sist endret</Tittel>
             <Tittel id={KolonneID.SistEndretAv}>Sist endret av</Tittel>
-            <Tittel id={KolonneID.MatchendeKriterier}>Treff på kriterier</Tittel>
+            <Tittel id={KolonneID.TreffPåKriterier}>Treff på kriterier</Tittel>
         </div>
     </div>
 );

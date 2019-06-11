@@ -10,6 +10,7 @@ import {
     GrunnleggendeBehov,
     Behovfelt,
 } from '../../types/Behov';
+import { formaterFnr } from '../før-du-begynner/fnr-input/fnrUtils';
 import { opprettKandidat } from '../../api/finnKandidatApi';
 import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from './arbeidstid/Arbeidstid';
@@ -18,9 +19,9 @@ import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Fysisk from './fysisk/Fysisk';
 import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
 import Informasjon from './informasjon/Informasjon';
+import Kandidat from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './registrering.less';
-import { formaterFnr } from '../før-du-begynner/fnr-input/fnrUtils';
 
 const cls = bemHelper('registrering');
 
@@ -38,22 +39,24 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
         event.preventDefault();
 
         if (arbeidstidBehov) {
-            sendInnKandidatOgRedirect();
+            sendInnKandidatOgRedirect(arbeidstidBehov);
         } else {
             visFeilmeldingOmArbeidstid();
         }
     };
 
-    const sendInnKandidatOgRedirect = async () => {
+    const sendInnKandidatOgRedirect = async (arbeidstidBehov: ArbeidstidBehov) => {
         setSubmitting(true);
 
-        const respons = await opprettKandidat({
+        const kandidat: Kandidat = {
             fnr,
             fysiskeBehov,
             arbeidsmiljøBehov,
             grunnleggendeBehov,
-            arbeidstidBehov: arbeidstidBehov!,
-        });
+            arbeidstidBehov: [arbeidstidBehov],
+        };
+
+        const respons = await opprettKandidat(kandidat);
         setSubmitting(false);
 
         if (respons) {

@@ -22,13 +22,18 @@ const EndreKandidat: FunctionComponent<Props> = props => {
     const [kandidat, setKandidat] = useState<Kandidat>(props.kandidat);
     const [isSubmitting, setSubmitting] = useState<boolean>(false);
 
-    const endreBehov = (behovfelt: Behovfelt, verdi: Behov | Behov[]) =>
+    const endreBehov = (behovfelt: Behovfelt, verdi: Behov[]) =>
         setKandidat({
             ...kandidat,
             [behovfelt]: verdi,
         });
 
-    const onBehovChange = (behovfelt: Behovfelt) => (verdi: Behov | Behov[]) =>
+    const onArbeidstidChange = (behov: Behov) => {
+        const somArray = [behov];
+        onBehovChange(Behovfelt.ArbeidstidBehov)(somArray);
+    };
+
+    const onBehovChange = (behovfelt: Behovfelt) => (verdi: Behov[]) =>
         endreBehov(behovfelt, verdi);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -47,8 +52,8 @@ const EndreKandidat: FunctionComponent<Props> = props => {
     return (
         <form onSubmit={handleSubmit}>
             <Arbeidstid
-                valgtAlternativ={kandidat.arbeidstidBehov}
-                onChange={onBehovChange(Behovfelt.ArbeidstidBehov)}
+                valgtAlternativ={kandidat.arbeidstidBehov[0]}
+                onChange={onArbeidstidChange}
             />
             <Fysisk
                 valgteAlternativer={kandidat.fysiskeBehov}

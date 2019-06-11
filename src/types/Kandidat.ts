@@ -1,21 +1,11 @@
-import {
-    ArbeidstidBehov,
-    FysiskBehov,
-    ArbeidsmijøBehov,
-    GrunnleggendeBehov,
-    Behovfelt,
-    Behov,
-} from './Behov';
+import { AlleBehov } from './Behov';
 
-interface Kandidat {
+interface KandidatUtenBehov {
     fnr: string;
     sistEndret?: Date;
     sistEndretAv?: string;
-
-    [Behovfelt.ArbeidstidBehov]: ArbeidstidBehov;
-    [Behovfelt.FysiskeBehov]: FysiskBehov[];
-    [Behovfelt.ArbeidsmiljøBehov]: ArbeidsmijøBehov[];
-    [Behovfelt.GrunnleggendeBehov]: GrunnleggendeBehov[];
 }
+
+type Kandidat = KandidatUtenBehov & AlleBehov;
 
 export default Kandidat;

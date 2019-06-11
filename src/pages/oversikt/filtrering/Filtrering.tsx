@@ -1,15 +1,17 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Element } from 'nav-frontend-typografi';
-import bemHelper from '../../../utils/bemHelper';
-import './filtrering.less';
-import { GrunnleggendeKriterie, grunnleggendeKriterier } from './kriterier/grunnleggendeKriterier';
-import { ArbeidstidKriterie, arbeidstidKriterier } from './kriterier/arbeidstidKriterier';
-import Filter from './filter/Filter';
-import { fysiskeKriterier, FysiskKriterie } from './kriterier/fysiskeKriterier';
-import { Behov, Behovfelt } from '../../../types/Behov';
-import { ArbeidsmiløKriterie, arbeidsmiløKriterier } from './kriterier/arbeidsmiljøKriterier';
 import { RouteComponentProps, withRouter } from 'react-router';
-import { hentFiltreringFraUrl, lagQueryParams } from './filtreringslogikk';
+
+import { ArbeidsmiløKriterie, arbeidsmiløKriterier } from './kriterier/arbeidsmiljøKriterier';
+import { ArbeidstidKriterie, arbeidstidKriterier } from './kriterier/arbeidstidKriterier';
+import { Behov, Behovfelt, AlleBehov } from '../../../types/Behov';
+import { fysiskeKriterier, FysiskKriterie } from './kriterier/fysiskeKriterier';
+import { GrunnleggendeKriterie, grunnleggendeKriterier } from './kriterier/grunnleggendeKriterier';
+import { hentFilterFraUrl, lagQueryParams } from './filtreringslogikk';
+import { hentBehovfeltMedTommeLister } from '../../../utils/behovUtils';
+import bemHelper from '../../../utils/bemHelper';
+import Filter from './filter/Filter';
+import './filtrering.less';
 
 const cls = bemHelper('filtrering');
 
@@ -19,44 +21,34 @@ export type Kriterie =
     | ArbeidsmiløKriterie
     | GrunnleggendeKriterie;
 
-export interface ValgteKriterier {
-    arbeidstidBehov: Behov[];
-    fysiskeBehov: Behov[];
-    arbeidsmiljøBehov: Behov[];
-    grunnleggendeBehov: Behov[];
-}
+export type ValgteKriterier = AlleBehov;
 
 const Filtrering: FunctionComponent<RouteComponentProps> = props => {
-    const defaultValgteKriterier: ValgteKriterier = {
-        arbeidstidBehov: [],
-        fysiskeBehov: [],
-        arbeidsmiljøBehov: [],
-        grunnleggendeBehov: [],
-    };
+    const defaultValgteKriterier = hentBehovfeltMedTommeLister();
 
     const [valgteKriterier, setValgteKriterier] = useState<ValgteKriterier>(defaultValgteKriterier);
 
-    useEffect(
-        () => {
-            const urlParams = location.search;
-            const filtrering = hentFiltreringFraUrl(urlParams);
-            setValgteKriterier(filtrering);
-        },
-        [location.search]
-    );
-
-    const endreValgteKriterier = (behov: Behov, checked: boolean, type: Behovfelt) => {
+    useEffect(() => {
         const urlParams = location.search;
-        let kriterierIUrl: any = hentFiltreringFraUrl(urlParams);
+        const filtrering = hentFilterFraUrl(urlParams);
+        setValgteKriterier(filtrering);
+    }, [location.search]);
 
-        const kriterieIkkeIUrl = !kriterierIUrl[type].includes(behov);
+    const endreValgteKriterier = (behov: Behov, checked: boolean, behovfelt: Behovfelt) => {
+        const urlParams = location.search;
+
+        let filterFraUrl: any = hentFilterFraUrl(urlParams);
+
+        const kriterieIkkeIUrl = !filterFraUrl[behovfelt].includes(behov);
         if (checked && kriterieIkkeIUrl) {
-            kriterierIUrl[type].push(behov);
+            filterFraUrl[behovfelt].push(behov);
         } else {
-            kriterierIUrl[type] = kriterierIUrl[type].filter((filter: Behov) => filter !== behov);
+            filterFraUrl[behovfelt] = filterFraUrl[behovfelt].filter(
+                (filter: Behov) => filter !== behov
+            );
         }
 
-        const queryParams = lagQueryParams(kriterierIUrl);
+        const queryParams = lagQueryParams(filterFraUrl);
         props.history.replace({ search: queryParams });
     };
 
