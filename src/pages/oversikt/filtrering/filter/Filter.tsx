@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, SyntheticEvent } from 'react';
 import { Kriterie } from '../Filtrering';
 import { Element } from 'nav-frontend-typografi';
 import bemHelper from '../../../../utils/bemHelper';
@@ -12,19 +12,17 @@ const cls = bemHelper('filter');
 interface Props {
     tittel: string;
     spørsmål: string;
-    type: Behovfelt;
     kriterier: Kriterie[];
     valgteKriterier: Behov[];
-    endreValgteKriterier: (behov: Behov, checked: boolean, type: Behovfelt) => void;
+    toggleKriterie: (behov: Behov) => void;
 }
 
 const Filter: FunctionComponent<Props> = ({
     tittel,
     spørsmål,
-    type,
     kriterier,
     valgteKriterier,
-    endreValgteKriterier,
+    toggleKriterie,
 }) => {
     return (
         <div className={cls.block}>
@@ -34,9 +32,7 @@ const Filter: FunctionComponent<Props> = ({
                     <Checkbox
                         label={kriterie.label}
                         checked={valgteKriterier.includes(kriterie.behov)}
-                        onChange={(event: any) =>
-                            endreValgteKriterier(kriterie.behov, event.currentTarget.checked, type)
-                        }
+                        onChange={() => toggleKriterie(kriterie.behov)}
                         key={kriterie.behov}
                     />
                 ))}

@@ -1,7 +1,7 @@
 import Kandidat from '../../../types/Kandidat';
 import { Behov, Behovfelt, AlleBehov } from '../../../types/Behov';
-import { ValgteKriterier } from './Filtrering';
 import { hentAlleBehovfelt } from '../../../utils/behovUtils';
+import { ValgteKriterier } from './Filtrering';
 
 export type Filter = AlleBehov;
 
