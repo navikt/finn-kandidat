@@ -56,7 +56,7 @@ export const opprettKandidat = async (kandidat: Kandidat): Promise<boolean> => {
 
 export const endreKandidat = async (kandidat: Kandidat): Promise<boolean> => {
     try {
-        const respons = await api.put('/kandidater', kandidat);
+        const respons = await api.put('/kandidater', tilKandidatDto(kandidat));
         return respons.data;
     } catch (error) {
         return Promise.reject(error.response);
