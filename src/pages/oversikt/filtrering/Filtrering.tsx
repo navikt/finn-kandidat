@@ -4,7 +4,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 import { ArbeidsmiløKriterie, arbeidsmiløKriterier } from './kriterier/arbeidsmiljøKriterier';
 import { ArbeidstidKriterie, arbeidstidKriterier } from './kriterier/arbeidstidKriterier';
-import { Behovfelt, AlleBehov, Behov } from '../../../types/Behov';
+import { AlleBehov, Behov, Behovfelt } from '../../../types/Behov';
 import { fysiskeKriterier, FysiskKriterie } from './kriterier/fysiskeKriterier';
 import { GrunnleggendeKriterie, grunnleggendeKriterier } from './kriterier/grunnleggendeKriterier';
 import bemHelper from '../../../utils/bemHelper';
@@ -24,7 +24,7 @@ export type ValgteKriterier = AlleBehov;
 
 const Filtrering: FunctionComponent<RouteComponentProps> = props => {
     const { valgteKriterier, toggleValgtKriterie, slettValgteKriterier } = useValgteKriterier(
-        props.history
+        props
     );
 
     const handleToggleKriterie = (behovfelt: Behovfelt) => (kriterie: Behov) => {

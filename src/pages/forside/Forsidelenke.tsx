@@ -28,7 +28,7 @@ const Forsidelenke: FunctionComponent<Props> = ({ ikon, tekst, href, onClick }) 
             href={href}
         >
             <div className={cls.element('lenkeinnhold')}>
-                <img src={ikon} className={cls.element('lenkeikon')} />
+                <img src={ikon} className={cls.element('lenkeikon')} alt="" />
                 <Element className="lenkepanel__heading">{tekst}</Element>
             </div>
         </LenkepanelBase>

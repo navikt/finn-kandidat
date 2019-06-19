@@ -1,10 +1,10 @@
-import React, { FunctionComponent, SyntheticEvent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Kriterie } from '../Filtrering';
 import { Element } from 'nav-frontend-typografi';
 import bemHelper from '../../../../utils/bemHelper';
 import './filter.less';
 import { Checkbox } from 'nav-frontend-skjema';
-import { Behov, Behovfelt } from '../../../../types/Behov';
+import { Behov } from '../../../../types/Behov';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
 const cls = bemHelper('filter');

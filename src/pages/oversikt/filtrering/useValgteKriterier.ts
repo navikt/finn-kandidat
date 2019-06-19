@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { Behovfelt, Behov } from '../../../types/Behov';
+import { useEffect, useState } from 'react';
+import { Behov, Behovfelt } from '../../../types/Behov';
 import { hentBehovfeltMedTommeLister } from '../../../utils/behovUtils';
-import { hentFilterFraUrl, lagQueryParams, Filter } from './filtreringslogikk';
-import { History } from 'history';
+import { Filter, hentFilterFraUrl, lagQueryParams } from './filtreringslogikk';
 import { useFilterContext } from './filter-context/FilterContext';
 import { ValgteKriterier } from './Filtrering';
+import { RouteComponentProps } from 'react-router';
 
 interface UseValgteKriterier {
     valgteKriterier: ValgteKriterier;
@@ -12,21 +12,21 @@ interface UseValgteKriterier {
     slettValgteKriterier: () => void;
 }
 
-const useValgteKriterier = (history: History): UseValgteKriterier => {
+const useValgteKriterier = (props: RouteComponentProps): UseValgteKriterier => {
     const defaultValgteKriterier = hentBehovfeltMedTommeLister();
 
     const [mellomlagretFilter, setMellomlagretFilter] = useFilterContext();
     const [valgteKriterier, setValgteKriterier] = useState<ValgteKriterier>(defaultValgteKriterier);
 
     const brukMellomlagretFilter = () => {
-        const urlHarIngenFilter = !location.search;
+        const urlHarIngenFilter = !props.location.search;
         if (urlHarIngenFilter && mellomlagretFilter) {
             setFilterIUrl(mellomlagretFilter);
         }
     };
 
     const brukFilterFraUrl = () => {
-        const urlParams = location.search;
+        const urlParams = props.location.search;
         const filterFraUrl = hentFilterFraUrl(urlParams);
 
         setMellomlagretFilter(filterFraUrl);
@@ -34,11 +34,11 @@ const useValgteKriterier = (history: History): UseValgteKriterier => {
     };
 
     useEffect(brukMellomlagretFilter, []);
-    useEffect(brukFilterFraUrl, [location.search]);
+    useEffect(brukFilterFraUrl, [props.location.search]);
 
     const setFilterIUrl = (filter?: Filter) => {
         const search = filter ? lagQueryParams(filter) : '';
-        history.replace({ search });
+        props.history.replace({ search });
     };
 
     const toggleKriterie = (kriterie: Behov, kriterier: Behov[]): Behov[] =>

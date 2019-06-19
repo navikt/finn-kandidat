@@ -11,7 +11,7 @@ interface Props {
 
 const Behovspunkt: FunctionComponent<Props> = ({ tekst, ingenBehov }) => (
     <li className={cls.element('behovspunkt')}>
-        {!ingenBehov && <img src={hakesirkel} className={cls.element('hakesirkel')} />}
+        {!ingenBehov && <img src={hakesirkel} className={cls.element('hakesirkel')} alt="" />}
         <span className={cls.element('behovstekst')}>
             {ingenBehov ? 'Ingen registrerte behov' : tekst}
         </span>

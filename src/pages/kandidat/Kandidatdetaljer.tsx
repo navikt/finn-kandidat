@@ -30,12 +30,6 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
     const [harSkrivetilgang, settSkrivetilgang] = useState<boolean>(false);
     const [slettemodalErÅpen, toggleSlettemodal] = useState<boolean>(false);
 
-    useEffect(() => {
-        redirectVedUgyldigFnr();
-        hentKandidatEllerVisFeilmelding();
-        sjekkSkrivetilgang();
-    }, [fnr]);
-
     const redirectVedUgyldigFnr = () => {
         const fnrErGyldig = erGyldigFnr(fnr);
         if (!fnrErGyldig) {
@@ -58,6 +52,13 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
         const harTilgang = await hentSkrivetilgang(fnr);
         settSkrivetilgang(harTilgang);
     };
+
+    useEffect(() => {
+        redirectVedUgyldigFnr();
+        hentKandidatEllerVisFeilmelding();
+        sjekkSkrivetilgang();
+        // TODO: Fiks det underliggende problemet i stedet for å disable linting
+    }, [fnr]); // eslint-disable-line
 
     return (
         <>

@@ -30,7 +30,7 @@ const cls = bemHelper('oversikt');
 const sorterPåMatchendeKriterier = (a: FiltrertKandidat, b: FiltrertKandidat) =>
     b.matchendeKriterier.length - a.matchendeKriterier.length;
 
-const Oversikt: FunctionComponent<RouteComponentProps> = () => {
+const Oversikt: FunctionComponent<RouteComponentProps> = props => {
     const [alleKandidater, setAlleKandidater] = useState<Kandidat[]>([]);
     const [filtrerteKandidater, setFiltrerteKandidater] = useState<FiltrertKandidat[]>([]);
     const [antallValgteKriterier, setAntallValgteKriterier] = useState<number>(0);
@@ -38,7 +38,7 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
     const [fetchError, setFetchError] = useState<boolean>(false);
 
     const brukKandidatfilter = (kandidater: Kandidat[]) => {
-        const urlParams = location.search;
+        const urlParams = props.location.search;
         const filter = hentFilterFraUrl(urlParams);
         const filtrerteKandidater = filtrerKandidater(kandidater, filter)
             .map(tilFiltrertKandidat)
@@ -75,13 +75,14 @@ const Oversikt: FunctionComponent<RouteComponentProps> = () => {
     };
 
     const onClickKandidat = () => {
-        const urlParams = location.search;
+        const urlParams = props.location.search;
         const aktivtFilter = hentFilterFraUrl(urlParams);
         loggKlikkPåKandidat(aktivtFilter);
     };
 
     useEffect(hentAlleKandidater, []);
-    useEffect(() => brukKandidatfilter(alleKandidater), [location.href]);
+    // TODO: Fiks det underliggende problemet i stedet for å disable linting
+    useEffect(() => brukKandidatfilter(alleKandidater), [window.location.href]); // eslint-disable-line
 
     let kandidaterInnhold = <LasterInn />;
     if (fetchError) {
