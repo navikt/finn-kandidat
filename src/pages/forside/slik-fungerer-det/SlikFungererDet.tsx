@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Undertittel } from 'nav-frontend-typografi';
+import { Undertittel, Element } from 'nav-frontend-typografi';
 import bemHelper from '../../../utils/bemHelper';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 import './slikFungererDet.less';
@@ -9,6 +9,7 @@ const cls = bemHelper('slikFungererDet');
 interface Informasjonsbolk {
     tittel: string;
     punkter: string[];
+    underbolk?: Informasjonsbolk;
 }
 
 const bolker: Informasjonsbolk[] = [
@@ -31,7 +32,22 @@ const bolker: Informasjonsbolk[] = [
         tittel: 'Hvem skal registreres?',
         punkter: [
             'Brukere som har som mål å skaffe arbeid.',
-            'Brukere som skal eller har blitt vurdert etter § 14a som har gitt uttrykk for at de har helse- eller andre utfordringer.',
+            'Brukere som skal eller har blitt vurdert etter § 14a som har gitt uttrykk for at de har helseutfordringer eller andre utfordringer.',
+        ],
+        underbolk: {
+            tittel: 'Rettslig grunnlag',
+            punkter: [
+                'NAV sin plikt til å vurdere brukers behov for bistand for å komme i jobb, ref. NAV-loven §14a.',
+                'NAV sitt ansvar for å bistå arbeidssøkere med å få jobb og arbeidsgivere med å skaffe arbeidskraft, ref. NAV-loven §4.',
+            ],
+        },
+    },
+    {
+        tittel: 'Hvem skal ikke registreres?',
+        punkter: [
+            'Brukere som inngår i kvalifiseringsprogrammet eller brukere som er under oppfølging av andre bestemmelser i sosialtjenesteloven.',
+            'Brukere med kode 6 og kode 7.',
+            'Egne ansatte/habilitering.',
         ],
     },
     {
@@ -51,23 +67,35 @@ const bolker: Informasjonsbolk[] = [
     },
 ];
 
-const SlikFungererDet: FunctionComponent = () => (
-    <section className={cls.block}>
-        <div className={cls.element('container')}>
-            <Undertittel className={cls.element('tittel')}>Slik fungerer det</Undertittel>
-            {bolker.map(bolk => (
-                <Ekspanderbartpanel border tittel={bolk.tittel} key={bolk.tittel}>
-                    <ul className={cls.element('punktliste')}>
-                        {bolk.punkter.map(punkt => (
-                            <li className={cls.element('punkt')} key={punkt}>
-                                {punkt}
-                            </li>
-                        ))}
-                    </ul>
-                </Ekspanderbartpanel>
+const SlikFungererDet: FunctionComponent = () => {
+    const renderPunkter = (punkter: string[]) => (
+        <ul className={cls.element('punktliste')}>
+            {punkter.map(punkt => (
+                <li className={cls.element('punkt')} key={punkt}>
+                    {punkt}
+                </li>
             ))}
-        </div>
-    </section>
-);
+        </ul>
+    );
+
+    return (
+        <section className={cls.block}>
+            <div className={cls.element('container')}>
+                <Undertittel className={cls.element('tittel')}>Slik fungerer det</Undertittel>
+                {bolker.map(bolk => (
+                    <Ekspanderbartpanel border tittel={bolk.tittel} key={bolk.tittel}>
+                        {renderPunkter(bolk.punkter)}
+                        {bolk.underbolk && (
+                            <>
+                                <Element>{bolk.underbolk.tittel}</Element>
+                                {renderPunkter(bolk.underbolk.punkter)}
+                            </>
+                        )}
+                    </Ekspanderbartpanel>
+                ))}
+            </div>
+        </section>
+    );
+};
 
 export default SlikFungererDet;
