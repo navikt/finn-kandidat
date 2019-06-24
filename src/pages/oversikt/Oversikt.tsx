@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FunctionComponent } from 'react';
+import React, { useState, useEffect, FunctionComponent, useCallback } from 'react';
 import { Element } from 'nav-frontend-typografi';
 import { RouteComponentProps, withRouter } from 'react-router';
 import NavFrontendSpinner from 'nav-frontend-spinner';
@@ -33,13 +33,14 @@ const sorterPåMatchendeKriterier = (a: FiltrertKandidat, b: FiltrertKandidat) =
 const Oversikt: FunctionComponent<RouteComponentProps> = props => {
     const [alleKandidater, setAlleKandidater] = useState<Kandidat[]>([]);
     const [filtrerteKandidater, setFiltrerteKandidater] = useState<FiltrertKandidat[]>([]);
+
     const [antallValgteKriterier, setAntallValgteKriterier] = useState<number>(0);
     const [isFetching, toggleFetching] = useState<boolean>(true);
     const [fetchError, setFetchError] = useState<boolean>(false);
 
-    const brukKandidatfilter = (kandidater: Kandidat[]) => {
-        const urlParams = props.location.search;
+    const brukKandidatfilter = useCallback((kandidater: Kandidat[], urlParams: string) => {
         const filter = hentFilterFraUrl(urlParams);
+
         const filtrerteKandidater = filtrerKandidater(kandidater, filter)
             .map(tilFiltrertKandidat)
             .map(tellKandidatensMatchendeKriterier(filter))
@@ -49,7 +50,7 @@ const Oversikt: FunctionComponent<RouteComponentProps> = props => {
 
         setFiltrerteKandidater(filtrerteKandidater);
         setAntallValgteKriterier(summerValgteKriterier(arbeidstidBehov, andreFiltre));
-    };
+    }, []);
 
     const summerValgteKriterier = (
         arbeidstidFilter: ArbeidstidBehov[],
@@ -65,9 +66,7 @@ const Oversikt: FunctionComponent<RouteComponentProps> = props => {
         hentKandidater()
             .then((kandidater: Kandidat[]) => {
                 toggleFetching(false);
-
                 setAlleKandidater(kandidater);
-                brukKandidatfilter(kandidater);
             })
             .catch(() => {
                 setFetchError(true);
@@ -81,8 +80,9 @@ const Oversikt: FunctionComponent<RouteComponentProps> = props => {
     };
 
     useEffect(hentAlleKandidater, []);
-    // TODO: Fiks det underliggende problemet i stedet for å disable linting
-    useEffect(() => brukKandidatfilter(alleKandidater), [window.location.href]); // eslint-disable-line
+    useEffect(() => {
+        brukKandidatfilter(alleKandidater, props.location.search);
+    }, [brukKandidatfilter, alleKandidater, props.location.search]);
 
     let kandidaterInnhold = <LasterInn />;
     if (fetchError) {
