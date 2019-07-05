@@ -45,7 +45,6 @@ const bolker: Informasjonsbolk[] = [
     {
         tittel: 'Hvem skal ikke registreres?',
         punkter: [
-            'Brukere som inngår i kvalifiseringsprogrammet eller brukere som er under oppfølging av andre bestemmelser i sosialtjenesteloven.',
             'Brukere med kode 6 og kode 7.',
             'Egne ansatte/habilitering.',
         ],
