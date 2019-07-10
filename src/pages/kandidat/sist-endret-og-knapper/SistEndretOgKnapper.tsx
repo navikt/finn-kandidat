@@ -42,7 +42,7 @@ const SistEndretOgKnapper: FunctionComponent<Props> = props => {
 };
 
 const SistEndret = ({ sistEndret, sistEndretAv }: { sistEndret: Date; sistEndretAv: string }) => {
-    const lenkeTilBrukerprofil = `https://navet.adeo.no/medsok/medarbeider/id/${sistEndretAv}`;
+    const lenkeTilBrukerprofil = `https://navno.sharepoint.com/sites/intranett/SitePages/search.aspx?q=${sistEndretAv}`;
 
     return (
         <span>
