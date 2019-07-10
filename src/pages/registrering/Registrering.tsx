@@ -10,7 +10,6 @@ import {
     GrunnleggendeBehov,
     Behovfelt,
 } from '../../types/Behov';
-import { formaterFnr } from '../før-du-begynner/fnr-input/fnrUtils';
 import { opprettKandidat } from '../../api/finnKandidatApi';
 import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from './arbeidstid/Arbeidstid';
@@ -83,7 +82,7 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
 
     return (
         <>
-            <RouteBanner tittel="Ny kandidat" undertittel={formaterFnr(fnr)} />
+            <RouteBanner tittel="Ny kandidat" undertittel={fnr} />
 
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.Registrering} />

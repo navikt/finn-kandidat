@@ -2,7 +2,7 @@ import React, { useState, useEffect, FunctionComponent } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 
 import { AppRoute, MatchProps } from '../../utils/paths';
-import { formaterFnr, erGyldigFnr } from '../før-du-begynner/fnr-input/fnrUtils';
+import { erGyldigFnr } from '../før-du-begynner/fnr-input/fnrUtils';
 import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
@@ -64,7 +64,7 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
         <>
             <RouteBanner
                 tittel={iEndremodus ? 'Endre kandidat' : 'Kandidat'}
-                undertittel={formaterFnr(fnr)}
+                undertittel={fnr}
             />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={sidenDuErPå} fnr={fnr} />
