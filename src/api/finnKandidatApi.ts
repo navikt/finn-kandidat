@@ -2,6 +2,7 @@ import { ArbeidstidBehov } from '../types/Behov';
 import { Omit } from 'react-router';
 import api from './initialize';
 import Kandidat from '../types/Kandidat';
+import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
 
 type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {
     arbeidstidBehov: ArbeidstidBehov;
@@ -79,4 +80,13 @@ export const hentSkrivetilgang = async (fnr: string): Promise<boolean> => {
     } catch (error) {
         return error.response.status === 403 ? false : Promise.reject(error.response);
     }
+};
+
+export const sendTilbakemelding = (tilbakemelding: string, behov: LovligeBehov) => {
+    try {
+        api.post('/tilbakemeldinger', {
+            tilbakemelding,
+            behov,
+        });
+    } catch (error) {}
 };

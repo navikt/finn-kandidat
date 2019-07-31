@@ -44,10 +44,7 @@ const bolker: Informasjonsbolk[] = [
     },
     {
         tittel: 'Hvem skal ikke registreres?',
-        punkter: [
-            'Brukere med kode 6 og kode 7.',
-            'Egne ansatte/habilitering.',
-        ],
+        punkter: ['Brukere med kode 6 og kode 7.', 'Egne ansatte/habilitering.'],
     },
     {
         tittel: 'Hvor ofte skal tilretteleggingsbehovene oppdateres?',

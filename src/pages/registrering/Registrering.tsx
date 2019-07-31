@@ -93,15 +93,22 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
                         valgtAlternativ={arbeidstidBehov}
                         onChange={handleArbeidstidBehovChange}
                         feilmelding={feilmelding}
+                        iRegistreringsModus={true}
                     />
-                    <Fysisk valgteAlternativer={fysiskeBehov} onChange={setFysiskeBehov} />
+                    <Fysisk
+                        valgteAlternativer={fysiskeBehov}
+                        onChange={setFysiskeBehov}
+                        iRegistreringsModus={true}
+                    />
                     <Arbeidsmiljø
                         valgteAlternativer={arbeidsmiljøBehov}
                         onChange={setArbeidsmiljøBehov}
+                        iRegistreringsModus={true}
                     />
                     <GrunnleggendeFerdigheter
                         valgteAlternativer={grunnleggendeBehov}
                         onChange={setGrunnleggendeBehov}
+                        iRegistreringsModus={true}
                     />
 
                     <Hovedknapp spinner={isSubmitting} htmlType="submit">

@@ -62,10 +62,7 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
 
     return (
         <>
-            <RouteBanner
-                tittel={iEndremodus ? 'Endre kandidat' : 'Kandidat'}
-                undertittel={fnr}
-            />
+            <RouteBanner tittel={iEndremodus ? 'Endre kandidat' : 'Kandidat'} undertittel={fnr} />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={sidenDuErPå} fnr={fnr} />
                 {kandidat && !feilmelding && (

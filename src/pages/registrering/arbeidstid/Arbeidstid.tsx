@@ -5,14 +5,17 @@ import arbeidstidSpørsmål from './arbeidstidSpørsmål';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 import { ArbeidstidBehov, Behovfelt } from '../../../types/Behov';
 import { Normaltekst } from 'nav-frontend-typografi';
+import UtvidetInformasjon from '../../../components/utvidetinformasjon/UtvidetInformasjon';
+import Tilbakemelding from '../tilbakemelding/Tilbakemelding';
 
 interface Props {
     valgtAlternativ?: ArbeidstidBehov;
     onChange: (behov: ArbeidstidBehov) => void;
     feilmelding?: string;
+    iRegistreringsModus?: boolean;
 }
 
-const Arbeidstid = ({ valgtAlternativ, onChange, feilmelding }: Props) => (
+const Arbeidstid = ({ valgtAlternativ, onChange, feilmelding, iRegistreringsModus }: Props) => (
     <section id={Behovfelt.ArbeidstidBehov} className="blokk-s">
         <Ekspanderbartpanel apen tittel={arbeidstidSpørsmål.tittel}>
             <Normaltekst className="blokk-m">
@@ -34,6 +37,12 @@ const Arbeidstid = ({ valgtAlternativ, onChange, feilmelding }: Props) => (
                     ))}
                 </Fieldset>
             </SkjemaGruppe>
+
+            {iRegistreringsModus && (
+                <UtvidetInformasjon åpneLabel="Savner du et alternativ?" lukkLabel="Lukk">
+                    <Tilbakemelding behov="ARBEIDSTID" />
+                </UtvidetInformasjon>
+            )}
         </Ekspanderbartpanel>
     </section>
 );
