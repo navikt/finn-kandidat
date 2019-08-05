@@ -11,14 +11,16 @@ import Kandidatdetaljer from './pages/kandidat/Kandidatdetaljer';
 import Oversikt from './pages/oversikt/Oversikt';
 import Registrering from './pages/registrering/Registrering';
 import './styles/app.less';
+import TestAdvarsel from './pages/registrering/TestAdvarsel';
 
 const App: FunctionComponent = () => (
     <div className="app">
         <Normaltekst tag="div">
             <FilterContextProvider>
                 <Router basename={APP_ROOT}>
-                    <Header />
+                    <TestAdvarsel />
 
+                    <Header />
                     <Switch>
                         <Route exact path={AppRoute.Forside} component={Forside} />
                         <Route exact path={AppRoute.Oversikt} component={Oversikt} />

@@ -13,6 +13,9 @@
     },
     "REACT_APP_MOCK": {
       "required": true
+    },
+    "REACT_APP_ON_HEROKU": {
+      "required": true
     }
   },
   "formation": {

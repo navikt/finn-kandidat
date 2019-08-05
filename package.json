@@ -77,6 +77,7 @@
         "develop": "yarn start",
         "serve": "node src/server/server.js",
         "mock": "REACT_APP_MOCK=true yarn start",
+        "heroku-postbuild": "REACT_APP_MOCK=true REACT_APP_ON_HEROKU=true yarn build",
         "docker:build": "docker build -t finn-kandidat .",
         "docker:start": "docker run -p 3000:3000 finn-kandidat"
     },
