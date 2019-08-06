@@ -1,5 +1,13 @@
 .kandidatliste {
     padding: 0;
+    opacity: 0;
+    transform: translateY(0.5rem);
+
+    &--vis {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 200ms;
+    }
 
     &__kandidat {
         display: flex;

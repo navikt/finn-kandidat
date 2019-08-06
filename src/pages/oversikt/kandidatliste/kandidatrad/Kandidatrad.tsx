@@ -31,24 +31,20 @@ const Kandidatrad = ({ kandidat, onClick, antallValgteKriterier }: Props) => {
             : '—';
 
     return (
-        <li className={cls.element('listElement')}>
-            <LenkepanelBase
-                href={hentRoute(AppRoute.SeKandidat, fnr)}
-                className={cls.element('kandidat')}
-                linkCreator={linkCreator}
-            >
-                <div className={cls.classNames(cls.element('rad'), 'lenkepanel__heading')}>
-                    <span aria-labelledby={KolonneID.Fnr}>{fnr}</span>
-                    <span aria-labelledby={KolonneID.SistEndret}>
-                        {sistEndret && formaterDato(sistEndret)}
-                    </span>
-                    <span aria-labelledby={KolonneID.SistEndretAv}>{sistEndretAv}</span>
-                    <span aria-labelledby={KolonneID.TreffPåKriterier}>
-                        {antallMatchendeKriterier}
-                    </span>
-                </div>
-            </LenkepanelBase>
-        </li>
+        <LenkepanelBase
+            href={hentRoute(AppRoute.SeKandidat, fnr)}
+            className={cls.element('kandidat')}
+            linkCreator={linkCreator}
+        >
+            <div className={cls.classNames(cls.element('rad'), 'lenkepanel__heading')}>
+                <span aria-labelledby={KolonneID.Fnr}>{fnr}</span>
+                <span aria-labelledby={KolonneID.SistEndret}>
+                    {sistEndret && formaterDato(sistEndret)}
+                </span>
+                <span aria-labelledby={KolonneID.SistEndretAv}>{sistEndretAv}</span>
+                <span aria-labelledby={KolonneID.TreffPåKriterier}>{antallMatchendeKriterier}</span>
+            </div>
+        </LenkepanelBase>
     );
 };
 
