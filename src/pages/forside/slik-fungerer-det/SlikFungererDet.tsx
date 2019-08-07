@@ -26,6 +26,7 @@ const bolker: Informasjonsbolk[] = [
             'I dette verktøyet kan du registrere tilretteleggingsbehov til kandidater på en strukturert måte. Når du registrerer en kandidat blir denne kandidaten søkbar for markedskontakter, som kan bruke verktøyet til å finne kandidater med tilretteleggingsbehov.',
             'Registreringen av tilretteleggingsbehov skal gjøres i forbindelse med en samtale.',
             'Du kan kun registrere tilretteleggingsbehov på kandidater du har tilgang til.',
+            'Kandidatene blir automatisk slettet fra verktøyet når de ikke lenger er under oppfølging.',
         ],
     },
     {
@@ -51,14 +52,6 @@ const bolker: Informasjonsbolk[] = [
         punkter: [
             'Når behovene til kandidaten endrer seg.',
             'Dersom målet endres fra «beholde» til «skaffe» arbeid.',
-        ],
-    },
-    {
-        tittel: 'Når skal tilretteleggingsbehovene slettes?',
-        punkter: [
-            'Når bruker ikke lenger er under arbeidsrettet oppfølging fra NAV.',
-            'Når bruker ber om det, uavhengig av årsak.',
-            'Når bruker ikke lenger har noen tilretteleggingsbehov.',
         ],
     },
 ];
