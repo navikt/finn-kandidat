@@ -3,7 +3,7 @@ import Kandidat from '../types/Kandidat';
 import api from '../api/initialize';
 
 const ROUTE_KANDIDATER = '/finn-kandidat-api/kandidater';
-const ROUTE_LOGGING = '/finn-kandidat-api/logging';
+const ROUTE_EVENTS = '/finn-kandidat-api/events';
 const ROUTE_TILBAKEMELDING = '/finn-kandidat-api/tilbakemeldinger';
 const ROUTE_FNR = /\/finn-kandidat-api\/kandidater\/\d+/;
 const ROUTE_SKRIVETILGANG = /\/finn-kandidat-api\/kandidater\/\d+\/skrivetilgang/;
@@ -46,8 +46,8 @@ mock.onGet(ROUTE_KANDIDATER).reply(() => [200, kandidater]);
 mock.onPost(ROUTE_KANDIDATER).reply(config => [201, config.data]);
 mock.onPut(ROUTE_KANDIDATER).reply(config => [200, config.data]);
 
-mock.onPost(ROUTE_LOGGING).reply(config => {
-    console.log('Logger', config.data);
+mock.onPost(ROUTE_EVENTS).reply(config => {
+    console.log('Sender event', config.data);
     return [200];
 });
 
