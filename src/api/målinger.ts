@@ -1,17 +1,25 @@
 import { Filter } from '../pages/oversikt/filtrering/filtreringslogikk';
 import api from './initialize';
+import { Behovfelt } from '../types/Behov';
+import { hentAlleBehovfelt } from '../utils/behovUtils';
 
 export const loggKlikkPåKandidat = (aktivtFilter: Filter) => {
-    // TODO: Implementer med det nye endepunktet
-    // const leggTilPrefix = (behovfelt: Behovfelt) =>
-    //     (aktivtFilter[behovfelt] as any).map((felt: Behovfelt) => `${behovfelt}.${felt}`);
-    // const data = {
-    //     eventnavn: 'kandidat.klikk',
-    //     felter: {
-    //         aktiveFelter: hentAlleBehovfelt().flatMap((behov: Behovfelt) => leggTilPrefix(behov)),
-    //     },
-    // };
-    // api.post('/logging', data);
+    const leggTilPrefix = (behovfelt: Behovfelt) =>
+        (aktivtFilter[behovfelt] as any).map((felt: Behovfelt) => `${behovfelt}.${felt}`);
+
+    const aktiveFilterString = hentAlleBehovfelt()
+        .flatMap((behov: Behovfelt) => leggTilPrefix(behov))
+        .join(',');
+
+    const data = {
+        name: 'finn-kandidat.kandidat.klikk',
+        tags: {},
+        fields: {
+            aktiveFilter: aktiveFilterString,
+        },
+    };
+
+    api.post('/events', data);
 };
 
 export const loggKlikkPåRegistrering = () => {
