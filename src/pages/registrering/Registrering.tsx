@@ -18,7 +18,7 @@ import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Fysisk from './fysisk/Fysisk';
 import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
 import Informasjon from './informasjon/Informasjon';
-import Kandidat from '../../types/Kandidat';
+import { Kandidat } from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './registrering.less';
 

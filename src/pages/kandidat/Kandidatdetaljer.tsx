@@ -7,7 +7,7 @@ import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Hovedinnhold from './hovedinnhold/Hovedinnhold';
-import Kandidat from '../../types/Kandidat';
+import { RestKandidat, Status, Kandidat } from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import SistEndretOgKnapper from './sist-endret-og-knapper/SistEndretOgKnapper';
 import SlettKandidatModal from './slett-kandidat-modal/SlettKandidatModal';
@@ -25,10 +25,19 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
     const fnr = match.params.fnr;
     const sidenDuErPå = iEndremodus ? AppRoute.EndreKandidat : AppRoute.SeKandidat;
 
-    const [kandidat, setKandidat] = useState<Kandidat | undefined>(undefined);
-    const [feilmelding, setFeilmelding] = useState<string | undefined>(undefined);
+    const [kandidat, setKandidat] = useState<RestKandidat>({
+        status: Status.LasterInn,
+    });
+
     const [harSkrivetilgang, settSkrivetilgang] = useState<boolean>(false);
     const [slettemodalErÅpen, toggleSlettemodal] = useState<boolean>(false);
+
+    const onKandidatChange = (endretKandidat: Kandidat) => {
+        setKandidat({
+            status: Status.Suksess,
+            data: endretKandidat,
+        });
+    };
 
     const redirectVedUgyldigFnr = () => {
         const fnrErGyldig = erGyldigFnr(fnr);
@@ -40,11 +49,17 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
     const hentKandidatEllerVisFeilmelding = async () => {
         try {
             const kandidat = await hentKandidat(fnr);
-            setKandidat(kandidat);
+
+            setKandidat({
+                status: Status.Suksess,
+                data: kandidat,
+            });
         } catch (error) {
-            setFeilmelding(
-                'Du har enten ikke tilgang til denne kandidaten eller så finnes ikke kandidaten i systemet'
-            );
+            setKandidat({
+                status: Status.Feil,
+                error:
+                    'Du har enten ikke tilgang til denne kandidaten eller så finnes ikke kandidaten i systemet',
+            });
         }
     };
 
@@ -65,7 +80,7 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
             <RouteBanner tittel={iEndremodus ? 'Endre kandidat' : 'Kandidat'} undertittel={fnr} />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={sidenDuErPå} fnr={fnr} />
-                {kandidat && !feilmelding && (
+                {kandidat.status !== Status.Feil && (
                     <SistEndretOgKnapper
                         kandidat={kandidat}
                         iEndremodus={iEndremodus}
@@ -76,8 +91,7 @@ const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodu
                 <Hovedinnhold
                     iEndremodus={iEndremodus}
                     kandidat={kandidat}
-                    setKandidat={setKandidat}
-                    feilmelding={feilmelding}
+                    setKandidat={onKandidatChange}
                 />
             </main>
             <SlettKandidatModal

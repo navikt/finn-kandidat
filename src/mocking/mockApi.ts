@@ -1,5 +1,5 @@
 import MockAdapter from 'axios-mock-adapter';
-import Kandidat from '../types/Kandidat';
+import { Kandidat } from '../types/Kandidat';
 import api from '../api/initialize';
 
 const ROUTE_KANDIDATER = '/finn-kandidat-api/kandidater';
@@ -10,7 +10,7 @@ const ROUTE_SKRIVETILGANG = /\/finn-kandidat-api\/kandidater\/\d+\/skrivetilgang
 
 const kandidater = require('./kandidater.json');
 const mock = new MockAdapter(api, {
-    delayResponse: 300,
+    delayResponse: 500,
 });
 
 const visAdvarsel = () => {

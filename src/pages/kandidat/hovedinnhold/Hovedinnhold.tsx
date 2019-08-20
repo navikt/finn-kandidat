@@ -1,32 +1,26 @@
 import React, { FunctionComponent } from 'react';
 import EndreKandidat from './endre-kandidat/EndreKandidat';
-import Kandidat from '../../../types/Kandidat';
+import { Kandidat, RestKandidat, Status } from '../../../types/Kandidat';
 import LasterInn from './laster-inn/LasterInn';
-import PanelMedTekst from '../../../components/panel-med-tekst/PanelMedTekst';
 import SeKandidat from './se-kandidat/SeKandidat';
 
 interface Props {
-    kandidat?: Kandidat;
+    kandidat: RestKandidat;
     iEndremodus: boolean;
     setKandidat: (kandidat: Kandidat) => void;
     feilmelding?: string;
 }
 
-const Hovedinnhold: FunctionComponent<Props> = props => {
-    const { kandidat, iEndremodus, setKandidat, feilmelding } = props;
-    if (kandidat) {
-        return iEndremodus ? (
-            <EndreKandidat kandidat={kandidat} onKandidatChange={setKandidat} />
+const Hovedinnhold: FunctionComponent<Props> = ({ kandidat, iEndremodus, setKandidat }) => {
+    if (iEndremodus) {
+        return kandidat.status === Status.Suksess ? (
+            <EndreKandidat kandidat={kandidat.data} onKandidatChange={setKandidat} />
         ) : (
-            <SeKandidat kandidat={kandidat} />
+            <LasterInn />
         );
     }
 
-    if (feilmelding) {
-        return <PanelMedTekst tekst={feilmelding} />;
-    }
-
-    return <LasterInn />;
+    return <SeKandidat kandidat={kandidat} />;
 };
 
 export default Hovedinnhold;

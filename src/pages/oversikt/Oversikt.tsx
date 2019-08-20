@@ -2,8 +2,10 @@ import React, { useState, useEffect, FunctionComponent, useCallback } from 'reac
 import { Element } from 'nav-frontend-typografi';
 import { RouteComponentProps, withRouter } from 'react-router';
 import NavFrontendSpinner from 'nav-frontend-spinner';
+import Skeleton from 'react-loading-skeleton';
 
 import { AppRoute } from '../../utils/paths';
+import { ArbeidstidBehov } from '../../types/Behov';
 import {
     filtrerKandidater,
     hentFilterFraUrl,
@@ -11,14 +13,14 @@ import {
     tilFiltrertKandidat,
     FiltrertKandidat,
 } from './filtrering/filtreringslogikk';
-import { ArbeidstidBehov } from '../../types/Behov';
 import { hentKandidater } from '../../api/finnKandidatApi';
+import { Kandidat, RestKandidater, Status } from '../../types/Kandidat';
 import { loggKlikkPåKandidat } from '../../api/målinger';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Filtrering from './filtrering/Filtrering';
-import Kandidat from '../../types/Kandidat';
 import Kandidatliste from './kandidatliste/Kandidatliste';
+import KandidatListeSkeleton from './kandidatliste/KandidatListeSkeleton';
 import Kolonnetitler from './kolonnetitler/Kolonnetitler';
 import NyKandidatKnapp from './ny-kandidat-knapp/NyKandidatKnapp';
 import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
@@ -31,12 +33,12 @@ const sorterPåMatchendeKriterier = (a: FiltrertKandidat, b: FiltrertKandidat) =
     b.matchendeKriterier.length - a.matchendeKriterier.length;
 
 const Oversikt: FunctionComponent<RouteComponentProps> = props => {
-    const [alleKandidater, setAlleKandidater] = useState<Kandidat[]>([]);
-    const [filtrerteKandidater, setFiltrerteKandidater] = useState<FiltrertKandidat[]>([]);
+    const [alleKandidater, setAlleKandidater] = useState<RestKandidater>({
+        status: Status.LasterInn,
+    });
 
+    const [filtrerteKandidater, setFiltrerteKandidater] = useState<FiltrertKandidat[]>([]);
     const [antallValgteKriterier, setAntallValgteKriterier] = useState<number>(0);
-    const [isFetching, toggleFetching] = useState<boolean>(true);
-    const [fetchError, setFetchError] = useState<boolean>(false);
 
     const brukKandidatfilter = useCallback((kandidater: Kandidat[], urlParams: string) => {
         const filter = hentFilterFraUrl(urlParams);
@@ -65,11 +67,16 @@ const Oversikt: FunctionComponent<RouteComponentProps> = props => {
     const hentAlleKandidater = () => {
         hentKandidater()
             .then((kandidater: Kandidat[]) => {
-                toggleFetching(false);
-                setAlleKandidater(kandidater);
+                setAlleKandidater({
+                    status: Status.Suksess,
+                    data: kandidater,
+                });
             })
             .catch(() => {
-                setFetchError(true);
+                setAlleKandidater({
+                    status: Status.Feil,
+                    error: 'Kunne ikke hente kandidater',
+                });
             });
     };
 
@@ -81,13 +88,15 @@ const Oversikt: FunctionComponent<RouteComponentProps> = props => {
 
     useEffect(hentAlleKandidater, []);
     useEffect(() => {
-        brukKandidatfilter(alleKandidater, props.location.search);
+        brukKandidatfilter(
+            alleKandidater.status === Status.Suksess ? alleKandidater.data : [],
+            props.location.search
+        );
     }, [brukKandidatfilter, alleKandidater, props.location.search]);
 
     let kandidaterInnhold = <LasterInn />;
-    if (fetchError) {
-        kandidaterInnhold = <PanelMedTekst tekst="Kunne ikke hente kandidater" />;
-    } else if (!isFetching) {
+
+    if (alleKandidater.status === Status.Suksess) {
         kandidaterInnhold = (
             <Kandidatliste
                 kandidater={filtrerteKandidater}
@@ -95,7 +104,18 @@ const Oversikt: FunctionComponent<RouteComponentProps> = props => {
                 onClickKandidat={onClickKandidat}
             />
         );
+    } else if (alleKandidater.status === Status.LasterInn) {
+        kandidaterInnhold = <KandidatListeSkeleton />;
+    } else if (alleKandidater.status === Status.Feil) {
+        kandidaterInnhold = <PanelMedTekst tekst={alleKandidater.error} />;
     }
+
+    const antallKandidater =
+        alleKandidater.status === Status.Suksess ? (
+            `${filtrerteKandidater.length} kandidater`
+        ) : (
+            <Skeleton width={105} />
+        );
 
     return (
         <>
@@ -108,7 +128,7 @@ const Oversikt: FunctionComponent<RouteComponentProps> = props => {
                     </aside>
                     <section className={cls.element('kandidatliste')}>
                         <div className={cls.element('antallOgKnapp')}>
-                            <Element>{filtrerteKandidater.length} kandidater</Element>
+                            <Element>{antallKandidater}</Element>
                             <NyKandidatKnapp />
                         </div>
                         <Kolonnetitler />

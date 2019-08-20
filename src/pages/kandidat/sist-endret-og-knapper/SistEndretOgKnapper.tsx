@@ -1,17 +1,18 @@
 import React, { FunctionComponent } from 'react';
 import { Knapp } from 'nav-frontend-knapper';
 import Lenke from 'nav-frontend-lenker';
+import Skeleton from 'react-loading-skeleton';
 
 import { formaterDatoOgTid } from '../../../utils/datoUtils';
+import { RestKandidat, Status } from '../../../types/Kandidat';
 import AvbrytKnapp from './avbryt-knapp/AvbrytKnapp';
 import bemHelper from '../../../utils/bemHelper';
 import EndreKandidatKnapp from './endre-kandidat-knapp/EndreKandidatKnapp';
-import Kandidat from '../../../types/Kandidat';
 
 const cls = bemHelper('kandidatdetaljer');
 
 interface Props {
-    kandidat: Kandidat;
+    kandidat: RestKandidat;
     iEndremodus: boolean;
     harSkrivetilgang: boolean;
     åpneSlettemodal: () => void;
@@ -20,20 +21,30 @@ interface Props {
 const SistEndretOgKnapper: FunctionComponent<Props> = props => {
     const { kandidat, iEndremodus, harSkrivetilgang, åpneSlettemodal } = props;
 
+    let sistEndretTekst;
+    if (kandidat.status === Status.Suksess) {
+        const { sistEndret, sistEndretAv } = kandidat.data;
+        if (sistEndret && sistEndretAv) {
+            sistEndretTekst = <SistEndret sistEndret={sistEndret} sistEndretAv={sistEndretAv} />;
+        }
+    }
+
     return (
         <div className={cls.element('sistEndretOgKnapper')}>
-            {kandidat.sistEndret && kandidat.sistEndretAv && (
-                <SistEndret sistEndret={kandidat.sistEndret} sistEndretAv={kandidat.sistEndretAv} />
-            )}
+            {sistEndretTekst || <Skeleton width={310} height={20} />}
             {harSkrivetilgang && (
                 <div className={cls.element('knapper')}>
                     <Knapp mini onClick={åpneSlettemodal} className={cls.element('slettknapp')}>
                         Slett
                     </Knapp>
-                    {iEndremodus ? (
-                        <AvbrytKnapp fnr={kandidat.fnr} />
+                    {kandidat.status === Status.Suksess ? (
+                        iEndremodus ? (
+                            <AvbrytKnapp fnr={kandidat.data.fnr} />
+                        ) : (
+                            <EndreKandidatKnapp fnr={kandidat.data.fnr} />
+                        )
                     ) : (
-                        <EndreKandidatKnapp fnr={kandidat.fnr} />
+                        <Skeleton width={220} height={30} />
                     )}
                 </div>
             )}

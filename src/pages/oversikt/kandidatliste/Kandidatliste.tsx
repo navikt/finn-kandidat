@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from 'react';
 
 import { FiltrertKandidat } from '../filtrering/filtreringslogikk';
 import bemHelper from '../../../utils/bemHelper';
-import IngenKandidater from './IngenKandidater';
+import IngenKandidater from './ingen-kandidater/IngenKandidater';
 import Kandidatrad from './kandidatrad/Kandidatrad';
 import './kandidatliste.less';
 
@@ -16,14 +16,21 @@ interface Props {
 
 const Kandidatliste = ({ kandidater, onClickKandidat, antallValgteKriterier }: Props) => {
     const [visKandidater, toggleVisKandidater] = useState<boolean>(true);
+    const [antallRendersAvKandidater, setAntall] = useState<number>(0);
 
-    useLayoutEffect(() => {
-        toggleVisKandidater(false);
+    const triggAnimasjonEtterKandidateneErLastet = () => {
+        if (antallRendersAvKandidater > 1) {
+            toggleVisKandidater(false);
 
-        setTimeout(() => {
-            toggleVisKandidater(true);
-        });
-    }, [kandidater]);
+            setTimeout(() => {
+                toggleVisKandidater(true);
+            });
+        }
+
+        setAntall(antallRendersAvKandidater + 1);
+    };
+
+    useLayoutEffect(triggAnimasjonEtterKandidateneErLastet, [kandidater]);
 
     return (
         <ul className={cls.classNames(cls.block, { [cls.modifier('vis')]: visKandidater })}>
