@@ -3,16 +3,17 @@ import { Element } from 'nav-frontend-typografi';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 
 import { Behov } from '../../../../../types/Behov';
-import Spørsmål from '../../../../registrering/Spørsmål';
-import bemHelper from '../../../../../utils/bemHelper';
 import Behovspunkt from './Behovspunkt';
+import bemHelper from '../../../../../utils/bemHelper';
+import RegistrerteSvarSkeleton from './RegistrerteSvarSkeleton';
+import Spørsmål from '../../../../registrering/Spørsmål';
 import './registrertBehov.less';
 
 const cls = bemHelper('registrertBehov');
 
 interface Props {
     spørsmål: Spørsmål<Behov>;
-    svar: Behov[];
+    svar?: Behov[];
 }
 
 const RegistrertBehov: FunctionComponent<Props> = ({ spørsmål, svar }) => {
@@ -21,11 +22,11 @@ const RegistrertBehov: FunctionComponent<Props> = ({ spørsmål, svar }) => {
     };
 
     let registrerteSvar: ReactNode;
-    if (svar.length > 0) {
+    if (svar && svar.length > 0) {
         registrerteSvar = svar.map(behov => (
             <Behovspunkt key={behov} tekst={hentBehovsbeskrivelse(behov)} />
         ));
-    } else {
+    } else if (svar) {
         registrerteSvar = <Behovspunkt ingenBehov />;
     }
 
@@ -33,7 +34,9 @@ const RegistrertBehov: FunctionComponent<Props> = ({ spørsmål, svar }) => {
         <section className="blokk-xs">
             <Ekspanderbartpanel apen tittel={spørsmål.tittel}>
                 <Element>{spørsmål.spørsmål}</Element>
-                <ul className={cls.element('svarliste')}>{registrerteSvar}</ul>
+                <ul className={cls.element('svarliste')}>
+                    {registrerteSvar || <RegistrerteSvarSkeleton />}
+                </ul>
             </Ekspanderbartpanel>
         </section>
     );

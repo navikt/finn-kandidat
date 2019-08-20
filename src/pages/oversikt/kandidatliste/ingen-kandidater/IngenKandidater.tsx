@@ -1,8 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import './IngenKandidater.less';
-import fjell from './fjell.svg';
 import { Systemtittel } from 'nav-frontend-typografi';
-import bemHelper from '../../../utils/bemHelper';
+
+import bemHelper from '../../../../utils/bemHelper';
+import fjell from './fjell.svg';
+import './IngenKandidater.less';
 
 interface Props {
     årsak: string;

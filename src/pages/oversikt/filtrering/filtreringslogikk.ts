@@ -1,4 +1,4 @@
-import Kandidat from '../../../types/Kandidat';
+import { Kandidat } from '../../../types/Kandidat';
 import { Behov, Behovfelt, AlleBehov } from '../../../types/Behov';
 import { hentAlleBehovfelt } from '../../../utils/behovUtils';
 import { ValgteKriterier } from './Filtrering';

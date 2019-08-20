@@ -4,12 +4,12 @@ import { withRouter, RouteComponentProps } from 'react-router';
 
 import { AppRoute, hentRoute } from '../../../../utils/paths';
 import { Behov, Behovfelt } from '../../../../types/Behov';
+import { endreKandidat } from '../../../../api/finnKandidatApi';
+import { Kandidat } from '../../../../types/Kandidat';
 import Arbeidsmiljø from '../../../registrering/arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from '../../../registrering/arbeidstid/Arbeidstid';
 import Fysisk from '../../../registrering/fysisk/Fysisk';
 import GrunnleggendeFerdigheter from '../../../registrering/grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
-import Kandidat from '../../../../types/Kandidat';
-import { endreKandidat } from '../../../../api/finnKandidatApi';
 
 interface OwnProps {
     kandidat: Kandidat;

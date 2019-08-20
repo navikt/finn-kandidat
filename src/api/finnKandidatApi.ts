@@ -1,7 +1,7 @@
 import { ArbeidstidBehov } from '../types/Behov';
 import { Omit } from 'react-router';
 import api from './initialize';
-import Kandidat from '../types/Kandidat';
+import { Kandidat } from '../types/Kandidat';
 import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
 
 type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {

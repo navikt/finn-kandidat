@@ -8,9 +8,10 @@ import Flervalgsalternativer from '../flervalgsalternativer/Flervalgsalternative
 import grunnleggendeFerdigheterSpørsmål from './grunnleggendeFerdigheterSpørsmål';
 import './grunnleggendeFerdigheter.less';
 import Tilbakemelding from '../tilbakemelding/Tilbakemelding';
+import Skeleton from 'react-loading-skeleton';
 
 interface Props {
-    valgteAlternativer: GrunnleggendeBehov[];
+    valgteAlternativer?: GrunnleggendeBehov[];
     onChange: (behov: GrunnleggendeBehov[]) => void;
     iRegistreringsModus?: boolean;
 }
@@ -19,7 +20,9 @@ const cls = bemHelper('grunnleggendeFerdigheter');
 
 const GrunnleggendeFerdigheter = ({ valgteAlternativer, onChange, iRegistreringsModus }: Props) => {
     const skalViseTilbakemeldingsInput =
-        iRegistreringsModus && valgteAlternativer.includes(GrunnleggendeBehov.AndreUtfordringer);
+        iRegistreringsModus &&
+        valgteAlternativer &&
+        valgteAlternativer.includes(GrunnleggendeBehov.AndreUtfordringer);
 
     return (
         <section className="blokk-s">
@@ -30,11 +33,15 @@ const GrunnleggendeFerdigheter = ({ valgteAlternativer, onChange, iRegistrerings
                 </p>
                 <Fieldset legend={grunnleggendeFerdigheterSpørsmål.spørsmål}>
                     <div className={cls.element('alternativer')}>
-                        <Flervalgsalternativer
-                            spørsmål={grunnleggendeFerdigheterSpørsmål}
-                            valgteAlternativer={valgteAlternativer}
-                            onChange={onChange}
-                        />
+                        {valgteAlternativer ? (
+                            <Flervalgsalternativer
+                                spørsmål={grunnleggendeFerdigheterSpørsmål}
+                                valgteAlternativer={valgteAlternativer}
+                                onChange={onChange}
+                            />
+                        ) : (
+                            <Skeleton />
+                        )}
                     </div>
                 </Fieldset>
                 {skalViseTilbakemeldingsInput && <Tilbakemelding behov="GRUNNLEGGENDE" />}

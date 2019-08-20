@@ -5,9 +5,10 @@ import Flervalgsalternativer from '../flervalgsalternativer/Flervalgsalternative
 import { Fieldset } from 'nav-frontend-skjema';
 import Ekspanderbartpanel from 'nav-frontend-ekspanderbartpanel';
 import Tilbakemelding from '../tilbakemelding/Tilbakemelding';
+import Skeleton from 'react-loading-skeleton';
 
 interface Props {
-    valgteAlternativer: ArbeidsmijøBehov[];
+    valgteAlternativer?: ArbeidsmijøBehov[];
     onChange: (arbeidsmiljøBehov: ArbeidsmijøBehov[]) => void;
     iRegistreringsModus?: boolean;
 }
@@ -18,17 +19,23 @@ const Arbeidsmiljø: FunctionComponent<Props> = ({
     iRegistreringsModus,
 }) => {
     const skalViseTilbakemeldingsInput =
-        iRegistreringsModus && valgteAlternativer.includes(ArbeidsmijøBehov.Annet);
+        iRegistreringsModus &&
+        valgteAlternativer &&
+        valgteAlternativer.includes(ArbeidsmijøBehov.Annet);
 
     return (
         <section className="blokk-s">
             <Ekspanderbartpanel apen tittel={arbeidsmiljøSpørsmål.tittel}>
                 <Fieldset legend={arbeidsmiljøSpørsmål.spørsmål}>
-                    <Flervalgsalternativer
-                        spørsmål={arbeidsmiljøSpørsmål}
-                        valgteAlternativer={valgteAlternativer}
-                        onChange={onChange}
-                    />
+                    {valgteAlternativer ? (
+                        <Flervalgsalternativer
+                            spørsmål={arbeidsmiljøSpørsmål}
+                            valgteAlternativer={valgteAlternativer}
+                            onChange={onChange}
+                        />
+                    ) : (
+                        <Skeleton />
+                    )}
                 </Fieldset>
                 {skalViseTilbakemeldingsInput && <Tilbakemelding behov="ARBEIDSMILJØ" />}
             </Ekspanderbartpanel>
