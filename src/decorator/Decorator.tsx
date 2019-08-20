@@ -1,5 +1,7 @@
 import NAVSPA from '@navikt/navspa';
 import React, { FunctionComponent } from 'react';
+import { RouteComponentProps, withRouter } from 'react-router';
+import { AppRoute, hentRoute } from '../utils/paths';
 
 interface DecoratorProps {
     appname: string; // Navn på applikasjon
@@ -45,18 +47,24 @@ interface Enhet {
 
 const InternflateDecorator = NAVSPA.importer<DecoratorProps>('internarbeidsflatefs');
 
-const decoratorProps: DecoratorProps = {
-    appname: '“Tilrettelegger’n”',
-    fnr: null,
-    enhet: null,
-    toggles: {
-        visVeilder: false,
-        visSokefelt: false,
-        visEnhetVelger: false,
-        visEnhet: false,
-    },
-    onSok: fnr => {},
-    onEnhetChange: enhet => {},
-};
+const Decorator: FunctionComponent<RouteComponentProps> = (props) =>
+    <InternflateDecorator
+        appname={'“Tilrettelegger’n”'}
+        fnr={null}
+        enhet={null}
+        toggles={{
+            visVeilder: false,
+            visSokefelt: true,
+            visEnhetVelger: false,
+            visEnhet: false,
+        }}
+        onSok={fnr => {
+            const pathTilPerson = hentRoute(AppRoute.SeKandidat, fnr);
+            console.log('fnr', fnr);
+            console.log('pathTilPerson', pathTilPerson);
+            props.history.push(pathTilPerson)
+        }}
+        onEnhetChange={enhet => {console.log('enhet', enhet)}}
+    />;
 
-export const Decorator: FunctionComponent = () => <InternflateDecorator {...decoratorProps} />;
+export default withRouter(Decorator);
