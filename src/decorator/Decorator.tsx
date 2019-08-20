@@ -46,14 +46,14 @@ interface Enhet {
 const InternflateDecorator = NAVSPA.importer<DecoratorProps>('internarbeidsflatefs');
 
 const decoratorProps: DecoratorProps = {
-    appname: 'finn-kandidat',
+    appname: '“Tilrettelegger’n”',
     fnr: null,
     enhet: null,
     toggles: {
-        visVeilder: true,
-        visSokefelt: true,
-        visEnhetVelger: true,
-        visEnhet: true,
+        visVeilder: false,
+        visSokefelt: false,
+        visEnhetVelger: false,
+        visEnhet: false,
     },
     onSok: fnr => {},
     onEnhetChange: enhet => {},
