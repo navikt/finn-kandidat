@@ -1,5 +1,5 @@
 import NAVSPA from '@navikt/navspa';
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { AppRoute, hentRoute, MatchProps } from '../utils/paths';
 
