@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const proxy = require('http-proxy-middleware');
 
 const DEFAULT_PORT = 3000;
 const PORT = process.env.PORT || DEFAULT_PORT;
@@ -23,6 +24,11 @@ const startServer = () => {
     app.use(BASE_PATH, (_, res) => {
         res.sendFile(path.resolve(buildPath, 'index.html'));
     });
+
+    app.use('/decorator', proxy({
+        target: process.env.DECORATOR_URL,
+        changeOrigin: true,
+    }));
 
     app.use('/', (_, res) => {
         res.redirect(BASE_PATH);

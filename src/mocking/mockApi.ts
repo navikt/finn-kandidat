@@ -28,6 +28,7 @@ const hentFnrFraConfig = (config: any) => config.url && config.url.split('/')[3]
 
 mock.onGet(ROUTE_SKRIVETILGANG).reply(() => [200]);
 
+
 mock.onGet(ROUTE_FNR).reply(config => {
     const fnrFraRoute = hentFnrFraConfig(config);
     const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute);
