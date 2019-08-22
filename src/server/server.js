@@ -28,6 +28,9 @@ const startServer = () => {
     app.use('/decorator', proxy({
         target: process.env.DECORATOR_URL,
         changeOrigin: true,
+        pathRewrite: {
+            "^/decorator": "/"
+        }
     }));
 
     app.use('/', (_, res) => {
