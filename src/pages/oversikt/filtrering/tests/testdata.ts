@@ -7,6 +7,7 @@ import {
 
 export const kandidatSomKanJobbeHeltid = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [],
     grunnleggendeBehov: [],
@@ -15,6 +16,7 @@ export const kandidatSomKanJobbeHeltid = {
 
 export const kandidatSomKanJobbeFleksibelt = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Fleksibel],
     fysiskeBehov: [],
     arbeidsmiljøBehov: [],
@@ -23,6 +25,7 @@ export const kandidatSomKanJobbeFleksibelt = {
 
 export const kandidatSomTrengerErgonomiskTilrettelegging = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [FysiskBehov.Ergonomi],
     arbeidsmiljøBehov: [],
@@ -31,6 +34,7 @@ export const kandidatSomTrengerErgonomiskTilrettelegging = {
 
 export const kandidatSomIkkeKanLøfteTung = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [FysiskBehov.TungeLøft],
     arbeidsmiljøBehov: [],
@@ -39,6 +43,7 @@ export const kandidatSomIkkeKanLøfteTung = {
 
 export const kandidatSomTrengerTilrettelagtOpplæring = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [],
     arbeidsmiljøBehov: [ArbeidsmijøBehov.TilrettelagtOpplæring],
@@ -47,6 +52,7 @@ export const kandidatSomTrengerTilrettelagtOpplæring = {
 
 export const kandidatSomTrengerMentor = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [],
     arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
@@ -55,6 +61,7 @@ export const kandidatSomTrengerMentor = {
 
 export const kandidatSomTrengerTilretteleggingForHørsel = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [FysiskBehov.Hørsel],
     arbeidsmiljøBehov: [],
@@ -63,6 +70,7 @@ export const kandidatSomTrengerTilretteleggingForHørsel = {
 
 export const kandidatSomTrengerTilretteleggingForSyn = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [FysiskBehov.Syn],
     arbeidsmiljøBehov: [],
@@ -71,6 +79,7 @@ export const kandidatSomTrengerTilretteleggingForSyn = {
 
 export const kandidatSomIkkeKanLøfteTungt = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [FysiskBehov.TungeLøft],
     arbeidsmiljøBehov: [],
@@ -79,6 +88,7 @@ export const kandidatSomIkkeKanLøfteTungt = {
 
 export const kandidatSomIkkeKanJobbe = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.KanIkkeJobbe],
     fysiskeBehov: [],
     arbeidsmiljøBehov: [],
@@ -87,6 +97,7 @@ export const kandidatSomIkkeKanJobbe = {
 
 export const kandidatSomKanSnakkeNorsk = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [],
     arbeidsmiljøBehov: [],
@@ -95,6 +106,7 @@ export const kandidatSomKanSnakkeNorsk = {
 
 export const kandidatSomKanSkriveNorsk = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [],
     arbeidsmiljøBehov: [],
@@ -103,6 +115,7 @@ export const kandidatSomKanSkriveNorsk = {
 
 export const kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [FysiskBehov.TungeLøft],
     arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],
@@ -111,6 +124,7 @@ export const kandidatSomIkkeKanLøfteTungtOgSomTrengerMentor = {
 
 export const kandidatSomIkkeKanLøfteTungtOgSomTrengerErgonomiOgMentor = {
     fnr: '',
+    aktørId: '',
     arbeidstidBehov: [ArbeidstidBehov.Heltid],
     fysiskeBehov: [FysiskBehov.TungeLøft, FysiskBehov.Ergonomi],
     arbeidsmiljøBehov: [ArbeidsmijøBehov.Mentor],

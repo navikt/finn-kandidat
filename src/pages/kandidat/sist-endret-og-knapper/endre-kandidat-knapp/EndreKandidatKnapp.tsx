@@ -10,10 +10,10 @@ const cls = bemHelper('endreKandidatKnapp');
 const knappCls = bemHelper('knapp');
 
 interface Props {
-    fnr: string;
+    aktørId: string;
 }
 
-const EndreKandidatKnapp: FunctionComponent<Props> = ({ fnr }) => (
+const EndreKandidatKnapp: FunctionComponent<Props> = ({ aktørId }) => (
     <Link
         className={classnames(
             cls.block,
@@ -21,7 +21,7 @@ const EndreKandidatKnapp: FunctionComponent<Props> = ({ fnr }) => (
             knappCls.modifier('hoved'),
             knappCls.modifier('mini')
         )}
-        to={hentRoute(AppRoute.EndreKandidat, fnr)}
+        to={hentRoute(AppRoute.EndreKandidat, aktørId)}
     >
         Endre
     </Link>

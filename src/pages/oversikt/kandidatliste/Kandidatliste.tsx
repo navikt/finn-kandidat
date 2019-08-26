@@ -36,7 +36,7 @@ const Kandidatliste = ({ kandidater, onClickKandidat, antallValgteKriterier }: P
         <ul className={cls.classNames(cls.block, { [cls.modifier('vis')]: visKandidater })}>
             {kandidater.length > 0 ? (
                 kandidater.map(kandidat => (
-                    <li key={kandidat.fnr} className={cls.element('listElement')}>
+                    <li key={kandidat.aktørId} className={cls.element('listElement')}>
                         <Kandidatrad
                             kandidat={kandidat}
                             onClick={onClickKandidat}

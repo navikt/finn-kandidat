@@ -11,11 +11,11 @@ const cls = bemHelper('brødsmulesti');
 
 interface Props {
     sidenDuErPå: AppRoute;
-    fnr?: string;
+    aktørId?: string;
 }
 
-const Brødsmulesti: FunctionComponent<Props> = ({ sidenDuErPå, fnr }) => {
-    const sti = byggSti(sidenDuErPå, fnr);
+const Brødsmulesti: FunctionComponent<Props> = ({ sidenDuErPå, aktørId }) => {
+    const sti = byggSti(sidenDuErPå, aktørId);
 
     return (
         <nav className={cls.block}>

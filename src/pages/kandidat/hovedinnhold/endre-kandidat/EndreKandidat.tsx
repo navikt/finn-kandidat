@@ -45,7 +45,7 @@ const EndreKandidat: FunctionComponent<Props> = props => {
 
         if (respons) {
             props.onKandidatChange(kandidat);
-            props.history.push(hentRoute(AppRoute.SeKandidat, kandidat.fnr));
+            props.history.push(hentRoute(AppRoute.SeKandidat, kandidat.aktørId));
         }
     };
 

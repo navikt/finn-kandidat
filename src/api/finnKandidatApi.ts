@@ -3,6 +3,7 @@ import { Omit } from 'react-router';
 import api from './initialize';
 import { Kandidat } from '../types/Kandidat';
 import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
+import { AxiosResponse } from 'axios';
 
 type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {
     arbeidstidBehov: ArbeidstidBehov;
@@ -28,10 +29,26 @@ const tilKandidatDto = (kandidat: Kandidat): KandidatDto => {
     };
 };
 
-export const hentKandidat = async (fnr: string): Promise<Kandidat> => {
+export const hentKandidat = async (aktørId: string): Promise<Kandidat> => {
     try {
-        const respons = await api.get(`/kandidater/${fnr}`);
+        const respons = await api.get(`/kandidater/${aktørId}`);
         return fraKandidatDto(respons.data);
+    } catch (error) {
+        return Promise.reject(error.response);
+    }
+};
+
+export const hentAktørId = async (fnr: string): Promise<AxiosResponse<string>> => {
+    try {
+        return await api.get(`/kandidater/${fnr}/aktorId`);
+    } catch (error) {
+        return Promise.reject(error.response);
+    }
+};
+
+export const hentFnr = async (aktørId: string): Promise<AxiosResponse<string>> => {
+    try {
+        return await api.get(`/kandidater/${aktørId}/fnr`);
     } catch (error) {
         return Promise.reject(error.response);
     }
@@ -64,18 +81,18 @@ export const endreKandidat = async (kandidat: Kandidat): Promise<boolean> => {
     }
 };
 
-export const slettKandidat = async (fnr: string): Promise<boolean> => {
+export const slettKandidat = async (aktørId: string): Promise<boolean> => {
     try {
-        const respons = await api.delete(`/kandidater/${fnr}`);
+        const respons = await api.delete(`/kandidater/${aktørId}`);
         return respons.status === 200;
     } catch (error) {
         return Promise.reject(error.response);
     }
 };
 
-export const hentSkrivetilgang = async (fnr: string): Promise<boolean> => {
+export const hentSkrivetilgang = async (aktørId: string): Promise<boolean> => {
     try {
-        await api.get(`/kandidater/${fnr}/skrivetilgang`);
+        await api.get(`/kandidater/${aktørId}/skrivetilgang`);
         return true;
     } catch (error) {
         return error.response.status === 403 ? false : Promise.reject(error.response);

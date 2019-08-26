@@ -17,7 +17,7 @@ interface Props {
 }
 
 const Kandidatrad = ({ kandidat, onClick, antallValgteKriterier }: Props) => {
-    const { fnr, sistEndret, sistEndretAv, matchendeKriterier } = kandidat;
+    const { fnr, aktørId, sistEndret, sistEndretAv, matchendeKriterier } = kandidat;
 
     const linkCreator = (props: React.HTMLProps<HTMLElement>) => (
         <Link className={props.className} to={props.href || '#'} onClick={() => onClick()}>
@@ -32,7 +32,7 @@ const Kandidatrad = ({ kandidat, onClick, antallValgteKriterier }: Props) => {
 
     return (
         <LenkepanelBase
-            href={hentRoute(AppRoute.SeKandidat, fnr)}
+            href={hentRoute(AppRoute.SeKandidat, aktørId)}
             className={cls.element('kandidat')}
             linkCreator={linkCreator}
         >

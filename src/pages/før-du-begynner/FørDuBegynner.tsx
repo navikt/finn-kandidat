@@ -4,7 +4,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 import { AppRoute, hentRoute } from '../../utils/paths';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
-import { hentSkrivetilgang, hentKandidat } from '../../api/finnKandidatApi';
+import { hentSkrivetilgang, hentAktørId, hentKandidat } from '../../api/finnKandidatApi';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import FnrInput from './fnr-input/FnrInput';
@@ -21,7 +21,8 @@ enum Feilmelding {
 }
 
 const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
-    const [fnr, setFnr] = useState<string>('00000000000'); // TODO: Fjern default fnr
+    const [fnr, setFnr] = useState<string>('');
+
     const [feilmelding, setFeilmelding] = useState<Feilmelding | undefined>(undefined);
     const [sjekkerTilgangOgEksistens, setSjekkerTilgangOgEksistens] = useState<boolean>();
 
@@ -30,53 +31,61 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
         setFeilmelding(undefined);
     };
 
-    const onGåVidereClick = async () => {
-        if (erGyldigFnr(fnr)) {
-            setSjekkerTilgangOgEksistens(true);
+    // TODO: Rydd opp i denne funksjonen ved å legge inn RestKandidat
+    const onGåVidereKlikk = async () => {
+        // Kun i Mock
+        if (process.env.REACT_APP_MOCK) {
+            redirectTil(AppRoute.Registrering, '1856024171652');
+            return;
+        }
 
-            const harSkrivetilgang = await sjekkTilgang();
-            if (harSkrivetilgang) {
-                await sjekkEksistensOgRedirect();
-            } else {
-                setSjekkerTilgangOgEksistens(false);
-            }
-        } else if (erTom(fnr)) {
+        // Valider fnr
+        if (erTom(fnr)) {
             setFeilmelding(Feilmelding.TomtFødselsnummer);
-        } else {
+            return;
+        }
+        if (!erGyldigFnr(fnr)) {
             setFeilmelding(Feilmelding.UgyldigFødselsnummer);
+            return;
         }
-    };
 
-    const sjekkTilgang = async () => {
+        // Hent aktørId
+        let aktørId: string = '';
         try {
-            if (await hentSkrivetilgang(fnr)) {
-                return true;
-            } else {
-                setFeilmelding(Feilmelding.IngenTilgang);
-            }
+            const response = await hentAktørId(fnr);
+            aktørId = response.data;
         } catch (error) {
-            setFeilmelding(Feilmelding.Serverfeil);
+            if (error.response.status === 400) {
+                setFeilmelding(Feilmelding.UgyldigFødselsnummer);
+                return;
+            } else if (error.response.status === 500) {
+                setFeilmelding(Feilmelding.Serverfeil);
+                return;
+            }
+        } finally {
+            setSjekkerTilgangOgEksistens(true);
         }
 
-        return false;
-    };
+        // Hent skrivetilgang
+        const harSkrivetilgang = await hentSkrivetilgang(aktørId);
+        if (!harSkrivetilgang) {
+            setFeilmelding(Feilmelding.IngenTilgang);
+            return;
+        }
 
-    const sjekkEksistensOgRedirect = async () => {
+        // Kandidat fins fra før eller ikke?
+        setSjekkerTilgangOgEksistens(false);
         try {
-            // TODO: Fjern når vi fjerner default fnr
-            if (fnr === '00000000000') {
-                throw new Error();
-            }
-
-            await hentKandidat(fnr);
-            redirectTil(AppRoute.EndreKandidat);
+            const kandidat = await hentKandidat(aktørId);
+            redirectTil(AppRoute.EndreKandidat, kandidat.aktørId);
         } catch (error) {
-            redirectTil(AppRoute.Registrering);
+            // Kandidat eksisterer ikke
+            redirectTil(AppRoute.Registrering, aktørId);
         }
     };
 
-    const redirectTil = (route: AppRoute) => {
-        props.history.push(hentRoute(route, fnr));
+    const redirectTil = (route: AppRoute, aktørId: string) => {
+        props.history.push(hentRoute(route, aktørId));
     };
 
     return (
@@ -88,7 +97,7 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
                 <Hovedknapp
                     spinner={sjekkerTilgangOgEksistens}
                     className={cls.element('knapp')}
-                    onClick={onGåVidereClick}
+                    onClick={onGåVidereKlikk}
                 >
                     Gå videre
                 </Hovedknapp>

@@ -39,9 +39,9 @@ const SistEndretOgKnapper: FunctionComponent<Props> = props => {
                     </Knapp>
                     {kandidat.status === Status.Suksess ? (
                         iEndremodus ? (
-                            <AvbrytKnapp fnr={kandidat.data.fnr} />
+                            <AvbrytKnapp aktørId={kandidat.data.aktørId} />
                         ) : (
-                            <EndreKandidatKnapp fnr={kandidat.data.fnr} />
+                            <EndreKandidatKnapp aktørId={kandidat.data.aktørId} />
                         )
                     ) : (
                         <Skeleton width={220} height={30} />
