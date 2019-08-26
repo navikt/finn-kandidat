@@ -10,10 +10,10 @@ const cls = bemHelper('avbrytKnapp');
 const knappCls = bemHelper('knapp');
 
 interface Props {
-    fnr: string;
+    aktørId: string;
 }
 
-const AvbrytKnapp: FunctionComponent<Props> = ({ fnr }) => (
+const AvbrytKnapp: FunctionComponent<Props> = ({ aktørId }) => (
     <Link
         className={classnames(
             cls.block,
@@ -21,7 +21,7 @@ const AvbrytKnapp: FunctionComponent<Props> = ({ fnr }) => (
             knappCls.modifier('flat'),
             knappCls.modifier('mini')
         )}
-        to={hentRoute(AppRoute.SeKandidat, fnr)}
+        to={hentRoute(AppRoute.SeKandidat, aktørId)}
     >
         Avbryt
     </Link>

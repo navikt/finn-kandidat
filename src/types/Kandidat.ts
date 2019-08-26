@@ -2,6 +2,7 @@ import { AlleBehov } from './Behov';
 
 interface KandidatUtenBehov {
     fnr: string;
+    aktørId: string;
     sistEndret?: Date;
     sistEndretAv?: string;
 }

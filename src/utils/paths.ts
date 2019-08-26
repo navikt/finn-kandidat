@@ -3,16 +3,17 @@ export const APP_ROOT = '/finn-kandidat';
 export enum AppRoute {
     Forside = '/',
     Oversikt = '/oversikt',
-    Registrering = '/registrering/:fnr',
-    SeKandidat = '/kandidat/:fnr',
-    EndreKandidat = '/kandidat/:fnr/endre',
+    Registrering = '/registrering/:aktorId',
+    SeKandidat = '/kandidat/:aktorId',
+    EndreKandidat = '/kandidat/:aktorId/endre',
     FørDuBegynner = '/for-du-begynner',
 }
 
 export interface MatchProps {
-    fnr: string;
+    // Må bruke o siden æøå ikke er støttet i react-router
+    aktorId: string;
 }
 
-export const hentRoute = (route: AppRoute, fødselsnummer?: string) => {
-    return fødselsnummer ? route.replace(':fnr', fødselsnummer) : route;
+export const hentRoute = (route: AppRoute, aktørId?: string) => {
+    return aktørId ? route.replace(':aktorId', aktørId) : route;
 };

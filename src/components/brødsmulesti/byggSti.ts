@@ -6,8 +6,8 @@ interface Steg {
     forrigeSteg?: AppRoute;
 }
 
-const byggSti = (route: AppRoute, fnr?: string) => {
-    const alleSider = hentAlleSider(fnr);
+const byggSti = (route: AppRoute, aktørId?: string) => {
+    const alleSider = hentAlleSider(aktørId);
 
     let detteSteget = alleSider[route];
     let sti = [detteSteget];
@@ -22,7 +22,7 @@ const byggSti = (route: AppRoute, fnr?: string) => {
 
 type AlleSider = { [route in AppRoute]: Steg };
 
-const hentAlleSider = (fødselsnummer?: string): AlleSider => ({
+const hentAlleSider = (aktørId?: string): AlleSider => ({
     [AppRoute.Forside]: {
         navn: 'Forside',
         href: AppRoute.Forside,
@@ -36,19 +36,19 @@ const hentAlleSider = (fødselsnummer?: string): AlleSider => ({
 
     [AppRoute.SeKandidat]: {
         navn: 'Kandidat',
-        href: hentRoute(AppRoute.SeKandidat, fødselsnummer),
+        href: hentRoute(AppRoute.SeKandidat, aktørId),
         forrigeSteg: AppRoute.Oversikt,
     },
 
     [AppRoute.EndreKandidat]: {
         navn: 'Endre kandidat',
-        href: hentRoute(AppRoute.EndreKandidat, fødselsnummer),
+        href: hentRoute(AppRoute.EndreKandidat, aktørId),
         forrigeSteg: AppRoute.Oversikt,
     },
 
     [AppRoute.Registrering]: {
         navn: 'Ny kandidat',
-        href: hentRoute(AppRoute.Registrering, fødselsnummer),
+        href: hentRoute(AppRoute.Registrering, aktørId),
         forrigeSteg: AppRoute.Oversikt,
     },
 

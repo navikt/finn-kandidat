@@ -5,12 +5,14 @@ import api from '../api/initialize';
 const ROUTE_KANDIDATER = '/finn-kandidat-api/kandidater';
 const ROUTE_EVENTS = '/finn-kandidat-api/events';
 const ROUTE_TILBAKEMELDING = '/finn-kandidat-api/tilbakemeldinger';
-const ROUTE_FNR = /\/finn-kandidat-api\/kandidater\/\d+/;
+const ROUTE_KANDIDAT = /\/finn-kandidat-api\/kandidater\/\d+/;
 const ROUTE_SKRIVETILGANG = /\/finn-kandidat-api\/kandidater\/\d+\/skrivetilgang/;
+const ROUTE_AKTØRID = /\/finn-kandidat-api\/kandidater\/\d+\/aktorId/;
+const ROUTE_FNR = /\/finn-kandidat-api\/kandidater\/\d+\/fnr/;
 
 const kandidater = require('./kandidater.json');
 const mock = new MockAdapter(api, {
-    delayResponse: 500,
+    delayResponse: 200,
 });
 
 const visAdvarsel = () => {
@@ -21,24 +23,42 @@ const visAdvarsel = () => {
     console.log('%cMOCKED API', bigFontCss);
     console.log('%cDETTE SKAL IKKE VISES I PRODUKSJON!\n', smallerFontCss);
 };
-
 visAdvarsel();
-
-const hentFnrFraConfig = (config: any) => config.url && config.url.split('/')[3];
 
 mock.onGet(ROUTE_SKRIVETILGANG).reply(() => [200]);
 
+mock.onGet(ROUTE_AKTØRID).reply(config => {
+    const fnrFraRoute = hentFnrFraConfig(config);
+    const kandidatFraMock: Kandidat = kandidater.find(
+        (kandidat: Kandidat) => kandidat.fnr === fnrFraRoute
+    );
+
+    return [200, kandidatFraMock.aktørId];
+});
 
 mock.onGet(ROUTE_FNR).reply(config => {
-    const fnrFraRoute = hentFnrFraConfig(config);
-    const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute);
+    const aktørIdFraRoute = hentAktørIdFraConfig(config);
+    const kandidatFraMock: Kandidat = kandidater.find(
+        (kandidat: Kandidat) => kandidat.aktørId === aktørIdFraRoute
+    );
+
+    return [200, kandidatFraMock.fnr];
+});
+
+mock.onGet(ROUTE_KANDIDAT).reply(config => {
+    const aktørIdFraUrl = hentAktørIdFraConfig(config);
+    const kandidatFraMock = kandidater.find(
+        (kandidat: Kandidat) => kandidat.aktørId === aktørIdFraUrl
+    );
 
     return kandidatFraMock ? [200, kandidatFraMock] : [404];
 });
 
-mock.onDelete(ROUTE_FNR).reply(config => {
-    const fnrFraRoute = hentFnrFraConfig(config);
-    const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute);
+mock.onDelete(ROUTE_KANDIDAT).reply(config => {
+    const aktørIdFraRoute = hentAktørIdFraConfig(config);
+    const kandidatFraMock = kandidater.find(
+        (kandidat: Kandidat) => kandidat.aktørId === aktørIdFraRoute
+    );
 
     return kandidatFraMock ? [200] : [404];
 });
@@ -53,3 +73,6 @@ mock.onPost(ROUTE_EVENTS).reply(config => {
 });
 
 mock.onPost(ROUTE_TILBAKEMELDING).reply(() => [201]);
+
+const hentFnrFraConfig = (config: any) => config.url && config.url.split('/')[3];
+const hentAktørIdFraConfig = (config: any) => config.url && config.url.split('/')[3];

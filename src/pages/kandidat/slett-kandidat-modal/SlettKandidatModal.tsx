@@ -15,21 +15,21 @@ const klartIkkeSlette = 'Vi klarte dessverre ikke å slette kandidaten.';
 
 interface OwnProps {
     erÅpen: boolean;
-    kandidatensFnr: string;
+    aktørId: string;
     lukk: () => void;
 }
 
 type Props = OwnProps & RouteComponentProps;
 
 const SlettKandidatModal: FunctionComponent<Props> = props => {
-    const { erÅpen, lukk, kandidatensFnr, history } = props;
+    const { erÅpen, lukk, aktørId, history } = props;
     const [sletterKandidat, toggleSletterKandidat] = useState<boolean>(false);
     const [feilmelding, setFeilmelding] = useState<string | undefined>(undefined);
 
     const slettKandidatOgLukk = async () => {
         try {
             toggleSletterKandidat(true);
-            const harSlettetKandidat = await slettKandidat(kandidatensFnr);
+            const harSlettetKandidat = await slettKandidat(aktørId);
             toggleSletterKandidat(false);
 
             if (harSlettetKandidat) {
