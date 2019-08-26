@@ -34,6 +34,10 @@ interface Markup {
 
 const InternflateDecorator = NAVSPA.importer<DecoratorProps>('internarbeidsflatefs');
 
+// TODO Dekoratøren prøver å koble seg til contextholder i Modia, som lagrer hvilken bruker og enhet veileder jobber på.
+// Den prøver seg på /modiacontextholder, men der ligger den ikke. Denne pathen er utenfor appens domene, så vi kan
+// heller ikke legge på proxy. Må nok gjøre endringer i selve dekoratøren.
+
 const Decorator: FunctionComponent<RouteComponentProps<MatchProps>> = props => (
     <InternflateDecorator
         appname={'“Tilrettelegger’n”'}
@@ -46,6 +50,7 @@ const Decorator: FunctionComponent<RouteComponentProps<MatchProps>> = props => (
             visEnhet: false,
         }}
         onSok={fnr => {
+            // TODO Her må vi konvertere fra fnr til aktørId når den tid kommer.
             const pathTilPerson = hentRoute(AppRoute.SeKandidat, fnr);
             props.history.push(pathTilPerson);
         }}
