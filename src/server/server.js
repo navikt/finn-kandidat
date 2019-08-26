@@ -25,6 +25,15 @@ const startServer = () => {
         res.sendFile(path.resolve(buildPath, 'index.html'));
     });
 
+    app.use(
+        '/decorator',
+        proxy('/decorator', {
+            target: process.env.DECORATOR_URL,
+            changeOrigin: true,
+            pathRewrite: (path, req) => path.replace('/decorator', ''),
+        })
+    );
+
     app.use('/', (_, res) => {
         res.redirect(BASE_PATH);
     });
