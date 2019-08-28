@@ -30,6 +30,10 @@
             {
                 "name": "LOGIN_URL",
                 "value": "https://loginservice.nais.adeo.no/login?redirect=https://arbeidsgiver.nais.adeo.no/finn-kandidat/"
+            },
+            {
+                "name": "INTERNMENY_URL",
+                "value": "https://modapp.adeo.no/internarbeidsflatedecorator"
             }
         ]
     }
