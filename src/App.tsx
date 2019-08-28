@@ -12,7 +12,7 @@ import Oversikt from './pages/oversikt/Oversikt';
 import Registrering from './pages/registrering/Registrering';
 import './styles/app.less';
 import TestAdvarsel from './pages/registrering/TestAdvarsel';
-import Decorator from './decorator/Decorator';
+import Internmeny from './internmeny/Internmeny';
 
 const App: FunctionComponent = () => (
     <div className="app">
@@ -20,7 +20,7 @@ const App: FunctionComponent = () => (
             <FilterContextProvider>
                 <Router basename={APP_ROOT}>
                     <TestAdvarsel />
-                    <Decorator />
+                    <Internmeny />
                     <Header />
                     <Switch>
                         <Route exact path={AppRoute.Forside} component={Forside} />

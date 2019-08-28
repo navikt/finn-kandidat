@@ -6,7 +6,7 @@ const proxy = require('http-proxy-middleware');
 const DEFAULT_PORT = 3000;
 const PORT = process.env.PORT || DEFAULT_PORT;
 const BASE_PATH = '/finn-kandidat';
-const DECORATOR_PATH = `${BASE_PATH}/decorator`;
+const INTERNMENY_PATH = `${BASE_PATH}/internmeny`;
 const LOCAL_APP = `http://localhost:${PORT}/finn-kandidat`;
 const LOCAL_LOGIN = `http://localhost:8080/finn-kandidat-api/local/isso-login?redirect=${LOCAL_APP}`;
 
@@ -23,10 +23,10 @@ const startServer = () => {
     });
 
     app.use(
-        proxy(DECORATOR_PATH, {
-            target: process.env.DECORATOR_URL,
+        proxy(INTERNMENY_PATH, {
+            target: process.env.INTERNMENY_URL,
             changeOrigin: true,
-            pathRewrite: (path, req) => path.replace(DECORATOR_PATH, ''),
+            pathRewrite: (path, req) => path.replace(INTERNMENY_PATH, ''),
         })
     );
 

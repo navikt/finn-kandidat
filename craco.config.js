@@ -23,17 +23,11 @@ module.exports = {
         },
     },
     devServer: {
-        proxy: {
-            '/finn-kandidat/decorator/v2/static/js/head.v2.min.js': {
-                target: 'http://localhost:8080',
-                pathRewrite: {'^/ditt-nav-arbeidsgiver/api' : '/ditt-nav-arbeidsgiver-api/api'}
-            }
-        },
         before: (app) => {
-            app.get('/finn-kandidat/decorator/v2/static/js/head.v2.min.js', (req, res) => {
+            app.get('/finn-kandidat/internmeny/v2/static/js/head.v2.min.js', (req, res) => {
                 sendFilSomReturverdi('./src/mocking/internmeny.js', res);
             });
-            app.get('/finn-kandidat/decorator/v2/static/css/main.css', (req, res) => {
+            app.get('/finn-kandidat/internmeny/v2/static/css/main.css', (req, res) => {
                 sendFilSomReturverdi('./src/mocking/internmeny.css', res);
             });
         }

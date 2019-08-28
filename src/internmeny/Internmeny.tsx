@@ -35,7 +35,7 @@ interface Markup {
 
 const InternflateDecorator = NAVSPA.importer<DecoratorProps>('internarbeidsflatefs');
 
-const Decorator: FunctionComponent<RouteComponentProps<MatchProps>> = props => {
+const Internmeny: FunctionComponent<RouteComponentProps<MatchProps>> = props => {
     const [fnr, setFnr] = useState<string>('');
 
     const aktørId = props.match.params.aktorId;
@@ -74,4 +74,4 @@ const Decorator: FunctionComponent<RouteComponentProps<MatchProps>> = props => {
     );
 }
 
-export default withRouter(Decorator);
+export default withRouter(Internmeny);
