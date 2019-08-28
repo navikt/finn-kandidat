@@ -1,5 +1,24 @@
 const CracoLessPlugin = require('craco-less');
 
+const fs = require('fs');
+
+const lesFilSomTekst = (path, callback) => {
+    const filnavn = require.resolve(path);
+    fs.readFile(filnavn, 'utf8', callback);
+};
+
+/*
+lesFilSomTekst('./test.txt', (error, text) => {
+    internmenyJsMock = text;
+});
+*/
+
+const sendFilSomReturverdi = (filnavn, res) => {
+    lesFilSomTekst(filnavn, (error, text) => {
+        res.send(text);
+    });
+};
+
 module.exports = {
     plugins: [{ plugin: CracoLessPlugin }],
     eslint: {
@@ -22,7 +41,7 @@ module.exports = {
         },
         before: (app) => {
             app.get('/finn-kandidat/decorator/v2/static/js/head.v2.min.js', (req, res) => {
-                res.send("test.js")
+                sendFilSomReturverdi('./src/mocking/internmeny.js', res);
             });
         }
     },
