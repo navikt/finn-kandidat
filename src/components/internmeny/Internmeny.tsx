@@ -27,7 +27,7 @@ const Internmeny: FunctionComponent<RouteComponentProps<MatchProps>> = props => 
     return (
         <InternflateDecorator
             appname={'“Tilrettelegger’n”'}
-            fnr={fnr}
+            fnr={fnr || ''}
             enhet={"0213"}
             toggles={{
                 visVeilder: false,
