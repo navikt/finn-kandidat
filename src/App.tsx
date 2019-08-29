@@ -12,7 +12,7 @@ import Oversikt from './pages/oversikt/Oversikt';
 import Registrering from './pages/registrering/Registrering';
 import './styles/app.less';
 import TestAdvarsel from './pages/registrering/TestAdvarsel';
-import Internmeny from './internmeny/Internmeny';
+import Internmeny from './components/internmeny/Internmeny';
 
 const App: FunctionComponent = () => (
     <div className="app">
