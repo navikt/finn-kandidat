@@ -28,7 +28,7 @@ const Internmeny: FunctionComponent<RouteComponentProps<MatchProps>> = props => 
         <InternflateDecorator
             appname={'“Tilrettelegger’n”'}
             fnr={fnr || ''}
-            enhet={"0213"}
+            enhet={'0213'}
             toggles={{
                 visVeilder: false,
                 visSokefelt: true,
@@ -41,6 +41,7 @@ const Internmeny: FunctionComponent<RouteComponentProps<MatchProps>> = props => 
                 props.history.push(pathTilPerson);
             }}
             onEnhetChange={enhet => {}}
+            contextholder={true}
         />
     );
 };
