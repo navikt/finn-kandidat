@@ -2,9 +2,10 @@ const CracoLessPlugin = require('craco-less');
 
 const fs = require('fs');
 
-const sendFilSomReturverdi = (path, res) => {
+const sendFilSomReturverdi = (path, res, contentType) => {
     const filnavn = require.resolve(path);
     fs.readFile(filnavn, 'utf8', (error, text) => {
+        res.set('Content-Type', contentType);
         res.send(text);
     });
 };
@@ -23,13 +24,13 @@ module.exports = {
         },
     },
     devServer: {
-        before: (app) => {
+        before: app => {
             app.get('/finn-kandidat/internmeny/v2/static/js/head.v2.min.js', (req, res) => {
-                sendFilSomReturverdi('./src/mocking/internmeny.js', res);
+                sendFilSomReturverdi('./src/mocking/internmeny.js', res, 'text/javascript');
             });
             app.get('/finn-kandidat/internmeny/v2/static/css/main.css', (req, res) => {
-                sendFilSomReturverdi('./src/mocking/internmeny.css', res);
+                sendFilSomReturverdi('./src/mocking/internmeny.css', res, 'text/css');
             });
-        }
+        },
     },
 };
