@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { hentAktørIdDirekte, hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
 import { hentGjeldendeAktørId } from '../../api/aktørregisterUtils';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
@@ -22,7 +22,7 @@ const useAktørId = (fnr: string, sjekkerTilgangOgEksistens: boolean): AktørIdO
     const [tilgangsstatus, setTilgangsstatus] = useState<TilgangsStatus>(TilgangsStatus.IngenFeil);
     const [kandidatEksisterer, setKandidatEksisterer] = useState<boolean>(false);
 
-    const hentAktørIdOgSjekkTilgang = async () => {
+    const hentAktørIdOgSjekkTilgang = useCallback(async () => {
         try {
             validerFnr(fnr);
             const gjeldendeAktørId = await hentAktørId(fnr);
@@ -33,13 +33,13 @@ const useAktørId = (fnr: string, sjekkerTilgangOgEksistens: boolean): AktørIdO
         } catch (status) {
             setTilgangsstatus(status);
         }
-    };
+    }, [fnr]);
 
     useEffect(() => {
         if (sjekkerTilgangOgEksistens) {
             hentAktørIdOgSjekkTilgang();
         }
-    }, [sjekkerTilgangOgEksistens]);
+    }, [sjekkerTilgangOgEksistens, hentAktørIdOgSjekkTilgang]);
 
     useEffect(() => {
         setTilgangsstatus(TilgangsStatus.IngenFeil);

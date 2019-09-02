@@ -5,7 +5,7 @@ import { Kandidat } from '../types/Kandidat';
 import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
 import { AxiosResponse } from 'axios';
 import { randomCallId } from '../utils/randomIdUtils';
-import { AktorIdResponse, hentGjeldendeAktørId, Identinfo } from './aktørregisterUtils';
+import { AktorIdResponse } from './aktørregisterUtils';
 
 type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {
     arbeidstidBehov: ArbeidstidBehov;

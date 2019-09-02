@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { RouteComponentProps, withRouter } from 'react-router';
 
@@ -12,11 +12,8 @@ import useAktørId, { TilgangsStatus } from './useAktørId';
 
 const cls = bemHelper('førDuBegynner');
 
-const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
+const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => {
     const [fnr, setFnr] = useState<string>('');
-    // const [feilmelding, setFeilmelding] = useState<TilgangsStatus | undefined>(
-    //     TilgangsStatus.IngenFeil
-    // );
     const [sjekkerTilgangOgEksistens, setSjekkerTilgangOgEksistens] = useState<boolean>(false);
 
     const { aktørId, tilgangsstatus, kandidatEksisterer } = useAktørId(
@@ -24,32 +21,31 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
         sjekkerTilgangOgEksistens
     );
 
+    const redirectTil = useCallback(
+        (route: AppRoute, aktørId: string) => {
+            history.push(hentRoute(route, aktørId));
+        },
+        [history]
+    );
+
+    useEffect(() => {
+        if (tilgangsstatus !== TilgangsStatus.IngenFeil) {
+            setSjekkerTilgangOgEksistens(false);
+        } else if (kandidatEksisterer && aktørId) {
+            redirectTil(AppRoute.EndreKandidat, aktørId);
+        } else if (aktørId) {
+            redirectTil(AppRoute.Registrering, aktørId);
+        }
+    }, [aktørId, tilgangsstatus, kandidatEksisterer, redirectTil]);
+
     const handleFnrChange = (fnr: string) => {
         setFnr(fnr);
-        // setFeilmelding(TilgangsStatus.IngenFeil);
         setSjekkerTilgangOgEksistens(false);
     };
 
     const onGåVidereKlikk = () => {
         setSjekkerTilgangOgEksistens(true);
     };
-
-    const redirectTil = (route: AppRoute, aktørId: string) => {
-        props.history.push(hentRoute(route, aktørId));
-    };
-
-    useEffect(() => {
-        if (tilgangsstatus !== TilgangsStatus.IngenFeil) {
-            // setFeilmelding(tilgangsstatus);
-            setSjekkerTilgangOgEksistens(false);
-
-            console.log('Feilmelding. Verdier:', aktørId, tilgangsstatus, kandidatEksisterer);
-        } else if (kandidatEksisterer && aktørId) {
-            redirectTil(AppRoute.EndreKandidat, aktørId);
-        } else if (aktørId) {
-            redirectTil(AppRoute.Registrering, aktørId);
-        }
-    }, [aktørId, tilgangsstatus, kandidatEksisterer]);
 
     return (
         <>
