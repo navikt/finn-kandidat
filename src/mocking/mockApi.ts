@@ -1,6 +1,7 @@
 import MockAdapter from 'axios-mock-adapter';
 import { Kandidat } from '../types/Kandidat';
 import api from '../api/initialize';
+import { AktorIdResponse } from '../api/aktørregisterUtils';
 
 const ROUTE_KANDIDATER = '/finn-kandidat-api/kandidater';
 const ROUTE_EVENTS = '/finn-kandidat-api/events';
@@ -9,6 +10,8 @@ const ROUTE_KANDIDAT = /\/finn-kandidat-api\/kandidater\/\d+/;
 const ROUTE_SKRIVETILGANG = /\/finn-kandidat-api\/kandidater\/\d+\/skrivetilgang/;
 const ROUTE_AKTØRID = /\/finn-kandidat-api\/kandidater\/\d+\/aktorId/;
 const ROUTE_FNR = /\/finn-kandidat-api\/kandidater\/\d+\/fnr/;
+const ROUTE_AKTØRID_DIREKTE =
+    '/finn-kandidat-api/aktoerregister/api/v1/identer?identgruppe=AktoerId&gjeldende=true';
 
 const kandidater = require('./kandidater.json');
 const mock = new MockAdapter(api, {
@@ -34,6 +37,35 @@ mock.onGet(ROUTE_AKTØRID).reply(config => {
     );
 
     return [200, kandidatFraMock.aktørId];
+});
+
+mock.onGet(ROUTE_AKTØRID_DIREKTE).reply(config => {
+    const fnr = config.headers['Nav-Personidenter'];
+    const kandidat: Kandidat = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnr);
+
+    if (kandidat) {
+        const respons: AktorIdResponse = {
+            [fnr]: {
+                identer: [
+                    {
+                        ident: kandidat.aktørId,
+                        identgruppe: 'AktoerId',
+                        gjeldende: true,
+                    },
+                ],
+                feilmelding: null,
+            },
+        };
+        return [200, respons];
+    } else {
+        const responsUtenIdenter: AktorIdResponse = {
+            [fnr]: {
+                identer: null,
+                feilmelding: 'Den angitte personidenten finnes ikke',
+            },
+        };
+        return [200, responsUtenIdenter];
+    }
 });
 
 mock.onGet(ROUTE_FNR).reply(config => {

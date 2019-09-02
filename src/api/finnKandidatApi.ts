@@ -4,6 +4,8 @@ import api from './initialize';
 import { Kandidat } from '../types/Kandidat';
 import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
 import { AxiosResponse } from 'axios';
+import { randomCallId } from '../utils/randomIdUtils';
+import { AktorIdResponse, hentGjeldendeAktørId, Identinfo } from './aktørregisterUtils';
 
 type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {
     arbeidstidBehov: ArbeidstidBehov;
@@ -41,6 +43,21 @@ export const hentKandidat = async (aktørId: string): Promise<Kandidat> => {
 export const hentAktørId = async (fnr: string): Promise<AxiosResponse<string>> => {
     try {
         return await api.get(`/kandidater/${fnr}/aktorId`);
+    } catch (error) {
+        return Promise.reject(error.response);
+    }
+};
+
+export const hentAktørIdDirekte = async (fnr: string): Promise<AxiosResponse<AktorIdResponse>> => {
+    try {
+        return await api.get('/aktoerregister/api/v1/identer?identgruppe=AktoerId&gjeldende=true', {
+            withCredentials: true,
+            headers: {
+                'Nav-Consumer-Id': 'finn-kandidat',
+                'Nav-Call-Id': randomCallId(),
+                'Nav-Personidenter': fnr,
+            },
+        });
     } catch (error) {
         return Promise.reject(error.response);
     }
