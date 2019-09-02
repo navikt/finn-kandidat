@@ -44,6 +44,9 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => 
     };
 
     const onGåVidereKlikk = () => {
+        if (process.env.REACT_APP_MOCK) {
+            redirectTil(AppRoute.Registrering, '1856024171652');
+        }
         setSjekkerTilgangOgEksistens(true);
     };
 
