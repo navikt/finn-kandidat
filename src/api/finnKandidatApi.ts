@@ -4,8 +4,6 @@ import api from './initialize';
 import { Kandidat } from '../types/Kandidat';
 import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
 import { AxiosResponse } from 'axios';
-import { randomCallId } from '../utils/randomIdUtils';
-import { AktorIdResponse } from './aktørregisterUtils';
 
 type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {
     arbeidstidBehov: ArbeidstidBehov;

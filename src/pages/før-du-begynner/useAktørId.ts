@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
-import { AktorIdResponse, hentGjeldendeAktørId } from '../../api/aktørregisterUtils';
+import { hentGjeldendeAktørId } from '../../api/aktørregisterUtils';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
 import { hentAktørIdDirekte } from '../../api/aktørregisterApi';
 
