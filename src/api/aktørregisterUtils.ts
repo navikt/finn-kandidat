@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 
 export interface AktorIdResponse {
-    [fnr: string]: Identinfo;
+    [ident: string]: Identinfo;
 }
 
 export interface Identinfo {
@@ -13,12 +13,12 @@ export interface Identinfo {
     }> | null;
 }
 
-export const hentGjeldendeAktørId = (
-    fnr: string,
+export const hentGjeldendeIdent = (
+    ident: string,
     respons: AxiosResponse<AktorIdResponse>
 ): string | undefined => {
     if (respons) {
-        const identinfo: Identinfo = respons.data[fnr];
+        const identinfo: Identinfo = respons.data[ident];
         if (identinfo && !identinfo.feilmelding && identinfo.identer) {
             const gjeldendeIdentinfo = identinfo.identer.find(ident => ident.gjeldende);
             if (gjeldendeIdentinfo) {

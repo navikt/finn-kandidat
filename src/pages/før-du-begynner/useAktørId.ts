@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
-import { hentGjeldendeAktørId } from '../../api/aktørregisterUtils';
+import { hentGjeldendeIdent } from '../../api/aktørregisterUtils';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
 import { hentAktørId } from '../../api/aktørregisterApi';
 
@@ -71,7 +71,7 @@ const hentOgSjekkAktørId = async (fnr: string) => {
         throw TilgangsStatus.IngenTilgangEllerIkkeFinnes;
     }
 
-    const gjeldendeAktørId = hentGjeldendeAktørId(fnr, respons);
+    const gjeldendeAktørId = hentGjeldendeIdent(fnr, respons);
     if (gjeldendeAktørId) {
         return gjeldendeAktørId;
     } else {
