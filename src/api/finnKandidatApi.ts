@@ -48,21 +48,6 @@ export const hentAktørId = async (fnr: string): Promise<AxiosResponse<string>> 
     }
 };
 
-export const hentAktørIdDirekte = async (fnr: string): Promise<AxiosResponse<AktorIdResponse>> => {
-    try {
-        return await api.get('/aktoerregister/api/v1/identer?identgruppe=AktoerId&gjeldende=true', {
-            withCredentials: true,
-            headers: {
-                'Nav-Consumer-Id': 'finn-kandidat',
-                'Nav-Call-Id': randomCallId(),
-                'Nav-Personidenter': fnr,
-            },
-        });
-    } catch (error) {
-        return Promise.reject(error.response);
-    }
-};
-
 export const hentFnr = async (aktørId: string): Promise<AxiosResponse<string>> => {
     try {
         return await api.get(`/kandidater/${aktørId}/fnr`);

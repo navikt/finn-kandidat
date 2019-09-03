@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const aktørregisterProxy = require('./aktørregisterProxy');
 const app = express();
 
 const DEFAULT_PORT = 3000;
@@ -11,6 +12,7 @@ const LOCAL_LOGIN = `http://localhost:8080/finn-kandidat-api/local/isso-login?re
 const buildPath = path.join(__dirname, '../../build');
 
 const startServer = () => {
+    app.use(`${BASE_PATH}/aktoerregister`, aktørregisterProxy);
     app.use(BASE_PATH, express.static(buildPath));
 
     app.get(`${BASE_PATH}/internal/isAlive`, (req, res) => res.sendStatus(200));
@@ -23,7 +25,6 @@ const startServer = () => {
     app.use(BASE_PATH, (_, res) => {
         res.sendFile(path.resolve(buildPath, 'index.html'));
     });
-
     app.use('/', (_, res) => {
         res.redirect(BASE_PATH);
     });

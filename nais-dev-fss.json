@@ -30,6 +30,10 @@
             {
                 "name": "LOGIN_URL",
                 "value": "https://loginservice.nais.preprod.local/login?redirect=https://arbeidsgiver.nais.preprod.local/finn-kandidat/"
+            },
+            {
+                "name": "AKTORREGISTER_URL",
+                "value": "https://app-q0.adeo.no"
             }
         ]
     }
