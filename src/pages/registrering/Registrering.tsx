@@ -1,4 +1,4 @@
-import React, { useState, FormEvent, FunctionComponent, useEffect } from 'react';
+import React, { useState, FormEvent, FunctionComponent } from 'react';
 import { Hovedknapp } from 'nav-frontend-knapper';
 import { withRouter, RouteComponentProps } from 'react-router';
 
@@ -10,7 +10,7 @@ import {
     GrunnleggendeBehov,
     Behovfelt,
 } from '../../types/Behov';
-import { hentFnr, opprettKandidat } from '../../api/finnKandidatApi';
+import { opprettKandidat } from '../../api/finnKandidatApi';
 import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from './arbeidstid/Arbeidstid';
 import bemHelper from '../../utils/bemHelper';
@@ -21,6 +21,7 @@ import Informasjon from './informasjon/Informasjon';
 import { Kandidat } from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './registrering.less';
+import useFnr from './useFnr';
 
 const cls = bemHelper('registrering');
 
@@ -33,15 +34,7 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
     const [grunnleggendeBehov, setGrunnleggendeBehov] = useState<GrunnleggendeBehov[]>([]);
     const [isSubmitting, setSubmitting] = useState<boolean>(false);
     const [feilmelding, setFeilmelding] = useState<string | undefined>(undefined);
-    const [fnr, setFnr] = useState<string>('');
-
-    useEffect(() => {
-        const hentOgSettFnr = async () => {
-            const respons = await hentFnr(aktørId);
-            setFnr(respons.data);
-        };
-        hentOgSettFnr();
-    }, [aktørId]);
+    const fnr = useFnr(aktørId);
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();

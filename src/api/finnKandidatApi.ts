@@ -3,7 +3,6 @@ import { Omit } from 'react-router';
 import api from './initialize';
 import { Kandidat } from '../types/Kandidat';
 import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
-import { AxiosResponse } from 'axios';
 
 type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {
     arbeidstidBehov: ArbeidstidBehov;
@@ -33,14 +32,6 @@ export const hentKandidat = async (aktørId: string): Promise<Kandidat> => {
     try {
         const respons = await api.get(`/kandidater/${aktørId}`);
         return fraKandidatDto(respons.data);
-    } catch (error) {
-        return Promise.reject(error.response);
-    }
-};
-
-export const hentFnr = async (aktørId: string): Promise<AxiosResponse<string>> => {
-    try {
-        return await api.get(`/kandidater/${aktørId}/fnr`);
     } catch (error) {
         return Promise.reject(error.response);
     }
