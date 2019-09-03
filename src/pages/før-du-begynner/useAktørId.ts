@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
-import { hentAktørIdDirekte, hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
-import { hentGjeldendeAktørId } from '../../api/aktørregisterUtils';
+import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
+import { AktorIdResponse, hentGjeldendeAktørId } from '../../api/aktørregisterUtils';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
+import { hentAktørIdDirekte } from '../../api/aktørregisterApi';
 
 export enum TilgangsStatus {
     TomtFødselsnummer = 'Vennligst fyll ut fødselsnummer',
@@ -57,14 +58,25 @@ const validerFnr = (fnr: string) => {
 };
 
 const hentAktørId = async (fnr: string) => {
+    let respons;
     try {
-        const respons = await hentAktørIdDirekte(fnr);
-        const gjeldendeAktørId = hentGjeldendeAktørId(fnr, respons);
-        if (gjeldendeAktørId) {
-            return gjeldendeAktørId;
-        }
-    } catch (ignored) {}
-    throw TilgangsStatus.Serverfeil;
+        respons = await hentAktørIdDirekte(fnr);
+    } catch (error) {
+        throw TilgangsStatus.Serverfeil;
+    }
+
+    const aktorIdFinnesIkke = !respons.data[fnr];
+    const ingenIdenter = respons.data[fnr] && !respons.data[fnr].identer;
+    if (aktorIdFinnesIkke || ingenIdenter) {
+        throw TilgangsStatus.IngenTilgangEllerIkkeFinnes;
+    }
+
+    const gjeldendeAktørId = hentGjeldendeAktørId(fnr, respons);
+    if (gjeldendeAktørId) {
+        return gjeldendeAktørId;
+    } else {
+        throw TilgangsStatus.Serverfeil;
+    }
 };
 
 const sjekkSkrivetilgang = async (aktørId: string) => {
