@@ -38,14 +38,6 @@ export const hentKandidat = async (aktørId: string): Promise<Kandidat> => {
     }
 };
 
-export const hentAktørId = async (fnr: string): Promise<AxiosResponse<string>> => {
-    try {
-        return await api.get(`/kandidater/${fnr}/aktorId`);
-    } catch (error) {
-        return Promise.reject(error.response);
-    }
-};
-
 export const hentFnr = async (aktørId: string): Promise<AxiosResponse<string>> => {
     try {
         return await api.get(`/kandidater/${aktørId}/fnr`);

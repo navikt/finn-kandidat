@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
 import { hentGjeldendeAktørId } from '../../api/aktørregisterUtils';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
-import { hentAktørIdDirekte } from '../../api/aktørregisterApi';
+import { hentAktørId } from '../../api/aktørregisterApi';
 
 export enum TilgangsStatus {
     TomtFødselsnummer = 'Vennligst fyll ut fødselsnummer',
@@ -26,7 +26,7 @@ const useAktørId = (fnr: string, sjekkerTilgangOgEksistens: boolean): AktørIdO
     const hentAktørIdOgSjekkTilgang = useCallback(async () => {
         try {
             validerFnr(fnr);
-            const gjeldendeAktørId = await hentAktørId(fnr);
+            const gjeldendeAktørId = await hentOgSjekkAktørId(fnr);
             await sjekkSkrivetilgang(gjeldendeAktørId);
             await sjekkKandidatEksisterer(gjeldendeAktørId);
             setAktørId(gjeldendeAktørId);
@@ -57,10 +57,10 @@ const validerFnr = (fnr: string) => {
     }
 };
 
-const hentAktørId = async (fnr: string) => {
+const hentOgSjekkAktørId = async (fnr: string) => {
     let respons;
     try {
-        respons = await hentAktørIdDirekte(fnr);
+        respons = await hentAktørId(fnr);
     } catch (error) {
         throw TilgangsStatus.Serverfeil;
     }
