@@ -4,7 +4,7 @@ import { hentGjeldendeIdent } from '../../api/aktørregisterUtils';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
 import { hentAktørId as hentAktørIdFraApi } from '../../api/aktørregisterApi';
 
-export enum TilgangsStatus {
+export enum Feilmelding {
     TomtFødselsnummer = 'Vennligst fyll ut fødselsnummer',
     UgyldigFødselsnummer = 'Fødselsnummeret er ugyldig',
     IngenTilgangEllerIkkeFinnes = 'Du har enten ikke tilgang til denne kandidaten eller så finnes ikke kandidaten i systemet',
@@ -13,9 +13,8 @@ export enum TilgangsStatus {
 }
 
 export interface AktørIdOgStatus {
-    // TODO: Respons i eget objekt
     aktørId: string;
-    tilgangsstatus: TilgangsStatus;
+    feilmelding?: Feilmelding;
     kandidatEksisterer: boolean;
     henterAktørId: boolean;
     hentAktørId: () => void;
@@ -23,7 +22,7 @@ export interface AktørIdOgStatus {
 
 export const useAktørId = (fnr: string): AktørIdOgStatus => {
     const [aktørId, setAktørId] = useState<string>('');
-    const [tilgangsstatus, setTilgangsstatus] = useState<TilgangsStatus>(TilgangsStatus.IngenFeil);
+    const [feilmelding, setFeilmelding] = useState<Feilmelding | undefined>(undefined);
     const [kandidatEksisterer, setKandidatEksisterer] = useState<boolean>(false);
     const [henterAktørId, setHenterAktørId] = useState<boolean>(false);
 
@@ -37,18 +36,18 @@ export const useAktørId = (fnr: string): AktørIdOgStatus => {
             setAktørId(gjeldendeAktørId);
             setKandidatEksisterer(true);
         } catch (status) {
-            setTilgangsstatus(status);
+            setFeilmelding(status);
             setHenterAktørId(false);
         }
     }, [fnr]);
 
     useEffect(() => {
-        setTilgangsstatus(TilgangsStatus.IngenFeil);
+        setFeilmelding(undefined);
     }, [fnr]);
 
     return {
         aktørId,
-        tilgangsstatus,
+        feilmelding,
         kandidatEksisterer,
         henterAktørId,
         hentAktørId,
@@ -57,9 +56,9 @@ export const useAktørId = (fnr: string): AktørIdOgStatus => {
 
 const validerFnr = (fnr: string) => {
     if (erTom(fnr)) {
-        throw TilgangsStatus.TomtFødselsnummer;
+        throw Feilmelding.TomtFødselsnummer;
     } else if (!erGyldigFnr(fnr)) {
-        throw TilgangsStatus.UgyldigFødselsnummer;
+        throw Feilmelding.UgyldigFødselsnummer;
     }
 };
 
@@ -68,27 +67,27 @@ const hentOgSjekkAktørId = async (fnr: string) => {
     try {
         respons = await hentAktørIdFraApi(fnr);
     } catch (error) {
-        throw TilgangsStatus.Serverfeil;
+        throw Feilmelding.Serverfeil;
     }
 
     const aktorIdFinnesIkke = !respons.data[fnr];
     const ingenIdenter = respons.data[fnr] && !respons.data[fnr].identer;
     if (aktorIdFinnesIkke || ingenIdenter) {
-        throw TilgangsStatus.IngenTilgangEllerIkkeFinnes;
+        throw Feilmelding.IngenTilgangEllerIkkeFinnes;
     }
 
     const gjeldendeAktørId = hentGjeldendeIdent(fnr, respons);
     if (gjeldendeAktørId) {
         return gjeldendeAktørId;
     } else {
-        throw TilgangsStatus.Serverfeil;
+        throw Feilmelding.Serverfeil;
     }
 };
 
 const sjekkSkrivetilgang = async (aktørId: string) => {
     const harSkrivetilgang = await hentSkrivetilgang(aktørId);
     if (!harSkrivetilgang) {
-        throw TilgangsStatus.IngenTilgangEllerIkkeFinnes;
+        throw Feilmelding.IngenTilgangEllerIkkeFinnes;
     }
 };
 
@@ -96,6 +95,6 @@ const sjekkKandidatEksisterer = async (aktørId: string) => {
     try {
         await hentKandidat(aktørId);
     } catch (ignored) {
-        throw TilgangsStatus.IngenTilgangEllerIkkeFinnes;
+        throw Feilmelding.IngenTilgangEllerIkkeFinnes;
     }
 };

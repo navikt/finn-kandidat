@@ -8,13 +8,13 @@ import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import FnrInput from './fnr-input/FnrInput';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './førDuBegynner.less';
-import { useAktørId, TilgangsStatus } from './useAktørId';
+import { useAktørId } from './useAktørId';
 
 const cls = bemHelper('førDuBegynner');
 
 const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => {
     const [fnr, setFnr] = useState<string>('');
-    const { aktørId, tilgangsstatus, kandidatEksisterer, henterAktørId, hentAktørId } = useAktørId(
+    const { aktørId, feilmelding, kandidatEksisterer, henterAktørId, hentAktørId } = useAktørId(
         fnr
     );
 
@@ -45,13 +45,7 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => 
             <RouteBanner tittel="Registrer eller endre kandidat" />
             <main className={cls.block}>
                 <Brødsmulesti sidenDuErPå={AppRoute.FørDuBegynner} />
-                <FnrInput
-                    fnr={fnr}
-                    onFnrChange={setFnr}
-                    feilmelding={
-                        tilgangsstatus === TilgangsStatus.IngenFeil ? undefined : tilgangsstatus
-                    }
-                />
+                <FnrInput fnr={fnr} onFnrChange={setFnr} feilmelding={feilmelding} />
                 <Hovedknapp
                     spinner={henterAktørId}
                     className={cls.element('knapp')}
