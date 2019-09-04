@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { hentKandidat, hentSkrivetilgang } from '../../api/finnKandidatApi';
 import { hentGjeldendeIdent } from '../../api/aktørregisterUtils';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
-import { hentAktørId } from '../../api/aktørregisterApi';
+import { hentAktørId as hentAktørIdFraApi } from '../../api/aktørregisterApi';
 
 export enum TilgangsStatus {
     TomtFødselsnummer = 'Vennligst fyll ut fødselsnummer',
@@ -13,19 +13,24 @@ export enum TilgangsStatus {
 }
 
 export interface AktørIdOgStatus {
-    aktørId?: string;
+    // TODO: Respons i eget objekt
+    aktørId: string;
     tilgangsstatus: TilgangsStatus;
     kandidatEksisterer: boolean;
+    henterAktørId: boolean;
+    hentAktørId: () => void;
 }
 
-const useAktørId = (fnr: string, sjekkerTilgangOgEksistens: boolean): AktørIdOgStatus => {
-    const [aktørId, setAktørId] = useState<string | undefined>(undefined);
+export const useAktørId = (fnr: string): AktørIdOgStatus => {
+    const [aktørId, setAktørId] = useState<string>('');
     const [tilgangsstatus, setTilgangsstatus] = useState<TilgangsStatus>(TilgangsStatus.IngenFeil);
     const [kandidatEksisterer, setKandidatEksisterer] = useState<boolean>(false);
+    const [henterAktørId, setHenterAktørId] = useState<boolean>(false);
 
-    const hentAktørIdOgSjekkTilgang = useCallback(async () => {
+    const hentAktørId = useCallback(async () => {
         try {
             validerFnr(fnr);
+            setHenterAktørId(true);
             const gjeldendeAktørId = await hentOgSjekkAktørId(fnr);
             await sjekkSkrivetilgang(gjeldendeAktørId);
             await sjekkKandidatEksisterer(gjeldendeAktørId);
@@ -33,20 +38,21 @@ const useAktørId = (fnr: string, sjekkerTilgangOgEksistens: boolean): AktørIdO
             setKandidatEksisterer(true);
         } catch (status) {
             setTilgangsstatus(status);
+            setHenterAktørId(false);
         }
     }, [fnr]);
-
-    useEffect(() => {
-        if (sjekkerTilgangOgEksistens) {
-            hentAktørIdOgSjekkTilgang();
-        }
-    }, [sjekkerTilgangOgEksistens, hentAktørIdOgSjekkTilgang]);
 
     useEffect(() => {
         setTilgangsstatus(TilgangsStatus.IngenFeil);
     }, [fnr]);
 
-    return { aktørId, tilgangsstatus, kandidatEksisterer };
+    return {
+        aktørId,
+        tilgangsstatus,
+        kandidatEksisterer,
+        henterAktørId,
+        hentAktørId,
+    };
 };
 
 const validerFnr = (fnr: string) => {
@@ -60,7 +66,7 @@ const validerFnr = (fnr: string) => {
 const hentOgSjekkAktørId = async (fnr: string) => {
     let respons;
     try {
-        respons = await hentAktørId(fnr);
+        respons = await hentAktørIdFraApi(fnr);
     } catch (error) {
         throw TilgangsStatus.Serverfeil;
     }
@@ -93,5 +99,3 @@ const sjekkKandidatEksisterer = async (aktørId: string) => {
         throw TilgangsStatus.IngenTilgangEllerIkkeFinnes;
     }
 };
-
-export default useAktørId;

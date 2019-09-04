@@ -8,17 +8,14 @@ import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import FnrInput from './fnr-input/FnrInput';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './førDuBegynner.less';
-import useAktørId, { TilgangsStatus } from './useAktørId';
+import { useAktørId, TilgangsStatus } from './useAktørId';
 
 const cls = bemHelper('førDuBegynner');
 
 const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => {
     const [fnr, setFnr] = useState<string>('');
-    const [sjekkerTilgangOgEksistens, setSjekkerTilgangOgEksistens] = useState<boolean>(false);
-
-    const { aktørId, tilgangsstatus, kandidatEksisterer } = useAktørId(
-        fnr,
-        sjekkerTilgangOgEksistens
+    const { aktørId, tilgangsstatus, kandidatEksisterer, henterAktørId, hentAktørId } = useAktørId(
+        fnr
     );
 
     const redirectTil = useCallback(
@@ -29,25 +26,18 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => 
     );
 
     useEffect(() => {
-        if (tilgangsstatus !== TilgangsStatus.IngenFeil) {
-            setSjekkerTilgangOgEksistens(false);
-        } else if (kandidatEksisterer && aktørId) {
+        if (kandidatEksisterer && aktørId) {
             redirectTil(AppRoute.EndreKandidat, aktørId);
         } else if (aktørId) {
             redirectTil(AppRoute.Registrering, aktørId);
         }
-    }, [aktørId, tilgangsstatus, kandidatEksisterer, redirectTil]);
-
-    const handleFnrChange = (fnr: string) => {
-        setFnr(fnr);
-        setSjekkerTilgangOgEksistens(false);
-    };
+    }, [aktørId, kandidatEksisterer, redirectTil]);
 
     const onGåVidereKlikk = () => {
         if (process.env.REACT_APP_MOCK) {
             redirectTil(AppRoute.Registrering, '1856024171652');
         }
-        setSjekkerTilgangOgEksistens(true);
+        hentAktørId();
     };
 
     return (
@@ -57,13 +47,13 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => 
                 <Brødsmulesti sidenDuErPå={AppRoute.FørDuBegynner} />
                 <FnrInput
                     fnr={fnr}
-                    onFnrChange={handleFnrChange}
+                    onFnrChange={setFnr}
                     feilmelding={
                         tilgangsstatus === TilgangsStatus.IngenFeil ? undefined : tilgangsstatus
                     }
                 />
                 <Hovedknapp
-                    spinner={sjekkerTilgangOgEksistens}
+                    spinner={henterAktørId}
                     className={cls.element('knapp')}
                     onClick={onGåVidereKlikk}
                 >
