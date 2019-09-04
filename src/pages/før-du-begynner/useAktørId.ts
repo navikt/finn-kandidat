@@ -9,7 +9,6 @@ export enum Feilmelding {
     UgyldigFødselsnummer = 'Fødselsnummeret er ugyldig',
     IngenTilgangEllerIkkeFinnes = 'Du har enten ikke tilgang til denne kandidaten eller så finnes ikke kandidaten i systemet',
     Serverfeil = 'Det skjedde dessverre en feil',
-    IngenFeil = 'Ingen feil',
 }
 
 export interface AktørIdOgStatus {
@@ -32,18 +31,17 @@ export const useAktørId = (fnr: string): AktørIdOgStatus => {
             setHenterAktørId(true);
             const gjeldendeAktørId = await hentOgSjekkAktørId(fnr);
             await sjekkSkrivetilgang(gjeldendeAktørId);
-            await sjekkKandidatEksisterer(gjeldendeAktørId);
+            const eksisterer = await sjekkKandidatEksisterer(gjeldendeAktørId);
+            setKandidatEksisterer(eksisterer);
             setAktørId(gjeldendeAktørId);
-            setKandidatEksisterer(true);
         } catch (status) {
             setFeilmelding(status);
+        } finally {
             setHenterAktørId(false);
         }
     }, [fnr]);
 
-    useEffect(() => {
-        setFeilmelding(undefined);
-    }, [fnr]);
+    useEffect(() => setFeilmelding(undefined), [fnr]);
 
     return {
         aktørId,
@@ -94,7 +92,8 @@ const sjekkSkrivetilgang = async (aktørId: string) => {
 const sjekkKandidatEksisterer = async (aktørId: string) => {
     try {
         await hentKandidat(aktørId);
+        return true;
     } catch (ignored) {
-        throw Feilmelding.IngenTilgangEllerIkkeFinnes;
+        return false;
     }
 };

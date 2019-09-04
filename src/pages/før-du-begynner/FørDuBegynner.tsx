@@ -26,12 +26,14 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = ({ history }) => 
     );
 
     useEffect(() => {
-        if (kandidatEksisterer && aktørId) {
+        if (henterAktørId || !aktørId) return;
+
+        if (kandidatEksisterer) {
             redirectTil(AppRoute.EndreKandidat, aktørId);
-        } else if (aktørId) {
+        } else {
             redirectTil(AppRoute.Registrering, aktørId);
         }
-    }, [aktørId, kandidatEksisterer, redirectTil]);
+    }, [aktørId, kandidatEksisterer, henterAktørId, redirectTil]);
 
     const onGåVidereKlikk = () => {
         if (process.env.REACT_APP_MOCK) {
