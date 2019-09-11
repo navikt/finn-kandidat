@@ -19,7 +19,7 @@ const Kandidatliste = ({ kandidater, onClickKandidat, antallValgteKriterier }: P
     const [antallRendersAvKandidater, setAntall] = useState<number>(0);
 
     const triggAnimasjonEtterKandidateneErLastet = () => {
-        if (antallRendersAvKandidater > 1) {
+        if (antallRendersAvKandidater > 2) {
             toggleVisKandidater(false);
 
             setTimeout(() => {

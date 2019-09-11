@@ -1,2404 +1,2012 @@
 [
     {
-        "aktørId": "2007528044113",
-        "fnr": "07067951896",
-        "sistEndret": "2019-08-17T23:04:09.311Z",
-        "sistEndretAv": "V417172",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8978877279114",
-        "fnr": "25047176320",
-        "sistEndret": "2019-06-07T12:20:15.863Z",
-        "sistEndretAv": "H760160",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1856024171652",
-        "fnr": "01065500791",
-        "sistEndret": "2019-06-09T09:35:40.470Z",
-        "sistEndretAv": "D757149",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "ANNET",
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8757521986001",
-        "fnr": "08048883185",
-        "sistEndret": "2019-05-27T02:27:18.866Z",
-        "sistEndretAv": "Z435428",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8881036895002",
-        "fnr": "10097546229",
-        "sistEndret": "2019-08-20T01:29:40.350Z",
-        "sistEndretAv": "M793510",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER",
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "9278246543081",
-        "fnr": "31118490730",
-        "sistEndret": "2019-07-08T03:17:45.824Z",
-        "sistEndretAv": "V953820",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3248382635283",
-        "fnr": "25069122089",
-        "sistEndret": "2019-05-28T06:40:21.699Z",
-        "sistEndretAv": "O793213",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6736540225646",
-        "fnr": "12057305531",
-        "sistEndret": "2019-02-13T19:54:32.085Z",
-        "sistEndretAv": "E510759",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "ANNET",
-            "ARBEIDSSTILLING"
-        ],
-        "grunnleggendeBehov": [
-            "SNAKKE_NORSK",
-            "SKRIVE_NORSK",
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1014891157724",
-        "fnr": "19008618898",
-        "sistEndret": "2019-04-20T16:16:07.138Z",
-        "sistEndretAv": "K963902",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "ANNET",
-            "ARBEIDSSTILLING",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [
-            "SNAKKE_NORSK",
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5481798055159",
-        "fnr": "01108203788",
-        "sistEndret": "2019-07-06T20:42:35.674Z",
-        "sistEndretAv": "W801616",
+        "aktørId": "9293040980561",
+        "fnr": "01019987899",
+        "sistEndret": "2019-08-18T07:55:40.032Z",
+        "sistEndretAv": "V538787",
         "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "2547941872073",
-        "fnr": "30058873051",
-        "sistEndret": "2019-06-05T22:22:44.015Z",
-        "sistEndretAv": "W519992",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6739833849198",
-        "fnr": "24068954149",
-        "sistEndret": "2019-01-26T20:37:16.147Z",
-        "sistEndretAv": "N051756",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8947412756875",
-        "fnr": "08069820736",
-        "sistEndret": "2019-06-11T11:44:13.489Z",
-        "sistEndretAv": "A498145",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "REGNING_OG_TALLFORSTÅELSE"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3724474466269",
-        "fnr": "21088999069",
-        "sistEndret": "2019-07-16T22:50:29.953Z",
-        "sistEndretAv": "Q074873",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "3060337835966",
-        "fnr": "24007971482",
-        "sistEndret": "2019-07-26T18:49:28.604Z",
-        "sistEndretAv": "I048723",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "ERGONOMI"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5069628554201",
-        "fnr": "04028686183",
-        "sistEndret": "2019-07-26T11:12:36.480Z",
-        "sistEndretAv": "K699965",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4237118903100",
-        "fnr": "18007530559",
-        "sistEndret": "2019-05-19T15:57:55.521Z",
-        "sistEndretAv": "W010420",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6280178078840",
-        "fnr": "16089769233",
-        "sistEndret": "2019-05-05T06:20:25.040Z",
-        "sistEndretAv": "K995258",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "REGNING_OG_TALLFORSTÅELSE"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2490175315828",
-        "fnr": "13068090029",
-        "sistEndret": "2019-02-22T16:31:17.080Z",
-        "sistEndretAv": "M896081",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3996234470005",
-        "fnr": "12058080460",
-        "sistEndret": "2019-01-14T11:44:26.352Z",
-        "sistEndretAv": "W465599",
+        "aktørId": "7179418827604",
+        "fnr": "15008462396",
+        "sistEndret": "2019-01-28T01:03:53.300Z",
+        "sistEndretAv": "O649231",
         "arbeidstidBehov": "HELTID",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "1161790468565",
-        "fnr": "09119491360",
-        "sistEndret": "2019-02-13T01:59:27.627Z",
-        "sistEndretAv": "D261504",
-        "arbeidstidBehov": "FLEKSIBEL",
+        "aktørId": "5105200207858",
+        "fnr": "04097558944",
+        "sistEndret": "2019-05-16T03:09:51.862Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
         "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "7206031749110",
-        "fnr": "11007581736",
-        "sistEndret": "2019-04-20T23:57:46.592Z",
-        "sistEndretAv": "I543738",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "7566583798327",
-        "fnr": "02058771328",
-        "sistEndret": "2019-08-17T00:17:15.077Z",
-        "sistEndretAv": "E163435",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "TUNGE_LØFT"
-        ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "3068061659579",
-        "fnr": "16078751219",
-        "sistEndret": "2019-08-08T06:15:27.520Z",
-        "sistEndretAv": "M058684",
+        "aktørId": "7489677245310",
+        "fnr": "28110043939",
+        "sistEndret": "2019-04-06T03:43:59.069Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["ANNET", "HØRSEL", "SYN", "TUNGE_LØFT"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4666891769020",
+        "fnr": "17087081796",
+        "sistEndret": "2019-06-10T22:05:18.611Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6813854422863",
+        "fnr": "28119659045",
+        "sistEndret": "2019-08-16T14:09:32.504Z",
+        "sistEndretAv": "E728716",
         "arbeidstidBehov": "HELTID",
         "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": [
-            "MENTOR",
-            "ANNET"
-        ]
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "8521179601922",
-        "fnr": "01019562499",
-        "sistEndret": "2019-01-07T04:47:32.666Z",
-        "sistEndretAv": "A681001",
+        "aktørId": "1834644099449",
+        "fnr": "03099369948",
+        "sistEndret": "2019-05-22T03:20:17.647Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9505336642001",
+        "fnr": "09058251523",
+        "sistEndret": "2019-07-28T15:25:17.265Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["ANNET"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["ANNET", "TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "6741592297172",
+        "fnr": "06089516321",
+        "sistEndret": "2019-06-02T06:07:39.260Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1747954306106",
+        "fnr": "22029677178",
+        "sistEndret": "2019-01-10T17:18:09.286Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": ["ANNET", "HØRSEL", "SYN"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "8556944312516",
+        "fnr": "10029951980",
+        "sistEndret": "2019-04-23T05:21:11.575Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4504525950459",
+        "fnr": "20068555508",
+        "sistEndret": "2019-06-06T08:46:32.327Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4428579118288",
+        "fnr": "11009240138",
+        "sistEndret": "2019-01-23T12:55:48.642Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7931330398399",
+        "fnr": "23118086805",
+        "sistEndret": "2019-04-23T11:39:11.881Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["HØRSEL", "ERGONOMI", "ANNET", "SYN"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2316179204432",
+        "fnr": "05119679879",
+        "sistEndret": "2019-09-09T16:49:51.077Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "7920291582637",
+        "fnr": "05107752082",
+        "sistEndret": "2019-07-10T20:11:58.765Z",
+        "sistEndretAv": "H121108",
         "arbeidstidBehov": "KAN_IKKE_JOBBE",
         "fysiskeBehov": [],
+        "grunnleggendeBehov": ["REGNING_OG_TALLFORSTÅELSE", "LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1210590386378",
+        "fnr": "26027459101",
+        "sistEndret": "2019-06-29T12:00:05.623Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8645251302995",
+        "fnr": "15048612455",
+        "sistEndret": "2019-02-23T08:49:43.740Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["SYN", "HØRSEL"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9607424369538",
+        "fnr": "20027726861",
+        "sistEndret": "2019-01-09T00:24:22.599Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["REGNING_OG_TALLFORSTÅELSE", "LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4711554299127",
+        "fnr": "22028481229",
+        "sistEndret": "2019-08-12T15:54:12.355Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "8553750444863",
+        "fnr": "24027821266",
+        "sistEndret": "2019-02-09T04:43:29.679Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "ANDRE_UTFORDRINGER", "REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1546908926049",
+        "fnr": "20097735132",
+        "sistEndret": "2019-09-02T07:17:42.364Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6625431450248",
+        "fnr": "24097231415",
+        "sistEndret": "2019-07-02T09:36:15.666Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "HØRSEL"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6297678508957",
+        "fnr": "25109189203",
+        "sistEndret": "2019-07-04T16:14:16.307Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": ["MENTOR"]
+    },
+    {
+        "aktørId": "3762846643958",
+        "fnr": "27068471716",
+        "sistEndret": "2019-02-01T23:49:47.287Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3058284461045",
+        "fnr": "06027923214",
+        "sistEndret": "2019-02-26T18:02:23.994Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8922611690813",
+        "fnr": "03118902717",
+        "sistEndret": "2019-02-11T07:21:36.994Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SNAKKE_NORSK", "LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7207512131494",
+        "fnr": "10099327869",
+        "sistEndret": "2019-06-07T02:54:28.053Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6648155148300",
+        "fnr": "24058518065",
+        "sistEndret": "2019-06-25T20:58:36.799Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2027306067399",
+        "fnr": "02017253088",
+        "sistEndret": "2019-05-09T03:46:52.014Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9362971321182",
+        "fnr": "27057477216",
+        "sistEndret": "2019-06-10T23:21:20.998Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9977164251050",
+        "fnr": "01088638618",
+        "sistEndret": "2019-03-26T01:45:11.503Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3420307665559",
+        "fnr": "16119301924",
+        "sistEndret": "2019-08-27T13:32:15.056Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2174908297067",
+        "fnr": "13108823091",
+        "sistEndret": "2019-08-21T15:38:16.961Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["HØRSEL", "SYN"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5874941962545",
+        "fnr": "27019077158",
+        "sistEndret": "2019-07-11T02:09:40.446Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7367082118202",
+        "fnr": "31118019663",
+        "sistEndret": "2019-05-16T13:00:54.908Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8756622793986",
+        "fnr": "28079064299",
+        "sistEndret": "2019-04-10T07:18:43.659Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "SNAKKE_NORSK", "REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2352517012223",
+        "fnr": "26008347750",
+        "sistEndret": "2019-02-11T02:45:50.395Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "ERGONOMI", "TUNGE_LØFT", "ANNET"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9473684229338",
+        "fnr": "22078951870",
+        "sistEndret": "2019-07-22T17:19:01.563Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "MENTOR"]
+    },
+    {
+        "aktørId": "8051422956189",
+        "fnr": "26117931004",
+        "sistEndret": "2019-04-23T14:46:15.778Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["ANNET"]
+    },
+    {
+        "aktørId": "1017445163137",
+        "fnr": "02028538939",
+        "sistEndret": "2019-01-22T09:08:19.222Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1549123000904",
+        "fnr": "11048610236",
+        "sistEndret": "2019-06-30T10:05:36.276Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "REGNING_OG_TALLFORSTÅELSE", "ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "3659578338240",
+        "fnr": "22057564060",
+        "sistEndret": "2019-05-28T10:37:28.441Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["HØRSEL", "TUNGE_LØFT"],
+        "grunnleggendeBehov": ["SNAKKE_NORSK"],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "6878017614834",
+        "fnr": "15018262778",
+        "sistEndret": "2019-01-05T03:57:21.891Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["LESE_NORSK", "REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7636458420762",
+        "fnr": "24017406678",
+        "sistEndret": "2019-01-21T20:58:30.814Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "SKRIVE_NORSK", "REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9952131698854",
+        "fnr": "28027309226",
+        "sistEndret": "2019-09-01T11:21:52.427Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3174937281033",
+        "fnr": "20087292844",
+        "sistEndret": "2019-01-21T02:29:47.261Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9809752352187",
+        "fnr": "05050011226",
+        "sistEndret": "2019-07-21T08:25:32.202Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["MENTOR"]
+    },
+    {
+        "aktørId": "6714892868504",
+        "fnr": "09049696806",
+        "sistEndret": "2019-07-24T14:00:50.539Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["HØRSEL"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1320249333829",
+        "fnr": "01009414637",
+        "sistEndret": "2019-07-07T01:14:10.914Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["SYN", "ANNET", "TUNGE_LØFT"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["ANNET", "TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "2090552157134",
+        "fnr": "23008896453",
+        "sistEndret": "2019-01-04T18:57:54.646Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "ERGONOMI", "SYN"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1604480963301",
+        "fnr": "20119661758",
+        "sistEndret": "2019-08-12T19:33:37.963Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6646932429206",
+        "fnr": "12008288567",
+        "sistEndret": "2019-04-12T00:27:15.460Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4480249356314",
+        "fnr": "13008327828",
+        "sistEndret": "2019-05-19T10:13:36.334Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3786754279313",
+        "fnr": "10067026239",
+        "sistEndret": "2019-02-05T19:30:55.094Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9597140521009",
+        "fnr": "03097975514",
+        "sistEndret": "2019-04-17T10:28:10.623Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5154313364265",
+        "fnr": "06069221708",
+        "sistEndret": "2019-05-21T04:07:14.734Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "7209962033024",
+        "fnr": "29057724771",
+        "sistEndret": "2019-03-25T04:15:23.410Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6579496061783",
+        "fnr": "16039389901",
+        "sistEndret": "2019-05-20T10:22:25.370Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["MENTOR"]
+    },
+    {
+        "aktørId": "1189940317999",
+        "fnr": "14059064615",
+        "sistEndret": "2019-01-01T08:54:16.469Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9737781224863",
+        "fnr": "16079355880",
+        "sistEndret": "2019-08-31T09:19:08.969Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["ERGONOMI"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2855075327902",
+        "fnr": "18008879318",
+        "sistEndret": "2019-02-17T08:04:41.658Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5893128973709",
+        "fnr": "03037588449",
+        "sistEndret": "2019-03-30T20:43:59.237Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1660647966553",
+        "fnr": "11107996526",
+        "sistEndret": "2019-01-20T18:26:33.759Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["ANNET", "ERGONOMI"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6288238375223",
+        "fnr": "20069065180",
+        "sistEndret": "2019-01-13T17:06:58.497Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["ANNET", "ERGONOMI", "SYN", "TUNGE_LØFT"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4138104392715",
+        "fnr": "30047587499",
+        "sistEndret": "2019-08-02T02:35:49.201Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SNAKKE_NORSK", "ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3463161532918",
+        "fnr": "09007828389",
+        "sistEndret": "2019-08-01T05:40:08.632Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "ANNET"]
+    },
+    {
+        "aktørId": "5675528858583",
+        "fnr": "06009052699",
+        "sistEndret": "2019-05-27T10:33:15.487Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["ANNET", "TUNGE_LØFT"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1505284957867",
+        "fnr": "05098292634",
+        "sistEndret": "2019-06-14T23:20:34.006Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9386451618505",
+        "fnr": "16097943927",
+        "sistEndret": "2019-07-25T14:37:55.547Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["LESE_NORSK", "SKRIVE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3069243129170",
+        "fnr": "08028509244",
+        "sistEndret": "2019-03-12T21:31:51.609Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2039654712961",
+        "fnr": "06059668569",
+        "sistEndret": "2019-01-01T23:58:10.496Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["TUNGE_LØFT"],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "ANDRE_UTFORDRINGER", "LESE_NORSK", "SNAKKE_NORSK"],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "7268274525362",
+        "fnr": "01058013559",
+        "sistEndret": "2019-05-17T13:49:43.056Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["LESE_NORSK", "ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9041811887351",
+        "fnr": "21029449039",
+        "sistEndret": "2019-01-27T15:21:11.728Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6841408279080",
+        "fnr": "26078808003",
+        "sistEndret": "2019-06-19T21:40:12.623Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7939742212485",
+        "fnr": "26078012853",
+        "sistEndret": "2019-06-02T20:16:54.169Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3974979863809",
+        "fnr": "14117555543",
+        "sistEndret": "2019-09-05T17:23:02.693Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6971721080166",
+        "fnr": "08108159414",
+        "sistEndret": "2019-01-06T21:48:58.918Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3939664988782",
+        "fnr": "25007531578",
+        "sistEndret": "2019-07-12T05:59:30.277Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6203495947054",
+        "fnr": "23007220790",
+        "sistEndret": "2019-07-16T21:03:46.816Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["ERGONOMI", "TUNGE_LØFT", "SYN"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1820704563553",
+        "fnr": "13008521675",
+        "sistEndret": "2019-05-28T06:54:54.847Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": ["ANNET", "SYN"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3995150987090",
+        "fnr": "06099078152",
+        "sistEndret": "2019-04-16T01:03:39.710Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8975470214443",
+        "fnr": "25079850163",
+        "sistEndret": "2019-01-02T17:51:05.627Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": ["ANNET", "ERGONOMI"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "7642058967193",
+        "fnr": "09008229942",
+        "sistEndret": "2019-01-03T11:20:01.528Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7954781906726",
+        "fnr": "15057563394",
+        "sistEndret": "2019-07-29T04:20:08.993Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "ERGONOMI"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5754498776184",
+        "fnr": "17028447205",
+        "sistEndret": "2019-02-07T19:28:43.396Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2446234094751",
+        "fnr": "31067013614",
+        "sistEndret": "2019-01-07T02:04:47.344Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6258375694370",
+        "fnr": "24027697700",
+        "sistEndret": "2019-04-27T01:21:08.692Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3130027112394",
+        "fnr": "18109995319",
+        "sistEndret": "2019-05-08T01:20:04.328Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2497955861500",
+        "fnr": "11027021907",
+        "sistEndret": "2019-03-03T17:22:50.513Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3794790781278",
+        "fnr": "10068307754",
+        "sistEndret": "2019-05-04T10:49:54.488Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4428618743059",
+        "fnr": "13020059596",
+        "sistEndret": "2019-06-17T01:50:48.651Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6532348877718",
+        "fnr": "27118484571",
+        "sistEndret": "2019-06-11T23:30:43.711Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["REGNING_OG_TALLFORSTÅELSE", "ANDRE_UTFORDRINGER", "LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8205622836136",
+        "fnr": "06027915262",
+        "sistEndret": "2019-07-23T10:33:41.916Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9088458045226",
+        "fnr": "20119290989",
+        "sistEndret": "2019-02-11T13:32:03.914Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5878084023094",
+        "fnr": "22088498481",
+        "sistEndret": "2019-02-14T04:38:25.954Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1961067209208",
+        "fnr": "14089763313",
+        "sistEndret": "2019-05-03T02:00:24.818Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8939423708267",
+        "fnr": "10007316602",
+        "sistEndret": "2019-05-26T01:29:04.567Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7968484583883",
+        "fnr": "17109036633",
+        "sistEndret": "2019-06-12T03:15:49.690Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "4034341341394",
+        "fnr": "10099705553",
+        "sistEndret": "2019-05-09T23:18:19.246Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5026894099320",
+        "fnr": "20080048077",
+        "sistEndret": "2019-02-09T21:48:45.295Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "6738386795666",
+        "fnr": "15020001264",
+        "sistEndret": "2019-04-05T13:23:12.266Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["ERGONOMI", "ANNET", "TUNGE_LØFT"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5047763502187",
+        "fnr": "09059518965",
+        "sistEndret": "2019-05-17T18:56:14.196Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "ERGONOMI", "TUNGE_LØFT"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6677455707287",
+        "fnr": "24007869432",
+        "sistEndret": "2019-07-29T03:53:05.066Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["ANNET", "SYN", "ERGONOMI"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6227998065995",
+        "fnr": "08017927648",
+        "sistEndret": "2019-03-10T02:56:26.389Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["REGNING_OG_TALLFORSTÅELSE", "SNAKKE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6968810784354",
+        "fnr": "03077168086",
+        "sistEndret": "2019-08-17T17:05:42.349Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "REGNING_OG_TALLFORSTÅELSE", "SNAKKE_NORSK"],
+        "arbeidsmiljøBehov": ["MENTOR"]
+    },
+    {
+        "aktørId": "2620878028958",
+        "fnr": "20097721077",
+        "sistEndret": "2019-07-04T14:57:22.347Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "4129119648314",
+        "fnr": "26017534059",
+        "sistEndret": "2019-03-20T10:22:37.031Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "8449559434304",
+        "fnr": "26019569232",
+        "sistEndret": "2019-04-16T10:15:06.450Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "1047043624795",
+        "fnr": "14079141543",
+        "sistEndret": "2019-08-01T13:41:53.573Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8284696098488",
+        "fnr": "23108879866",
+        "sistEndret": "2019-08-28T11:23:23.520Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3473102405731",
+        "fnr": "30099955712",
+        "sistEndret": "2019-03-06T06:11:23.102Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["TUNGE_LØFT", "ERGONOMI", "ANNET", "HØRSEL"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3304703194247",
+        "fnr": "25089846547",
+        "sistEndret": "2019-05-09T16:19:41.773Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9224897425036",
+        "fnr": "06059901042",
+        "sistEndret": "2019-01-18T10:47:19.049Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SNAKKE_NORSK", "ANDRE_UTFORDRINGER", "LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4989748928696",
+        "fnr": "11008042340",
+        "sistEndret": "2019-06-26T06:12:32.163Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4737707748102",
+        "fnr": "28098863666",
+        "sistEndret": "2019-05-02T15:20:05.179Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8318419836996",
+        "fnr": "04039040889",
+        "sistEndret": "2019-06-13T14:24:37.387Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5399873756895",
+        "fnr": "17029588856",
+        "sistEndret": "2019-05-09T10:07:44.450Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8935309537465",
+        "fnr": "25019913069",
+        "sistEndret": "2019-04-17T09:01:10.434Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1250166788540",
+        "fnr": "04078971822",
+        "sistEndret": "2019-03-11T03:09:50.375Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "ERGONOMI", "HØRSEL"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4355295366262",
+        "fnr": "29028858408",
+        "sistEndret": "2019-08-13T23:07:05.144Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7481449262048",
+        "fnr": "05088938455",
+        "sistEndret": "2019-07-24T09:29:42.357Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "SYN", "HØRSEL"],
+        "grunnleggendeBehov": ["SNAKKE_NORSK", "SKRIVE_NORSK", "ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": ["ANNET", "TILRETTELAGTE_ARBEIDSOPPGAVER", "TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "3587359814092",
+        "fnr": "01108793070",
+        "sistEndret": "2019-08-05T16:54:58.512Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": ["ERGONOMI", "HØRSEL", "ARBEIDSSTILLING"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7582432530277",
+        "fnr": "23010010799",
+        "sistEndret": "2019-08-25T09:03:44.646Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": ["ERGONOMI", "ARBEIDSSTILLING", "TUNGE_LØFT"],
+        "grunnleggendeBehov": ["REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2948364660173",
+        "fnr": "07049154105",
+        "sistEndret": "2019-06-28T17:29:29.821Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["ANNET", "HØRSEL", "SYN"],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "LESE_NORSK", "SKRIVE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5304628424269",
+        "fnr": "26009515711",
+        "sistEndret": "2019-07-07T11:06:58.010Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "REGNING_OG_TALLFORSTÅELSE", "LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2232384920139",
+        "fnr": "15067331858",
+        "sistEndret": "2019-06-29T09:44:44.249Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1094771051084",
+        "fnr": "07017565413",
+        "sistEndret": "2019-03-25T03:02:44.634Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3975408142904",
+        "fnr": "21117734800",
+        "sistEndret": "2019-05-10T04:48:45.802Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7798543266553",
+        "fnr": "13028590568",
+        "sistEndret": "2019-06-29T13:04:15.668Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["ANNET"]
+    },
+    {
+        "aktørId": "4629598160241",
+        "fnr": "30117292661",
+        "sistEndret": "2019-08-27T13:48:43.506Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3627968709123",
+        "fnr": "20047549559",
+        "sistEndret": "2019-03-08T04:55:33.614Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["ANNET"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "5560201891758",
+        "fnr": "19088838109",
+        "sistEndret": "2019-07-29T18:42:22.154Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["ANNET", "TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "2098954126381",
+        "fnr": "23069187498",
+        "sistEndret": "2019-04-06T07:24:41.139Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "7083301382306",
+        "fnr": "06088620354",
+        "sistEndret": "2019-02-09T22:32:54.932Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["MENTOR", "TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "3014502732579",
+        "fnr": "03109381887",
+        "sistEndret": "2019-05-15T12:59:38.742Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": ["SYN"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "TILRETTELAGT_OPPLÆRING"]
+    },
+    {
+        "aktørId": "8566670114041",
+        "fnr": "08017735153",
+        "sistEndret": "2019-05-14T16:26:56.660Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9150315754879",
+        "fnr": "24098486638",
+        "sistEndret": "2019-02-09T01:08:01.156Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "MENTOR"]
+    },
+    {
+        "aktørId": "7966596608476",
+        "fnr": "18088609790",
+        "sistEndret": "2019-05-12T15:05:40.635Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "SNAKKE_NORSK", "LESE_NORSK"],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "ANNET"]
+    },
+    {
+        "aktørId": "3463463652045",
+        "fnr": "20017658426",
+        "sistEndret": "2019-05-06T18:44:20.650Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SNAKKE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8223914419995",
+        "fnr": "11117452710",
+        "sistEndret": "2019-04-24T04:30:15.188Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "SNAKKE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9018640028383",
+        "fnr": "15008680180",
+        "sistEndret": "2019-04-22T18:12:32.842Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "TILRETTELAGTE_ARBEIDSOPPGAVER", "ANNET"]
+    },
+    {
+        "aktørId": "9051946541283",
+        "fnr": "11099936063",
+        "sistEndret": "2019-06-26T05:06:36.558Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1329497873324",
+        "fnr": "27078862349",
+        "sistEndret": "2019-01-20T11:58:00.934Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3639177635602",
+        "fnr": "10009655293",
+        "sistEndret": "2019-04-14T15:54:14.515Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2729174454265",
+        "fnr": "31118440202",
+        "sistEndret": "2019-01-19T23:47:24.951Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": ["ARBEIDSSTILLING", "HØRSEL", "TUNGE_LØFT", "ANNET"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3300586844382",
+        "fnr": "09107312428",
+        "sistEndret": "2019-01-19T05:35:19.498Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "SNAKKE_NORSK", "ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1535094466812",
+        "fnr": "08118695861",
+        "sistEndret": "2019-03-31T08:12:18.926Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5594688118117",
+        "fnr": "05059450087",
+        "sistEndret": "2019-07-26T22:39:37.244Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2658672347489",
+        "fnr": "27058282036",
+        "sistEndret": "2019-09-03T01:50:41.587Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3251138081159",
+        "fnr": "08079703231",
+        "sistEndret": "2019-07-21T18:09:29.202Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4382982818536",
+        "fnr": "22068258670",
+        "sistEndret": "2019-04-08T16:00:11.548Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3808369787421",
+        "fnr": "13038874769",
+        "sistEndret": "2019-05-18T06:50:40.404Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": ["HØRSEL", "ANNET", "TUNGE_LØFT"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7447079239466",
+        "fnr": "09057322907",
+        "sistEndret": "2019-08-10T10:57:11.013Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2620827015130",
+        "fnr": "20089900922",
+        "sistEndret": "2019-05-30T22:39:49.199Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3197408984536",
+        "fnr": "22017264714",
+        "sistEndret": "2019-07-05T19:14:30.992Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "5230221067661",
+        "fnr": "06078978374",
+        "sistEndret": "2019-08-16T15:24:16.599Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8368196086274",
+        "fnr": "01038510920",
+        "sistEndret": "2019-03-15T02:40:04.740Z",
+        "sistEndretAv": "A617093",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "6259459993053",
+        "fnr": "11117228632",
+        "sistEndret": "2019-04-30T03:57:03.689Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2595908785704",
+        "fnr": "22099390607",
+        "sistEndret": "2019-06-08T22:33:31.187Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1303251073084",
+        "fnr": "27007812790",
+        "sistEndret": "2019-03-30T11:10:19.460Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": ["TUNGE_LØFT", "ERGONOMI"],
         "grunnleggendeBehov": [
             "SKRIVE_NORSK",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7465544600573",
-        "fnr": "04048173816",
-        "sistEndret": "2019-05-09T06:16:12.639Z",
-        "sistEndretAv": "W562717",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "SYN",
-            "ERGONOMI"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3947767173472",
-        "fnr": "24007012574",
-        "sistEndret": "2019-04-01T04:23:16.916Z",
-        "sistEndretAv": "O425102",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8392007028152",
-        "fnr": "06119553081",
-        "sistEndret": "2019-01-26T08:22:12.848Z",
-        "sistEndretAv": "J388651",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7066891947466",
-        "fnr": "23017649930",
-        "sistEndret": "2019-04-28T09:18:08.936Z",
-        "sistEndretAv": "Z449779",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3533023830458",
-        "fnr": "28048036041",
-        "sistEndret": "2019-05-10T19:50:39.301Z",
-        "sistEndretAv": "B196966",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9284758561690",
-        "fnr": "19049684560",
-        "sistEndret": "2019-08-21T08:35:30.355Z",
-        "sistEndretAv": "R418877",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1764295871863",
-        "fnr": "09089948301",
-        "sistEndret": "2019-03-30T02:50:32.990Z",
-        "sistEndretAv": "P913130",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
+            "SNAKKE_NORSK",
             "LESE_NORSK",
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER",
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "3815819210539",
-        "fnr": "05117318151",
-        "sistEndret": "2019-05-23T18:00:59.694Z",
-        "sistEndretAv": "L503433",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8109099599212",
-        "fnr": "05009338952",
-        "sistEndret": "2019-08-14T19:59:47.576Z",
-        "sistEndretAv": "K672401",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "5787251059168",
-        "fnr": "29068863463",
-        "sistEndret": "2019-01-22T01:24:38.606Z",
-        "sistEndretAv": "O652069",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5504657814099",
-        "fnr": "17027939805",
-        "sistEndret": "2019-06-22T23:58:10.532Z",
-        "sistEndretAv": "S823478",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "ANNET",
-            "ERGONOMI",
-            "ARBEIDSSTILLING"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7994108855350",
-        "fnr": "30028409768",
-        "sistEndret": "2019-05-12T06:37:25.220Z",
-        "sistEndretAv": "E322470",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "4935185139233",
-        "fnr": "31078050546",
-        "sistEndret": "2019-03-28T16:57:51.657Z",
-        "sistEndretAv": "H522535",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "SNAKKE_NORSK",
-            "SKRIVE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2213908668029",
-        "fnr": "04109299397",
-        "sistEndret": "2019-01-10T04:13:48.263Z",
-        "sistEndretAv": "Z736159",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET",
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "7774476144021",
-        "fnr": "06107299309",
-        "sistEndret": "2019-01-12T08:16:04.206Z",
-        "sistEndretAv": "U529072",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "6239257929667",
-        "fnr": "13008841149",
-        "sistEndret": "2019-08-14T13:57:22.056Z",
-        "sistEndretAv": "Y004837",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
             "REGNING_OG_TALLFORSTÅELSE"
         ],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER",
-            "ANNET"
-        ]
+        "arbeidsmiljøBehov": ["TILRETTELAGT_OPPLÆRING", "MENTOR"]
     },
     {
-        "aktørId": "7254059144754",
-        "fnr": "30069242444",
-        "sistEndret": "2019-03-29T17:43:10.112Z",
-        "sistEndretAv": "O264336",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "ERGONOMI",
-            "ARBEIDSSTILLING",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "5726828375916",
-        "fnr": "11068104795",
-        "sistEndret": "2019-07-10T01:06:23.551Z",
-        "sistEndretAv": "B164037",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "ERGONOMI",
-            "SYN",
-            "HØRSEL"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4460736479138",
-        "fnr": "26118474065",
-        "sistEndret": "2019-08-11T09:20:45.583Z",
-        "sistEndretAv": "K807173",
+        "aktørId": "9404491199671",
+        "fnr": "17047772311",
+        "sistEndret": "2019-04-29T01:14:06.415Z",
+        "sistEndretAv": "H010716",
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "3060062875931",
-        "fnr": "11097411443",
-        "sistEndret": "2019-07-17T00:34:47.150Z",
-        "sistEndretAv": "Q903198",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8751492737435",
-        "fnr": "25059505699",
-        "sistEndret": "2019-05-10T02:33:43.968Z",
-        "sistEndretAv": "X930115",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5269485464115",
-        "fnr": "18119330420",
-        "sistEndret": "2019-06-08T11:10:56.245Z",
-        "sistEndretAv": "N152462",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SNAKKE_NORSK",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4331556038668",
-        "fnr": "11008878732",
-        "sistEndret": "2019-04-01T06:06:52.193Z",
-        "sistEndretAv": "O534273",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "8403637210574",
-        "fnr": "07117959737",
-        "sistEndret": "2019-06-26T04:10:12.412Z",
-        "sistEndretAv": "F425176",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2533542233412",
-        "fnr": "08108552248",
-        "sistEndret": "2019-03-15T18:52:46.511Z",
-        "sistEndretAv": "N457749",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "ARBEIDSSTILLING",
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "4292275093336",
-        "fnr": "15099128787",
-        "sistEndret": "2019-07-25T09:42:18.407Z",
-        "sistEndretAv": "Y879695",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4486854251741",
-        "fnr": "16058106953",
-        "sistEndret": "2019-08-03T14:40:41.820Z",
-        "sistEndretAv": "R863900",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "REGNING_OG_TALLFORSTÅELSE"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5494623954632",
-        "fnr": "06049827413",
-        "sistEndret": "2019-06-20T09:06:17.290Z",
-        "sistEndretAv": "M148814",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1661703798410",
-        "fnr": "14079752062",
-        "sistEndret": "2019-03-29T02:05:03.959Z",
-        "sistEndretAv": "P684856",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6491979700790",
-        "fnr": "05089072796",
-        "sistEndret": "2019-06-24T19:04:56.723Z",
-        "sistEndretAv": "W431533",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5983474763194",
-        "fnr": "28109866689",
-        "sistEndret": "2019-02-06T19:59:57.071Z",
-        "sistEndretAv": "S513414",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET",
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "3935119536072",
-        "fnr": "13069599464",
-        "sistEndret": "2019-07-29T19:36:36.591Z",
-        "sistEndretAv": "Z377122",
+        "aktørId": "4471775983025",
+        "fnr": "18057821554",
+        "sistEndret": "2019-05-24T20:15:05.370Z",
+        "sistEndretAv": "B048830",
         "arbeidstidBehov": "KAN_IKKE_JOBBE",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "7375774833456",
-        "fnr": "14049294302",
-        "sistEndret": "2019-03-04T16:09:17.472Z",
-        "sistEndretAv": "A422435",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3337136330556",
-        "fnr": "23088342534",
-        "sistEndret": "2019-01-27T03:01:43.512Z",
-        "sistEndretAv": "R582966",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "6206915821348",
-        "fnr": "25058350403",
-        "sistEndret": "2019-06-11T12:27:16.531Z",
-        "sistEndretAv": "J084902",
+        "aktørId": "8296574130658",
+        "fnr": "04029920074",
+        "sistEndret": "2019-06-20T11:13:52.600Z",
+        "sistEndretAv": "E728716",
         "arbeidstidBehov": "HELTID",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "5605626754384",
-        "fnr": "26097205336",
-        "sistEndret": "2019-03-07T05:53:25.944Z",
-        "sistEndretAv": "S442372",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "ERGONOMI"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "3130812387591",
-        "fnr": "29037262151",
-        "sistEndret": "2019-02-16T22:46:57.122Z",
-        "sistEndretAv": "V446695",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6905289555115",
-        "fnr": "28009952243",
-        "sistEndret": "2019-02-21T12:59:43.020Z",
-        "sistEndretAv": "T796442",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8038237034308",
-        "fnr": "25019297066",
-        "sistEndret": "2019-04-20T12:18:18.560Z",
-        "sistEndretAv": "X534633",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9803259269459",
-        "fnr": "08117789560",
-        "sistEndret": "2019-04-15T02:44:10.246Z",
-        "sistEndretAv": "C976884",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3860380786097",
-        "fnr": "26107795242",
-        "sistEndret": "2019-05-24T20:27:46.588Z",
-        "sistEndretAv": "M047716",
+        "aktørId": "7385971717545",
+        "fnr": "21047446268",
+        "sistEndret": "2019-07-25T13:39:54.029Z",
+        "sistEndretAv": "A768684",
         "arbeidstidBehov": "KAN_IKKE_JOBBE",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "3043423620556",
-        "fnr": "21057297376",
-        "sistEndret": "2019-08-02T21:30:04.945Z",
-        "sistEndretAv": "W486857",
+        "aktørId": "8489918037498",
+        "fnr": "11037456502",
+        "sistEndret": "2019-08-10T16:19:32.846Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": ["HØRSEL", "TUNGE_LØFT", "ANNET", "ARBEIDSSTILLING"],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6455465277349",
+        "fnr": "08048215131",
+        "sistEndret": "2019-03-25T08:48:38.927Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7513520532260",
+        "fnr": "19099186022",
+        "sistEndret": "2019-04-29T00:10:05.280Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4574947151930",
+        "fnr": "12039696833",
+        "sistEndret": "2019-02-14T11:42:33.677Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "9603564799408",
+        "fnr": "20088036019",
+        "sistEndret": "2019-03-04T06:06:51.993Z",
+        "sistEndretAv": "H010716",
         "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "ANNET"
-        ],
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6569422185488",
+        "fnr": "03068801086",
+        "sistEndret": "2019-09-05T00:19:26.002Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3583828073990",
+        "fnr": "18088836673",
+        "sistEndret": "2019-02-20T15:38:24.622Z",
+        "sistEndretAv": "H053207",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SNAKKE_NORSK", "LESE_NORSK", "REGNING_OG_TALLFORSTÅELSE"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6037785576611",
+        "fnr": "11097110869",
+        "sistEndret": "2019-08-29T03:21:08.294Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "SKRIVE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "8485323745502",
+        "fnr": "08108925109",
+        "sistEndret": "2019-02-24T01:29:47.731Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1750475094490",
+        "fnr": "30039444255",
+        "sistEndret": "2019-05-08T08:51:12.121Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "SKRIVE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2221434880275",
+        "fnr": "10078049168",
+        "sistEndret": "2019-04-02T19:59:14.658Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "HELTID",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER"]
+    },
+    {
+        "aktørId": "3950404395887",
+        "fnr": "17008350884",
+        "sistEndret": "2019-01-10T20:16:39.915Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1005729528184",
+        "fnr": "24119774078",
+        "sistEndret": "2019-06-11T00:02:00.514Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["REGNING_OG_TALLFORSTÅELSE", "ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6771046370662",
+        "fnr": "21040027227",
+        "sistEndret": "2019-04-01T02:33:10.779Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SNAKKE_NORSK", "SKRIVE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "3291889754818",
+        "fnr": "06098333906",
+        "sistEndret": "2019-02-17T04:58:16.790Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "4617427858019",
+        "fnr": "08008042757",
+        "sistEndret": "2019-06-08T01:24:50.116Z",
+        "sistEndretAv": "A768684",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "7298366487082",
+        "fnr": "22060078487",
+        "sistEndret": "2019-03-03T12:16:24.833Z",
+        "sistEndretAv": "O649231",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["SNAKKE_NORSK", "REGNING_OG_TALLFORSTÅELSE", "ANDRE_UTFORDRINGER"],
+        "arbeidsmiljøBehov": ["TILRETTELAGTE_ARBEIDSOPPGAVER", "MENTOR"]
+    },
+    {
+        "aktørId": "9307963694106",
+        "fnr": "18109903333",
+        "sistEndret": "2019-07-21T09:45:15.885Z",
+        "sistEndretAv": "E728716",
+        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "6558514357921",
+        "fnr": "02088369729",
+        "sistEndret": "2019-06-29T15:12:51.644Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "IKKE_HELE_DAGER",
+        "fysiskeBehov": ["SYN"],
         "grunnleggendeBehov": [
             "REGNING_OG_TALLFORSTÅELSE",
-            "ANDRE_UTFORDRINGER",
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4947967778318",
-        "fnr": "01028421776",
-        "sistEndret": "2019-02-28T06:44:14.667Z",
-        "sistEndretAv": "W261795",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6819049717050",
-        "fnr": "26058538069",
-        "sistEndret": "2019-08-22T07:40:58.340Z",
-        "sistEndretAv": "L301072",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "9483034465848",
-        "fnr": "30049415202",
-        "sistEndret": "2019-07-05T04:42:16.484Z",
-        "sistEndretAv": "P584549",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6438937336197",
-        "fnr": "06079033578",
-        "sistEndret": "2019-06-16T10:42:49.173Z",
-        "sistEndretAv": "K758260",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "ERGONOMI",
-            "ANNET",
-            "SYN",
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1634478440704",
-        "fnr": "26068731940",
-        "sistEndret": "2019-05-30T21:05:56.184Z",
-        "sistEndretAv": "A218634",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5829035961564",
-        "fnr": "05049241048",
-        "sistEndret": "2019-06-24T02:08:37.103Z",
-        "sistEndretAv": "Z683799",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3335375556358",
-        "fnr": "14017899792",
-        "sistEndret": "2019-04-28T21:29:18.032Z",
-        "sistEndretAv": "D595121",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2918973841399",
-        "fnr": "15039977904",
-        "sistEndret": "2019-08-16T12:52:24.417Z",
-        "sistEndretAv": "S232668",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3772229910116",
-        "fnr": "18067182126",
-        "sistEndret": "2019-02-12T23:49:36.403Z",
-        "sistEndretAv": "N628843",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3605635277392",
-        "fnr": "21019395534",
-        "sistEndret": "2019-07-21T22:27:19.483Z",
-        "sistEndretAv": "V163477",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1558006142469",
-        "fnr": "12017839495",
-        "sistEndret": "2019-02-25T01:50:31.147Z",
-        "sistEndretAv": "C629803",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8482568642533",
-        "fnr": "17078809108",
-        "sistEndret": "2019-05-09T18:07:38.798Z",
-        "sistEndretAv": "I864692",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3531325591207",
-        "fnr": "04037623364",
-        "sistEndret": "2019-06-30T16:59:12.881Z",
-        "sistEndretAv": "E214971",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "4055140071589",
-        "fnr": "27018840362",
-        "sistEndret": "2019-04-23T15:30:33.410Z",
-        "sistEndretAv": "S358929",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "LESE_NORSK",
             "SNAKKE_NORSK",
             "SKRIVE_NORSK",
             "ANDRE_UTFORDRINGER"
         ],
+        "arbeidsmiljøBehov": ["MENTOR"]
+    },
+    {
+        "aktørId": "3393947087101",
+        "fnr": "11009165705",
+        "sistEndret": "2019-02-09T02:50:39.402Z",
+        "sistEndretAv": "V538787",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": ["ANNET", "HØRSEL"],
+        "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "8160746457657",
-        "fnr": "30009123918",
-        "sistEndret": "2019-04-18T00:35:23.302Z",
-        "sistEndretAv": "X936976",
+        "aktørId": "6754749317150",
+        "fnr": "20008977306",
+        "sistEndret": "2019-03-17T18:05:34.784Z",
+        "sistEndretAv": "A768684",
         "arbeidstidBehov": "KAN_IKKE_JOBBE",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "7225234549110",
-        "fnr": "06109696100",
-        "sistEndret": "2019-05-16T20:35:20.622Z",
-        "sistEndretAv": "P560078",
+        "aktørId": "2085036854302",
+        "fnr": "27077632986",
+        "sistEndret": "2019-02-14T02:48:45.386Z",
+        "sistEndretAv": "H121108",
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR"
-        ]
+        "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "5251606957008",
-        "fnr": "26029505739",
-        "sistEndret": "2019-05-28T03:45:38.223Z",
-        "sistEndretAv": "J004752",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "SYN"
-        ],
+        "aktørId": "9013094469351",
+        "fnr": "22028363293",
+        "sistEndret": "2019-08-21T21:06:19.679Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
         "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
+        "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "9497125800507",
-        "fnr": "08030003463",
-        "sistEndret": "2019-05-03T16:36:59.084Z",
-        "sistEndretAv": "K244324",
+        "aktørId": "1470783697879",
+        "fnr": "19077503091",
+        "sistEndret": "2019-03-10T09:27:38.602Z",
+        "sistEndretAv": "H121108",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "SNAKKE_NORSK", "LESE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2903418844141",
+        "fnr": "17067786971",
+        "sistEndret": "2019-09-01T01:13:37.821Z",
+        "sistEndretAv": "W411843",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "1096016799306",
+        "fnr": "05039982767",
+        "sistEndret": "2019-04-11T16:02:20.986Z",
+        "sistEndretAv": "W411843",
         "arbeidstidBehov": "IKKE_HELE_DAGER",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "9282212927026",
-        "fnr": "28109347371",
-        "sistEndret": "2019-07-03T21:34:44.801Z",
-        "sistEndretAv": "W726545",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "ERGONOMI",
-            "HØRSEL",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6770871109886",
-        "fnr": "04017267707",
-        "sistEndret": "2019-04-29T08:35:44.727Z",
-        "sistEndretAv": "B190093",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "SYN"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "9986393646327",
-        "fnr": "16117971841",
-        "sistEndret": "2019-02-14T13:27:38.551Z",
-        "sistEndretAv": "B953968",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1930412601768",
-        "fnr": "15080028056",
-        "sistEndret": "2019-06-26T17:16:32.872Z",
-        "sistEndretAv": "X320991",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7806676660494",
-        "fnr": "10078868266",
-        "sistEndret": "2019-07-04T12:25:00.078Z",
-        "sistEndretAv": "D916159",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "REGNING_OG_TALLFORSTÅELSE"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6273205409787",
-        "fnr": "10019465042",
-        "sistEndret": "2019-03-28T17:23:16.681Z",
-        "sistEndretAv": "P616996",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4012308114823",
-        "fnr": "11058650953",
-        "sistEndret": "2019-04-23T11:35:18.894Z",
-        "sistEndretAv": "Q973360",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "REGNING_OG_TALLFORSTÅELSE",
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6004175457557",
-        "fnr": "24029072163",
-        "sistEndret": "2019-02-18T20:53:34.326Z",
-        "sistEndretAv": "E938478",
+        "aktørId": "1681377466625",
+        "fnr": "07048695420",
+        "sistEndret": "2019-01-24T23:20:15.007Z",
+        "sistEndretAv": "E728716",
         "arbeidstidBehov": "HELTID",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "1805004507188",
-        "fnr": "10089361554",
-        "sistEndret": "2019-07-23T19:35:30.177Z",
-        "sistEndretAv": "L042881",
+        "aktørId": "5243352288875",
+        "fnr": "25098402139",
+        "sistEndret": "2019-03-23T16:39:19.235Z",
+        "sistEndretAv": "B048830",
+        "arbeidstidBehov": "FLEKSIBEL",
+        "fysiskeBehov": [],
+        "grunnleggendeBehov": [],
+        "arbeidsmiljøBehov": ["ANNET"]
+    },
+    {
+        "aktørId": "1663587355136",
+        "fnr": "17088143876",
+        "sistEndret": "2019-01-31T01:34:03.080Z",
+        "sistEndretAv": "H010716",
+        "arbeidstidBehov": "KAN_IKKE_JOBBE",
+        "fysiskeBehov": ["SYN"],
+        "grunnleggendeBehov": ["LESE_NORSK", "SKRIVE_NORSK", "SNAKKE_NORSK"],
+        "arbeidsmiljøBehov": []
+    },
+    {
+        "aktørId": "2389410897705",
+        "fnr": "05028526115",
+        "sistEndret": "2019-01-07T04:42:20.696Z",
+        "sistEndretAv": "H010716",
         "arbeidstidBehov": "HELTID",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "1375070976804",
-        "fnr": "29047756519",
-        "sistEndret": "2019-01-26T06:24:05.627Z",
-        "sistEndretAv": "R172831",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "ARBEIDSSTILLING",
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR",
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "3313107420229",
-        "fnr": "26078747179",
-        "sistEndret": "2019-04-10T00:03:06.074Z",
-        "sistEndretAv": "Q712815",
+        "aktørId": "1336732990930",
+        "fnr": "26079208107",
+        "sistEndret": "2019-03-06T20:34:49.335Z",
+        "sistEndretAv": "E728716",
         "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "REGNING_OG_TALLFORSTÅELSE",
-            "SNAKKE_NORSK",
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": [
-            "MENTOR",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "6313955550893",
-        "fnr": "13047447563",
-        "sistEndret": "2019-02-01T19:33:13.945Z",
-        "sistEndretAv": "C194916",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
+        "fysiskeBehov": ["SYN"],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "2326055631594",
-        "fnr": "23088283368",
-        "sistEndret": "2019-06-03T22:45:58.862Z",
-        "sistEndretAv": "V118854",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4213032219136",
-        "fnr": "22008518541",
-        "sistEndret": "2019-04-07T04:17:58.596Z",
-        "sistEndretAv": "G786547",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5393788521902",
-        "fnr": "26097530571",
-        "sistEndret": "2019-03-27T16:16:29.158Z",
-        "sistEndretAv": "R535969",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3455714735528",
-        "fnr": "25099231591",
-        "sistEndret": "2019-03-26T01:52:14.059Z",
-        "sistEndretAv": "L140703",
+        "aktørId": "4733721751074",
+        "fnr": "06068952164",
+        "sistEndret": "2019-01-09T02:54:00.869Z",
+        "sistEndretAv": "B048830",
         "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "ERGONOMI",
-            "SYN",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
+        "fysiskeBehov": ["ARBEIDSSTILLING"],
+        "grunnleggendeBehov": ["SKRIVE_NORSK"],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "3875420142763",
-        "fnr": "18098725381",
-        "sistEndret": "2019-07-02T20:46:58.675Z",
-        "sistEndretAv": "L199841",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [
-            "SYN",
-            "ARBEIDSSTILLING",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "SNAKKE_NORSK",
-            "REGNING_OG_TALLFORSTÅELSE"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5553055488586",
-        "fnr": "20049368462",
-        "sistEndret": "2019-03-12T23:17:21.241Z",
-        "sistEndretAv": "P640478",
+        "aktørId": "2288966148910",
+        "fnr": "11039936013",
+        "sistEndret": "2019-03-23T06:27:30.894Z",
+        "sistEndretAv": "W411843",
         "arbeidstidBehov": "KAN_IKKE_JOBBE",
         "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "5337412609380",
-        "fnr": "07037032020",
-        "sistEndret": "2019-04-03T13:42:41.781Z",
-        "sistEndretAv": "T707742",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
+        "grunnleggendeBehov": ["ANDRE_UTFORDRINGER", "SNAKKE_NORSK"],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "9853838543388",
-        "fnr": "25107725779",
-        "sistEndret": "2019-06-03T20:32:23.736Z",
-        "sistEndretAv": "M827561",
+        "aktørId": "7090598063535",
+        "fnr": "07119265384",
+        "sistEndret": "2019-07-22T19:29:03.773Z",
+        "sistEndretAv": "H121108",
         "arbeidstidBehov": "FLEKSIBEL",
         "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "6727460000112",
-        "fnr": "22017729482",
-        "sistEndret": "2019-08-09T00:44:18.045Z",
-        "sistEndretAv": "J891868",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
+        "grunnleggendeBehov": ["SKRIVE_NORSK", "ANDRE_UTFORDRINGER"],
         "arbeidsmiljøBehov": []
     },
     {
-        "aktørId": "3267135461876",
-        "fnr": "11117826637",
-        "sistEndret": "2019-06-08T23:06:11.397Z",
-        "sistEndretAv": "Y357607",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "ARBEIDSSTILLING",
-            "TUNGE_LØFT",
-            "ERGONOMI",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7408424914842",
-        "fnr": "22079868314",
-        "sistEndret": "2019-02-25T12:37:36.633Z",
-        "sistEndretAv": "X148275",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6497951298232",
-        "fnr": "13047274391",
-        "sistEndret": "2019-01-06T10:32:20.651Z",
-        "sistEndretAv": "V234465",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "TUNGE_LØFT",
-            "ARBEIDSSTILLING",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "5141248222184",
-        "fnr": "14008857688",
-        "sistEndret": "2019-07-17T01:19:32.447Z",
-        "sistEndretAv": "T153669",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SNAKKE_NORSK",
-            "ANDRE_UTFORDRINGER",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9210310072395",
-        "fnr": "05078921848",
-        "sistEndret": "2019-04-03T19:59:11.653Z",
-        "sistEndretAv": "L165311",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8574650415665",
-        "fnr": "19068451879",
-        "sistEndret": "2019-06-03T14:34:02.500Z",
-        "sistEndretAv": "S758526",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5514049167086",
-        "fnr": "14078257793",
-        "sistEndret": "2019-03-08T14:11:41.410Z",
-        "sistEndretAv": "H142993",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "TUNGE_LØFT",
-            "SYN",
-            "ERGONOMI",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "8684593304957",
-        "fnr": "22109129481",
-        "sistEndret": "2019-04-04T02:44:26.145Z",
-        "sistEndretAv": "X016651",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "ARBEIDSSTILLING",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6129073435278",
-        "fnr": "30027771617",
-        "sistEndret": "2019-04-08T01:42:06.714Z",
-        "sistEndretAv": "J598215",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "TUNGE_LØFT",
-            "ERGONOMI",
-            "ARBEIDSSTILLING",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3606988659467",
-        "fnr": "18008687176",
-        "sistEndret": "2019-07-16T15:31:08.030Z",
-        "sistEndretAv": "A198649",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5517466151242",
-        "fnr": "01058295260",
-        "sistEndret": "2019-07-17T22:30:28.743Z",
-        "sistEndretAv": "R278372",
+        "aktørId": "4729591925764",
+        "fnr": "06037758238",
+        "sistEndret": "2019-04-30T19:03:31.207Z",
+        "sistEndretAv": "H010716",
         "arbeidstidBehov": "IKKE_HELE_DAGER",
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9713983404944",
-        "fnr": "23068600464",
-        "sistEndret": "2019-03-17T17:16:15.504Z",
-        "sistEndretAv": "S545758",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "SYN",
-            "HØRSEL"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "5900714479438",
-        "fnr": "27067927368",
-        "sistEndret": "2019-01-09T00:25:54.342Z",
-        "sistEndretAv": "O954002",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4530476688379",
-        "fnr": "16017557665",
-        "sistEndret": "2019-03-03T13:44:10.201Z",
-        "sistEndretAv": "K942246",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "7826149798167",
-        "fnr": "17069910483",
-        "sistEndret": "2019-03-17T04:00:34.442Z",
-        "sistEndretAv": "E669637",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1586471141435",
-        "fnr": "28088091010",
-        "sistEndret": "2019-02-03T19:41:32.494Z",
-        "sistEndretAv": "X125581",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "ERGONOMI",
-            "ARBEIDSSTILLING",
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "LESE_NORSK",
-            "REGNING_OG_TALLFORSTÅELSE"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6089240285547",
-        "fnr": "09027714797",
-        "sistEndret": "2019-08-16T23:38:58.095Z",
-        "sistEndretAv": "R869262",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7435591128256",
-        "fnr": "07099615588",
-        "sistEndret": "2019-06-15T10:37:12.544Z",
-        "sistEndretAv": "O146088",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "8300317600594",
-        "fnr": "12037760291",
-        "sistEndret": "2019-01-16T15:24:01.564Z",
-        "sistEndretAv": "W231669",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SNAKKE_NORSK",
-            "REGNING_OG_TALLFORSTÅELSE",
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": [
-            "ANNET",
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "9558440438422",
-        "fnr": "15057155601",
-        "sistEndret": "2019-05-24T21:14:55.687Z",
-        "sistEndretAv": "U165312",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5520305274379",
-        "fnr": "25077273193",
-        "sistEndret": "2019-01-21T06:05:29.978Z",
-        "sistEndretAv": "T375033",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2557400095282",
-        "fnr": "06010078693",
-        "sistEndret": "2019-04-10T18:52:07.914Z",
-        "sistEndretAv": "D096606",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4095571118765",
-        "fnr": "12099586638",
-        "sistEndret": "2019-03-28T14:57:23.281Z",
-        "sistEndretAv": "E222960",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "REGNING_OG_TALLFORSTÅELSE",
-            "LESE_NORSK",
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3477115840834",
-        "fnr": "13037565851",
-        "sistEndret": "2019-03-03T17:35:21.596Z",
-        "sistEndretAv": "N566850",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "9951261710706",
-        "fnr": "28017529627",
-        "sistEndret": "2019-02-04T06:15:39.664Z",
-        "sistEndretAv": "I036611",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4629638518114",
-        "fnr": "18029884230",
-        "sistEndret": "2019-02-14T10:12:59.143Z",
-        "sistEndretAv": "T020408",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3356187519582",
-        "fnr": "31047554201",
-        "sistEndret": "2019-01-22T12:00:59.013Z",
-        "sistEndretAv": "N304680",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "TUNGE_LØFT",
-            "ARBEIDSSTILLING"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2280348256274",
-        "fnr": "14047195633",
-        "sistEndret": "2019-04-26T12:37:59.012Z",
-        "sistEndretAv": "S671332",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7176280096476",
-        "fnr": "17079235520",
-        "sistEndret": "2019-08-16T12:42:44.417Z",
-        "sistEndretAv": "A027335",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "ARBEIDSSTILLING"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR",
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "7103042720808",
-        "fnr": "16079318381",
-        "sistEndret": "2019-05-17T05:25:54.338Z",
-        "sistEndretAv": "I767293",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7916526951123",
-        "fnr": "26078021003",
-        "sistEndret": "2019-07-09T00:16:46.221Z",
-        "sistEndretAv": "Q267647",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "5118146112817",
-        "fnr": "20019413099",
-        "sistEndret": "2019-05-08T15:19:02.046Z",
-        "sistEndretAv": "J288872",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "SYN",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING",
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "5460292886830",
-        "fnr": "28097499847",
-        "sistEndret": "2019-04-27T22:54:07.406Z",
-        "sistEndretAv": "I177842",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9783454787206",
-        "fnr": "12027223212",
-        "sistEndret": "2019-06-16T13:38:02.587Z",
-        "sistEndretAv": "S562732",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING"
-        ]
-    },
-    {
-        "aktørId": "2663402204808",
-        "fnr": "07118811245",
-        "sistEndret": "2019-06-17T19:15:04.960Z",
-        "sistEndretAv": "I904933",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4843386553120",
-        "fnr": "17109718726",
-        "sistEndret": "2019-02-25T09:36:06.711Z",
-        "sistEndretAv": "Q040889",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9068773112589",
-        "fnr": "11018165696",
-        "sistEndret": "2019-03-04T04:56:32.680Z",
-        "sistEndretAv": "W582909",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7586881742190",
-        "fnr": "04007215873",
-        "sistEndret": "2019-07-08T22:39:10.321Z",
-        "sistEndretAv": "R689859",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4286471410829",
-        "fnr": "13119528458",
-        "sistEndret": "2019-07-06T01:54:27.948Z",
-        "sistEndretAv": "R413655",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7650642162948",
-        "fnr": "18030009467",
-        "sistEndret": "2019-07-19T17:15:30.626Z",
-        "sistEndretAv": "R639884",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "REGNING_OG_TALLFORSTÅELSE",
-            "ANDRE_UTFORDRINGER",
-            "SKRIVE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3812676801076",
-        "fnr": "27027381850",
-        "sistEndret": "2019-04-11T09:45:36.231Z",
-        "sistEndretAv": "Q278861",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING",
-            "TILRETTELAGTE_ARBEIDSOPPGAVER",
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "9021119721414",
-        "fnr": "20118731833",
-        "sistEndret": "2019-03-30T05:29:08.325Z",
-        "sistEndretAv": "G799390",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9166190811060",
-        "fnr": "03059411194",
-        "sistEndret": "2019-04-02T13:03:42.123Z",
-        "sistEndretAv": "H867484",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4501254309078",
-        "fnr": "07058776038",
-        "sistEndret": "2019-06-09T05:42:26.917Z",
-        "sistEndretAv": "C257699",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7513244977125",
-        "fnr": "17037007323",
-        "sistEndret": "2019-01-22T10:54:18.884Z",
-        "sistEndretAv": "O456708",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [
-            "TUNGE_LØFT",
-            "ANNET",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3448138136792",
-        "fnr": "22017965372",
-        "sistEndret": "2019-06-25T14:44:18.472Z",
-        "sistEndretAv": "O906380",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7084148118829",
-        "fnr": "18017812668",
-        "sistEndret": "2019-01-01T12:47:50.431Z",
-        "sistEndretAv": "Z253619",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8651622113362",
-        "fnr": "28038516878",
-        "sistEndret": "2019-02-01T16:00:40.255Z",
-        "sistEndretAv": "J233893",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGT_OPPLÆRING",
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "4072080282085",
-        "fnr": "19078529078",
-        "sistEndret": "2019-07-07T03:13:41.796Z",
-        "sistEndretAv": "Z261102",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8798773184614",
-        "fnr": "30068896548",
-        "sistEndret": "2019-02-20T04:28:26.013Z",
-        "sistEndretAv": "E912354",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4028044742417",
-        "fnr": "10039541500",
-        "sistEndret": "2019-02-01T13:04:24.606Z",
-        "sistEndretAv": "X295081",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "SYN",
-            "HØRSEL",
-            "ERGONOMI",
-            "ANNET"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER",
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "3213968866753",
-        "fnr": "16058024019",
-        "sistEndret": "2019-01-26T12:12:31.952Z",
-        "sistEndretAv": "C397801",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3045825525953",
-        "fnr": "26047870010",
-        "sistEndret": "2019-06-14T13:40:24.354Z",
-        "sistEndretAv": "Y866933",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "REGNING_OG_TALLFORSTÅELSE",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4848454049286",
-        "fnr": "05008388271",
-        "sistEndret": "2019-03-30T20:38:29.351Z",
-        "sistEndretAv": "D795147",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4532934630489",
-        "fnr": "18029209967",
-        "sistEndret": "2019-03-12T02:03:16.326Z",
-        "sistEndretAv": "G600035",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7104969732074",
-        "fnr": "16099061425",
-        "sistEndret": "2019-08-02T00:24:31.829Z",
-        "sistEndretAv": "T398511",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "SKRIVE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7222300270431",
-        "fnr": "17118045874",
-        "sistEndret": "2019-07-27T23:55:51.868Z",
-        "sistEndretAv": "L455285",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9845168064398",
-        "fnr": "10119830341",
-        "sistEndret": "2019-07-15T07:45:52.125Z",
-        "sistEndretAv": "C744286",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "2995925531892",
-        "fnr": "01019898462",
-        "sistEndret": "2019-05-23T09:46:35.090Z",
-        "sistEndretAv": "S900660",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8899178246572",
-        "fnr": "28100058555",
-        "sistEndret": "2019-05-13T14:41:05.263Z",
-        "sistEndretAv": "Q528920",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8340881636520",
-        "fnr": "04037229585",
-        "sistEndret": "2019-03-18T15:13:00.566Z",
-        "sistEndretAv": "G323262",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5375283920536",
-        "fnr": "11049194465",
-        "sistEndret": "2019-08-20T05:35:08.350Z",
-        "sistEndretAv": "R358842",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "HØRSEL"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7273473207241",
-        "fnr": "29027485438",
-        "sistEndret": "2019-04-13T02:59:38.471Z",
-        "sistEndretAv": "P575657",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "ARBEIDSSTILLING",
-            "SYN",
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9211797472844",
-        "fnr": "01079607955",
-        "sistEndret": "2019-06-28T07:59:53.788Z",
-        "sistEndretAv": "U875652",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "ARBEIDSSTILLING"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1846466593416",
-        "fnr": "04039273441",
-        "sistEndret": "2019-06-24T22:54:04.208Z",
-        "sistEndretAv": "Q484936",
-        "arbeidstidBehov": "BORTE_FASTE_DAGER_ELLER_TIDER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5206747173502",
-        "fnr": "31077227973",
-        "sistEndret": "2019-06-22T07:53:42.918Z",
-        "sistEndretAv": "Y784205",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6272545184309",
-        "fnr": "29097318040",
-        "sistEndret": "2019-03-20T20:33:35.432Z",
-        "sistEndretAv": "O278776",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "TUNGE_LØFT",
-            "ANNET",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8181274756830",
-        "fnr": "24008450354",
-        "sistEndret": "2019-07-15T23:26:36.470Z",
-        "sistEndretAv": "F628314",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SNAKKE_NORSK",
-            "ANDRE_UTFORDRINGER"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7256642898858",
-        "fnr": "04089076345",
-        "sistEndret": "2019-07-18T08:17:40.464Z",
-        "sistEndretAv": "R313289",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5273189977124",
-        "fnr": "01049312160",
-        "sistEndret": "2019-04-08T03:24:33.742Z",
-        "sistEndretAv": "V135964",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8449677692687",
-        "fnr": "25117325442",
-        "sistEndret": "2019-02-12T04:20:36.778Z",
-        "sistEndretAv": "E215146",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "ANDRE_UTFORDRINGER",
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "1417486687819",
-        "fnr": "19089935868",
-        "sistEndret": "2019-05-30T09:26:12.233Z",
-        "sistEndretAv": "K522034",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "9302705130671",
-        "fnr": "24099588426",
-        "sistEndret": "2019-04-30T19:29:36.754Z",
-        "sistEndretAv": "L431743",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [
-            "ARBEIDSSTILLING"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2050475731259",
-        "fnr": "19079904239",
-        "sistEndret": "2019-06-20T11:26:14.440Z",
-        "sistEndretAv": "Z534353",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "MENTOR",
-            "TILRETTELAGT_OPPLÆRING",
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "4993099239990",
-        "fnr": "30068691105",
-        "sistEndret": "2019-02-22T10:27:21.847Z",
-        "sistEndretAv": "X710322",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "SYN"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "3754422823975",
-        "fnr": "02108401071",
-        "sistEndret": "2019-04-24T01:58:28.868Z",
-        "sistEndretAv": "W669098",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8272149290831",
-        "fnr": "12029871610",
-        "sistEndret": "2019-01-02T12:44:36.746Z",
-        "sistEndretAv": "N629263",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4051725173751",
-        "fnr": "06117841861",
-        "sistEndret": "2019-08-20T09:35:54.231Z",
-        "sistEndretAv": "V462703",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET",
-            "TILRETTELAGT_OPPLÆRING",
-            "MENTOR"
-        ]
-    },
-    {
-        "aktørId": "9016212933500",
-        "fnr": "14087203558",
-        "sistEndret": "2019-01-31T02:13:09.708Z",
-        "sistEndretAv": "P695799",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5718360436552",
-        "fnr": "06109654300",
-        "sistEndret": "2019-05-05T15:00:14.941Z",
-        "sistEndretAv": "V368557",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "ANNET",
-            "SYN",
-            "HØRSEL"
-        ],
-        "grunnleggendeBehov": [
-            "REGNING_OG_TALLFORSTÅELSE",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7861534282951",
-        "fnr": "01058772859",
-        "sistEndret": "2019-05-28T02:23:20.784Z",
-        "sistEndretAv": "U537633",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8431844148975",
-        "fnr": "16047839401",
-        "sistEndret": "2019-02-17T19:03:34.662Z",
-        "sistEndretAv": "H653053",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "SNAKKE_NORSK",
-            "LESE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4759548490060",
-        "fnr": "22097347372",
-        "sistEndret": "2019-03-20T22:09:58.407Z",
-        "sistEndretAv": "U710346",
-        "arbeidstidBehov": "HELTID",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2482758055380",
-        "fnr": "28057972787",
-        "sistEndret": "2019-03-28T15:25:56.632Z",
-        "sistEndretAv": "A140460",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "TUNGE_LØFT"
-        ],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "6357163437611",
-        "fnr": "21009334340",
-        "sistEndret": "2019-02-16T03:11:15.679Z",
-        "sistEndretAv": "D284114",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "4519263258053",
-        "fnr": "23109960500",
-        "sistEndret": "2019-06-21T00:33:43.200Z",
-        "sistEndretAv": "L941780",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": [
-            "ANNET"
-        ]
-    },
-    {
-        "aktørId": "9118011732259",
-        "fnr": "13099172295",
-        "sistEndret": "2019-08-11T16:33:01.030Z",
-        "sistEndretAv": "H063249",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "2016084265627",
-        "fnr": "05108912253",
-        "sistEndret": "2019-01-31T08:17:45.483Z",
-        "sistEndretAv": "O122742",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5221827803821",
-        "fnr": "03037144079",
-        "sistEndret": "2019-02-14T07:38:03.075Z",
-        "sistEndretAv": "V582465",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "5180497603336",
-        "fnr": "15078794892",
-        "sistEndret": "2019-07-18T14:07:44.862Z",
-        "sistEndretAv": "Q225598",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "6421479093302",
-        "fnr": "12077430049",
-        "sistEndret": "2019-05-17T18:03:03.372Z",
-        "sistEndretAv": "J954057",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [
-            "HØRSEL",
-            "TUNGE_LØFT",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK"
-        ],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
-    },
-    {
-        "aktørId": "1551725141164",
-        "fnr": "07037616960",
-        "sistEndret": "2019-08-02T00:03:32.521Z",
-        "sistEndretAv": "G072531",
-        "arbeidstidBehov": "FLEKSIBEL",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [
-            "SKRIVE_NORSK",
-            "ANDRE_UTFORDRINGER",
-            "SNAKKE_NORSK"
-        ],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "8680285328325",
-        "fnr": "07087140991",
-        "sistEndret": "2019-01-06T07:57:42.093Z",
-        "sistEndretAv": "M898732",
-        "arbeidstidBehov": "IKKE_HELE_DAGER",
-        "fysiskeBehov": [],
-        "grunnleggendeBehov": [],
-        "arbeidsmiljøBehov": []
-    },
-    {
-        "aktørId": "7140614705134",
-        "fnr": "31000020411",
-        "sistEndret": "2019-02-17T17:19:49.823Z",
-        "sistEndretAv": "Q706468",
-        "arbeidstidBehov": "KAN_IKKE_JOBBE",
-        "fysiskeBehov": [
-            "ERGONOMI",
-            "HØRSEL",
-            "ARBEIDSSTILLING",
-            "SYN"
-        ],
-        "grunnleggendeBehov": [
-            "REGNING_OG_TALLFORSTÅELSE"
-        ],
-        "arbeidsmiljøBehov": [
-            "TILRETTELAGTE_ARBEIDSOPPGAVER"
-        ]
     }
 ]

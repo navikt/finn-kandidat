@@ -1,9 +1,12 @@
 import { Kandidat } from '../../../types/Kandidat';
-import { Behov, Behovfelt, AlleBehov } from '../../../types/Behov';
+import { Behov, Behovfelt, AlleBehov, ArbeidstidBehov } from '../../../types/Behov';
 import { hentAlleBehovfelt } from '../../../utils/behovUtils';
-import { ValgteKriterier } from './Filtrering';
 
 export type Filter = AlleBehov;
+
+export enum UrlParameter {
+    KunEgne = 'kunEgne',
+}
 
 export type FiltrertKandidat = Kandidat & {
     matchendeKriterier: Behov[];
@@ -49,26 +52,52 @@ const kombinerMatchendeKriterier = (kandidat: FiltrertKandidat, filter: Filter) 
     return matchendeKriterier.concat(intersectionAvBehov(kandidatensBehov, aktueltFilter));
 };
 
+export const summerValgteKriterier = (
+    arbeidstidFilter: ArbeidstidBehov[],
+    filtreUtenomArbeidstid: Object
+) => {
+    const antallArbeidstidkriterierSomPasserKandidat = arbeidstidFilter.length > 0 ? 1 : 0;
+    const antallAndreKriterier = Object.values(filtreUtenomArbeidstid).flat().length;
+
+    return antallArbeidstidkriterierSomPasserKandidat + antallAndreKriterier;
+};
+
 const intersectionAvBehov = (kandidatensBehov: Behov[], filter: Behov[]): Behov[] => {
     return filter.filter(behov => kandidatensBehov.includes(behov));
 };
 
 export const hentFilterFraUrl = (urlParams: string): Filter => {
-    const query = new URLSearchParams(urlParams);
+    const searchParams = new URLSearchParams(urlParams);
 
     return hentAlleBehovfelt().reduce(
-        (filter: Filter, behov: Behovfelt) => ({
-            ...filter,
-            [behov]: query.getAll(behov),
-        }),
+        (filter: Filter, behov: Behovfelt) => {
+            const parametreForBehov = searchParams.getAll(behov);
+
+            return {
+                ...filter,
+                [behov]: parametreForBehov,
+            };
+        },
         {} as Filter
     );
 };
 
-export const lagQueryParams = (kriterier: ValgteKriterier) =>
-    Object.entries(kriterier)
-        .map(([behovfelt, alleBehov]: any) =>
-            alleBehov.map((etbehov: Behov) => `${behovfelt}=${etbehov}`).join('&')
-        )
-        .filter(liste => liste.length !== 0)
-        .join('&');
+export const byggNyUrlMedFilter = (filter?: Filter): URL => {
+    const url = new URL(window.location.href);
+
+    if (filter) {
+        Object.keys(filter).forEach((behovfelt: string) => {
+            const kriterierForBehov = filter[behovfelt as Behovfelt];
+
+            url.searchParams.delete(behovfelt);
+
+            if (kriterierForBehov.length > 0) {
+                kriterierForBehov.forEach((kriterie: Behov) => {
+                    url.searchParams.append(behovfelt, kriterie);
+                });
+            }
+        });
+    }
+
+    return url;
+};

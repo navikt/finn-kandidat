@@ -14,6 +14,8 @@ const config = {
     sjanseForArbeidsmiljøbehov: 0.25,
 };
 
+const alfabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 const formaterDato = (dato: Date) =>
     String(dato.getDate()).padStart(2, '0') +
     String(dato.getMonth()).padStart(2, '0') +
@@ -33,15 +35,44 @@ const skapTilfeldigFødselsnummer = (tidligstFødt: Date, senestFødt: Date) => 
     return fødselsdato + personnummer;
 };
 
-const skapTilfeldigBrukernavn = () => {
-    const alfabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    return (
+const shuffle = (a: any) => {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+
+    return a;
+};
+
+const skapTilfeldigVeileder = (veilederPool: { [id: string]: number }) => {
+    const veiledere = Object.keys(veilederPool);
+    const sisteVeileder = veiledere[veiledere.length - 1];
+
+    if (sisteVeileder && veilederPool[sisteVeileder] < config.antallKandidater * 0.1) {
+        veilederPool[sisteVeileder] += 1;
+        return sisteVeileder;
+    }
+
+    const nyVeileder =
         alfabet[randomInt(alfabet.length)] +
         Math.floor(Math.random() * 999999)
             .toString()
-            .padStart(6, '0')
+            .padStart(6, '0');
+
+    veilederPool[nyVeileder] = 1;
+    return nyVeileder;
+};
+
+const skapTilfeldigeVeiledere = (): string[] => {
+    const veilederPool = {};
+
+    return shuffle(
+        [...new Array(config.antallKandidater)].map(() => skapTilfeldigVeileder(veilederPool))
     );
 };
+
+const skapTilfeldigAktørId = () =>
+    String(Math.floor(1000000000000 + Math.random() * 9000000000000));
 
 const getEnumValues = (E: Object) => {
     const keys = Object.keys(E);
@@ -70,8 +101,9 @@ const hentTilfeldigUtvalg = (E: object, sjanseForNoenBehov: number = 1) =>
 
 const skapKandidater = (antall: number = config.antallKandidater) => {
     const antallKandidater = antall;
+    const veiledere = skapTilfeldigeVeiledere();
 
-    return [...new Array(antallKandidater).fill(0)].map(() => {
+    return [...new Array(antallKandidater).fill(0)].map((_, i) => {
         const sistEndret = skapTilfeldigDato(config.tidligstSistEndret, new Date()).toISOString();
 
         let fnr = skapTilfeldigFødselsnummer(config.tidligstFødt, config.senestFødt);
@@ -80,10 +112,10 @@ const skapKandidater = (antall: number = config.antallKandidater) => {
         }
 
         return {
-            aktørId: String(Math.floor(1000000000000 + Math.random() * 9000000000000)),
+            aktørId: skapTilfeldigAktørId(),
             fnr,
             sistEndret,
-            sistEndretAv: skapTilfeldigBrukernavn(),
+            sistEndretAv: veiledere[i],
             arbeidstidBehov: getRandomValue(ArbeidstidBehov),
             fysiskeBehov: hentTilfeldigUtvalg(FysiskBehov, config.sjanseForFysiskebehov),
             grunnleggendeBehov: hentTilfeldigUtvalg(

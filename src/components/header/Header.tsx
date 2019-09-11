@@ -5,6 +5,8 @@ import { AppRoute } from '../../utils/paths';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import bemHelper from '../../utils/bemHelper';
 import './header.less';
+import { useAppContext } from '../../utils/AppContext';
+import Skeleton from 'react-loading-skeleton';
 
 const cls = bemHelper('header');
 
@@ -22,6 +24,8 @@ const hentSidetittel = (path: string): string => {
 };
 
 const Header = (props: RouteComponentProps) => {
+    const { navIdent } = useAppContext();
+
     return (
         <header className={cls.block}>
             <Link to={AppRoute.Forside}>
@@ -29,6 +33,7 @@ const Header = (props: RouteComponentProps) => {
                     “{hentSidetittel(props.location.pathname)}”
                 </Sidetittel>
             </Link>
+            {navIdent || <Skeleton width={60} />}
         </header>
     );
 };

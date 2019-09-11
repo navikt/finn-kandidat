@@ -29,6 +29,15 @@ const tilKandidatDto = (kandidat: Kandidat): KandidatDto => {
     };
 };
 
+export const hentInnloggetVeileder = async (): Promise<string> => {
+    try {
+        const respons = await api.get(`/veileder/me`);
+        return respons.data;
+    } catch (error) {
+        return Promise.reject(error.response);
+    }
+};
+
 export const hentKandidat = async (aktørId: string): Promise<Kandidat> => {
     try {
         const respons = await api.get(`/kandidater/${aktørId}`);

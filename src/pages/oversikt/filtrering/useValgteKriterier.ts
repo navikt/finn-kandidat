@@ -1,44 +1,40 @@
 import { useEffect, useState } from 'react';
+import { History, Location } from 'history';
+
 import { Behov, Behovfelt } from '../../../types/Behov';
+import { Filter, hentFilterFraUrl, byggNyUrlMedFilter } from './filtreringslogikk';
 import { hentBehovfeltMedTommeLister } from '../../../utils/behovUtils';
-import { Filter, hentFilterFraUrl, lagQueryParams } from './filtreringslogikk';
 import { useFilterContext } from './filter-context/FilterContext';
 import { ValgteKriterier } from './Filtrering';
-import { RouteComponentProps } from 'react-router';
 
 interface UseValgteKriterier {
     valgteKriterier: ValgteKriterier;
     toggleValgtKriterie: (kriterie: Behov, behovfelt: Behovfelt) => void;
-    slettValgteKriterier: () => void;
 }
 
-const useValgteKriterier = (props: RouteComponentProps): UseValgteKriterier => {
+const useValgteKriterier = (history: History, location: Location): UseValgteKriterier => {
     const defaultValgteKriterier = hentBehovfeltMedTommeLister();
 
     const [mellomlagretFilter, setMellomlagretFilter] = useFilterContext();
     const [valgteKriterier, setValgteKriterier] = useState<ValgteKriterier>(defaultValgteKriterier);
 
+    const settNyttFilterIUrl = (filter?: Filter) => {
+        const { search } = byggNyUrlMedFilter(filter);
+        history.replace({ search });
+    };
+
     const brukMellomlagretFilter = () => {
-        const urlHarIngenFilter = !props.location.search;
+        const urlHarIngenFilter = !location.search;
         if (urlHarIngenFilter && mellomlagretFilter) {
-            setFilterIUrl(mellomlagretFilter);
+            settNyttFilterIUrl(mellomlagretFilter);
         }
     };
 
     const brukFilterFraUrl = () => {
-        const urlParams = props.location.search;
-        const filterFraUrl = hentFilterFraUrl(urlParams);
+        const filterFraUrl = hentFilterFraUrl(location.search);
 
         setMellomlagretFilter(filterFraUrl);
         setValgteKriterier(filterFraUrl);
-    };
-
-    useEffect(brukMellomlagretFilter, []);
-    useEffect(brukFilterFraUrl, [props.location.search]);
-
-    const setFilterIUrl = (filter?: Filter) => {
-        const search = filter ? lagQueryParams(filter) : '';
-        props.history.replace({ search });
     };
 
     const toggleKriterie = (kriterie: Behov, kriterier: Behov[]): Behov[] =>
@@ -47,16 +43,18 @@ const useValgteKriterier = (props: RouteComponentProps): UseValgteKriterier => {
             : [...kriterier, kriterie];
 
     const toggleValgtKriterie = (kriterie: Behov, behovfelt: Behovfelt) => {
-        setFilterIUrl({
+        settNyttFilterIUrl({
             ...valgteKriterier,
             [behovfelt]: toggleKriterie(kriterie, valgteKriterier[behovfelt]),
         });
     };
 
+    useEffect(brukMellomlagretFilter, []);
+    useEffect(brukFilterFraUrl, [location.search]);
+
     return {
         valgteKriterier,
         toggleValgtKriterie,
-        slettValgteKriterier: () => setFilterIUrl(),
     };
 };
 

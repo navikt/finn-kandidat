@@ -5,15 +5,20 @@ import api from '../api/initialize';
 const ROUTE_KANDIDATER = '/finn-kandidat-api/kandidater';
 const ROUTE_EVENTS = '/finn-kandidat-api/events';
 const ROUTE_TILBAKEMELDING = '/finn-kandidat-api/tilbakemeldinger';
+const ROUTE_VEILEDER_ME = '/finn-kandidat-api/veileder/me';
 const ROUTE_KANDIDAT = /\/finn-kandidat-api\/kandidater\/\d+/;
 const ROUTE_SKRIVETILGANG = /\/finn-kandidat-api\/kandidater\/\d+\/skrivetilgang/;
 const ROUTE_AKTØRID = /\/finn-kandidat-api\/kandidater\/\d+\/aktorId/;
 const ROUTE_FNR = /\/finn-kandidat-api\/kandidater\/\d+\/fnr/;
 
-const kandidater = require('./kandidater.json');
+const kandidater: Kandidat[] = require('./kandidater.json');
 const mock = new MockAdapter(api, {
     delayResponse: 200,
 });
+
+export const FØRSTE_KANDIDAT = kandidater[0];
+
+const innloggetVeileder = FØRSTE_KANDIDAT.sistEndretAv;
 
 const visAdvarsel = () => {
     const bigFontCss =
@@ -23,26 +28,27 @@ const visAdvarsel = () => {
     console.log('%cMOCKED API', bigFontCss);
     console.log('%cDETTE SKAL IKKE VISES I PRODUKSJON!\n', smallerFontCss);
 };
+
 visAdvarsel();
 
 mock.onGet(ROUTE_SKRIVETILGANG).reply(() => [200]);
 
+mock.onGet(ROUTE_VEILEDER_ME).reply(() => [200, innloggetVeileder]);
+
 mock.onGet(ROUTE_AKTØRID).reply(config => {
     const fnrFraRoute = hentFnrFraConfig(config);
-    const kandidatFraMock: Kandidat = kandidater.find(
-        (kandidat: Kandidat) => kandidat.fnr === fnrFraRoute
-    );
+    const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute)!;
 
-    return [200, kandidatFraMock.aktørId];
+    return [200, kandidatFraMock!.aktørId];
 });
 
 mock.onGet(ROUTE_FNR).reply(config => {
     const aktørIdFraRoute = hentAktørIdFraConfig(config);
-    const kandidatFraMock: Kandidat = kandidater.find(
+    const kandidatFraMock = kandidater.find(
         (kandidat: Kandidat) => kandidat.aktørId === aktørIdFraRoute
     );
 
-    return [200, kandidatFraMock.fnr];
+    return [200, kandidatFraMock!.fnr];
 });
 
 mock.onGet(ROUTE_KANDIDAT).reply(config => {
