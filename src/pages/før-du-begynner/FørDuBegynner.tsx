@@ -4,7 +4,6 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 import { AppRoute, hentRoute } from '../../utils/paths';
 import { erGyldigFnr, erTom } from './fnr-input/fnrUtils';
-import { FØRSTE_KANDIDAT } from '../../mocking/mockApi';
 import { hentSkrivetilgang, hentAktørId, hentKandidat } from '../../api/finnKandidatApi';
 import bemHelper from '../../utils/bemHelper';
 import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
@@ -36,7 +35,7 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
     const onGåVidereKlikk = async () => {
         // Kun i Mock
         if (process.env.REACT_APP_MOCK) {
-            redirectTil(AppRoute.Registrering, FØRSTE_KANDIDAT.aktørId);
+            redirectTil(AppRoute.Registrering, '9293040980561');
             return;
         }
 
