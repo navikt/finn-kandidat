@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const createEnvSettingsFile = require('./envVariabler.js');
 const proxy = require('http-proxy-middleware');
 
 const DEFAULT_PORT = 3000;
@@ -11,6 +12,8 @@ const LOCAL_APP = `http://localhost:${PORT}/finn-kandidat`;
 const LOCAL_LOGIN = `http://localhost:8080/finn-kandidat-api/local/isso-login?redirect=${LOCAL_APP}`;
 
 const buildPath = path.join(__dirname, '../../build');
+
+createEnvSettingsFile(path.resolve(`${buildPath}/static/js/envVariabler.js`));
 
 const startServer = () => {
     app.use(BASE_PATH, express.static(buildPath));

@@ -34,6 +34,10 @@
             {
                 "name": "INTERNMENY_URL",
                 "value": "https://modapp.adeo.no/internarbeidsflatedecorator"
+            },
+            {
+                "name": "AKTØRREGISTER_URL",
+                "value": "https://app.adeo.no/aktoerregister/api/v1"
             }
         ]
     }

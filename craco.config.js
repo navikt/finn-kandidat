@@ -31,6 +31,9 @@ module.exports = {
             app.get('/finn-kandidat/internmeny/v2/static/css/main.css', (req, res) => {
                 sendFilSomReturverdi('./src/mocking/internmeny.css', res, 'text/css');
             });
+            app.get("/finn-kandidat/static/js/envVariabler.js", (req, res) => {
+                sendFilSomReturverdi('./src/mocking/envVariabler.js', res, 'text/javascript');
+            })
         },
     },
 };
