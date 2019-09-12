@@ -1,16 +1,17 @@
 import React, { FunctionComponent } from 'react';
 import { Element } from 'nav-frontend-typografi';
-import { RouteComponentProps, withRouter } from 'react-router';
 
+import { AlleBehov, Behov, Behovfelt } from '../../../types/Behov';
 import { ArbeidsmiløKriterie, arbeidsmiløKriterier } from './kriterier/arbeidsmiljøKriterier';
 import { ArbeidstidKriterie, arbeidstidKriterier } from './kriterier/arbeidstidKriterier';
-import { AlleBehov, Behov, Behovfelt } from '../../../types/Behov';
 import { fysiskeKriterier, FysiskKriterie } from './kriterier/fysiskeKriterier';
 import { GrunnleggendeKriterie, grunnleggendeKriterier } from './kriterier/grunnleggendeKriterier';
 import bemHelper from '../../../utils/bemHelper';
+import EgneKandidaterFilter from './EgneKandidaterFilter';
 import Filterboks from './filter/Filter';
 import useValgteKriterier from './useValgteKriterier';
 import './filtrering.less';
+import { withRouter, RouteComponentProps } from 'react-router';
 
 const cls = bemHelper('filtrering');
 
@@ -23,19 +24,24 @@ export type Kriterie =
 export type ValgteKriterier = AlleBehov;
 
 const Filtrering: FunctionComponent<RouteComponentProps> = props => {
-    const { valgteKriterier, toggleValgtKriterie, slettValgteKriterier } = useValgteKriterier(
-        props
-    );
+    const { history, location } = props;
+    const { valgteKriterier, toggleValgtKriterie } = useValgteKriterier(history, location);
 
     const handleToggleKriterie = (behovfelt: Behovfelt) => (kriterie: Behov) => {
         toggleValgtKriterie(kriterie, behovfelt);
     };
 
+    const slettAlleKriterier = () => {
+        history.replace({ search: undefined });
+    };
+
     return (
         <div className={cls.block}>
-            <button onClick={slettValgteKriterier} className={cls.element('slettKnapp')}>
+            <button onClick={slettAlleKriterier} className={cls.element('slettKnapp')}>
                 <Element>Slett alle kriterier</Element>
             </button>
+
+            <EgneKandidaterFilter />
 
             <Filterboks
                 tittel="Arbeidstid"

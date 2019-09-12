@@ -35,7 +35,7 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
     const onGåVidereKlikk = async () => {
         // Kun i Mock
         if (process.env.REACT_APP_MOCK) {
-            redirectTil(AppRoute.Registrering, '1856024171652');
+            redirectTil(AppRoute.Registrering, '9293040980561');
             return;
         }
 
