@@ -50,6 +50,10 @@ api.interceptors.response.use(
         }
         console.log('error.config');
         console.log(error.config);
+
+        console.log('redirecter til openam');
+        redirectTilOpenAMLogin();
+
         // if (error.response.status === 403) {
         //     if (process.env.REACT_APP_MOCK) {
         //         console.log('redirecter til openam');
