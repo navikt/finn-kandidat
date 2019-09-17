@@ -4,8 +4,8 @@ import { AktorIdResponse } from './aktørregisterUtils';
 import environment from '../../utils/environment';
 import { aktørregisterApi } from './initialiserAktørregisterApi';
 
-export const aktørIdUrl = `${environment.AKTØRREGISTER_URL}/identer?identgruppe=AktoerId&gjeldende=true`;
-export const fnrUrl = `${environment.AKTØRREGISTER_URL}/identer?identgruppe=NorskIdent&gjeldende=true`;
+export const aktørIdUrl = `${environment.AKTORREGISTER_URL}/identer?identgruppe=AktoerId&gjeldende=true`;
+export const fnrUrl = `${environment.AKTORREGISTER_URL}/identer?identgruppe=NorskIdent&gjeldende=true`;
 
 export const hentAktørId = async (fnr: string): Promise<AxiosResponse<AktorIdResponse>> => {
     return await aktørregisterApi.get(aktørIdUrl, {

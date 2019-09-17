@@ -36,7 +36,7 @@
                 "value": "https://modapp.adeo.no/internarbeidsflatedecorator"
             },
             {
-                "name": "AKTØRREGISTER_URL",
+                "name": "AKTORREGISTER_URL",
                 "value": "https://app.adeo.no/aktoerregister/api/v1"
             }
         ]
