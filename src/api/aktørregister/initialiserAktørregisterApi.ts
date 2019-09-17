@@ -25,7 +25,10 @@ const api = axios.create({
 });
 
 api.interceptors.response.use(
-    response => response,
+    response => {
+        console.log('Fikk response: ', response);
+        return response;
+    },
     error => {
         if (error.response.status === 403) {
             if (process.env.REACT_APP_MOCK) {

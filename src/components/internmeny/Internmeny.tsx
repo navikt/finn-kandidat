@@ -10,8 +10,6 @@ const InternflateDecorator = NAVSPA.importer<DecoratorProps>('internarbeidsflate
 const Internmeny: FunctionComponent<RouteComponentProps<MatchProps>> = props => {
     const aktørId = aktørIdFraUrl(props.location.pathname);
     const [fnr, setFnr] = useState<string>('');
-    console.log(aktørId);
-    console.log(fnr);
 
     useEffect(() => {
         if (!aktørId) {
@@ -24,7 +22,6 @@ const Internmeny: FunctionComponent<RouteComponentProps<MatchProps>> = props => 
             try {
                 const respons = await hentFnr(aktørId);
                 setFnr(respons.data);
-                console.log('setter fnr', respons.data);
             } catch (error) {
                 setFnr('');
             }

@@ -22,8 +22,12 @@ export const AppContextProvider: FunctionComponent = ({ children }) => {
     // trenger bare kalle apiet så fikses ting av seg selv
     const sjekkOpenAMInnlogging = useCallback(async () => {
         try {
+            console.log('Prøver å hente aktørid i appcontext');
             await hentAktørId('');
-        } catch (ignorert) {}
+            console.log('funka');
+        } catch (ignorert) {
+            console.log('feilet å hente aktørid i appcontext. feil: ', ignorert);
+        }
     }, []);
 
     const sjekkAzureInnlogging = useCallback(async () => {
