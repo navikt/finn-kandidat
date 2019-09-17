@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import uuid from 'uuid';
 
 const redirectTilOpenAMLogin = () => {
@@ -25,34 +25,30 @@ const api = axios.create({
 });
 
 api.interceptors.response.use(
-    response => {
+    (response: AxiosResponse) => {
         console.log('Fikk response: ', response);
         return response;
     },
-    error => {
-        console.log('feil i aktørregisterinterceptor. error: ', error);
-        if (error.response) {
-            console.log('error.response');
-            // The request was made and the server responded with a status code
-            // that falls out of the range of 2xx
-            console.log(error.response.data);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-        } else if (error.request) {
-            console.log('error.request');
-            // The request was made but no response was received
-            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-            // http.ClientRequest in node.js
-            console.log(error.request);
-        } else {
-            // Something happened in setting up the request that triggered an Error
-            console.log('else Error', error.message);
-        }
+    (error: AxiosError) => {
+        console.log('feil i aktørregisterinterceptor. error:');
+        console.log(error);
+        console.log('error.message');
+        console.log(error.message);
+        console.log('error.code');
+        console.log(error.code);
         console.log('error.config');
         console.log(error.config);
+        console.log('error.isAxiosError');
+        console.log(error.isAxiosError);
+        console.log('error.request');
+        console.log(error.request);
+        console.log('error.name');
+        console.log(error.name);
 
         console.log('redirecter til openam');
         redirectTilOpenAMLogin();
+
+        return Promise.reject(error);
 
         // if (error.response.status === 403) {
         //     if (process.env.REACT_APP_MOCK) {

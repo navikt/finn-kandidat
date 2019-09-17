@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import { isDevelopment } from '../utils/environment';
 import { APP_ROOT } from '../utils/paths';
 
@@ -17,9 +17,9 @@ const initializeApi = () => {
     });
 
     api.interceptors.response.use(
-        response => response,
-        error => {
-            if (error.response.status === 401) {
+        (response: AxiosResponse) => response,
+        (error: AxiosError) => {
+            if (error.response && error.response.status === 401) {
                 redirectToLogin();
             } else {
                 return Promise.reject(error);
