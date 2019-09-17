@@ -10,11 +10,12 @@ const redirectTilOpenAMLogin = () => {
         const redirectUrl = encodeURIComponent(
             'https://arbeidsgiver.nais.preprod.local/finn-kandidat/'
         );
-        document.cookie = `state_${randomId}=${redirectUrl}`;
+        // TODO: sett expires
+        document.cookie = `state_${randomId}=${redirectUrl};domain=isso-q.adeo.no`;
         window.location.href = `https://isso-q.adeo.no/isso/oauth2/authorize?session=winssochain&authIndexType=service&authIndexValue=winssochain&response_type=code&scope=openid&client_id=veilarblogin-q0&state=state_${randomId}&redirect_uri=https://app-q0.adeo.no/veilarblogin/api/login`;
     } else {
         const redirectUrl = encodeURIComponent('https://arbeidsgiver.nais.adeo.no/finn-kandidat/');
-        document.cookie = `state_${randomId}=${redirectUrl}`;
+        document.cookie = `state_${randomId}=${redirectUrl};domain=isso.adeo.no`;
         window.location.href = `https://isso.adeo.no/isso/oauth2/authorize?session=winssochain&authIndexType=service&authIndexValue=winssochain&response_type=code&scope=openid&client_id=veilarblogin-p&state=state_${randomId}&redirect_uri=https://app.adeo.no/veilarblogin/api/login`;
     }
 };
@@ -49,6 +50,10 @@ api.interceptors.response.use(
         redirectTilOpenAMLogin();
 
         return Promise.reject(error);
+
+        // Angående å få vite om det er CORS feil eller ikke
+        // https://github.com/axios/axios/issues/838
+        // Må kanskje håndtere feilmeldinger, og hvis ingenting funker vi må vi redirecte til OpenAM
 
         // if (error.response.status === 403) {
         //     if (process.env.REACT_APP_MOCK) {
