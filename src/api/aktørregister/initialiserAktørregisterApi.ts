@@ -31,9 +31,12 @@ api.interceptors.response.use(
             if (process.env.REACT_APP_MOCK) {
                 console.log('redirecter til openam');
             } else {
+                console.log('403 feil fra aktørregister, redirecter til OpenAM. error: ', error);
                 redirectTilOpenAMLogin();
             }
         } else {
+            console.log('annen feil fra atkørregister, redirecter til OpenAM. error: ', error);
+            redirectTilOpenAMLogin();
             return Promise.reject(error);
         }
     }
