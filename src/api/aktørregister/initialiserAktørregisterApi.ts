@@ -30,6 +30,7 @@ api.interceptors.response.use(
         return response;
     },
     error => {
+        console.log('feil i aktørregisterinterceptor. error: ', error);
         if (error.response.status === 403) {
             if (process.env.REACT_APP_MOCK) {
                 console.log('redirecter til openam');
