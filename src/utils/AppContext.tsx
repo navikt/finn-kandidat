@@ -7,6 +7,7 @@ import React, {
     useCallback,
 } from 'react';
 import { hentInnloggetVeileder } from '../api/finnKandidatApi';
+import { hentAktørId } from '../api/aktørregister/aktørregisterApi';
 
 interface AppState {
     navIdent?: string;
@@ -15,23 +16,29 @@ interface AppState {
 const AppContext = createContext<AppState>([] as any);
 
 export const AppContextProvider: FunctionComponent = ({ children }) => {
-    const [appState, setAppState] = useState<AppState>({});
+    const [navIdent, setNavIdent] = useState<string>('');
 
-    const hentAppState = async () => {
-        const navIdent = await hentInnloggetVeileder();
+    // redirect vil skje automatisk av interceptor
+    // trenger bare kalle apiet så fikses ting av seg selv
+    const sjekkOpenAMInnlogging = useCallback(async () => {
+        try {
+            await hentAktørId('');
+        } catch (ignorert) {}
+    }, []);
 
-        setAppState({
-            navIdent,
-        });
-    };
-
-    const memoisertHentAppState = useCallback(hentAppState, []);
+    const sjekkAzureInnlogging = useCallback(async () => {
+        try {
+            const navIdent = await hentInnloggetVeileder();
+            setNavIdent(navIdent);
+        } catch (ignorert) {}
+    }, []);
 
     useEffect(() => {
-        hentAppState();
-    }, [memoisertHentAppState]);
+        sjekkAzureInnlogging();
+        sjekkOpenAMInnlogging();
+    }, [sjekkAzureInnlogging, sjekkOpenAMInnlogging]);
 
-    return <AppContext.Provider value={appState}>{children}</AppContext.Provider>;
+    return <AppContext.Provider value={{ navIdent }}>{children}</AppContext.Provider>;
 };
 
 export const useAppContext = () => useContext(AppContext);

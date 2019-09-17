@@ -1,6 +1,9 @@
 import MockAdapter from 'axios-mock-adapter';
 import { Kandidat } from '../types/Kandidat';
 import api from '../api/initialize';
+import { aktørIdUrl, fnrUrl } from '../api/aktørregister/aktørregisterApi';
+import { aktørIdRespons, fnrRespons, ingenIdenterRespons, kandidatFraMock } from './mockUtils';
+import { aktørregisterApi } from '../api/aktørregister/initialiserAktørregisterApi';
 
 const ROUTE_KANDIDATER = '/finn-kandidat-api/kandidater';
 const ROUTE_EVENTS = '/finn-kandidat-api/events';
@@ -15,6 +18,7 @@ const kandidater: Kandidat[] = require('./kandidater.json');
 const mock = new MockAdapter(api, {
     delayResponse: 200,
 });
+const aktørregisterMock = new MockAdapter(aktørregisterApi, { delayResponse: 200 });
 
 export const FØRSTE_KANDIDAT = kandidater[0];
 
@@ -33,11 +37,11 @@ visAdvarsel();
 
 mock.onGet(ROUTE_SKRIVETILGANG).reply(() => [200]);
 
-mock.onGet(ROUTE_VEILEDER_ME).reply(() => [200, innloggetVeileder]);
+mock.onGet(ROUTE_VEILEDER_ME).reply(200, innloggetVeileder);
 
 mock.onGet(ROUTE_AKTØRID).reply(config => {
     const fnrFraRoute = hentFnrFraConfig(config);
-    const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute)!;
+    const kandidatFraMock = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnrFraRoute);
 
     return [200, kandidatFraMock!.aktørId];
 });
@@ -79,6 +83,30 @@ mock.onPost(ROUTE_EVENTS).reply(config => {
 });
 
 mock.onPost(ROUTE_TILBAKEMELDING).reply(() => [201]);
+
+// TODO: returner riktig
+aktørregisterMock.onGet(aktørIdUrl).replyOnce(403);
+aktørregisterMock.onGet(aktørIdUrl).reply(config => {
+    const fnr = config.headers['Nav-Personidenter'];
+    const kandidat = kandidater.find((kandidat: Kandidat) => kandidat.fnr === fnr);
+    if (kandidat) {
+        return [200, aktørIdRespons(fnr, kandidat.aktørId)];
+    } else {
+        return [200, ingenIdenterRespons(fnr)];
+    }
+});
+
+aktørregisterMock.onGet(fnrUrl).reply(config => {
+    const aktørId = config.headers['Nav-Personidenter'];
+    const kandidat = kandidatFraMock(aktørId);
+    if (kandidat) {
+        return [200, fnrRespons(aktørId, kandidat.fnr)];
+    } else {
+        return [200, ingenIdenterRespons(aktørId)];
+    }
+});
+
+// TODO: Mocke kall som modiadekoratøren gjør
 
 const hentFnrFraConfig = (config: any) => config.url && config.url.split('/')[3];
 const hentAktørIdFraConfig = (config: any) => config.url && config.url.split('/')[3];

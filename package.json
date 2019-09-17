@@ -56,7 +56,9 @@
         "react-router-use-location-state": "^2.1.5",
         "react-scripts": "^3.0.1",
         "regenerator": "^0.14.2",
-        "typescript": "^3.4.5"
+        "typescript": "^3.4.5",
+        "universal-cookie": "^4.0.2",
+        "uuid": "^3.3.3"
     },
     "devDependencies": {
         "@craco/craco": "^5.2.4",
@@ -67,11 +69,12 @@
         "@types/react-collapse": "^4.0.2",
         "@types/react-dom": "^16.8.4",
         "@types/react-router-dom": "^4.3.3",
+        "@types/uuid": "^3.4.5",
         "axios-mock-adapter": "^1.16.0",
         "body-parser": "^1.18.3",
         "express": "^4.16.4",
-        "prettier": "^1.17.1",
-        "http-proxy-middleware": "^0.19.1"
+        "http-proxy-middleware": "^0.19.1",
+        "prettier": "^1.17.1"
     },
     "scripts": {
         "start": "craco start",

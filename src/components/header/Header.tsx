@@ -24,6 +24,7 @@ const hentSidetittel = (path: string): string => {
 };
 
 const Header = (props: RouteComponentProps) => {
+    // TODO: Fjern: denne vises i modiadekoratøren
     const { navIdent } = useAppContext();
 
     return (

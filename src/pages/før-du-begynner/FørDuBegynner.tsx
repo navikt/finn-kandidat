@@ -35,8 +35,8 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
     const onGåVidereKlikk = async () => {
         // Kun i Mock
         if (process.env.REACT_APP_MOCK) {
-            redirectTil(AppRoute.Registrering, '9293040980561');
-            return;
+            // redirectTil(AppRoute.Registrering, '9293040980561');
+            // return;
         }
 
         // Valider fnr
@@ -52,6 +52,7 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
         // Hent aktørId
         let aktørId: string = '';
         try {
+            // await hentFnr('');
             const response = await hentAktørId(fnr);
             aktørId = response.data;
         } catch (error) {
@@ -62,6 +63,7 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
                 setFeilmelding(Feilmelding.Serverfeil);
                 return;
             }
+            // TODO: Else serverfeil?
         } finally {
             setSjekkerTilgangOgEksistens(true);
         }

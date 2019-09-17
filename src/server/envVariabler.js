@@ -5,7 +5,7 @@ function createEnvSettingsFile(settingsPath) {
         fsExtra.writeFileSync(
             settingsPath,
             `window.appSettings = {
-               AKTØRREGISTER_URL: '${process.env.AKTØRREGISTER_URL}',
+               AKTØRREGISTER_URL: '${process.env.AKTØRREGISTER_URL}'
             };`
         );
     });
