@@ -2,10 +2,10 @@ import axios, { AxiosError, AxiosResponse } from 'axios';
 import uuid from 'uuid';
 
 const redirectTilOpenAMLogin = () => {
-    // TODO: fiks dette
+    // TODO: fiks miljø
     const iTestmiljø = true;
 
-    const randomId = uuid.v4();
+    const randomId = uuid.v4().replace(/-/g, '');
     if (iTestmiljø) {
         const redirectUrl = encodeURIComponent(
             'https://arbeidsgiver.nais.preprod.local/finn-kandidat/'

@@ -39,7 +39,7 @@ export const AppContextProvider: FunctionComponent = ({ children }) => {
 
     useEffect(() => {
         sjekkOpenAMInnlogging();
-        sjekkAzureInnlogging();
+        // sjekkAzureInnlogging();
     }, [sjekkOpenAMInnlogging, sjekkAzureInnlogging]);
 
     return <AppContext.Provider value={{ navIdent }}>{children}</AppContext.Provider>;
