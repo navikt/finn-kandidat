@@ -1,30 +1,32 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import uuid from 'uuid';
-import Cookies from 'universal-cookie';
+// import Cookies from 'universal-cookie';
 
 const redirectTilOpenAMLogin = () => {
     // TODO: fiks miljø
     const iTestmiljø = true;
 
     const randomId = uuid.v4().replace(/-/g, '');
+    // console.log(randomId);
     if (iTestmiljø) {
         const redirectUrl = encodeURIComponent(
             'https://arbeidsgiver.nais.preprod.local/finn-kandidat/'
         );
         // TODO: sett expires
         // TODO: Test ut universal-cookie pakke om dette ikke fungerer
-        const cookie = `state_${randomId}=${redirectUrl}; domain=.adeo.no; path=/veilarblogin/api/login; max-age=3600`;
+        // const cookie = `state_${randomId}=${redirectUrl}; domain=.adeo.no; path=/veilarblogin/api/login; max-age=3600`;
         // document.cookie = cookie;
-        const openAmUrl = `https://isso-q.adeo.no/isso/oauth2/authorize?session=winssochain&authIndexType=service&authIndexValue=winssochain&response_type=code&scope=openid&client_id=veilarblogin-q0&state=state_${randomId}&redirect_uri=https://app-q0.adeo.no/veilarblogin/api/login`;
-        console.log(cookie);
-        console.log(openAmUrl);
-
-        const cookies = new Cookies();
-        cookies.set(`state_${randomId}`, redirectUrl, {
-            domain: '.adeo.no',
-            path: '/veilarblogin/api/login',
-            maxAge: 3600,
-        });
+        // const openAmUrl = `https://isso-q.adeo.no/isso/oauth2/authorize?session=winssochain&authIndexType=service&authIndexValue=winssochain&response_type=code&scope=openid&client_id=veilarblogin-q0&state=state_${randomId}&redirect_uri=https://app-q0.adeo.no/veilarblogin/api/login`;
+        // console.log(cookie);
+        // console.log(openAmUrl);
+        //
+        // const cookies = new Cookies();
+        // TODO: Kan ikke sette annet domain enn det man er på
+        // cookies.set(`state_${randomId}`, redirectUrl, {
+        //     domain: '.adeo.no',
+        //     path: '/veilarblogin/api/login',
+        //     maxAge: 3600,
+        // });
 
         // path?: string;
         // expires?: Date;
@@ -34,11 +36,10 @@ const redirectTilOpenAMLogin = () => {
         // httpOnly?: boolean;
         // sameSite?: boolean | 'none' | 'lax' | 'strict';
 
-        console.log('cookies');
-        console.log(cookies.getAll());
-        console.log(document.cookie);
-
-        window.location.href = openAmUrl;
+        // console.log('cookies');
+        // console.log(cookies.getAll());
+        // console.log(document.cookie);
+        window.location.href = 'https://app-q0.adeo.no/veilarblogin/api/start?url=' + redirectUrl;
     } else {
         const redirectUrl = encodeURIComponent('https://arbeidsgiver.nais.adeo.no/finn-kandidat/');
         document.cookie = `state_${randomId}=${redirectUrl}; domain=.adeo.no; path=/veilarblogin/api/login; max-age=3600`;
