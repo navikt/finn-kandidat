@@ -12,7 +12,7 @@ import Kandidatdetaljer from './pages/kandidat/Kandidatdetaljer';
 import Oversikt from './pages/oversikt/Oversikt';
 import Registrering from './pages/registrering/Registrering';
 import TestAdvarsel from './pages/registrering/TestAdvarsel';
-import Internmeny from './components/internmeny/Internmeny';
+// import Internmeny from './components/internmeny/Internmeny';
 import './styles/app.less';
 
 const App: FunctionComponent = () => (
@@ -22,7 +22,7 @@ const App: FunctionComponent = () => (
                 <FilterContextProvider>
                     <Router basename={APP_ROOT}>
                         <TestAdvarsel />
-                        <Internmeny />
+                        {/*<Internmeny />*/}
                         <Header />
                         <Switch>
                             <Route exact path={AppRoute.Forside} component={Forside} />
