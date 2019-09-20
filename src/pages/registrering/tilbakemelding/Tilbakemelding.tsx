@@ -9,10 +9,10 @@ import bemHelper from '../../../utils/bemHelper';
 import UtvidetInformasjon from '../../../components/utvidetinformasjon/UtvidetInformasjon';
 
 export enum Behov {
-    Arbeidsmiljø,
-    Arbeidstid,
-    Fysisk,
-    Grunnleggende,
+    Arbeidsmiljø = 'ARBEIDSMILJØ',
+    Arbeidstid = 'ARBEIDSTID',
+    Fysisk = 'FYSISK',
+    Grunnleggende = 'GRUNNLEGGENDE',
 }
 export type LovligeBehov =
     | Behov.Arbeidsmiljø
