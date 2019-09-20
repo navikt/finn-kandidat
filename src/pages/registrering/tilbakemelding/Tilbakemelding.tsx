@@ -23,7 +23,7 @@ const Tilbakemelding: FunctionComponent<Props> = ({ behov }) => {
     const onChange = (event: any) => {
         setFeilmelding(undefined);
         const verdi = event.target.value;
-        if (verdi.length <= 50) {
+        if (verdi.length <= 100) {
             setTilbakemelding(verdi);
         }
     };
