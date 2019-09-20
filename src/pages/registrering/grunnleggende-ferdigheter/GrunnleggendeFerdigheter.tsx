@@ -7,23 +7,17 @@ import bemHelper from '../../../utils/bemHelper';
 import Flervalgsalternativer from '../flervalgsalternativer/Flervalgsalternativer';
 import grunnleggendeFerdigheterSpørsmål from './grunnleggendeFerdigheterSpørsmål';
 import './grunnleggendeFerdigheter.less';
-import Tilbakemelding from '../tilbakemelding/Tilbakemelding';
+import Tilbakemelding, { Behov } from '../tilbakemelding/Tilbakemelding';
 import Skeleton from 'react-loading-skeleton';
 
 interface Props {
     valgteAlternativer?: GrunnleggendeBehov[];
     onChange: (behov: GrunnleggendeBehov[]) => void;
-    iRegistreringsModus?: boolean;
 }
 
 const cls = bemHelper('grunnleggendeFerdigheter');
 
-const GrunnleggendeFerdigheter = ({ valgteAlternativer, onChange, iRegistreringsModus }: Props) => {
-    const skalViseTilbakemeldingsInput =
-        iRegistreringsModus &&
-        valgteAlternativer &&
-        valgteAlternativer.includes(GrunnleggendeBehov.AndreUtfordringer);
-
+const GrunnleggendeFerdigheter = ({ valgteAlternativer, onChange }: Props) => {
     return (
         <section className="blokk-s">
             <Ekspanderbartpanel apen tittel={grunnleggendeFerdigheterSpørsmål.tittel}>
@@ -44,7 +38,8 @@ const GrunnleggendeFerdigheter = ({ valgteAlternativer, onChange, iRegistrerings
                         )}
                     </div>
                 </Fieldset>
-                {skalViseTilbakemeldingsInput && <Tilbakemelding behov="GRUNNLEGGENDE" />}
+
+                <Tilbakemelding behov={Behov.Grunnleggende} />
             </Ekspanderbartpanel>
         </section>
     );

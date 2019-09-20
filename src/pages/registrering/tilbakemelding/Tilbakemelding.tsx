@@ -6,8 +6,19 @@ import { sendTilbakemelding } from '../../../api/finnKandidatApi';
 import AlertStripe from 'nav-frontend-alertstriper';
 import './tilbakemelding.less';
 import bemHelper from '../../../utils/bemHelper';
+import UtvidetInformasjon from '../../../components/utvidetinformasjon/UtvidetInformasjon';
 
-export type LovligeBehov = 'ARBEIDSMILJØ' | 'ARBEIDSTID' | 'FYSISK' | 'GRUNNLEGGENDE';
+export enum Behov {
+    Arbeidsmiljø,
+    Arbeidstid,
+    Fysisk,
+    Grunnleggende,
+}
+export type LovligeBehov =
+    | Behov.Arbeidsmiljø
+    | Behov.Arbeidstid
+    | Behov.Fysisk
+    | Behov.Grunnleggende;
 
 const cls = bemHelper('tilbakemelding');
 
@@ -38,23 +49,25 @@ const Tilbakemelding: FunctionComponent<Props> = ({ behov }) => {
     };
 
     return (
-        <div className={cls.block}>
-            {tilbakemeldingSendt ? (
-                <AlertStripe type="suksess">Takk for din tilbakemelding</AlertStripe>
-            ) : (
-                <>
-                    <Input
-                        label="Savner du et alternativ? Send oss et forslag. Forslaget blir kun brukt til videreutvikling av verktøyet."
-                        value={tilbakemelding}
-                        onChange={onChange}
-                        feil={feilmelding ? { feilmelding } : undefined}
-                    />
-                    <Knapp htmlType="button" mini={true} onClick={onClick}>
-                        Gi tilbakemelding
-                    </Knapp>
-                </>
-            )}
-        </div>
+        <UtvidetInformasjon åpneLabel="Savner du et alternativ?" lukkLabel="Lukk">
+            <div className={cls.element('innhold')}>
+                {tilbakemeldingSendt ? (
+                    <AlertStripe type="suksess">Takk for din tilbakemelding</AlertStripe>
+                ) : (
+                    <>
+                        <Input
+                            label="Savner du et alternativ? Send oss et forslag. Forslaget blir kun brukt til videreutvikling av verktøyet."
+                            value={tilbakemelding}
+                            onChange={onChange}
+                            feil={feilmelding ? { feilmelding } : undefined}
+                        />
+                        <Knapp htmlType="button" mini={true} onClick={onClick}>
+                            Gi tilbakemelding
+                        </Knapp>
+                    </>
+                )}
+            </div>
+        </UtvidetInformasjon>
     );
 };
 
