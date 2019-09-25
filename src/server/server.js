@@ -8,6 +8,7 @@ const DEFAULT_PORT = 3000;
 const PORT = process.env.PORT || DEFAULT_PORT;
 const BASE_PATH = '/finn-kandidat';
 const INTERNMENY_PATH = `${BASE_PATH}/internmeny`;
+const AKTØRREGISTER_PATH = `${BASE_PATH}/aktoerregister`;
 const LOCAL_APP = `http://localhost:${PORT}/finn-kandidat`;
 const LOCAL_LOGIN = `http://localhost:8080/finn-kandidat-api/local/isso-login?redirect=${LOCAL_APP}`;
 
@@ -30,6 +31,14 @@ const startServer = () => {
             target: process.env.INTERNMENY_URL,
             changeOrigin: true,
             pathRewrite: (path, req) => path.replace(INTERNMENY_PATH, ''),
+        })
+    );
+
+    app.use(
+        proxy(AKTØRREGISTER_PATH, {
+            target: process.env.AKTORREGISTER_URL,
+            changeOrigin: true,
+            pathRewrite: (path, req) => path.replace(AKTØRREGISTER_PATH, ''),
         })
     );
 
