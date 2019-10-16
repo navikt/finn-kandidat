@@ -1,5 +1,6 @@
 import { erGyldigFnr } from '../pages/før-du-begynner/fnr-input/fnrUtils';
 import { ArbeidstidBehov, FysiskBehov, GrunnleggendeBehov, ArbeidsmijøBehov } from '../types/Behov';
+import { enhetsnrKontorMapping } from '../utils/kontorMapping';
 
 const config = {
     antallKandidater: 200,
@@ -99,6 +100,12 @@ const getRandomSelection = (E: object) => {
 const hentTilfeldigUtvalg = (E: object, sjanseForNoenBehov: number = 1) =>
     Math.random() < sjanseForNoenBehov ? getRandomSelection(E) : [];
 
+const hentNavkontor = (): string => {
+    const enhetsnr = ['1000', '1001', '1002', '1003', '1004', '1014', '1017'];
+    const randomIndex = randomInt(enhetsnr.length);
+    return enhetsnr[randomIndex];
+};
+
 const skapKandidater = (antall: number = config.antallKandidater) => {
     const antallKandidater = antall;
     const veiledere = skapTilfeldigeVeiledere();
@@ -126,6 +133,7 @@ const skapKandidater = (antall: number = config.antallKandidater) => {
                 ArbeidsmijøBehov,
                 config.sjanseForArbeidsmiljøbehov
             ),
+            navkontor: hentNavkontor(),
         };
     });
 };
