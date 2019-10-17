@@ -31,56 +31,46 @@ const FørDuBegynner: FunctionComponent<RouteComponentProps> = props => {
         setFeilmelding(undefined);
     };
 
-    // TODO: Rydd opp i denne funksjonen ved å legge inn RestKandidat
     const onGåVidereKlikk = async () => {
-        // Kun i Mock
         if (process.env.REACT_APP_MOCK) {
             redirectTil(AppRoute.Registrering, '9293040980561');
             return;
         }
 
-        // Valider fnr
+        setSjekkerTilgangOgEksistens(true);
+
+        try {
+            const aktørId = await sjekkTilgangOgEksistens();
+            hentKandidat(aktørId)
+                .then(kandidat => redirectTil(AppRoute.EndreKandidat, kandidat.aktørId))
+                .catch(() => redirectTil(AppRoute.Registrering, aktørId));
+        } catch (error) {
+            setFeilmelding(error);
+            setSjekkerTilgangOgEksistens(false);
+        }
+    };
+
+    // TODO: Rydd opp i denne funksjonen ved å legge inn RestKandidat
+    const sjekkTilgangOgEksistens = async (): Promise<string> => {
         if (erTom(fnr)) {
-            setFeilmelding(Feilmelding.TomtFødselsnummer);
-            return;
+            return Promise.reject(Feilmelding.TomtFødselsnummer);
         }
+
         if (!erGyldigFnr(fnr)) {
-            setFeilmelding(Feilmelding.UgyldigFødselsnummer);
-            return;
+            return Promise.reject(Feilmelding.UgyldigFødselsnummer);
         }
 
-        // Hent aktørId
-        let aktørId: string = '';
         try {
-            const response = await hentAktørId(fnr);
-            aktørId = response.data;
-        } catch (error) {
-            if (error.response.status === 400) {
-                setFeilmelding(Feilmelding.UgyldigFødselsnummer);
-                return;
-            } else if (error.response.status === 500) {
-                setFeilmelding(Feilmelding.Serverfeil);
-                return;
-            }
-        } finally {
-            setSjekkerTilgangOgEksistens(true);
-        }
+            const aktørId = await hentAktørId(fnr);
+            const skrivetilgang = await hentSkrivetilgang(aktørId);
 
-        // Hent skrivetilgang
-        const harSkrivetilgang = await hentSkrivetilgang(aktørId);
-        if (!harSkrivetilgang) {
-            setFeilmelding(Feilmelding.IngenTilgang);
-            return;
-        }
-
-        // Kandidat fins fra før eller ikke?
-        setSjekkerTilgangOgEksistens(false);
-        try {
-            const kandidat = await hentKandidat(aktørId);
-            redirectTil(AppRoute.EndreKandidat, kandidat.aktørId);
+            return skrivetilgang
+                ? Promise.resolve(aktørId)
+                : Promise.reject(Feilmelding.IngenTilgang);
         } catch (error) {
-            // Kandidat eksisterer ikke
-            redirectTil(AppRoute.Registrering, aktørId);
+            return Promise.reject(
+                error.status === 400 ? Feilmelding.UgyldigFødselsnummer : Feilmelding.Serverfeil
+            );
         }
     };
 
