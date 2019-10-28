@@ -1,14 +1,14 @@
 import { AlleBehov } from './Behov';
 
-interface KandidatUtenBehov {
-    fnr: string;
-    aktørId: string;
-    sistEndret?: Date;
-    sistEndretAv?: string;
-    navKontor: string | null;
-}
-
 export type Kandidat = KandidatUtenBehov & AlleBehov;
+
+interface KandidatUtenBehov {
+    aktørId: string;
+    fnr: string;
+    sistEndret: Date;
+    sistEndretAv: string;
+    navKontor?: string;
+}
 
 export enum Status {
     'IkkeLastet',

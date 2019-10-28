@@ -50,6 +50,6 @@ const kandidater: Kandidat[] = [
         fysiskeBehov: [],
         grunnleggendeBehov: [],
         arbeidsmiljøBehov: [],
-        navKontor: null,
+        navKontor: undefined,
     },
 ];

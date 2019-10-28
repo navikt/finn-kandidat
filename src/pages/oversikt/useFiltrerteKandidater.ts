@@ -33,7 +33,7 @@ const useFiltrerteKandidater = (alleKandidater: RestKandidater, location: Locati
     const filtrerPåEnhet = useCallback(
         (kandidat: FiltrertKandidat) => {
             if (valgtEnhet === ALLE_ENHETER) return true;
-            if (valgtEnhet === 'ingenEnhet' && kandidat.navKontor === null) return true;
+            if (valgtEnhet === 'ingenEnhet' && !kandidat.navKontor) return true;
             return kandidat.navKontor === valgtEnhet;
         },
         [valgtEnhet]

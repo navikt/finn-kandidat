@@ -10,7 +10,7 @@ import {
     GrunnleggendeBehov,
     Behovfelt,
 } from '../../types/Behov';
-import { hentFnr, opprettKandidat } from '../../api/finnKandidatApi';
+import { hentFnr, KandidatTilApi, opprettKandidat } from '../../api/finnKandidatApi';
 import Arbeidsmiljø from './arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from './arbeidstid/Arbeidstid';
 import bemHelper from '../../utils/bemHelper';
@@ -18,7 +18,6 @@ import Brødsmulesti from '../../components/brødsmulesti/Brødsmulesti';
 import Fysisk from './fysisk/Fysisk';
 import GrunnleggendeFerdigheter from './grunnleggende-ferdigheter/GrunnleggendeFerdigheter';
 import Informasjon from './informasjon/Informasjon';
-import { Kandidat } from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import './registrering.less';
 
@@ -56,14 +55,12 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
     const sendInnKandidatOgRedirect = async (arbeidstidBehov: ArbeidstidBehov) => {
         setSubmitting(true);
 
-        const kandidat: Kandidat = {
+        const kandidat: KandidatTilApi = {
             aktørId,
-            fnr,
             fysiskeBehov,
             arbeidsmiljøBehov,
             grunnleggendeBehov,
-            arbeidstidBehov: [arbeidstidBehov],
-            navKontor: null,
+            arbeidstidBehov,
         };
 
         const respons = await opprettKandidat(kandidat);

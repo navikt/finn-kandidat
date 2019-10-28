@@ -4,7 +4,7 @@ import { withRouter, RouteComponentProps } from 'react-router';
 
 import { AppRoute, hentRoute } from '../../../../utils/paths';
 import { Behov, Behovfelt } from '../../../../types/Behov';
-import { endreKandidat } from '../../../../api/finnKandidatApi';
+import { endreKandidat, konverterKandidatTilApi } from '../../../../api/finnKandidatApi';
 import { Kandidat } from '../../../../types/Kandidat';
 import Arbeidsmiljø from '../../../registrering/arbeidsmiljø/Arbeidsmiljø';
 import Arbeidstid from '../../../registrering/arbeidstid/Arbeidstid';
@@ -39,8 +39,9 @@ const EndreKandidat: FunctionComponent<Props> = props => {
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
+        const kandidatTilApi = konverterKandidatTilApi(kandidat);
         setSubmitting(true);
-        const respons = await endreKandidat(kandidat);
+        const respons = await endreKandidat(kandidatTilApi);
         setSubmitting(false);
 
         if (respons) {

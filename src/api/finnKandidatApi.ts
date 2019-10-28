@@ -1,31 +1,49 @@
-import { ArbeidstidBehov } from '../types/Behov';
-import { Omit } from 'react-router';
-import api from './initialize';
-import { Kandidat } from '../types/Kandidat';
-import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
 import { AxiosResponse } from 'axios';
 
-type KandidatDto = Omit<Kandidat, 'arbeidstidBehov'> & {
+import { ArbeidsmijøBehov, ArbeidstidBehov, FysiskBehov, GrunnleggendeBehov } from '../types/Behov';
+import { Kandidat } from '../types/Kandidat';
+import { LovligeBehov } from '../pages/registrering/tilbakemelding/Tilbakemelding';
+import api from './initialize';
+
+export interface KandidatTilApi {
+    aktørId: string;
     arbeidstidBehov: ArbeidstidBehov;
-};
+    fysiskeBehov: FysiskBehov[];
+    arbeidsmiljøBehov: ArbeidsmijøBehov[];
+    grunnleggendeBehov: GrunnleggendeBehov[];
+}
 
-const fraKandidatDto = (kandidat: KandidatDto): Kandidat => {
-    const sistEndret = kandidat.sistEndret ? new Date(kandidat.sistEndret) : undefined;
+interface KandidatFraApi {
+    aktørId: string;
+    fnr: string;
+    sistEndret: string;
+    sistEndretAv: string;
+    navKontor: string | null;
+    arbeidstidBehov: ArbeidstidBehov;
+    fysiskeBehov: FysiskBehov[];
+    arbeidsmiljøBehov: ArbeidsmijøBehov[];
+    grunnleggendeBehov: GrunnleggendeBehov[];
+}
+
+const konverterKandidatFraApi = (kandidat: KandidatFraApi): Kandidat => {
+    const sistEndret = new Date(kandidat.sistEndret);
     const arbeidstidBehov = [kandidat.arbeidstidBehov];
-
+    const navKontor = kandidat.navKontor || undefined;
     return {
         ...kandidat,
         sistEndret,
+        navKontor,
         arbeidstidBehov,
     };
 };
 
-const tilKandidatDto = (kandidat: Kandidat): KandidatDto => {
-    const arbeidstidBehov = kandidat.arbeidstidBehov[0];
-
+export const konverterKandidatTilApi = (kandidat: Kandidat): KandidatTilApi => {
     return {
-        ...kandidat,
-        arbeidstidBehov,
+        aktørId: kandidat.aktørId,
+        arbeidstidBehov: kandidat.arbeidstidBehov[0],
+        fysiskeBehov: kandidat.fysiskeBehov,
+        arbeidsmiljøBehov: kandidat.arbeidsmiljøBehov,
+        grunnleggendeBehov: kandidat.grunnleggendeBehov,
     };
 };
 
@@ -41,7 +59,7 @@ export const hentInnloggetVeileder = async (): Promise<string> => {
 export const hentKandidat = async (aktørId: string): Promise<Kandidat> => {
     try {
         const respons = await api.get(`/kandidater/${aktørId}`);
-        return fraKandidatDto(respons.data);
+        return konverterKandidatFraApi(respons.data);
     } catch (error) {
         return Promise.reject(error.response);
     }
@@ -67,24 +85,24 @@ export const hentFnr = async (aktørId: string): Promise<AxiosResponse<string>> 
 export const hentKandidater = async (): Promise<Kandidat[]> => {
     try {
         const respons = await api.get('/kandidater');
-        return respons.data.map(fraKandidatDto);
+        return respons.data.map(konverterKandidatFraApi);
     } catch (error) {
         return Promise.reject(error.response);
     }
 };
 
-export const opprettKandidat = async (kandidat: Kandidat): Promise<boolean> => {
+export const opprettKandidat = async (kandidat: KandidatTilApi): Promise<boolean> => {
     try {
-        const respons = await api.post('/kandidater', tilKandidatDto(kandidat));
+        const respons = await api.post('/kandidater', kandidat);
         return respons.data;
     } catch (error) {
         return Promise.reject(error.response);
     }
 };
 
-export const endreKandidat = async (kandidat: Kandidat): Promise<boolean> => {
+export const endreKandidat = async (kandidat: KandidatTilApi): Promise<boolean> => {
     try {
-        const respons = await api.put('/kandidater', tilKandidatDto(kandidat));
+        const respons = await api.put('/kandidater', kandidat);
         return respons.data;
     } catch (error) {
         return Promise.reject(error.response);
