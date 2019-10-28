@@ -2,6 +2,10 @@ interface EnhetsnrKontorMapping {
     [enhetsnr: string]: string;
 }
 
+export const hentNavn = (enhetsnr: string): string => {
+    return enhetsnrKontorMapping[enhetsnr];
+};
+
 export const enhetsnrKontorMapping: EnhetsnrKontorMapping = {
     '1000': 'NAV Agder',
     '1001': 'NAV Kristiansand',
@@ -785,4 +789,5 @@ export const enhetsnrKontorMapping: EnhetsnrKontorMapping = {
     '0987': 'NAV Tiltak Aust-Agder',
     '0989': 'Avviklet - NAV Forvaltning Arendal',
     '0991': 'NAV Arbeidslivssenter Aust-Agder',
+    ingenEnhet: 'Ingen enhet',
 };

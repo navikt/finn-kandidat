@@ -1,6 +1,5 @@
 import { erGyldigFnr } from '../pages/før-du-begynner/fnr-input/fnrUtils';
 import { ArbeidstidBehov, FysiskBehov, GrunnleggendeBehov, ArbeidsmijøBehov } from '../types/Behov';
-import { enhetsnrKontorMapping } from '../utils/kontorMapping';
 
 const config = {
     antallKandidater: 200,
@@ -133,7 +132,7 @@ const skapKandidater = (antall: number = config.antallKandidater) => {
                 ArbeidsmijøBehov,
                 config.sjanseForArbeidsmiljøbehov
             ),
-            navkontor: hentNavkontor(),
+            navKontor: hentNavkontor(),
         };
     });
 };

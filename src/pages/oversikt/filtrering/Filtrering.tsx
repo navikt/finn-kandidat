@@ -12,6 +12,7 @@ import Filterboks from './filter/Filter';
 import useValgteKriterier from './useValgteKriterier';
 import './filtrering.less';
 import { withRouter, RouteComponentProps } from 'react-router';
+import Enhetsfilter from './enhetsfilter/Enhetsfilter';
 
 const cls = bemHelper('filtrering');
 
@@ -23,8 +24,15 @@ export type Kriterie =
 
 export type ValgteKriterier = AlleBehov;
 
-const Filtrering: FunctionComponent<RouteComponentProps> = props => {
-    const { history, location } = props;
+interface Props {
+    enheter: Set<string>;
+}
+
+const Filtrering: FunctionComponent<Props & RouteComponentProps> = ({
+    enheter,
+    history,
+    location,
+}) => {
     const { valgteKriterier, toggleValgtKriterie } = useValgteKriterier(history, location);
 
     const handleToggleKriterie = (behovfelt: Behovfelt) => (kriterie: Behov) => {
@@ -41,6 +49,7 @@ const Filtrering: FunctionComponent<RouteComponentProps> = props => {
                 <Element>Slett alle kriterier</Element>
             </button>
 
+            <Enhetsfilter enheter={enheter} />
             <EgneKandidaterFilter />
 
             <Filterboks

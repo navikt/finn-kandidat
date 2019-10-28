@@ -5,7 +5,7 @@ interface KandidatUtenBehov {
     aktørId: string;
     sistEndret?: Date;
     sistEndretAv?: string;
-    navkontor?: string;
+    navKontor: string | null;
 }
 
 export type Kandidat = KandidatUtenBehov & AlleBehov;

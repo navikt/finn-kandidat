@@ -1,12 +1,11 @@
-import React, { useState, useEffect, FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useMemo, useState } from 'react';
 import { Element } from 'nav-frontend-typografi';
-import { useQueryState } from 'react-router-use-location-state';
-import { withRouter, RouteComponentProps } from 'react-router';
+import { RouteComponentProps, withRouter } from 'react-router';
 import NavFrontendSpinner from 'nav-frontend-spinner';
 import Skeleton from 'react-loading-skeleton';
 
 import { AppRoute } from '../../utils/paths';
-import { hentFilterFraUrl, UrlParameter } from './filtrering/filtreringslogikk';
+import { hentFilterFraUrl } from './filtrering/filtreringslogikk';
 import { hentKandidater } from '../../api/finnKandidatApi';
 import { RestKandidater, Status } from '../../types/Kandidat';
 import { loggKlikkPåKandidat } from '../../api/målinger';
@@ -21,19 +20,17 @@ import PanelMedTekst from '../../components/panel-med-tekst/PanelMedTekst';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import useFiltrerteKandidater from './useFiltrerteKandidater';
 import './oversikt.less';
+import { hentUnikeKontor } from './filtrering/enhetsfilter/kandidatenesKontor';
 
 const cls = bemHelper('oversikt');
 
-const Oversikt: FunctionComponent<RouteComponentProps> = ({ history, location }) => {
-    const [visEgneKandidater] = useQueryState<boolean>(UrlParameter.KunEgne, false);
-
+const Oversikt: FunctionComponent<RouteComponentProps> = ({ location }) => {
     const [alleKandidater, setAlleKandidater] = useState<RestKandidater>({
         status: Status.LasterInn,
     });
 
     const { filtrerteKandidater, antallValgteKriterier } = useFiltrerteKandidater(
         alleKandidater,
-        visEgneKandidater,
         location
     );
 
@@ -84,6 +81,12 @@ const Oversikt: FunctionComponent<RouteComponentProps> = ({ history, location })
             <Skeleton width={105} />
         );
 
+    const enheter = useMemo(() => {
+        return alleKandidater.status === Status.Suksess
+            ? hentUnikeKontor(alleKandidater.data)
+            : new Set<string>();
+    }, [alleKandidater]);
+
     return (
         <>
             <RouteBanner tittel="Finn kandidater med tilretteleggingsbehov" />
@@ -91,7 +94,7 @@ const Oversikt: FunctionComponent<RouteComponentProps> = ({ history, location })
                 <Brødsmulesti sidenDuErPå={AppRoute.Oversikt} />
                 <div className={cls.element('filterOgKandidatliste')}>
                     <aside className={cls.element('filter')}>
-                        <Filtrering />
+                        <Filtrering enheter={enheter} />
                     </aside>
                     <section className={cls.element('kandidatliste')}>
                         <div className={cls.element('antallOgKnapp')}>

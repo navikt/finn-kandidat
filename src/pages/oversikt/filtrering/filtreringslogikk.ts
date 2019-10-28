@@ -6,6 +6,7 @@ export type Filter = AlleBehov;
 
 export enum UrlParameter {
     KunEgne = 'kunEgne',
+    Enhet = 'enhet',
 }
 
 export type FiltrertKandidat = Kandidat & {

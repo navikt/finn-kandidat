@@ -63,6 +63,7 @@ const Registrering: FunctionComponent<RouteComponentProps<MatchProps>> = ({ hist
             arbeidsmiljøBehov,
             grunnleggendeBehov,
             arbeidstidBehov: [arbeidstidBehov],
+            navKontor: null,
         };
 
         const respons = await opprettKandidat(kandidat);

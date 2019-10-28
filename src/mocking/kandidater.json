@@ -8,7 +8,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": null
     },
     {
         "aktørId": "5669594346088",
@@ -22,7 +22,7 @@
             "TILRETTELAGT_OPPLÆRING",
             "ANNET"
         ],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "9530979332682",
@@ -33,7 +33,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "1670611517332",
@@ -44,7 +44,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "7512549246100",
@@ -55,7 +55,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "6745184651558",
@@ -68,7 +68,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "2779250913216",
@@ -79,7 +79,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "1726157539989",
@@ -98,7 +98,7 @@
             "TILRETTELAGT_OPPLÆRING",
             "TILRETTELAGTE_ARBEIDSOPPGAVER"
         ],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "7062916567914",
@@ -115,7 +115,7 @@
             "ANNET",
             "TILRETTELAGT_OPPLÆRING"
         ],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "7821228923929",
@@ -128,7 +128,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "8471525022065",
@@ -139,7 +139,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "5944478829768",
@@ -150,7 +150,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "1087346791873",
@@ -161,7 +161,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "2820443226852",
@@ -172,7 +172,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "5760696123559",
@@ -183,7 +183,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "4842008423465",
@@ -194,7 +194,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "8856836792922",
@@ -205,7 +205,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "3389499127142",
@@ -216,7 +216,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "3939273020169",
@@ -230,7 +230,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "9169177949440",
@@ -241,7 +241,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "3484849878415",
@@ -256,7 +256,7 @@
             "SKRIVE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "4467002471526",
@@ -267,7 +267,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "1139064709573",
@@ -278,7 +278,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "7859811493624",
@@ -293,7 +293,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "3770248583815",
@@ -304,7 +304,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "4064142767791",
@@ -315,7 +315,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2572663230933",
@@ -326,7 +326,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "7548358992816",
@@ -337,7 +337,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "1239617109735",
@@ -348,7 +348,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2461571960530",
@@ -359,7 +359,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "3329139989352",
@@ -373,7 +373,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "2033963459303",
@@ -384,7 +384,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "1160728713586",
@@ -400,7 +400,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "5658283834359",
@@ -411,7 +411,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "1525782009250",
@@ -425,7 +425,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "8028064594613",
@@ -436,7 +436,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "1776917140311",
@@ -451,7 +451,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "6343099946163",
@@ -470,7 +470,7 @@
             "MENTOR",
             "ANNET"
         ],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "3044716188519",
@@ -486,7 +486,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "7602551487725",
@@ -501,7 +501,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "4154620074624",
@@ -517,7 +517,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "8848742107195",
@@ -528,7 +528,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "9707903141453",
@@ -541,7 +541,7 @@
             "SNAKKE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "1707844858532",
@@ -552,7 +552,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "8967958024874",
@@ -567,7 +567,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "2734994516075",
@@ -578,7 +578,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "4895973949770",
@@ -589,7 +589,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "8495835981740",
@@ -606,7 +606,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "ANNET"
         ],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "7264166169583",
@@ -617,7 +617,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "3298329331304",
@@ -628,7 +628,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "9475399764380",
@@ -642,7 +642,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "6879522708879",
@@ -653,7 +653,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "9409173542488",
@@ -664,7 +664,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "2451525013124",
@@ -675,7 +675,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "2415644505786",
@@ -688,7 +688,7 @@
         "arbeidsmiljøBehov": [
             "TILRETTELAGT_OPPLÆRING"
         ],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "2544033551182",
@@ -706,7 +706,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "6217574788731",
@@ -717,7 +717,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2140161539535",
@@ -728,7 +728,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "8222232835419",
@@ -739,7 +739,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "7364337137382",
@@ -755,7 +755,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "4203809543279",
@@ -766,7 +766,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "1446734559849",
@@ -777,7 +777,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "8901889887900",
@@ -788,7 +788,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "2973627141561",
@@ -799,7 +799,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "2525837667295",
@@ -810,7 +810,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "9747034980596",
@@ -821,7 +821,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "9746663462168",
@@ -837,7 +837,7 @@
             "SNAKKE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "6912859349683",
@@ -853,7 +853,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2486466385990",
@@ -864,7 +864,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "1180114948589",
@@ -882,7 +882,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "ANNET"
         ],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "1229486244518",
@@ -893,7 +893,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "4962673376676",
@@ -904,7 +904,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2068148569047",
@@ -922,7 +922,7 @@
             "SKRIVE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "4345248300203",
@@ -938,7 +938,7 @@
             "ANNET",
             "TILRETTELAGTE_ARBEIDSOPPGAVER"
         ],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "2970828081738",
@@ -949,7 +949,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "2046293041977",
@@ -960,7 +960,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "4274500257889",
@@ -971,7 +971,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "4619732401679",
@@ -982,7 +982,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "4259869488204",
@@ -993,7 +993,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "3389786303765",
@@ -1004,7 +1004,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "8968729405033",
@@ -1015,7 +1015,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "5148380318650",
@@ -1029,7 +1029,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "9186583359141",
@@ -1042,7 +1042,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "1993945056746",
@@ -1053,7 +1053,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "7468308446309",
@@ -1067,7 +1067,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "9310689358871",
@@ -1078,7 +1078,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "1354920717277",
@@ -1089,7 +1089,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "8241398345892",
@@ -1102,7 +1102,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "2301731965180",
@@ -1113,7 +1113,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "9207830146980",
@@ -1135,7 +1135,7 @@
             "ANNET",
             "TILRETTELAGTE_ARBEIDSOPPGAVER"
         ],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "1571978480561",
@@ -1146,7 +1146,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "3282211203638",
@@ -1160,7 +1160,7 @@
             "SNAKKE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "6302426531037",
@@ -1173,7 +1173,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "3029539743730",
@@ -1184,7 +1184,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "2944997673518",
@@ -1195,7 +1195,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "1923697230674",
@@ -1206,7 +1206,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "6382304355160",
@@ -1220,7 +1220,7 @@
             "LESE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "4163726696588",
@@ -1234,7 +1234,7 @@
             "ANNET",
             "TILRETTELAGT_OPPLÆRING"
         ],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "5623978297716",
@@ -1247,7 +1247,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "3568756569386",
@@ -1258,7 +1258,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "8417986454447",
@@ -1269,7 +1269,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "6917961282999",
@@ -1282,7 +1282,7 @@
             "SNAKKE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "1118181899469",
@@ -1299,7 +1299,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "8383694205099",
@@ -1310,7 +1310,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "9891005321695",
@@ -1321,7 +1321,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "5403738798581",
@@ -1335,7 +1335,7 @@
             "SKRIVE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "3361994735276",
@@ -1349,7 +1349,7 @@
             "SKRIVE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "7326679035832",
@@ -1365,7 +1365,7 @@
             "SKRIVE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "9753437695731",
@@ -1381,7 +1381,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "1785772078111",
@@ -1395,7 +1395,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "TILRETTELAGT_OPPLÆRING"
         ],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2849519321972",
@@ -1406,7 +1406,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "4684796245643",
@@ -1417,7 +1417,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "5059288687809",
@@ -1428,7 +1428,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "5219871501327",
@@ -1439,7 +1439,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "4515486015609",
@@ -1450,7 +1450,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "2974032272981",
@@ -1461,7 +1461,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "6699705210713",
@@ -1476,7 +1476,7 @@
             "TILRETTELAGT_OPPLÆRING",
             "TILRETTELAGTE_ARBEIDSOPPGAVER"
         ],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "9371238833834",
@@ -1489,7 +1489,7 @@
         "arbeidsmiljøBehov": [
             "TILRETTELAGTE_ARBEIDSOPPGAVER"
         ],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "8667715245126",
@@ -1500,7 +1500,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "5630831185739",
@@ -1514,7 +1514,7 @@
             "SNAKKE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "9761504087685",
@@ -1525,7 +1525,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "8630638085826",
@@ -1536,7 +1536,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "4870910444486",
@@ -1547,7 +1547,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "3451113736062",
@@ -1558,7 +1558,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "4313066736595",
@@ -1569,7 +1569,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "8175913410066",
@@ -1580,7 +1580,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "4301547540086",
@@ -1591,7 +1591,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "5780095931111",
@@ -1602,7 +1602,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "4290482573332",
@@ -1615,7 +1615,7 @@
         "arbeidsmiljøBehov": [
             "MENTOR"
         ],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "2003107659213",
@@ -1629,7 +1629,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "3089649054096",
@@ -1640,7 +1640,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2595470436745",
@@ -1657,7 +1657,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "3638487276390",
@@ -1668,7 +1668,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "2329412476933",
@@ -1679,7 +1679,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "6105235936747",
@@ -1694,7 +1694,7 @@
             "LESE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "9481544318587",
@@ -1705,7 +1705,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "7572863158069",
@@ -1716,7 +1716,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "2625278539208",
@@ -1727,7 +1727,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "5521776954451",
@@ -1738,7 +1738,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "5233436360125",
@@ -1751,7 +1751,7 @@
         "arbeidsmiljøBehov": [
             "TILRETTELAGT_OPPLÆRING"
         ],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "1266882248087",
@@ -1766,7 +1766,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "3035140114708",
@@ -1783,7 +1783,7 @@
             "ANNET",
             "MENTOR"
         ],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "8825217186006",
@@ -1798,7 +1798,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "6855744228272",
@@ -1809,7 +1809,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "8687320610110",
@@ -1826,7 +1826,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "TILRETTELAGT_OPPLÆRING"
         ],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "1548778667617",
@@ -1837,7 +1837,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "1013385933253",
@@ -1848,7 +1848,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "2669624904608",
@@ -1859,7 +1859,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "7336996350747",
@@ -1873,7 +1873,7 @@
             "LESE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "1965914671056",
@@ -1884,7 +1884,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "2494259937714",
@@ -1895,7 +1895,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "6816330722660",
@@ -1906,7 +1906,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "9958121045067",
@@ -1919,7 +1919,7 @@
         "arbeidsmiljøBehov": [
             "MENTOR"
         ],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "9416450076824",
@@ -1933,7 +1933,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "8841824772134",
@@ -1953,7 +1953,7 @@
         "arbeidsmiljøBehov": [
             "TILRETTELAGTE_ARBEIDSOPPGAVER"
         ],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "2194781412451",
@@ -1972,7 +1972,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "7286891238446",
@@ -1988,7 +1988,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "MENTOR"
         ],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "6621893619462",
@@ -2001,7 +2001,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "8400005659595",
@@ -2012,7 +2012,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "9226127331306",
@@ -2023,7 +2023,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "5518301422355",
@@ -2034,7 +2034,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "5594753958553",
@@ -2045,7 +2045,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "8711852945270",
@@ -2060,7 +2060,7 @@
         "arbeidsmiljøBehov": [
             "ANNET"
         ],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "4508872801778",
@@ -2071,7 +2071,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "2452985236227",
@@ -2082,7 +2082,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "3219836700467",
@@ -2093,7 +2093,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "6688730452110",
@@ -2110,7 +2110,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "7564033911090",
@@ -2121,7 +2121,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "4652036099064",
@@ -2132,7 +2132,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "8751820842848",
@@ -2146,7 +2146,7 @@
             "SNAKKE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "6668269726878",
@@ -2165,7 +2165,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "ANNET"
         ],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "9732827265489",
@@ -2180,7 +2180,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "6895586079828",
@@ -2191,7 +2191,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "6013504957813",
@@ -2202,7 +2202,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "1916503369221",
@@ -2213,7 +2213,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "7160907880195",
@@ -2227,7 +2227,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "5272250741021",
@@ -2244,7 +2244,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "ANNET"
         ],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "9052387666020",
@@ -2255,7 +2255,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "9193738696212",
@@ -2266,7 +2266,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "4091603620606",
@@ -2277,7 +2277,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "5439909969431",
@@ -2288,7 +2288,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "5149683052976",
@@ -2302,7 +2302,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "6144944913915",
@@ -2313,7 +2313,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "7762227205929",
@@ -2327,7 +2327,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "6188353368082",
@@ -2342,7 +2342,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "7529811864494",
@@ -2353,7 +2353,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1001"
+        "navKontor": "1001"
     },
     {
         "aktørId": "3909270233946",
@@ -2367,7 +2367,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "2595231776548",
@@ -2378,7 +2378,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "5911811243179",
@@ -2389,7 +2389,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "7795514415044",
@@ -2404,7 +2404,7 @@
             "TILRETTELAGTE_ARBEIDSOPPGAVER",
             "ANNET"
         ],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "1357655749129",
@@ -2415,7 +2415,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     },
     {
         "aktørId": "8419294354251",
@@ -2428,7 +2428,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "2460179704177",
@@ -2439,7 +2439,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1003"
+        "navKontor": "1003"
     },
     {
         "aktørId": "2876873189194",
@@ -2450,7 +2450,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "6799779287871",
@@ -2465,7 +2465,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1000"
+        "navKontor": "1000"
     },
     {
         "aktørId": "7357179331676",
@@ -2476,7 +2476,7 @@
         "fysiskeBehov": [],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "7146878165954",
@@ -2489,7 +2489,7 @@
             "REGNING_OG_TALLFORSTÅELSE"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1017"
+        "navKontor": "1017"
     },
     {
         "aktørId": "2980752617378",
@@ -2505,7 +2505,7 @@
         ],
         "grunnleggendeBehov": [],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1014"
+        "navKontor": "1014"
     },
     {
         "aktørId": "4164429363998",
@@ -2521,7 +2521,7 @@
             "ANDRE_UTFORDRINGER"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1004"
+        "navKontor": "1004"
     },
     {
         "aktørId": "9347975579866",
@@ -2536,6 +2536,6 @@
             "LESE_NORSK"
         ],
         "arbeidsmiljøBehov": [],
-        "navkontor": "1002"
+        "navKontor": "1002"
     }
 ]
