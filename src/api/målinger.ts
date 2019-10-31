@@ -28,6 +28,7 @@ export const loggKlikkPåRegistrering = () => {
         tags: {},
         fields: {},
     };
+
     api.post('/events', data);
 };
 
@@ -37,5 +38,16 @@ export const loggKlikkPåFinnKandidater = () => {
         tags: {},
         fields: {},
     };
+
+    api.post('/events', data);
+};
+
+export const loggInngangFraKandidatsøk = () => {
+    const data = {
+        name: 'finn-kandidat.inngang.kandidatsok',
+        tags: {},
+        fields: {},
+    };
+
     api.post('/events', data);
 };

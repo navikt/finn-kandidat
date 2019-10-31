@@ -10,6 +10,7 @@ import { Kandidat, RestKandidat, Status } from '../../types/Kandidat';
 import RouteBanner from '../../components/route-banner/RouteBanner';
 import SistEndretOgKnapper from './sist-endret-og-knapper/SistEndretOgKnapper';
 import SlettKandidatModal from './slett-kandidat-modal/SlettKandidatModal';
+import useLoggInngang from './useLoggInngang';
 import './kandidatdetaljer.less';
 
 const cls = bemHelper('kandidatdetaljer');
@@ -21,11 +22,14 @@ interface OwnProps {
 type Props = OwnProps & RouteComponentProps<MatchProps>;
 
 const Kandidatdetaljer: FunctionComponent<Props> = ({ match, history, iEndremodus }) => {
+    useLoggInngang();
+
     const aktørId = match.params.aktorId;
     const sidenDuErPå = iEndremodus ? AppRoute.EndreKandidat : AppRoute.SeKandidat;
     const [kandidat, setKandidat] = useState<RestKandidat>({
         status: Status.LasterInn,
     });
+
     const [harSkrivetilgang, settSkrivetilgang] = useState<boolean>(false);
     const [slettemodalErÅpen, toggleSlettemodal] = useState<boolean>(false);
 
