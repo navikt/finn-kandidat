@@ -12,6 +12,7 @@ import Kandidatdetaljer from './pages/kandidat/Kandidatdetaljer';
 import Oversikt from './pages/oversikt/Oversikt';
 import Registrering from './pages/registrering/Registrering';
 import TestAdvarsel from './pages/registrering/TestAdvarsel';
+import IngenTilgang from './pages/ingen-tilgang/IngenTilgang';
 import './styles/app.less';
 
 const App: FunctionComponent = () => (
@@ -34,6 +35,7 @@ const App: FunctionComponent = () => (
                                 render={() => <Kandidatdetaljer iEndremodus />}
                             />
                             <Route exact path={AppRoute.SeKandidat} component={Kandidatdetaljer} />
+                            <Route exact path={AppRoute.IngenTilgang} component={IngenTilgang} />
                             <Redirect to={AppRoute.Oversikt} />
                         </Switch>
                     </Router>

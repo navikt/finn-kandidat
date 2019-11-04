@@ -7,6 +7,7 @@ export enum AppRoute {
     SeKandidat = '/kandidat/:aktorId',
     EndreKandidat = '/kandidat/:aktorId/endre',
     FørDuBegynner = '/for-du-begynner',
+    IngenTilgang = '/ingen-tilgang',
 }
 
 export interface MatchProps {

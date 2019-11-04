@@ -2,15 +2,14 @@ import React, { FunctionComponent, Fragment } from 'react';
 import { HoyreChevron } from 'nav-frontend-chevron';
 import { Link } from 'react-router-dom';
 
-import { AppRoute } from '../../utils/paths';
-import byggSti from './byggSti';
+import byggSti, { Brødsmuleside } from './byggSti';
 import bemHelper from '../../utils/bemHelper';
 import './brødsmulesti.less';
 
 const cls = bemHelper('brødsmulesti');
 
 interface Props {
-    sidenDuErPå: AppRoute;
+    sidenDuErPå: Brødsmuleside;
     aktørId?: string;
 }
 

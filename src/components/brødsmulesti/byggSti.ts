@@ -3,10 +3,12 @@ import { AppRoute, hentRoute } from '../../utils/paths';
 interface Steg {
     navn: string;
     href: string;
-    forrigeSteg?: AppRoute;
+    forrigeSteg?: Brødsmuleside;
 }
 
-const byggSti = (route: AppRoute, aktørId?: string) => {
+export type Brødsmuleside = Exclude<AppRoute, AppRoute.IngenTilgang>;
+
+const byggSti = (route: Brødsmuleside, aktørId?: string) => {
     const alleSider = hentAlleSider(aktørId);
 
     let detteSteget = alleSider[route];
@@ -20,7 +22,7 @@ const byggSti = (route: AppRoute, aktørId?: string) => {
     return sti;
 };
 
-type AlleSider = { [route in AppRoute]: Steg };
+type AlleSider = { [route in Brødsmuleside]: Steg };
 
 const hentAlleSider = (aktørId?: string): AlleSider => ({
     [AppRoute.Forside]: {
