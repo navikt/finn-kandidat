@@ -1,0 +1,25 @@
+apiVersion: nais.io/v1alpha1
+kind: Application
+metadata:
+  name: finn-kandidat
+  namespace: default
+  labels:
+    team: {{team}}
+spec:
+  image: {{version}}
+  team: {{team}}
+  port: 3000
+  ingresses:
+  - https://arbeidsgiver.nais.adeo.no/finn-kandidat/
+  liveness:
+    initialDelay: 5
+    path: /finn-kandidat/internal/isAlive
+  readiness:
+    initialDelay: 5
+    path: /finn-kandidat/internal/isReady
+  env:
+  - name: NODE_EXTRA_CA_CERTS
+    value: /etc/ssl/ca-bundle.pem
+  - name: LOGIN_URL
+    value: https://loginservice.nais.adeo.no/login?redirect=https://arbeidsgiver.nais.adeo.no/finn-kandidat/
+
