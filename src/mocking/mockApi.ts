@@ -80,5 +80,5 @@ mock.onPost(ROUTE_EVENTS).reply(config => {
 
 mock.onPost(ROUTE_TILBAKEMELDING).reply(() => [201]);
 
-const hentFnrFraConfig = (config: any) => config.url && config.url.split('/')[3];
-const hentAktørIdFraConfig = (config: any) => config.url && config.url.split('/')[3];
+const hentFnrFraConfig = (config: any) => config.url && config.url.split('/').reverse()[0];
+const hentAktørIdFraConfig = (config: any) => config.url && config.url.split('/').reverse()[0];
