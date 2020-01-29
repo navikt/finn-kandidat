@@ -7,7 +7,7 @@ import api from './initialize';
 
 export interface KandidatTilApi {
     aktørId: string;
-    arbeidstidBehov: ArbeidstidBehov;
+    arbeidstidBehov: ArbeidstidBehov[];
     fysiskeBehov: FysiskBehov[];
     arbeidsmiljøBehov: ArbeidsmijøBehov[];
     grunnleggendeBehov: GrunnleggendeBehov[];
@@ -40,7 +40,7 @@ const konverterKandidatFraApi = (kandidat: KandidatFraApi): Kandidat => {
 export const konverterKandidatTilApi = (kandidat: Kandidat): KandidatTilApi => {
     return {
         aktørId: kandidat.aktørId,
-        arbeidstidBehov: kandidat.arbeidstidBehov[0],
+        arbeidstidBehov: kandidat.arbeidstidBehov,
         fysiskeBehov: kandidat.fysiskeBehov,
         arbeidsmiljøBehov: kandidat.arbeidsmiljøBehov,
         grunnleggendeBehov: kandidat.grunnleggendeBehov,
