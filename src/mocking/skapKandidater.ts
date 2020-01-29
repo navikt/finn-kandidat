@@ -122,7 +122,7 @@ const skapKandidater = (antall: number = config.antallKandidater) => {
             fnr,
             sistEndret,
             sistEndretAv: veiledere[i],
-            arbeidstidBehov: getRandomValue(ArbeidstidBehov),
+            arbeidstidBehov: [getRandomValue(ArbeidstidBehov)],
             fysiskeBehov: hentTilfeldigUtvalg(FysiskBehov, config.sjanseForFysiskebehov),
             grunnleggendeBehov: hentTilfeldigUtvalg(
                 GrunnleggendeBehov,

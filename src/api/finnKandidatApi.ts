@@ -19,7 +19,7 @@ interface KandidatFraApi {
     sistEndret: string;
     sistEndretAv: string;
     navKontor: string | null;
-    arbeidstidBehov: ArbeidstidBehov;
+    arbeidstidBehov: ArbeidstidBehov[];
     fysiskeBehov: FysiskBehov[];
     arbeidsmiljøBehov: ArbeidsmijøBehov[];
     grunnleggendeBehov: GrunnleggendeBehov[];
@@ -27,13 +27,11 @@ interface KandidatFraApi {
 
 const konverterKandidatFraApi = (kandidat: KandidatFraApi): Kandidat => {
     const sistEndret = new Date(kandidat.sistEndret);
-    const arbeidstidBehov = [kandidat.arbeidstidBehov];
     const navKontor = kandidat.navKontor || undefined;
     return {
         ...kandidat,
         sistEndret,
         navKontor,
-        arbeidstidBehov,
     };
 };
 
