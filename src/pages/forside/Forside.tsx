@@ -9,6 +9,7 @@ import forstørrelsesglass from './forstørrelsesglass.svg';
 import SlikFungererDet from './slik-fungerer-det/SlikFungererDet';
 import './forside.less';
 import { loggKlikkPåFinnKandidater, loggKlikkPåRegistrering } from '../../api/målinger';
+import TilretteleggingsbehovFlyttetInfo from './tilretteleggingsbehov-flyttet-info/TilretteleggingsbehovFlyttetInfo';
 
 const cls = bemHelper('forside');
 
@@ -16,6 +17,7 @@ const Forside: FunctionComponent = () => {
     return (
         <>
             <RouteBanner tittel="Tilretteleggingsbehov" />
+            <TilretteleggingsbehovFlyttetInfo/>
             <main className={cls.block}>
                 <div className={cls.element('container')}>
                     <span className={cls.element('introduksjon')}>
