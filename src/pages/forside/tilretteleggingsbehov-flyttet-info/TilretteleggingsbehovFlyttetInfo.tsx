@@ -15,13 +15,13 @@ const TilretteleggingsbehovFlyttetInfo: FunctionComponent = () => {
 
     return (
         <Alertstripe type="advarsel" className={cls.block}>
-            <Element>Vi har flyttet tilretteleggingsbehovene</Element> Fra nå av skal du fylle inn
+            <Element>Vi har flyttet tilretteleggingsbehovene</Element>Fra nå av skal du fylle inn
             tilretteleggingsbehov under <b>Detaljer</b> i <b>Aktivitsplanen</b>.
-            <p>
+            <div className={cls.element('lenke')}>
                 <Lenke href={url}>
                     Gå til enhetens oversikt og velg bruker for å registrere tilretteleggingbehov.
                 </Lenke>
-            </p>
+            </div>
         </Alertstripe>
     );
 };

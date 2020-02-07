@@ -17,7 +17,7 @@ const Forside: FunctionComponent = () => {
     return (
         <>
             <RouteBanner tittel="Tilretteleggingsbehov" />
-            <TilretteleggingsbehovFlyttetInfo/>
+            <TilretteleggingsbehovFlyttetInfo />
             <main className={cls.block}>
                 <div className={cls.element('container')}>
                     <span className={cls.element('introduksjon')}>
